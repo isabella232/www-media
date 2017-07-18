@@ -1,0 +1,90 @@
+html {
+  color: #1c1c1c;
+  font-family: 'Hind', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 0;
+}
+
+h3 {
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: .5em 0;
+}
+
+h3 a {
+  background: #e73c4d;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 1em;
+  padding: .5em 1em;
+  text-decoration: none;
+  transition: background 300ms;
+  width: auto;
+}
+
+h3 a:hover {
+  background: #F43F51;
+}
+
+section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 5em;
+}
+
+#soon {
+  background: url('images/bkg.jpg') no-repeat center;
+  background-size: cover;
+  color: #fff;
+  flex: 1 60%;
+  position: relative;
+}
+
+#soon:before {
+  content: url('images/logoblanc.svg');
+  display: block;
+  position: absolute;
+  top: 5em;
+  width: 15em;
+}
+
+#presentation {
+  flex: 1 40%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li:first-of-type {
+  font-weight: 600;
+}
+
+ul a {
+  color: #e73c4d;
+  text-decoration: none;
+  transition: color 300ms;
+}
+
+ul a:hover {
+  color: #F43F51;
+}
