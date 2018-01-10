@@ -44,7 +44,7 @@
 
     <nav>
       <ul>
-        {% for id, name in MENU_PAGES %}
+        {% for id, name in NAV_PAGES %}
           <li {{ 'class="active"' if page == id }}><a href="{{ url_for('page', page=id) }}">{{ name }}</a></li>
         {% endfor %}
       </ul>
