@@ -1,4 +1,38 @@
 {% extends "_layout.jinja2" %}
 
 {% block content %}
+  <article>
+    <h2>Bonjour !</h2>
+    <p>
+      Besoin de nous sur un projet ? Envie de nous rencontrer, de devenir
+      partenaire ? Contactez-nous !
+    </p>
+    <dl>
+      <dt>Adresse</dt>
+      <dd>
+        <address>107 boulevard de Stalingrad
+69100
+Villeurbanne</address>
+      </dd>
+      <dt>Contact</dt>
+      <dd>
+        <ul>
+          <li><a href="tel:+33427118397">+33 4 27 11 83 97</a></li>
+          <li><a href="mailto:media@kozea.fr">media@kozea.fr</a></li>
+        </ul>
+      </dd>
+    </dl>
+    <form action="{{ url_for('contact') }}" method="post">
+      <label>Email
+        <input placeholder="Email" type="email" name="email" />
+      </label>
+      <label>Nom / Société
+        <input placeholder="Nom / Société" type="text" name="name" />
+      </label>
+      <label>Message
+        <textarea placeholder="Message"></textarea>
+      </label>
+      <input type="submit" value="Envoyer" />
+    </form>
+  </article>
 {% endblock content %}

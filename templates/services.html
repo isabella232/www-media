@@ -1,4 +1,105 @@
 {% extends "_layout.jinja2" %}
 
 {% block content %}
+  <article>
+    <h2>Nos prestations à la carte</h2>
+    <p>
+      Du <em>social media</em> (<em>community management</em>) à la publicité
+      en ligne, Kozea Media vous propose des services sur mesure pour réussir
+      une campagne de communication avec succès.
+    </p>
+    <dl>
+      <dt id="advice">Agence conseil</dt>
+      <dd>
+        <ul>
+          <li>Accompagnement personnalisé</li>
+          <li>Prestations sur mesure</li>
+        </ul>
+      </dd>
+      <dt id="website">Création site internet</dt>
+      <dd>
+        <ul>
+          <li>Institutionnel</li>
+          <li>Sur mesure</li>
+        </ul>
+      </dd>
+      <dt id="community"><em>Community management</em></dt>
+      <dd>
+        <ul>
+          <li>Création</li>
+          <li>Animation</li>
+          <li>Modération des pages</li>
+        </ul>
+      </dd>
+      <dt id="graphics">Studio graphique</dt>
+      <dd>
+        <ul>
+          <li>Logos</li>
+          <li>Infographies</li>
+          <li>Thèmes personnalisés</li>
+          <li>Affiches</li>
+          <li>Flyers</li>
+        </ul>
+      </dd>
+      <dt id="content">Création de contenu santé</dt>
+      <dd>
+        <ul>
+          <li>Articles de santé</li>
+          <li>Fiches conseil</li>
+        </ul>
+      </dd>
+      <dt id="media">Régie média</dt>
+      <dd>
+        <ul>
+          <li>Gestion d'espaces publicitaires</li>
+          <li>Monétisation d'espaces</li>
+          <li>Plan média</li>
+        </ul>
+      </dd>
+      <dt id="animation">Animation commerciale</dt>
+      <dd>
+        <ul>
+          <li>Newsletters auprès de 2300 clients qualifiés</li>
+          <li>Création de contenu sur mesure</li>
+        </ul>
+      </dd>
+      <dt id="integration">Service d'intégration web</dt>
+      <dd>
+        <ul>
+          <li>Intégration de produits</li>
+          <li>Promotion</li>
+        </ul>
+      </dd>
+      <dt id="video">Vidéo</dt>
+      <dd>
+        <ul>
+          <li>Publicitaire</li>
+          <li>Explicative</li>
+          <li>Événementielle</li>
+        </ul>
+      </dd>
+    </dl>
+  </article>
+  <article>
+    <h2>Vous êtes ?</h2>
+    <ul>
+      <li>
+        <a href="{{ url_for('page', page='pharmacy') }}">Pharmacien</a>
+      </li>
+      <li>
+        <a href="{{ url_for('page', page='group') }}">Groupement</a>
+      </li>
+      <li>
+        <a href="{{ url_for('page', page='laboratory') }}">Laboratoire</a>
+      </li>
+    </ul>
+    <p>
+      <strong>Manque de temps, manque de ressources ?</strong> Confiez-nous
+      votre projet, on s'occupe de tout !
+    </p>
+    <p>
+      Nous nous adoptons à votre projet pour établir une prestation unique
+      répondant à vos besoins.
+    </p>
+  </article>
 {% endblock content %}

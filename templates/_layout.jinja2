@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 
+{% set MENU_PAGES = (
+  ('index', 'Accueil'),
+  ('about', 'À propos'),
+  ('guarantees', 'Garanties'),
+  ('services', 'Nos services'),
+  ('references', 'Nos références'),
+  ('contact', 'Contact'),
+) %}
+{% set NAV_PAGES = (
+  ('pharmacy', 'Je suis un pharmacien'),
+  ('laboratory', 'Je suis un laboratoire'),
+  ('group', 'Je suis un groupement'),
+) %}
+{% set HIDDEN_PAGES = (
+  ('quotation', 'Devis'),
+) %}
+{% set PAGES = dict(MENU_PAGES + NAV_PAGES + HIDDEN_PAGES) %}
+
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Kozea media - Agence e-marketing dédiée exclusivement aux professionnels de santé" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <title>Kozea media - Agence e-marketing dédiée exclusivement aux professionnels de santé</title>
+    <title>{{ PAGES[page] }} - Kozea media</title>
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.sass.css') }}" />
   </head>
 
   <body>
+    <h1>{{ PAGES[page] }} - Kozea media</h1>
+
     <nav>
       <ul>
-        <li><a href="{{ url_for('page', page='index') }}">Accueil</a></li>
-        <li><a href="{{ url_for('page', page='about') }}">À propos</a></li>
-        <li><a href="{{ url_for('page', page='guarantees') }}">Nos garanties</a></li>
-        <li><a href="{{ url_for('page', page='services') }}">Nos services</a></li>
-        <li><a href="{{ url_for('page', page='references') }}">Références</a></li>
-        <li><a href="{{ url_for('page', page='contact') }}">Contact</a></li>
+        {% for id, name in MENU_PAGES %}
+          <li><a href="{{ url_for('page', page=id) }}">{{ name }}</a></li>
+        {% endfor %}
       </ul>
       <ul>
         <li><a href="tel:+33427118397">+33 4 27 11 83 97</a></li>
@@ -27,15 +44,27 @@
 
     <nav>
       <ul>
-        <li {{ 'class="active"' if page == 'pharmacy' }}><a href="{{ url_for('page', page='pharmacy') }}">Je suis un pharmacien</a></li>
-        <li {{ 'class="active"' if page == 'laboratory' }}><a href="{{ url_for('page', page='laboratory') }}">Je suis un laboratoire</a></li>
-        <li {{ 'class="active"' if page == 'group' }}><a href="{{ url_for('page', page='group') }}">Je suis un groupement</a></li>
+        {% for id, name in MENU_PAGES %}
+          <li {{ 'class="active"' if page == id }}><a href="{{ url_for('page', page=id) }}">{{ name }}</a></li>
+        {% endfor %}
       </ul>
     </nav>
 
     <main id="page-{{ page }}">
       {% block content %}{% endblock content %}
     </main>
+
+    <aside>
+      <h2>Alors pourquoi pas vous ?</h2>
+      <p>
+        Osez vous démarquer en allant chercher vos patients là où ils se
+        trouvent.
+      </p>
+      <ul>
+        <li><a href="{{ url_for('page', page='quotation') }}">Obtenir un devis personnalisé</a></li>
+        <li><a href="{{ url_for('page', page='services') }}">Voir notre expertise</a></li>
+      </ul>
+    </aside>
 
     <footer>
       <section id="address">

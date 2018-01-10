@@ -35,15 +35,17 @@ def robots():
 @app.route('/contact', methods=['POST'])
 def contact():
     message = {
-        'to': [{'email': 'contact@kozea.fr'}],
-        'subject': 'Prise de contact sur le site de PromoMaker',
-        'from_email': 'contact@kozea.fr',
+        'to': [{'email': 'media@kozea.fr'}],
+        'subject': 'Prise de contact sur le site de Kozea Media',
+        'from_email': 'media@kozea.fr',
         'html': '<br>'.join([
-            'Prénom : %s' % request.form.get('firstname', ''),
-            'Nom : %s' % request.form.get('lastname', ''),
+            'Nom : %s' % request.form.get('name', ''),
             'Email : %s' % request.form.get('email', ''),
-            'Société : %s' % request.form.get('company', ''),
-            'Téléphone : %s' % request.form.get('phone', '')])}
+            'Téléphone : %s' % request.form.get('phone', ''),
+            'Message : %s' % request.form.get('message', ''),
+            'Type de contact : %s' % request.form.get('type', ''),
+            'Besoin : %s' % request.form.get('need', ''),
+            'Cible : %s' % request.form.get('target', '')])}
 
     if app.debug:
         print(message)

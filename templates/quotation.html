@@ -1,4 +1,38 @@
 {% extends "_layout.jinja2" %}
 
 {% block content %}
+  <article>
+    <h2>Obtenir un devis</h2>
+    <p>
+      Si vous remplissez ce questionnaire rapide, nous pourrons vous
+      recontacter pour votre devis personnalisé.
+    </p>
+    <form action="{{ url_for('contact') }}" method="post">
+      <label>Qui êtes-vous ?
+        <select name="type">
+          {# TODO #}
+        </select>
+      </label>
+      <label>Quel est votre besoin ?
+        <select name="need">
+          {# TODO #}
+        </select>
+      </label>
+      <label>Quelle est votre cible ?
+        <select name="target">
+          {# TODO #}
+        </select>
+      </label>
+      <label>Nom / Société
+        <input placeholder="Firstname" type="text" name="name" />
+      </label>
+      <label>Email
+        <input placeholder="Email" type="email" name="email" />
+      </label>
+      <label>Téléphone
+        <input placeholder="Téléphone" type="telephone" name="phone" />
+      </label>
+      <input type="submit" value="Envoyer" />
+    </form>
+  </article>
 {% endblock content %}
