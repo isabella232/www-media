@@ -1,3 +1,190 @@
-body
-  background: #eee
-  color: #333
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,700');
+
+$text: #1C1C1C
+$primary: #E73C4D
+$bkgd: #fcfcfc
+
+=button($bkgd,$radius,$padding,$border)
+  background: $bkgd
+  border-radius: $radius
+  padding: $padding
+  border: $border
+
+html
+  body
+    font-family: 'Hind', sans-serif
+    background: $bkgd
+    color: $text
+    margin: 0
+    display: flex
+    flex-direction: column
+
+    h1
+      background: yellow
+      font-size: 1em
+      font-weight: 300
+
+      &:before 
+        content: '[ '
+
+      &:after 
+        content: '] '
+
+    h2
+      font-size: 2.2em
+
+    ul li a
+      text-decoration: none
+
+    > nav
+      background: red
+      order: -1
+
+      & + nav 
+        background: grey
+
+    ul
+      padding-left: 0
+
+      li
+        list-style-type: none
+
+    nav
+      display: flex
+
+      &:first-of-type
+
+      &:last-of-type
+        ul 
+          display: flex
+    
+    main
+      &#page-pharmacy,&#page-laboratory, &#page-group
+        width: 50%
+
+        article 
+          &:first-child
+            background: cadetblue
+
+          &:nth-child(2)
+            background: green
+
+          &:last-child
+            background: purple
+
+      &#page-index
+        background: aqua
+
+      &#page-about
+        article 
+          &:first-child
+            background: yellow
+
+          &:nth-child(2)
+            background: green
+
+          &:last-child
+            background: purple
+
+      &#page-guarantees
+        background: antiquewhite
+
+      &#page-services
+        article 
+          &:first-child
+            background: orange
+
+          &:last-child
+            background: chocolate
+
+      &#page-contact
+        article
+          background: yellowgreen
+
+          form
+            background: turquoise
+
+    > aside
+      background: tomato
+
+      h2,p,ul 
+        width: 60%
+        margin: auto
+        text-align: center
+        color: #fff
+
+      ul 
+        display: flex
+        justify-content: center
+
+        li
+          +button(white,25px,7px 20px,none)
+
+        li + li
+          +button(transparent,25px,7px 20px,2px solid #fff) 
+        
+    footer
+      display: flex
+      background: $text
+      color: #fff
+      font-weight: 300
+      padding: 20px
+
+      a
+        color: #fff
+
+      section
+        flex: 1
+
+        &:first-child
+          flex: 2
+
+          &:before
+            content: ''
+            background: red
+            width: 110px 
+            height: 40px
+            float: left
+            margin: 0 30px
+            
+          > *
+            font-style: normal
+
+        &:last-child
+          display: flex
+          font-size: 1.15em
+          position: relative
+
+          h2
+            position: absolute
+            background: $text
+            padding: 3px 10px
+            z-index: 1
+            left: calc(50% - 76px)
+            color: $primary
+            top: -10px
+
+          ul
+            display: flex;
+            align-self: center
+            border: 2px solid $primary
+            padding: 15px 20px
+            margin: 0 auto
+            
+
+            li:first-of-type
+              &:after
+                content: '-'
+                padding: 8px
+
+      h2, ul,address
+        font-size: .8em
+
+      h2
+        margin-bottom: 0
+
+      ul
+        margin-top: 0
+
+
+

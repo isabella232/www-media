@@ -1,5 +1,129 @@
-body {
-  background: #eee;
-  color: #333; }
+@import url("https://fonts.googleapis.com/css?family=Hind:300,400,500,700");
+html body {
+  font-family: 'Hind', sans-serif;
+  background: #fcfcfc;
+  color: #1C1C1C;
+  margin: 0;
+  display: flex;
+  flex-direction: column; }
+  html body h1 {
+    background: yellow;
+    font-size: 1em;
+    font-weight: 300; }
+    html body h1:before {
+      content: '[ '; }
+    html body h1:after {
+      content: '] '; }
+  html body h2 {
+    font-size: 2.2em; }
+  html body ul li a {
+    text-decoration: none; }
+  html body > nav {
+    background: red;
+    order: -1; }
+    html body > nav + nav {
+      background: grey; }
+  html body ul {
+    padding-left: 0; }
+    html body ul li {
+      list-style-type: none; }
+  html body nav {
+    display: flex; }
+    html body nav:last-of-type ul {
+      display: flex; }
+  html body main#page-pharmacy, html body main#page-laboratory, html body main#page-group {
+    width: 50%; }
+    html body main#page-pharmacy article:first-child, html body main#page-laboratory article:first-child, html body main#page-group article:first-child {
+      background: cadetblue; }
+    html body main#page-pharmacy article:nth-child(2), html body main#page-laboratory article:nth-child(2), html body main#page-group article:nth-child(2) {
+      background: green; }
+    html body main#page-pharmacy article:last-child, html body main#page-laboratory article:last-child, html body main#page-group article:last-child {
+      background: purple; }
+  html body main#page-index {
+    background: aqua; }
+  html body main#page-about article:first-child {
+    background: yellow; }
+  html body main#page-about article:nth-child(2) {
+    background: green; }
+  html body main#page-about article:last-child {
+    background: purple; }
+  html body main#page-guarantees {
+    background: antiquewhite; }
+  html body main#page-services article:first-child {
+    background: orange; }
+  html body main#page-services article:last-child {
+    background: chocolate; }
+  html body main#page-contact article {
+    background: yellowgreen; }
+    html body main#page-contact article form {
+      background: turquoise; }
+  html body > aside {
+    background: tomato; }
+    html body > aside h2, html body > aside p, html body > aside ul {
+      width: 60%;
+      margin: auto;
+      text-align: center;
+      color: #fff; }
+    html body > aside ul {
+      display: flex;
+      justify-content: center; }
+      html body > aside ul li {
+        background: white;
+        border-radius: 25px;
+        padding: 7px 20px;
+        border: none; }
+      html body > aside ul li + li {
+        background: transparent;
+        border-radius: 25px;
+        padding: 7px 20px;
+        border: 2px solid #fff; }
+  html body footer {
+    display: flex;
+    background: #1C1C1C;
+    color: #fff;
+    font-weight: 300;
+    padding: 20px; }
+    html body footer a {
+      color: #fff; }
+    html body footer section {
+      flex: 1; }
+      html body footer section:first-child {
+        flex: 2; }
+        html body footer section:first-child:before {
+          content: '';
+          background: red;
+          width: 110px;
+          height: 40px;
+          float: left;
+          margin: 0 30px; }
+        html body footer section:first-child > * {
+          font-style: normal; }
+      html body footer section:last-child {
+        display: flex;
+        font-size: 1.15em;
+        position: relative; }
+        html body footer section:last-child h2 {
+          position: absolute;
+          background: #1C1C1C;
+          padding: 3px 10px;
+          z-index: 1;
+          left: calc(50% - 76px);
+          color: #E73C4D;
+          top: -10px; }
+        html body footer section:last-child ul {
+          display: flex;
+          align-self: center;
+          border: 2px solid #E73C4D;
+          padding: 15px 20px;
+          margin: 0 auto; }
+          html body footer section:last-child ul li:first-of-type:after {
+            content: '-';
+            padding: 8px; }
+    html body footer h2, html body footer ul, html body footer address {
+      font-size: .8em; }
+    html body footer h2 {
+      margin-bottom: 0; }
+    html body footer ul {
+      margin-top: 0; }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */
