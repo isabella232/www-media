@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:300,400,500,700");
+address {
+  font-style: normal; }
+
 html body {
   font-family: 'Hind', sans-serif;
   background: #fcfcfc;
@@ -27,10 +30,8 @@ html body {
     padding-left: 0; }
     html body ul li {
       list-style-type: none; }
-  html body nav {
+  html body nav:last-of-type ul {
     display: flex; }
-    html body nav:last-of-type ul {
-      display: flex; }
   html body main#page-pharmacy, html body main#page-laboratory, html body main#page-group {
     width: 50%; }
     html body main#page-pharmacy article:first-child, html body main#page-laboratory article:first-child, html body main#page-group article:first-child {
@@ -48,15 +49,109 @@ html body {
   html body main#page-about article:last-child {
     background: purple; }
   html body main#page-guarantees {
-    background: antiquewhite; }
+    background: antiquewhite;
+    z-index: 0; }
+    html body main#page-guarantees dl {
+      width: 67%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      counter-reset: guarantee; }
+      html body main#page-guarantees dl dt, html body main#page-guarantees dl dd {
+        color: #fff;
+        width: 350px;
+        height: 350px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative; }
+      html body main#page-guarantees dl dd:hover:nth-of-type(2n+1):after, html body main#page-guarantees dl dt:hover + dd:nth-of-type(2n+1):after {
+        transform: translateX(350px); }
+      html body main#page-guarantees dl dt:hover:nth-of-type(2n):after {
+        transform: translateX(-350px); }
+      html body main#page-guarantees dl dt:nth-of-type(2n):after, html body main#page-guarantees dl dd:nth-of-type(2n+1):after {
+        content: '';
+        height: 100%;
+        top: 0;
+        background: blue;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        transition-property: transform;
+        transition-duration: 1s;
+        transition-timing-function: ease; }
+      html body main#page-guarantees dl dd {
+        background: #303030;
+        padding: 2%;
+        box-sizing: border-box; }
+        html body main#page-guarantees dl dd:nth-of-type(2n+1):after {
+          left: 0; }
+        html body main#page-guarantees dl dd:nth-of-type(2n+1) + dt {
+          margin-left: 350px; }
+      html body main#page-guarantees dl dt {
+        background: #242424;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 700; }
+        html body main#page-guarantees dl dt:before {
+          counter-increment: guarantee;
+          content: "[0" counter(guarantee) "]";
+          font-weight: 300; }
+        html body main#page-guarantees dl dt:nth-of-type(2n):after {
+          left: 0; }
   html body main#page-services article:first-child {
     background: orange; }
   html body main#page-services article:last-child {
     background: chocolate; }
   html body main#page-contact article {
-    background: yellowgreen; }
+    background: yellowgreen;
+    margin-left: 50%;
+    padding: 4% 6%; }
+    html body main#page-contact article dl {
+      display: flex;
+      flex-wrap: wrap; }
+    html body main#page-contact article dt:first-child, html body main#page-contact article dt:first-child + dd {
+      width: 50%; }
+    html body main#page-contact article dt:nth-of-type(2), html body main#page-contact article dt:nth-of-type(2) + dd {
+      width: 23%; }
+    html body main#page-contact article ul {
+      margin: 0; }
+      html body main#page-contact article ul li {
+        font-size: 1em; }
+    html body main#page-contact article dd {
+      margin-left: 0; }
+    html body main#page-contact article dt {
+      font-weight: 700;
+      order: -1;
+      padding-top: 10px; }
     html body main#page-contact article form {
-      background: turquoise; }
+      background: turquoise;
+      display: flex;
+      flex-direction: column; }
+      html body main#page-contact article form label {
+        font-size: 0; }
+        html body main#page-contact article form label input, html body main#page-contact article form label textarea {
+          background: transparent;
+          border-radius: 0;
+          padding: 15px;
+          border: 2px solid #1C1C1C;
+          color: #1C1C1C;
+          margin-bottom: 20px;
+          width: 100%;
+          box-sizing: border-box; }
+        html body main#page-contact article form label textarea {
+          min-height: 150px; }
+      html body main#page-contact article form input[type="submit"] {
+        color: #fff;
+        background: #1C1C1C;
+        border-radius: 25px;
+        padding: 12px;
+        border: none;
+        width: 20%;
+        align-self: flex-end; }
   html body > aside {
     background: tomato; }
     html body > aside h2, html body > aside p, html body > aside ul {
@@ -96,8 +191,6 @@ html body {
           height: 40px;
           float: left;
           margin: 0 30px; }
-        html body footer section:first-child > * {
-          font-style: normal; }
       html body footer section:last-child {
         display: flex;
         font-size: 1.15em;

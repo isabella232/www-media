@@ -10,6 +10,9 @@ $bkgd: #fcfcfc
   padding: $padding
   border: $border
 
+address
+  font-style: normal
+
 html
   body
     font-family: 'Hind', sans-serif
@@ -49,14 +52,9 @@ html
       li
         list-style-type: none
 
-    nav
-      display: flex
-
-      &:first-of-type
-
-      &:last-of-type
-        ul 
-          display: flex
+    nav:last-of-type
+      ul 
+        display: flex
     
     main
       &#page-pharmacy,&#page-laboratory, &#page-group
@@ -88,6 +86,80 @@ html
 
       &#page-guarantees
         background: antiquewhite
+        z-index: 0
+
+        dl 
+          width: 67%
+          margin: 0 auto
+          display: flex
+          flex-wrap: wrap
+          counter-reset: guarantee 
+
+          dt, dd
+            color: #fff
+            width: 350px
+            height: 350px
+            margin: 0
+            display: flex
+            align-items: center
+            text-align: center
+            justify-content: center
+            flex-direction: column
+            position: relative
+
+          dd:hover, dt:hover + dd
+            &:nth-of-type(2n+1):after
+              transform: translateX(350px)
+
+          dt:hover
+            &:nth-of-type(2n):after
+              transform: translateX(-350px)
+
+
+          dt:nth-of-type(2n), dd:nth-of-type(2n+1)
+            &:after
+              content: ''
+              height: 100%
+              top: 0
+              background: blue
+              position: absolute
+              width: 100%
+              z-index: -1
+              transition-property: transform
+              transition-duration: 1s
+              transition-timing-function: ease
+
+          dd
+            background: lighten($text,8%)
+            padding: 2%
+            box-sizing: border-box
+
+            &:nth-of-type(2n+1)
+              &:after
+                left: 0
+
+              
+              & + dt
+                margin-left: 350px
+
+          dt
+            background: lighten($text,3%)
+            text-transform: uppercase
+            letter-spacing: 0.1em
+            font-weight: 700
+
+
+            &:before
+              counter-increment: guarantee
+              content: "[0" counter(guarantee) "]"
+              font-weight: 300
+
+            &:nth-of-type(2n):after
+              left: 0
+              
+
+
+
 
       &#page-services
         article 
@@ -100,9 +172,56 @@ html
       &#page-contact
         article
           background: yellowgreen
+          margin-left: 50%
+          padding: 4% 6%;
+
+          dl
+            display: flex
+            flex-wrap: wrap
+
+          dt:first-child, dt:first-child + dd
+            width: 50%
+
+          dt:nth-of-type(2),dt:nth-of-type(2) + dd
+            width: 23%
+
+          ul
+            margin: 0
+
+            li
+              font-size: 1em
+
+          dd
+            margin-left: 0
+
+          dt
+            font-weight: 700
+            order: -1
+            padding-top: 10px
 
           form
             background: turquoise
+            display: flex
+            flex-direction: column
+
+            label
+              font-size: 0
+
+              input, textarea
+                +button(transparent,0,15px,2px solid $text)
+                color: $text
+                margin-bottom: 20px
+                width: 100%;
+                box-sizing: border-box;
+
+              textarea
+                min-height: 150px
+
+            input[type="submit"]
+              color: #fff
+              +button($text,25px,12px,none) 
+              width: 20%
+              align-self: flex-end
 
     > aside
       background: tomato
@@ -146,9 +265,6 @@ html
             height: 40px
             float: left
             margin: 0 30px
-            
-          > *
-            font-style: normal
 
         &:last-child
           display: flex
