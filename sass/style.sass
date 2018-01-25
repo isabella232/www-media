@@ -38,6 +38,11 @@ html
 
     h2
       font-size: 2.4em
+      margin-top: 0
+      margin-bottom: 0
+
+      & + *
+        margin-top: 0
 
     p
       font-size: 1.3em
@@ -172,32 +177,38 @@ html
             background: orange
 
           &:last-child
-            padding: 4% 6%;
             background: chocolate
+            padding: 4% 6%;
             margin-left: 50%
 
-            ul
-              li
-                +button(transparent,50px,15px,2px solid $text)
-                justify-content: center;
-                display: flex;
-                margin-bottom: 20px
+            ul li
+              +button(transparent,50px,15px,2px solid $text)
+              display: flex;
+              justify-content: center;
+              margin-bottom: 20px
 
             p
               display: flex;
               flex-direction: column;
 
       &#page-contact
+        background: url(../images/bkgd-contact.jpg) 0
+
         article
-          background: yellowgreen
+          background: #fff
           margin-left: 50%
-          padding: 4% 6%;
+          padding: 4% 10%;
 
           dl
             display: flex
             flex-wrap: wrap
+            margin-bottom: 50px
+
+            dt,dl,address, ul li a
+              font-size: 1.3em
 
           dt:first-child, dt:first-child + dd
+            padding-right: 4%
             width: 50%
 
           dt:nth-of-type(2),dt:nth-of-type(2) + dd
@@ -206,8 +217,8 @@ html
           ul
             margin: 0
 
-            li
-              font-size: 1em
+            li a
+              color: $text             
 
           dd
             margin-left: 0
@@ -218,7 +229,6 @@ html
             padding-top: 10px
 
           form
-            background: turquoise
             display: flex
             flex-direction: column
 
@@ -226,31 +236,30 @@ html
               font-size: 0
 
               input, textarea
+                box-sizing: border-box;
                 +button(transparent,0,15px,2px solid $text)
                 color: $text
                 margin-bottom: 20px
                 width: 100%;
-                box-sizing: border-box;
 
               textarea
                 min-height: 150px
 
             input[type="submit"]
-              color: #fff
-              +button($text,25px,12px,none) 
-              width: 20%
               align-self: flex-end
+              +button($text,25px,12px,none) 
+              color: #fff
+              width: 20%
 
     > aside
       background: url(../images/pourquoi-pas-vous.jpg)100%
       padding: 4%
 
-
       h2,p,ul 
-        width: 60%
+        color: #fff
         margin: auto
         text-align: center
-        color: #fff
+        width: 60%
 
       ul 
         display: flex
@@ -267,9 +276,9 @@ html
             color: #fff
         
     footer
-      display: flex
       background: $text
       color: #fff
+      display: flex
       font-weight: 300
       padding: 20px
 
@@ -280,16 +289,16 @@ html
         flex: 1
 
         &:first-child
-          position: relative
           padding: 0 3% 0 10%
+          position: relative
 
           &:before
-            content: ''
             background: url(../images/logo-footer.svg)no-repeat
-            width: 22%
+            content: ''
             height: 100%
-            position: absolute
             left: 0
+            position: absolute
+            width: 22%
 
         &:last-child
           display: flex
@@ -297,22 +306,21 @@ html
           position: relative
 
           h2
-            position: absolute
             background: $text
-            padding: 3px 10px
-            z-index: 1
-            left: calc(50% - 76px)
             color: $primary
+            left: calc(50% - 76px)
+            padding: 3px 10px
+            position: absolute
             top: -10px
+            z-index: 1
 
           ul
-            display: flex;
             align-self: center
             border: 2px solid $primary
-            padding: 15px 20px
+            display: flex;
             margin: 0 auto
+            padding: 15px 20px
             
-
             li:first-of-type
               &:after
                 content: '-'

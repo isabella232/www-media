@@ -18,7 +18,11 @@ html body {
     html body h1:after {
       content: '] '; }
   html body h2 {
-    font-size: 2.4em; }
+    font-size: 2.4em;
+    margin-top: 0;
+    margin-bottom: 0; }
+    html body h2 + * {
+      margin-top: 0; }
   html body p {
     font-size: 1.3em; }
   html body ul li a {
@@ -109,80 +113,85 @@ html body {
   html body main#page-services article:first-child {
     background: orange; }
   html body main#page-services article:last-child {
-    padding: 4% 6%;
     background: chocolate;
+    padding: 4% 6%;
     margin-left: 50%; }
     html body main#page-services article:last-child ul li {
       background: transparent;
       border-radius: 50px;
       padding: 15px;
       border: 2px solid #1C1C1C;
-      justify-content: center;
       display: flex;
+      justify-content: center;
       margin-bottom: 20px; }
       html body main#page-services article:last-child ul li a {
         color: #1C1C1C; }
     html body main#page-services article:last-child p {
       display: flex;
       flex-direction: column; }
-  html body main#page-contact article {
-    background: yellowgreen;
-    margin-left: 50%;
-    padding: 4% 6%; }
-    html body main#page-contact article dl {
-      display: flex;
-      flex-wrap: wrap; }
-    html body main#page-contact article dt:first-child, html body main#page-contact article dt:first-child + dd {
-      width: 50%; }
-    html body main#page-contact article dt:nth-of-type(2), html body main#page-contact article dt:nth-of-type(2) + dd {
-      width: 23%; }
-    html body main#page-contact article ul {
-      margin: 0; }
-      html body main#page-contact article ul li {
-        font-size: 1em; }
-    html body main#page-contact article dd {
-      margin-left: 0; }
-    html body main#page-contact article dt {
-      font-weight: 700;
-      order: -1;
-      padding-top: 10px; }
-    html body main#page-contact article form {
-      background: turquoise;
-      display: flex;
-      flex-direction: column; }
-      html body main#page-contact article form label {
-        font-size: 0; }
-        html body main#page-contact article form label input, html body main#page-contact article form label textarea {
-          background: transparent;
-          border-radius: 0;
-          padding: 15px;
-          border: 2px solid #1C1C1C;
-          color: #1C1C1C;
-          margin-bottom: 20px;
-          width: 100%;
-          box-sizing: border-box; }
-          html body main#page-contact article form label input a, html body main#page-contact article form label textarea a {
-            color: #1C1C1C; }
-        html body main#page-contact article form label textarea {
-          min-height: 150px; }
-      html body main#page-contact article form input[type="submit"] {
-        color: #fff;
-        background: #1C1C1C;
-        border-radius: 25px;
-        padding: 12px;
-        border: none;
-        width: 20%;
-        align-self: flex-end; }
-        html body main#page-contact article form input[type="submit"] a {
+  html body main#page-contact {
+    background: url(../images/bkgd-contact.jpg) 0; }
+    html body main#page-contact article {
+      background: #fff;
+      margin-left: 50%;
+      padding: 4% 10%; }
+      html body main#page-contact article dl {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px; }
+        html body main#page-contact article dl dt, html body main#page-contact article dl dl, html body main#page-contact article dl address, html body main#page-contact article dl ul li a {
+          font-size: 1.3em; }
+      html body main#page-contact article dt:first-child, html body main#page-contact article dt:first-child + dd {
+        padding-right: 4%;
+        width: 50%; }
+      html body main#page-contact article dt:nth-of-type(2), html body main#page-contact article dt:nth-of-type(2) + dd {
+        width: 23%; }
+      html body main#page-contact article ul {
+        margin: 0; }
+        html body main#page-contact article ul li a {
           color: #1C1C1C; }
+      html body main#page-contact article dd {
+        margin-left: 0; }
+      html body main#page-contact article dt {
+        font-weight: 700;
+        order: -1;
+        padding-top: 10px; }
+      html body main#page-contact article form {
+        display: flex;
+        flex-direction: column; }
+        html body main#page-contact article form label {
+          font-size: 0; }
+          html body main#page-contact article form label input, html body main#page-contact article form label textarea {
+            box-sizing: border-box;
+            background: transparent;
+            border-radius: 0;
+            padding: 15px;
+            border: 2px solid #1C1C1C;
+            color: #1C1C1C;
+            margin-bottom: 20px;
+            width: 100%; }
+            html body main#page-contact article form label input a, html body main#page-contact article form label textarea a {
+              color: #1C1C1C; }
+          html body main#page-contact article form label textarea {
+            min-height: 150px; }
+        html body main#page-contact article form input[type="submit"] {
+          align-self: flex-end;
+          background: #1C1C1C;
+          border-radius: 25px;
+          padding: 12px;
+          border: none;
+          color: #fff;
+          width: 20%; }
+          html body main#page-contact article form input[type="submit"] a {
+            color: #1C1C1C; }
   html body > aside {
     background: url(../images/pourquoi-pas-vous.jpg) 100%;
     padding: 4%; }
     html body > aside h2, html body > aside p, html body > aside ul {
-      width: 60%;
+      color: #fff;
       margin: auto;
       text-align: center;
-      color: #fff; }
+      width: 60%; }
     html body > aside ul {
       display: flex;
       justify-content: center; }
@@ -204,9 +213,9 @@ html body {
         html body > aside ul li + li a {
           color: #fff; }
   html body footer {
-    display: flex;
     background: #1C1C1C;
     color: #fff;
+    display: flex;
     font-weight: 300;
     padding: 20px; }
     html body footer a {
@@ -214,33 +223,33 @@ html body {
     html body footer section {
       flex: 1; }
       html body footer section:first-child {
-        position: relative;
-        padding: 0 3% 0 10%; }
+        padding: 0 3% 0 10%;
+        position: relative; }
         html body footer section:first-child:before {
-          content: '';
           background: url(../images/logo-footer.svg) no-repeat;
-          width: 22%;
+          content: '';
           height: 100%;
+          left: 0;
           position: absolute;
-          left: 0; }
+          width: 22%; }
       html body footer section:last-child {
         display: flex;
         font-size: 1.15em;
         position: relative; }
         html body footer section:last-child h2 {
-          position: absolute;
           background: #1C1C1C;
-          padding: 3px 10px;
-          z-index: 1;
-          left: calc(50% - 76px);
           color: #E73C4D;
-          top: -10px; }
+          left: calc(50% - 76px);
+          padding: 3px 10px;
+          position: absolute;
+          top: -10px;
+          z-index: 1; }
         html body footer section:last-child ul {
-          display: flex;
           align-self: center;
           border: 2px solid #E73C4D;
-          padding: 15px 20px;
-          margin: 0 auto; }
+          display: flex;
+          margin: 0 auto;
+          padding: 15px 20px; }
           html body footer section:last-child ul li:first-of-type:after {
             content: '-';
             padding: 8px; }
