@@ -18,9 +18,12 @@ html body {
     html body h1:after {
       content: '] '; }
   html body h2 {
-    font-size: 2.2em; }
+    font-size: 2.4em; }
+  html body p {
+    font-size: 1.3em; }
   html body ul li a {
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 1.1em; }
   html body > nav {
     background: red;
     order: -1; }
@@ -117,6 +120,8 @@ html body {
       justify-content: center;
       display: flex;
       margin-bottom: 20px; }
+      html body main#page-services article:last-child ul li a {
+        color: #1C1C1C; }
     html body main#page-services article:last-child p {
       display: flex;
       flex-direction: column; }
@@ -156,6 +161,8 @@ html body {
           margin-bottom: 20px;
           width: 100%;
           box-sizing: border-box; }
+          html body main#page-contact article form label input a, html body main#page-contact article form label textarea a {
+            color: #1C1C1C; }
         html body main#page-contact article form label textarea {
           min-height: 150px; }
       html body main#page-contact article form input[type="submit"] {
@@ -166,8 +173,11 @@ html body {
         border: none;
         width: 20%;
         align-self: flex-end; }
+        html body main#page-contact article form input[type="submit"] a {
+          color: #1C1C1C; }
   html body > aside {
-    background: tomato; }
+    background: url(../images/pourquoi-pas-vous.jpg) 100%;
+    padding: 4%; }
     html body > aside h2, html body > aside p, html body > aside ul {
       width: 60%;
       margin: auto;
@@ -180,12 +190,19 @@ html body {
         background: white;
         border-radius: 25px;
         padding: 7px 20px;
-        border: none; }
+        border: 2px solid #fff;
+        margin: 15px 10px; }
+        html body > aside ul li a {
+          color: #1C1C1C; }
       html body > aside ul li + li {
         background: transparent;
         border-radius: 25px;
         padding: 7px 20px;
         border: 2px solid #fff; }
+        html body > aside ul li + li a {
+          color: #1C1C1C; }
+        html body > aside ul li + li a {
+          color: #fff; }
   html body footer {
     display: flex;
     background: #1C1C1C;
@@ -197,14 +214,15 @@ html body {
     html body footer section {
       flex: 1; }
       html body footer section:first-child {
-        flex: 2; }
+        position: relative;
+        padding: 0 3% 0 10%; }
         html body footer section:first-child:before {
           content: '';
-          background: red;
-          width: 110px;
-          height: 40px;
-          float: left;
-          margin: 0 30px; }
+          background: url(../images/logo-footer.svg) no-repeat;
+          width: 22%;
+          height: 100%;
+          position: absolute;
+          left: 0; }
       html body footer section:last-child {
         display: flex;
         font-size: 1.15em;
