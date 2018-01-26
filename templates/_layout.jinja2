@@ -27,7 +27,7 @@
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.sass.css') }}" />
   </head>
 
-  <body>
+  <body id="page-{{ page }}">
     <h1>{{ PAGES[page] }}</h1>
 
     <nav>
@@ -50,7 +50,7 @@
       </ul>
     </nav>
 
-    <main id="page-{{ page }}">
+    <main>
       {% block content %}{% endblock content %}
     </main>
 

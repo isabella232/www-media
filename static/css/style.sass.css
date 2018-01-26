@@ -39,129 +39,174 @@ html body {
       list-style-type: none; }
   html body nav:last-of-type ul {
     display: flex; }
-  html body main#page-pharmacy, html body main#page-laboratory, html body main#page-group {
+  html body#page-pharmacy main, html body#page-laboratory html body#page-group main {
     width: 50%; }
-    html body main#page-pharmacy article:first-child, html body main#page-laboratory article:first-child, html body main#page-group article:first-child {
+    html body#page-pharmacy main article:first-child, html body#page-laboratory html body#page-group main article:first-child {
       background: cadetblue; }
-    html body main#page-pharmacy article:nth-child(2), html body main#page-laboratory article:nth-child(2), html body main#page-group article:nth-child(2) {
+    html body#page-pharmacy main article:nth-child(2), html body#page-laboratory html body#page-group main article:nth-child(2) {
       background: green; }
-    html body main#page-pharmacy article:last-child, html body main#page-laboratory article:last-child, html body main#page-group article:last-child {
+    html body#page-pharmacy main article:last-child, html body#page-laboratory html body#page-group main article:last-child {
       background: purple; }
-  html body main#page-index {
+  html body#page-about main article:first-of-type, html body#page-services main article:last-of-type {
+    background: #fff;
+    padding: 4% 6%;
+    margin-left: 50%;
+    position: relative; }
+    html body#page-about main article:first-of-type:before, html body#page-services main article:last-of-type:before {
+      background-size: cover;
+      content: '';
+      height: 100%;
+      left: -100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1; }
+  html body#page-index {
     background: aqua; }
-  html body main#page-about article:first-child {
-    background: yellow;
-    margin-left: 50%; }
-  html body main#page-about article:nth-child(2) {
+  html body#page-about article:first-child:before {
+    background: url(../images/bkgd-agency.jpg); }
+  html body#page-about article:nth-child(2) {
     background: green; }
-  html body main#page-about article:last-child {
+    html body#page-about article:nth-child(2) dl {
+      display: flex;
+      flex-wrap: wrap; }
+      html body#page-about article:nth-child(2) dl dt, html body#page-about article:nth-child(2) dl dd {
+        display: block;
+        width: 300px;
+        height: 300px;
+        background: blue;
+        margin: 0; }
+      html body#page-about article:nth-child(2) dl dt:hover + dd, html body#page-about article:nth-child(2) dl dd:hover {
+        display: block; }
+      html body#page-about article:nth-child(2) dl dd {
+        margin-left: -275px;
+        margin-top: 25px;
+        margin-right: 25px;
+        display: none;
+        background: red;
+        width: 250px;
+        height: 250px; }
+  html body#page-about article:last-child {
     background: purple; }
-  html body main#page-guarantees {
-    background: antiquewhite;
+  html body#page-guarantees {
     z-index: 0; }
-    html body main#page-guarantees dl {
-      width: 67%;
-      margin: 0 auto;
+    html body#page-guarantees dl {
+      counter-reset: guarantee;
       display: flex;
       flex-wrap: wrap;
-      counter-reset: guarantee; }
-      html body main#page-guarantees dl dt, html body main#page-guarantees dl dd {
+      margin: 30px auto 70px;
+      max-width: 1024px; }
+      html body#page-guarantees dl dt, html body#page-guarantees dl dd {
         color: #fff;
-        width: 350px;
-        height: 350px;
-        margin: 0;
         display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
         flex-direction: column;
-        position: relative; }
-      html body main#page-guarantees dl dd:hover:nth-of-type(2n+1):after, html body main#page-guarantees dl dt:hover + dd:nth-of-type(2n+1):after {
-        transform: translateX(350px); }
-      html body main#page-guarantees dl dt:hover:nth-of-type(2n):after {
-        transform: translateX(-350px); }
-      html body main#page-guarantees dl dt:nth-of-type(2n):after, html body main#page-guarantees dl dd:nth-of-type(2n+1):after {
+        height: 335px;
+        justify-content: center;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        width: 335px; }
+      html body#page-guarantees dl dd {
+        background: #303030;
+        box-sizing: border-box;
+        padding: 2%; }
+        html body#page-guarantees dl dd:nth-of-type(2n+1):after {
+          left: 0; }
+        html body#page-guarantees dl dd:nth-of-type(2n+1) + dt {
+          margin-left: 335px; }
+      html body#page-guarantees dl dd:hover:nth-of-type(2n+1):after, html body#page-guarantees dl dt:hover + dd:nth-of-type(2n+1):after {
+        transform: translateX(335px); }
+      html body#page-guarantees dl dt:hover:nth-of-type(2n):after {
+        transform: translateX(-335px); }
+      html body#page-guarantees dl dt:nth-of-type(2n):after, html body#page-guarantees dl dd:nth-of-type(2n+1):after {
         content: '';
         height: 100%;
-        top: 0;
-        background: blue;
         position: absolute;
-        width: 100%;
-        z-index: -1;
-        transition-property: transform;
+        top: 0;
         transition-duration: 1s;
-        transition-timing-function: ease; }
-      html body main#page-guarantees dl dd {
-        background: #303030;
-        padding: 2%;
-        box-sizing: border-box; }
-        html body main#page-guarantees dl dd:nth-of-type(2n+1):after {
-          left: 0; }
-        html body main#page-guarantees dl dd:nth-of-type(2n+1) + dt {
-          margin-left: 350px; }
-      html body main#page-guarantees dl dt {
+        transition-property: transform;
+        transition-timing-function: ease;
+        width: 100%;
+        z-index: -1; }
+      html body#page-guarantees dl dt {
         background: #242424;
-        text-transform: uppercase;
+        font-weight: 700;
         letter-spacing: 0.1em;
-        font-weight: 700; }
-        html body main#page-guarantees dl dt:before {
-          counter-increment: guarantee;
+        text-transform: uppercase; }
+        html body#page-guarantees dl dt:before {
           content: "[0" counter(guarantee) "]";
+          counter-increment: guarantee;
           font-weight: 300; }
-        html body main#page-guarantees dl dt:nth-of-type(2n):after {
+        html body#page-guarantees dl dt:nth-of-type(2n):after {
           left: 0; }
-  html body main#page-services article:first-child {
+        html body#page-guarantees dl dt#innovate + dd:after {
+          background: #fff url(../images/guarantees/innovation.svg) no-repeat 50%;
+          background-size: 40%; }
+        html body#page-guarantees dl dt#visibility:after {
+          background: #fff url(../images/guarantees/visibility.svg) no-repeat 50%;
+          background-size: 40%; }
+        html body#page-guarantees dl dt#expertise + dd:after {
+          background: #fff url(../images/guarantees/expertise.svg) no-repeat 50%;
+          background-size: 40%; }
+        html body#page-guarantees dl dt#guarantee:after {
+          background: #fff url(../images/guarantees/guarantee.svg) no-repeat 50%;
+          background-size: 40%; }
+        html body#page-guarantees dl dt#result + dd:after {
+          background: #fff url(../images/guarantees/result.svg) no-repeat 50%;
+          background-size: 40%; }
+        html body#page-guarantees dl dt#accompaniment:after {
+          background: #fff url(../images/guarantees/accompaniment.svg) no-repeat 50%;
+          background-size: 40%; }
+  html body#page-services article:first-child {
     background: orange; }
-  html body main#page-services article:last-child {
-    background: chocolate;
-    padding: 4% 6%;
-    margin-left: 50%; }
-    html body main#page-services article:last-child ul li {
-      background: transparent;
-      border-radius: 50px;
-      padding: 15px;
-      border: 2px solid #1C1C1C;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px; }
-      html body main#page-services article:last-child ul li a {
-        color: #1C1C1C; }
-    html body main#page-services article:last-child p {
-      display: flex;
-      flex-direction: column; }
-  html body main#page-contact {
+  html body#page-services article:last-child:before {
+    background: url(../images/bkgd-targets.jpg); }
+  html body#page-services article:last-child ul li {
+    background: transparent;
+    border-radius: 50px;
+    padding: 15px;
+    border: 2px solid #1C1C1C;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; }
+    html body#page-services article:last-child ul li a {
+      color: #1C1C1C; }
+  html body#page-services article:last-child p {
+    display: flex;
+    flex-direction: column; }
+  html body#page-contact {
     background: url(../images/bkgd-contact.jpg) 0; }
-    html body main#page-contact article {
+    html body#page-contact article {
       background: #fff;
       margin-left: 50%;
       padding: 4% 10%; }
-      html body main#page-contact article dl {
+      html body#page-contact article dl {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 50px; }
-        html body main#page-contact article dl dt, html body main#page-contact article dl dl, html body main#page-contact article dl address, html body main#page-contact article dl ul li a {
+        html body#page-contact article dl dt, html body#page-contact article dl dl, html body#page-contact article dl address, html body#page-contact article dl ul li a {
           font-size: 1.3em; }
-      html body main#page-contact article dt:first-child, html body main#page-contact article dt:first-child + dd {
+      html body#page-contact article dt:first-child, html body#page-contact article dt:first-child + dd {
         padding-right: 4%;
         width: 50%; }
-      html body main#page-contact article dt:nth-of-type(2), html body main#page-contact article dt:nth-of-type(2) + dd {
+      html body#page-contact article dt:nth-of-type(2), html body#page-contact article dt:nth-of-type(2) + dd {
         width: 23%; }
-      html body main#page-contact article ul {
+      html body#page-contact article ul {
         margin: 0; }
-        html body main#page-contact article ul li a {
+        html body#page-contact article ul li a {
           color: #1C1C1C; }
-      html body main#page-contact article dd {
+      html body#page-contact article dd {
         margin-left: 0; }
-      html body main#page-contact article dt {
+      html body#page-contact article dt {
         font-weight: 700;
         order: -1;
         padding-top: 10px; }
-      html body main#page-contact article form {
+      html body#page-contact article form {
         display: flex;
         flex-direction: column; }
-        html body main#page-contact article form label {
+        html body#page-contact article form label {
           font-size: 0; }
-          html body main#page-contact article form label input, html body main#page-contact article form label textarea {
+          html body#page-contact article form label input, html body#page-contact article form label textarea {
             box-sizing: border-box;
             background: transparent;
             border-radius: 0;
@@ -170,11 +215,11 @@ html body {
             color: #1C1C1C;
             margin-bottom: 20px;
             width: 100%; }
-            html body main#page-contact article form label input a, html body main#page-contact article form label textarea a {
+            html body#page-contact article form label input a, html body#page-contact article form label textarea a {
               color: #1C1C1C; }
-          html body main#page-contact article form label textarea {
+          html body#page-contact article form label textarea {
             min-height: 150px; }
-        html body main#page-contact article form input[type="submit"] {
+        html body#page-contact article form input[type="submit"] {
           align-self: flex-end;
           background: #1C1C1C;
           border-radius: 25px;
@@ -182,7 +227,7 @@ html body {
           border: none;
           color: #fff;
           width: 20%; }
-          html body main#page-contact article form input[type="submit"] a {
+          html body#page-contact article form input[type="submit"] a {
             color: #1C1C1C; }
   html body > aside {
     background: url(../images/pourquoi-pas-vous.jpg) 100%;

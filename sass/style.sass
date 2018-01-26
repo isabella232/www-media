@@ -67,9 +67,9 @@ html
     nav:last-of-type
       ul 
         display: flex
-    
-    main
-      &#page-pharmacy,&#page-laboratory, &#page-group
+
+    &#page-pharmacy, &#page-laboratory &#page-group
+      main
         width: 50%
 
         article 
@@ -82,174 +82,231 @@ html
           &:last-child
             background: purple
 
-      &#page-index
-        background: aqua
+    &#page-about main article:first-of-type, &#page-services main article:last-of-type
+      background: #fff
+      padding: 4% 6%;
+      margin-left: 50%
+      position: relative
 
-      &#page-about
-        article 
-          &:first-child
-            background: yellow
-            margin-left: 50%
+      &:before
+        background-size: cover;
+        content: ''
+        height: 100%;
+        left: -100%
+        position: absolute
+        top: 0
+        width: 100%;
+        z-index: -1
 
-          &:nth-child(2)
-            background: green
+    &#page-index
+      background: aqua
 
-          &:last-child
-            background: purple
+    &#page-about
+      article 
+        &:first-child:before
+          background: url(../images/bkgd-agency.jpg)
 
-      &#page-guarantees
-        background: antiquewhite
-        z-index: 0
-
-        dl 
-          width: 67%
-          margin: 0 auto
-          display: flex
-          flex-wrap: wrap
-          counter-reset: guarantee 
-
-          dt, dd
-            color: #fff
-            width: 350px
-            height: 350px
-            margin: 0
-            display: flex
-            align-items: center
-            text-align: center
-            justify-content: center
-            flex-direction: column
-            position: relative
-
-          dd:hover, dt:hover + dd
-            &:nth-of-type(2n+1):after
-              transform: translateX(350px)
-
-          dt:hover
-            &:nth-of-type(2n):after
-              transform: translateX(-350px)
-
-
-          dt:nth-of-type(2n), dd:nth-of-type(2n+1)
-            &:after
-              content: ''
-              height: 100%
-              top: 0
-              background: blue
-              position: absolute
-              width: 100%
-              z-index: -1
-              transition-property: transform
-              transition-duration: 1s
-              transition-timing-function: ease
-
-          dd
-            background: lighten($text,8%)
-            padding: 2%
-            box-sizing: border-box
-
-            &:nth-of-type(2n+1)
-              &:after
-                left: 0
-
-              
-              & + dt
-                margin-left: 350px
-
-          dt
-            background: lighten($text,3%)
-            text-transform: uppercase
-            letter-spacing: 0.1em
-            font-weight: 700
-
-
-            &:before
-              counter-increment: guarantee
-              content: "[0" counter(guarantee) "]"
-              font-weight: 300
-
-            &:nth-of-type(2n):after
-              left: 0
-              
-
-      &#page-services
-        article 
-          &:first-child
-            background: orange
-
-          &:last-child
-            background: chocolate
-            padding: 4% 6%;
-            margin-left: 50%
-
-            ul li
-              +button(transparent,50px,15px,2px solid $text)
-              display: flex;
-              justify-content: center;
-              margin-bottom: 20px
-
-            p
-              display: flex;
-              flex-direction: column;
-
-      &#page-contact
-        background: url(../images/bkgd-contact.jpg) 0
-
-        article
-          background: #fff
-          margin-left: 50%
-          padding: 4% 10%;
+        &:nth-child(2)
+          background: green
 
           dl
             display: flex
             flex-wrap: wrap
-            margin-bottom: 50px
 
-            dt,dl,address, ul li a
-              font-size: 1.3em
+            dt,dd
+             display: block
+             width: 300px
+             height: 300px
+             background: blue
+             margin: 0
+            
+            dt:hover + dd, dd:hover
+              display: block
 
-          dt:first-child, dt:first-child + dd
-            padding-right: 4%
-            width: 50%
+            dd
+              margin-left: -275px
+              margin-top: 25px
+              margin-right: 25px
+              display: none
+              background: red
+              width: 250px
+              height: 250px
 
-          dt:nth-of-type(2),dt:nth-of-type(2) + dd
-            width: 23%
+        &:last-child
+          background: purple
 
-          ul
-            margin: 0
+    &#page-guarantees
+      z-index: 0
 
-            li a
-              color: $text             
+      dl 
+        counter-reset: guarantee 
+        display: flex
+        flex-wrap: wrap
+        margin: 30px auto 70px
+        max-width: 1024px
 
-          dd
-            margin-left: 0
+        dt, dd
+          color: #fff
+          display: flex
+          flex-direction: column
+          height: 335px
+          justify-content: center
+          margin: 0
+          position: relative
+          text-align: center
+          width: 335px
 
-          dt
-            font-weight: 700
-            order: -1
-            padding-top: 10px
+        dd
+          background: lighten($text,8%)
+          box-sizing: border-box
+          padding: 2%
 
-          form
-            display: flex
-            flex-direction: column
+          &:nth-of-type(2n+1)
+            &:after
+              left: 0
+ 
+            & + dt
+              margin-left: 335px
 
-            label
-              font-size: 0
+        dd:hover, dt:hover + dd
+          &:nth-of-type(2n+1):after
+            transform: translateX(335px)
 
-              input, textarea
-                box-sizing: border-box;
-                +button(transparent,0,15px,2px solid $text)
-                color: $text
-                margin-bottom: 20px
-                width: 100%;
+        dt:hover
+          &:nth-of-type(2n):after
+            transform: translateX(-335px)
 
-              textarea
-                min-height: 150px
+        dt:nth-of-type(2n), dd:nth-of-type(2n+1)
+          &:after
+            content: ''
+            height: 100%
+            position: absolute
+            top: 0
+            transition-duration: 1s
+            transition-property: transform
+            transition-timing-function: ease
+            width: 100%
+            z-index: -1
 
-            input[type="submit"]
-              align-self: flex-end
-              +button($text,25px,12px,none) 
-              color: #fff
-              width: 20%
+        dt
+          background: lighten($text,3%)
+          font-weight: 700
+          letter-spacing: 0.1em
+          text-transform: uppercase
+
+          &:before
+            content: "[0" counter(guarantee) "]"
+            counter-increment: guarantee
+            font-weight: 300
+
+          &:nth-of-type(2n):after
+            left: 0
+
+          &#innovate + dd:after
+            background: #fff url(../images/guarantees/innovation.svg)no-repeat 50%
+            background-size: 40%
+
+          &#visibility:after
+            background: #fff url(../images/guarantees/visibility.svg)no-repeat 50%
+            background-size: 40%
+
+          &#expertise + dd:after
+            background: #fff url(../images/guarantees/expertise.svg)no-repeat 50%
+            background-size: 40%
+
+          &#guarantee:after
+            background: #fff url(../images/guarantees/guarantee.svg)no-repeat 50%
+            background-size: 40%
+
+          &#result + dd:after
+            background: #fff url(../images/guarantees/result.svg)no-repeat 50%
+            background-size: 40%
+
+          &#accompaniment:after
+            background: #fff url(../images/guarantees/accompaniment.svg)no-repeat 50%
+            background-size: 40%
+
+              
+
+    &#page-services
+      article 
+        &:first-child
+          background: orange
+
+        &:last-child
+
+          &:before
+            background: url(../images/bkgd-targets.jpg)
+
+          ul li
+            +button(transparent,50px,15px,2px solid $text)
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px
+
+          p
+            display: flex;
+            flex-direction: column;
+
+    &#page-contact
+      background: url(../images/bkgd-contact.jpg) 0
+
+      article
+        background: #fff
+        margin-left: 50%
+        padding: 4% 10%;
+
+        dl
+          display: flex
+          flex-wrap: wrap
+          margin-bottom: 50px
+
+          dt,dl,address, ul li a
+            font-size: 1.3em
+
+        dt:first-child, dt:first-child + dd
+          padding-right: 4%
+          width: 50%
+
+        dt:nth-of-type(2),dt:nth-of-type(2) + dd
+          width: 23%
+
+        ul
+          margin: 0
+
+          li a
+            color: $text             
+
+        dd
+          margin-left: 0
+
+        dt
+          font-weight: 700
+          order: -1
+          padding-top: 10px
+
+        form
+          display: flex
+          flex-direction: column
+
+          label
+            font-size: 0
+
+            input, textarea
+              box-sizing: border-box;
+              +button(transparent,0,15px,2px solid $text)
+              color: $text
+              margin-bottom: 20px
+              width: 100%;
+
+            textarea
+              min-height: 150px
+
+          input[type="submit"]
+            align-self: flex-end
+            +button($text,25px,12px,none) 
+            color: #fff
+            width: 20%
 
     > aside
       background: url(../images/pourquoi-pas-vous.jpg)100%
