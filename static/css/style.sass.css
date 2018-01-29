@@ -39,14 +39,15 @@ html body {
       list-style-type: none; }
   html body nav:last-of-type ul {
     display: flex; }
-  html body#page-pharmacy main, html body#page-laboratory html body#page-group main {
+  html body#page-about article:nth-child(2) h2, html body#page-about article:nth-child(2) h2 + p {
+    text-align: center; }
+  html body#page-pharmacy main article:first-child, html body#page-laboratory main article:first-child, html body#page-group main article:first-child {
+    background: cadetblue;
     width: 50%; }
-    html body#page-pharmacy main article:first-child, html body#page-laboratory html body#page-group main article:first-child {
-      background: cadetblue; }
-    html body#page-pharmacy main article:nth-child(2), html body#page-laboratory html body#page-group main article:nth-child(2) {
-      background: green; }
-    html body#page-pharmacy main article:last-child, html body#page-laboratory html body#page-group main article:last-child {
-      background: purple; }
+  html body#page-pharmacy main article:nth-child(2), html body#page-laboratory main article:nth-child(2), html body#page-group main article:nth-child(2) {
+    background: green; }
+  html body#page-pharmacy main article:last-child, html body#page-laboratory main article:last-child, html body#page-group main article:last-child {
+    background: purple; }
   html body#page-about main article:first-of-type, html body#page-services main article:last-of-type {
     background: #fff;
     padding: 4% 6%;
@@ -65,29 +66,83 @@ html body {
     background: aqua; }
   html body#page-about article:first-child:before {
     background: url(../images/bkgd-agency.jpg); }
-  html body#page-about article:nth-child(2) {
-    background: green; }
-    html body#page-about article:nth-child(2) dl {
+  html body#page-about article #members {
+    display: flex;
+    flex-wrap: wrap; }
+    html body#page-about article #members > * {
+      height: 300px;
+      margin: 0;
+      width: 300px; }
+    html body#page-about article #members section {
       display: flex;
-      flex-wrap: wrap; }
-      html body#page-about article:nth-child(2) dl dt, html body#page-about article:nth-child(2) dl dd {
-        display: block;
-        width: 300px;
-        height: 300px;
-        background: blue;
-        margin: 0; }
-      html body#page-about article:nth-child(2) dl dt:hover + dd, html body#page-about article:nth-child(2) dl dd:hover {
-        display: block; }
-      html body#page-about article:nth-child(2) dl dd {
-        margin-left: -275px;
-        margin-top: 25px;
-        margin-right: 25px;
-        display: none;
-        background: red;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative; }
+      html body#page-about article #members section:after {
+        background: rgba(231, 60, 77, 0.6);
+        content: '';
+        height: 250px;
+        left: 25px;
+        opacity: 0;
+        position: absolute;
+        top: 25px;
+        transform: scale(0);
+        transition: opacity 0.35s, transform 0.35s;
         width: 250px;
-        height: 250px; }
-  html body#page-about article:last-child {
-    background: purple; }
+        z-index: -1; }
+      html body#page-about article #members section h4, html body#page-about article #members section p {
+        opacity: 0;
+        padding: 0 12%;
+        transform: scale(0);
+        transition: opacity 0.35s, transform 0.35s;
+        color: #fff; }
+      html body#page-about article #members section h4 {
+        font-size: 1.2em;
+        font-weight: 400;
+        line-height: 2.2em;
+        margin: 0; }
+        html body#page-about article #members section h4:after {
+          background: #fff;
+          content: '';
+          display: block;
+          height: 2px;
+          width: 25px; }
+      html body#page-about article #members section p {
+        font-size: 1em;
+        font-style: italic;
+        line-height: 1.2em;
+        padding-bottom: 20px; }
+      html body#page-about article #members section img {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 300px;
+        z-index: -1; }
+      html body#page-about article #members section:hover:after, html body#page-about article #members section:hover h4, html body#page-about article #members section:hover p, html body#page-about article #members section:focus:after, html body#page-about article #members section:focus h4, html body#page-about article #members section:focus p {
+        opacity: 1;
+        transform: scale(1); }
+  html body#page-about article:last-child ul {
+    width: 50%;
+    margin-left: 50%;
+    display: flex;
+    flex-wrap: wrap; }
+    html body#page-about article:last-child ul li {
+      background: #fff;
+      height: 300px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      letter-spacing: 0.1em; }
+      html body#page-about article:last-child ul li:nth-child(odd) {
+        border-right: 1px solid #f2f2f2;
+        box-sizing: border-box; }
+      html body#page-about article:last-child ul li:nth-child(n+3) {
+        border-top: 1px solid #f2f2f2; }
+      html body#page-about article:last-child ul li strong {
+        font-size: 2.4em; }
   html body#page-guarantees {
     z-index: 0; }
     html body#page-guarantees dl {

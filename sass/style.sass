@@ -68,19 +68,22 @@ html
       ul 
         display: flex
 
-    &#page-pharmacy, &#page-laboratory &#page-group
-      main
-        width: 50%
+    &#page-about article:nth-child(2)
+      h2, h2 + p
+        text-align: center
 
-        article 
-          &:first-child
-            background: cadetblue
 
-          &:nth-child(2)
-            background: green
+    &#page-pharmacy, &#page-laboratory, &#page-group
+      main article 
+        &:first-child
+          background: cadetblue
+          width: 50%
 
-          &:last-child
-            background: purple
+        &:nth-child(2)
+          background: green
+
+        &:last-child
+          background: purple
 
     &#page-about main article:first-of-type, &#page-services main article:last-of-type
       background: #fff
@@ -106,34 +109,99 @@ html
         &:first-child:before
           background: url(../images/bkgd-agency.jpg)
 
-        &:nth-child(2)
-          background: green
+        #members
+          display: flex
+          flex-wrap: wrap
 
-          dl
+          > *
+            height: 300px
+            margin: 0
+            width: 300px
+
+          section
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            position: relative
+
+            &:after
+              background: rgba($primary,0.6)
+              content: ''
+              height: 250px
+              left: 25px
+              opacity: 0
+              position: absolute
+              top: 25px
+              transform: scale(0)
+              transition: opacity 0.35s, transform 0.35s
+              width: 250px
+              z-index: -1
+
+            h4, p
+              opacity: 0
+              padding: 0 12%
+              transform: scale(0)
+              transition: opacity 0.35s, transform 0.35s
+              color: #fff
+
+            h4
+              font-size: 1.2em
+              font-weight: 400
+              line-height: 2.2em
+              margin: 0
+
+              &:after
+                background: #fff
+                content: ''
+                display: block
+                height: 2px
+                width: 25px
+
+            p
+              font-size: 1em
+              font-style: italic
+              line-height: 1.2em
+              padding-bottom: 20px
+
+            img
+              left: 0
+              position: absolute
+              top: 0
+              width: 300px
+              z-index: -1
+
+            &:hover, &:focus
+              &:after,h4,p
+                opacity: 1
+                transform: scale(1)
+
+        &:last-child
+          ul
+            width: 50%
+            margin-left: 50%
             display: flex
             flex-wrap: wrap
 
-            dt,dd
-             display: block
-             width: 300px
-             height: 300px
-             background: blue
-             margin: 0
-            
-            dt:hover + dd, dd:hover
-              display: block
+            li 
+              background: #fff
+              height: 300px
+              width: 50%
+              display: flex
+              flex-direction: column
+              align-items: center
+              justify-content: center
+              text-transform: uppercase
+              letter-spacing: 0.1em;
 
-            dd
-              margin-left: -275px
-              margin-top: 25px
-              margin-right: 25px
-              display: none
-              background: red
-              width: 250px
-              height: 250px
+              &:nth-child(odd)
+                border-right: 1px solid darken($bkgd,4%)
+                box-sizing: border-box
 
-        &:last-child
-          background: purple
+              &:nth-child(n+3)
+                border-top: 1px solid darken($bkgd,4%)
+
+              strong
+                font-size: 2.4em
 
     &#page-guarantees
       z-index: 0
