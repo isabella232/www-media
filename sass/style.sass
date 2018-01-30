@@ -418,97 +418,97 @@ html
     &#page-guarantees
       z-index: 0
 
-      article h2
-        padding-bottom: 20px
+      article 
+        h2
+          padding-bottom: 20px
 
-      dl 
-        counter-reset: guarantee 
-        display: flex
-        flex-wrap: wrap
-        margin-top: 30px
-        margin-bottom: 70px
-
-
-        dt, dd
-          color: #fff
+        dl
+          counter-reset: guarantee 
           display: flex
-          flex-direction: column
-          height: 335px
-          justify-content: center
-          margin: 0
-          position: relative
-          text-align: center
-          width: 335px
+          flex-wrap: wrap
+          margin-top: 30px
+          margin-bottom: 70px
 
-        dd
-          background: lighten($text,8%)
-          box-sizing: border-box
-          padding: 2%
+          dt, dd
+            color: #fff
+            display: flex
+            flex-direction: column
+            height: 335px
+            justify-content: center
+            margin: 0
+            position: relative
+            text-align: center
+            width: 335px
 
-          &:nth-of-type(2n+1)
+          dd
+            background: lighten($text,8%)
+            box-sizing: border-box
+            padding: 2%
+
+            &:nth-of-type(2n+1)
+              &:after
+                left: 0
+   
+              & + dt
+                margin-left: 335px
+
+          dd:hover, dt:hover + dd
+            &:nth-of-type(2n+1):after
+              transform: translateX(335px)
+
+          dt:hover
+            &:nth-of-type(2n):after
+              transform: translateX(-335px)
+
+          dt:nth-of-type(2n), dd:nth-of-type(2n+1)
             &:after
+              content: ''
+              height: 100%
+              position: absolute
+              top: 0
+              transition-duration: 1s
+              transition-property: transform
+              transition-timing-function: ease
+              width: 100%
+              z-index: -1
+
+          dt
+            background: lighten($text,3%)
+            font-weight: 700
+            letter-spacing: 0.1em
+            text-transform: uppercase
+
+            &:before
+              content: "[0" counter(guarantee) "]"
+              counter-increment: guarantee
+              font-weight: 300
+
+            &:nth-of-type(2n):after
               left: 0
- 
-            & + dt
-              margin-left: 335px
 
-        dd:hover, dt:hover + dd
-          &:nth-of-type(2n+1):after
-            transform: translateX(335px)
+            &#innovate + dd:after
+              background: #fff url(../images/guarantees/innovation.svg)no-repeat 50%
+              background-size: 40%
 
-        dt:hover
-          &:nth-of-type(2n):after
-            transform: translateX(-335px)
+            &#visibility:after
+              background: #fff url(../images/guarantees/visibility.svg)no-repeat 50%
+              background-size: 40%
 
-        dt:nth-of-type(2n), dd:nth-of-type(2n+1)
-          &:after
-            content: ''
-            height: 100%
-            position: absolute
-            top: 0
-            transition-duration: 1s
-            transition-property: transform
-            transition-timing-function: ease
-            width: 100%
-            z-index: -1
+            &#expertise + dd:after
+              background: #fff url(../images/guarantees/expertise.svg)no-repeat 50%
+              background-size: 40%
 
-        dt
-          background: lighten($text,3%)
-          font-weight: 700
-          letter-spacing: 0.1em
-          text-transform: uppercase
+            &#guarantee:after
+              background: #fff url(../images/guarantees/guarantee.svg)no-repeat 50%
+              background-size: 40%
 
-          &:before
-            content: "[0" counter(guarantee) "]"
-            counter-increment: guarantee
-            font-weight: 300
+            &#result + dd:after
+              background: #fff url(../images/guarantees/result.svg)no-repeat 50%
+              background-size: 40%
 
-          &:nth-of-type(2n):after
-            left: 0
-
-          &#innovate + dd:after
-            background: #fff url(../images/guarantees/innovation.svg)no-repeat 50%
-            background-size: 40%
-
-          &#visibility:after
-            background: #fff url(../images/guarantees/visibility.svg)no-repeat 50%
-            background-size: 40%
-
-          &#expertise + dd:after
-            background: #fff url(../images/guarantees/expertise.svg)no-repeat 50%
-            background-size: 40%
-
-          &#guarantee:after
-            background: #fff url(../images/guarantees/guarantee.svg)no-repeat 50%
-            background-size: 40%
-
-          &#result + dd:after
-            background: #fff url(../images/guarantees/result.svg)no-repeat 50%
-            background-size: 40%
-
-          &#accompaniment:after
-            background: #fff url(../images/guarantees/accompaniment.svg)no-repeat 50%
-            background-size: 40%
+            &#accompaniment:after
+              background: #fff url(../images/guarantees/accompaniment.svg)no-repeat 50%
+              background-size: 40%
 
 
     &#page-services
