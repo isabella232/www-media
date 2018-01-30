@@ -16,6 +16,30 @@ $bkgd: #fcfcfc
 address
   font-style: normal
 
+form
+  display: flex
+  flex-direction: column
+  box-sizing: border-box;
+
+  label
+    font-size: 0
+
+    input, textarea, select
+      box-sizing: border-box;
+      +button(transparent,0,15px,2px solid $text)
+      color: $text
+      margin-bottom: 20px
+      width: 100%;
+
+    textarea
+      min-height: 150px
+
+  input[type="submit"]
+    align-self: flex-end
+    +button($text,25px,12px,none) 
+    color: #fff
+    width: 40%
+
 html
   body
     font-family: 'Hind', sans-serif
@@ -50,7 +74,7 @@ html
     ul li a
       text-decoration: none
       font-size: 1.1em
-
+    
     > nav
       background: red
       order: -1
@@ -68,12 +92,20 @@ html
       ul 
         display: flex
 
-    &#page-about article:nth-child(2)
+
+    &#page-about article:nth-child(2), 
+    &#page-quotation, 
+    &#page-guarantees article, 
+    &#page-services article:first-child
       h2, h2 + p
         text-align: center
+        width: 40%
+        margin: auto
 
 
-    &#page-pharmacy, &#page-laboratory, &#page-group
+    &#page-pharmacy, 
+    &#page-laboratory, 
+    &#page-group
       main article 
         &:first-child
           background: cadetblue
@@ -83,9 +115,9 @@ html
           background: green
 
         &:last-child
-          background: purple
 
-    &#page-about main article:first-of-type, &#page-services main article:last-of-type
+    &#page-about main article:first-of-type, 
+    &#page-services main article:last-of-type
       background: #fff
       padding: 4% 6%;
       margin-left: 50%
@@ -100,6 +132,92 @@ html
         top: 0
         width: 100%;
         z-index: -1
+
+    &#page-index, &#page-quotation
+      aside,footer
+        display: none
+
+    &#page-guarantees article dl, 
+    &#page-services article section, 
+    &#page-group article:last-child,
+    &#page-pharmacy article:last-child,
+    &#page-laboratory article:last-child
+      max-width: 1024px
+      margin: auto
+    
+    &#page-services article:first-child, 
+    &#page-pharmacy article:last-child,
+    &#page-laboratory article:last-child,
+    &#page-group article:last-child,
+      > section
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 70px
+        margin-top: 30px
+
+        section
+          align-items: center
+          background: #fff
+          box-shadow: 0 0 1px darken($bkgd,7%)
+          box-sizing: border-box
+          display: flex
+          flex-direction: column
+          height: 300px
+          line-height: 1.4em
+          justify-content: end
+          padding: 7% 2%
+          text-align: center
+          width: 33.3%
+          
+          h3, ul
+            margin: 0
+
+          h3
+            letter-spacing: 0.1em
+            text-transform: uppercase
+
+            &:before
+              display: block
+              margin: 0 auto 10px
+              width: 60px
+
+          ul
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+
+            li:not(:last-child):after
+              content: ' / '
+
+          &#advice h3:before
+            content: url(../images/services/advice.svg)
+
+          &#website h3:before
+            content: url(../images/services/website.svg)
+
+          &#community h3:before
+            content: url(../images/services/community.svg)
+
+          &#graphics h3:before
+            content: url(../images/services/graphics.svg)
+
+          &#content h3:before
+            content: url(../images/services/content.svg)
+
+          &#media h3:before
+            content: url(../images/services/media.svg)
+
+          &#animation h3:before
+            content: url(../images/services/animation.svg)
+
+          &#integration h3:before
+            content: url(../images/services/integration.svg)
+
+          &#video h3:before
+            content: url(../images/services/video.svg)
+
+          &#offers h3:before
+            content: url(../images/services/offer.svg)
 
     &#page-index
       background: aqua
@@ -210,8 +328,9 @@ html
         counter-reset: guarantee 
         display: flex
         flex-wrap: wrap
-        margin: 30px auto 70px
-        max-width: 1024px
+        margin-top: 30px
+        margin-bottom: 70px
+
 
         dt, dd
           color: #fff
@@ -294,15 +413,10 @@ html
             background: #fff url(../images/guarantees/accompaniment.svg)no-repeat 50%
             background-size: 40%
 
-              
 
     &#page-services
-      article 
-        &:first-child
-          background: orange
-
+      article
         &:last-child
-
           &:before
             background: url(../images/bkgd-targets.jpg)
 
@@ -353,28 +467,16 @@ html
           order: -1
           padding-top: 10px
 
-        form
-          display: flex
-          flex-direction: column
-
-          label
-            font-size: 0
-
-            input, textarea
-              box-sizing: border-box;
-              +button(transparent,0,15px,2px solid $text)
-              color: $text
-              margin-bottom: 20px
-              width: 100%;
-
-            textarea
-              min-height: 150px
-
-          input[type="submit"]
-            align-self: flex-end
-            +button($text,25px,12px,none) 
-            color: #fff
-            width: 20%
+      aside
+        display: none
+    
+    &#page-quotation
+      form
+        width: 50%
+        margin: 0 auto 70px
+        background: #fff
+        padding: 8%
+        border: 1px solid darken($bkgd,3%)
 
     > aside
       background: url(../images/pourquoi-pas-vous.jpg)100%

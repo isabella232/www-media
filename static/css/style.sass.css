@@ -2,6 +2,36 @@
 address {
   font-style: normal; }
 
+form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; }
+  form label {
+    font-size: 0; }
+    form label input, form label textarea, form label select {
+      box-sizing: border-box;
+      background: transparent;
+      border-radius: 0;
+      padding: 15px;
+      border: 2px solid #1C1C1C;
+      color: #1C1C1C;
+      margin-bottom: 20px;
+      width: 100%; }
+      form label input a, form label textarea a, form label select a {
+        color: #1C1C1C; }
+    form label textarea {
+      min-height: 150px; }
+  form input[type="submit"] {
+    align-self: flex-end;
+    background: #1C1C1C;
+    border-radius: 25px;
+    padding: 12px;
+    border: none;
+    color: #fff;
+    width: 40%; }
+    form input[type="submit"] a {
+      color: #1C1C1C; }
+
 html body {
   font-family: 'Hind', sans-serif;
   background: #fcfcfc;
@@ -39,21 +69,27 @@ html body {
       list-style-type: none; }
   html body nav:last-of-type ul {
     display: flex; }
-  html body#page-about article:nth-child(2) h2, html body#page-about article:nth-child(2) h2 + p {
-    text-align: center; }
+  html body#page-about article:nth-child(2) h2, html body#page-about article:nth-child(2) h2 + p, html body#page-quotation h2, html body#page-quotation h2 + p,
+  html body#page-guarantees article h2,
+  html body#page-guarantees article h2 + p,
+  html body#page-services article:first-child h2,
+  html body#page-services article:first-child h2 + p {
+    text-align: center;
+    width: 40%;
+    margin: auto; }
   html body#page-pharmacy main article:first-child, html body#page-laboratory main article:first-child, html body#page-group main article:first-child {
     background: cadetblue;
     width: 50%; }
   html body#page-pharmacy main article:nth-child(2), html body#page-laboratory main article:nth-child(2), html body#page-group main article:nth-child(2) {
     background: green; }
-  html body#page-pharmacy main article:last-child, html body#page-laboratory main article:last-child, html body#page-group main article:last-child {
-    background: purple; }
-  html body#page-about main article:first-of-type, html body#page-services main article:last-of-type {
+  html body#page-about main article:first-of-type,
+  html body#page-services main article:last-of-type {
     background: #fff;
     padding: 4% 6%;
     margin-left: 50%;
     position: relative; }
-    html body#page-about main article:first-of-type:before, html body#page-services main article:last-of-type:before {
+    html body#page-about main article:first-of-type:before,
+    html body#page-services main article:last-of-type:before {
       background-size: cover;
       content: '';
       height: 100%;
@@ -62,6 +98,122 @@ html body {
       top: 0;
       width: 100%;
       z-index: -1; }
+  html body#page-index aside, html body#page-index footer, html body#page-quotation aside, html body#page-quotation footer {
+    display: none; }
+  html body#page-guarantees article dl,
+  html body#page-services article section,
+  html body#page-group article:last-child,
+  html body#page-pharmacy article:last-child,
+  html body#page-laboratory article:last-child {
+    max-width: 1024px;
+    margin: auto; }
+  html body#page-services article:first-child > section,
+  html body#page-pharmacy article:last-child > section,
+  html body#page-laboratory article:last-child > section,
+  html body#page-group article:last-child > section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+    margin-top: 30px; }
+    html body#page-services article:first-child > section section,
+    html body#page-pharmacy article:last-child > section section,
+    html body#page-laboratory article:last-child > section section,
+    html body#page-group article:last-child > section section {
+      align-items: center;
+      background: #fff;
+      box-shadow: 0 0 1px #eaeaea;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      line-height: 1.4em;
+      justify-content: end;
+      padding: 7% 2%;
+      text-align: center;
+      width: 33.3%; }
+      html body#page-services article:first-child > section section h3, html body#page-services article:first-child > section section ul,
+      html body#page-pharmacy article:last-child > section section h3,
+      html body#page-pharmacy article:last-child > section section ul,
+      html body#page-laboratory article:last-child > section section h3,
+      html body#page-laboratory article:last-child > section section ul,
+      html body#page-group article:last-child > section section h3,
+      html body#page-group article:last-child > section section ul {
+        margin: 0; }
+      html body#page-services article:first-child > section section h3,
+      html body#page-pharmacy article:last-child > section section h3,
+      html body#page-laboratory article:last-child > section section h3,
+      html body#page-group article:last-child > section section h3 {
+        letter-spacing: 0.1em;
+        text-transform: uppercase; }
+        html body#page-services article:first-child > section section h3:before,
+        html body#page-pharmacy article:last-child > section section h3:before,
+        html body#page-laboratory article:last-child > section section h3:before,
+        html body#page-group article:last-child > section section h3:before {
+          display: block;
+          margin: 0 auto 10px;
+          width: 60px; }
+      html body#page-services article:first-child > section section ul,
+      html body#page-pharmacy article:last-child > section section ul,
+      html body#page-laboratory article:last-child > section section ul,
+      html body#page-group article:last-child > section section ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; }
+        html body#page-services article:first-child > section section ul li:not(:last-child):after,
+        html body#page-pharmacy article:last-child > section section ul li:not(:last-child):after,
+        html body#page-laboratory article:last-child > section section ul li:not(:last-child):after,
+        html body#page-group article:last-child > section section ul li:not(:last-child):after {
+          content: ' / '; }
+      html body#page-services article:first-child > section section#advice h3:before,
+      html body#page-pharmacy article:last-child > section section#advice h3:before,
+      html body#page-laboratory article:last-child > section section#advice h3:before,
+      html body#page-group article:last-child > section section#advice h3:before {
+        content: url(../images/services/advice.svg); }
+      html body#page-services article:first-child > section section#website h3:before,
+      html body#page-pharmacy article:last-child > section section#website h3:before,
+      html body#page-laboratory article:last-child > section section#website h3:before,
+      html body#page-group article:last-child > section section#website h3:before {
+        content: url(../images/services/website.svg); }
+      html body#page-services article:first-child > section section#community h3:before,
+      html body#page-pharmacy article:last-child > section section#community h3:before,
+      html body#page-laboratory article:last-child > section section#community h3:before,
+      html body#page-group article:last-child > section section#community h3:before {
+        content: url(../images/services/community.svg); }
+      html body#page-services article:first-child > section section#graphics h3:before,
+      html body#page-pharmacy article:last-child > section section#graphics h3:before,
+      html body#page-laboratory article:last-child > section section#graphics h3:before,
+      html body#page-group article:last-child > section section#graphics h3:before {
+        content: url(../images/services/graphics.svg); }
+      html body#page-services article:first-child > section section#content h3:before,
+      html body#page-pharmacy article:last-child > section section#content h3:before,
+      html body#page-laboratory article:last-child > section section#content h3:before,
+      html body#page-group article:last-child > section section#content h3:before {
+        content: url(../images/services/content.svg); }
+      html body#page-services article:first-child > section section#media h3:before,
+      html body#page-pharmacy article:last-child > section section#media h3:before,
+      html body#page-laboratory article:last-child > section section#media h3:before,
+      html body#page-group article:last-child > section section#media h3:before {
+        content: url(../images/services/media.svg); }
+      html body#page-services article:first-child > section section#animation h3:before,
+      html body#page-pharmacy article:last-child > section section#animation h3:before,
+      html body#page-laboratory article:last-child > section section#animation h3:before,
+      html body#page-group article:last-child > section section#animation h3:before {
+        content: url(../images/services/animation.svg); }
+      html body#page-services article:first-child > section section#integration h3:before,
+      html body#page-pharmacy article:last-child > section section#integration h3:before,
+      html body#page-laboratory article:last-child > section section#integration h3:before,
+      html body#page-group article:last-child > section section#integration h3:before {
+        content: url(../images/services/integration.svg); }
+      html body#page-services article:first-child > section section#video h3:before,
+      html body#page-pharmacy article:last-child > section section#video h3:before,
+      html body#page-laboratory article:last-child > section section#video h3:before,
+      html body#page-group article:last-child > section section#video h3:before {
+        content: url(../images/services/video.svg); }
+      html body#page-services article:first-child > section section#offers h3:before,
+      html body#page-pharmacy article:last-child > section section#offers h3:before,
+      html body#page-laboratory article:last-child > section section#offers h3:before,
+      html body#page-group article:last-child > section section#offers h3:before {
+        content: url(../images/services/offer.svg); }
   html body#page-index {
     background: aqua; }
   html body#page-about article:first-child:before {
@@ -149,8 +301,8 @@ html body {
       counter-reset: guarantee;
       display: flex;
       flex-wrap: wrap;
-      margin: 30px auto 70px;
-      max-width: 1024px; }
+      margin-top: 30px;
+      margin-bottom: 70px; }
       html body#page-guarantees dl dt, html body#page-guarantees dl dd {
         color: #fff;
         display: flex;
@@ -212,8 +364,6 @@ html body {
         html body#page-guarantees dl dt#accompaniment:after {
           background: #fff url(../images/guarantees/accompaniment.svg) no-repeat 50%;
           background-size: 40%; }
-  html body#page-services article:first-child {
-    background: orange; }
   html body#page-services article:last-child:before {
     background: url(../images/bkgd-targets.jpg); }
   html body#page-services article:last-child ul li {
@@ -256,34 +406,14 @@ html body {
         font-weight: 700;
         order: -1;
         padding-top: 10px; }
-      html body#page-contact article form {
-        display: flex;
-        flex-direction: column; }
-        html body#page-contact article form label {
-          font-size: 0; }
-          html body#page-contact article form label input, html body#page-contact article form label textarea {
-            box-sizing: border-box;
-            background: transparent;
-            border-radius: 0;
-            padding: 15px;
-            border: 2px solid #1C1C1C;
-            color: #1C1C1C;
-            margin-bottom: 20px;
-            width: 100%; }
-            html body#page-contact article form label input a, html body#page-contact article form label textarea a {
-              color: #1C1C1C; }
-          html body#page-contact article form label textarea {
-            min-height: 150px; }
-        html body#page-contact article form input[type="submit"] {
-          align-self: flex-end;
-          background: #1C1C1C;
-          border-radius: 25px;
-          padding: 12px;
-          border: none;
-          color: #fff;
-          width: 20%; }
-          html body#page-contact article form input[type="submit"] a {
-            color: #1C1C1C; }
+    html body#page-contact aside {
+      display: none; }
+  html body#page-quotation form {
+    width: 50%;
+    margin: 0 auto 70px;
+    background: #fff;
+    padding: 8%;
+    border: 1px solid #f4f4f4; }
   html body > aside {
     background: url(../images/pourquoi-pas-vous.jpg) 100%;
     padding: 4%; }
