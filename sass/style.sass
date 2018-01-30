@@ -67,6 +67,7 @@ html
 
     article h2
       padding-top: 50px
+      line-height: 1.2em
 
       & + *
         margin-top: 0
@@ -108,10 +109,6 @@ html
         width: 40%
         margin: auto
 
-      h2
-        padding-top: 50px
-        line-height: 1.2em
-
       h2 + p
         padding-bottom: 20px
 
@@ -121,7 +118,10 @@ html
     &#page-group
       main article 
         &:first-child
-          background: cadetblue
+          display: table
+
+          >*:not(:last-child)
+            padding: 0 15%
 
           ul
             &:first-of-type
@@ -130,20 +130,19 @@ html
             &:last-of-type
               align-items: center
               background: #fff
-              display: flex
-              flex-wrap: wrap
+              display: table-cell
               text-align: center
               width: 50%
 
               li
                 background: #fff
-                box-shadow: 0 0 1px red
+                box-shadow: 0 0 1px darken($bkgd,8%)
                 box-sizing: border-box
-                display: flex
-                flex-direction: column
+                display: inline-table
                 height: 250px
                 padding: 7% 2%
                 width: 50%
+                margin-left: -3px
 
                 &:before
                   display: block
@@ -209,7 +208,7 @@ html
     &#page-about main article:first-of-type, 
     &#page-services main article:last-of-type
       background: #fff
-      padding: 4% 6%;
+      padding: 4% 8%;
       margin-left: 50%
       position: relative
 
@@ -311,7 +310,25 @@ html
             content: url(../images/services/offer.svg)
 
     &#page-index
-      background: aqua
+      main
+        background: url(../images/bkgd-index.jpg)
+        height: calc(100vh - 70px)
+        background-position: 100%
+
+        article
+          color: #fff
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+
+          p
+            +button($primary,50px,15px,none)
+            text-align: center
+            width: 13%
+
+            a
+              color: #fff
+              text-decoration: none
 
     &#page-about
       article 
@@ -533,7 +550,7 @@ html
       article
         background: #fff
         margin-left: 50%
-        padding: 4% 10%;
+        padding: 4% 8%;
 
         dl
           display: flex

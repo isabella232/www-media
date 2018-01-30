@@ -52,7 +52,8 @@ html body {
     font-size: 2.4em;
     margin: 0; }
   html body article h2 {
-    padding-top: 50px; }
+    padding-top: 50px;
+    line-height: 1.2em; }
     html body article h2 + * {
       margin-top: 0; }
   html body p {
@@ -85,14 +86,6 @@ html body {
     text-align: center;
     width: 40%;
     margin: auto; }
-  html body#page-about article:nth-child(2) h2, html body#page-quotation h2,
-  html body#page-guarantees article h2,
-  html body#page-services article:first-child h2,
-  html body#page-pharmacy article:not(:first-child) h2,
-  html body#page-laboratory article:not(:first-child) h2,
-  html body#page-group article:not(:first-child) h2 {
-    padding-top: 50px;
-    line-height: 1.2em; }
   html body#page-about article:nth-child(2) h2 + p, html body#page-quotation h2 + p,
   html body#page-guarantees article h2 + p,
   html body#page-services article:first-child h2 + p,
@@ -101,25 +94,26 @@ html body {
   html body#page-group article:not(:first-child) h2 + p {
     padding-bottom: 20px; }
   html body#page-pharmacy main article:first-child, html body#page-laboratory main article:first-child, html body#page-group main article:first-child {
-    background: cadetblue; }
+    display: table; }
+    html body#page-pharmacy main article:first-child > *:not(:last-child), html body#page-laboratory main article:first-child > *:not(:last-child), html body#page-group main article:first-child > *:not(:last-child) {
+      padding: 0 15%; }
     html body#page-pharmacy main article:first-child ul:first-of-type, html body#page-laboratory main article:first-child ul:first-of-type, html body#page-group main article:first-child ul:first-of-type {
       font-size: 1.3em; }
     html body#page-pharmacy main article:first-child ul:last-of-type, html body#page-laboratory main article:first-child ul:last-of-type, html body#page-group main article:first-child ul:last-of-type {
       align-items: center;
       background: #fff;
-      display: flex;
-      flex-wrap: wrap;
+      display: table-cell;
       text-align: center;
       width: 50%; }
       html body#page-pharmacy main article:first-child ul:last-of-type li, html body#page-laboratory main article:first-child ul:last-of-type li, html body#page-group main article:first-child ul:last-of-type li {
         background: #fff;
-        box-shadow: 0 0 1px red;
+        box-shadow: 0 0 1px #e8e8e8;
         box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
+        display: inline-table;
         height: 250px;
         padding: 7% 2%;
-        width: 50%; }
+        width: 50%;
+        margin-left: -3px; }
         html body#page-pharmacy main article:first-child ul:last-of-type li:before, html body#page-laboratory main article:first-child ul:last-of-type li:before, html body#page-group main article:first-child ul:last-of-type li:before {
           display: block;
           margin: 0 auto 10px;
@@ -163,7 +157,7 @@ html body {
   html body#page-about main article:first-of-type,
   html body#page-services main article:last-of-type {
     background: #fff;
-    padding: 4% 6%;
+    padding: 4% 8%;
     margin-left: 50%;
     position: relative; }
     html body#page-about main article:first-of-type:before,
@@ -293,8 +287,27 @@ html body {
       html body#page-laboratory article:last-child > section section#offers h3:before,
       html body#page-group article:last-child > section section#offers h3:before {
         content: url(../images/services/offer.svg); }
-  html body#page-index {
-    background: aqua; }
+  html body#page-index main {
+    background: url(../images/bkgd-index.jpg);
+    height: calc(100vh - 70px);
+    background-position: 100%; }
+    html body#page-index main article {
+      color: #fff;
+      align-items: center;
+      display: flex;
+      flex-direction: column; }
+      html body#page-index main article p {
+        background: #E73C4D;
+        border-radius: 50px;
+        padding: 15px;
+        border: none;
+        text-align: center;
+        width: 13%; }
+        html body#page-index main article p a {
+          color: #1C1C1C; }
+        html body#page-index main article p a {
+          color: #fff;
+          text-decoration: none; }
   html body#page-about article:first-child:before {
     background: url(../images/bkgd-agency.jpg); }
   html body#page-about article #members {
@@ -467,7 +480,7 @@ html body {
     html body#page-contact article {
       background: #fff;
       margin-left: 50%;
-      padding: 4% 10%; }
+      padding: 4% 8%; }
       html body#page-contact article dl {
         display: flex;
         flex-wrap: wrap;
