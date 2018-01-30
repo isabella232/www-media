@@ -367,28 +367,33 @@ html body {
       html body#page-about article #members section:hover:after, html body#page-about article #members section:hover h4, html body#page-about article #members section:hover p, html body#page-about article #members section:focus:after, html body#page-about article #members section:focus h4, html body#page-about article #members section:focus p {
         opacity: 1;
         transform: scale(1); }
-  html body#page-about article:last-child ul {
-    width: 50%;
-    margin-left: 50%;
-    display: flex;
-    flex-wrap: wrap; }
-    html body#page-about article:last-child ul li {
-      background: #fff;
-      height: 300px;
+  html body#page-about article:last-child {
+    display: table; }
+    html body#page-about article:last-child > *:not(:last-child) {
+      padding: 4% 10%;
+      text-align: end; }
+    html body#page-about article:last-child ul {
       width: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-transform: uppercase;
-      letter-spacing: 0.1em; }
-      html body#page-about article:last-child ul li:nth-child(odd) {
-        border-right: 1px solid #f2f2f2;
-        box-sizing: border-box; }
-      html body#page-about article:last-child ul li:nth-child(n+3) {
-        border-top: 1px solid #f2f2f2; }
-      html body#page-about article:last-child ul li strong {
-        font-size: 2.4em; }
+      display: table-cell; }
+      html body#page-about article:last-child ul li {
+        display: inline-table;
+        background: #fff;
+        height: 300px;
+        width: 50%;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-left: -3px; }
+        html body#page-about article:last-child ul li:nth-child(odd) {
+          border-right: 1px solid #f2f2f2;
+          box-sizing: border-box; }
+        html body#page-about article:last-child ul li:nth-child(n+3) {
+          border-top: 1px solid #f2f2f2; }
+        html body#page-about article:last-child ul li strong {
+          font-size: 2.4em; }
   html body#page-guarantees {
     z-index: 0; }
     html body#page-guarantees article h2 {

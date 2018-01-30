@@ -405,22 +405,28 @@ html
                 transform: scale(1)
 
         &:last-child
+          display: table
+
+          >*:not(:last-child)
+            padding: 4% 10%
+            text-align: end
+
           ul
             width: 50%
-            margin-left: 50%
-            display: flex
-            flex-wrap: wrap
+            display: table-cell
 
-            li 
+            li
+              display: inline-table
               background: #fff
               height: 300px
               width: 50%
-              display: flex
+              display: inline-flex
               flex-direction: column
               align-items: center
               justify-content: center
               text-transform: uppercase
               letter-spacing: 0.1em;
+              margin-left: -3px
 
               &:nth-child(odd)
                 border-right: 1px solid darken($bkgd,4%)
