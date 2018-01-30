@@ -13,6 +13,9 @@ $bkgd: #fcfcfc
   a
     color: $text
 
+a.link
+  color: $primary
+
 address
   font-style: normal
 
@@ -50,9 +53,7 @@ html
     flex-direction: column
 
     h1
-      background: yellow
-      font-size: 1em
-      font-weight: 300
+      display: none
 
       &:before 
         content: '[ '
@@ -62,8 +63,10 @@ html
 
     h2
       font-size: 2.4em
-      margin-top: 0
-      margin-bottom: 0
+      margin: 0
+
+    article h2
+      padding-top: 50px
 
       & + *
         margin-top: 0
@@ -96,11 +99,21 @@ html
     &#page-about article:nth-child(2), 
     &#page-quotation, 
     &#page-guarantees article, 
-    &#page-services article:first-child
+    &#page-services article:first-child,
+    &#page-pharmacy article:not(:first-child),
+    &#page-laboratory article:not(:first-child),
+    &#page-group article:not(:first-child)
       h2, h2 + p
         text-align: center
         width: 40%
         margin: auto
+
+      h2
+        padding-top: 50px
+        line-height: 1.2em
+
+      h2 + p
+        padding-bottom: 20px
 
 
     &#page-pharmacy, 
@@ -109,12 +122,89 @@ html
       main article 
         &:first-child
           background: cadetblue
-          width: 50%
+
+          ul
+            &:first-of-type
+              font-size: 1.3em
+
+            &:last-of-type
+              align-items: center
+              background: #fff
+              display: flex
+              flex-wrap: wrap
+              text-align: center
+              width: 50%
+
+              li
+                background: #fff
+                box-shadow: 0 0 1px red
+                box-sizing: border-box
+                display: flex
+                flex-direction: column
+                height: 250px
+                padding: 7% 2%
+                width: 50%
+
+                &:before
+                  display: block
+                  margin: 0 auto 10px
+                  width: 22%
+
+                &#revenue:before
+                  content: url(../images/jobs/revenue.svg)
+
+                &#competition:before
+                  content: url(../images/jobs/competition.svg)
+
+                &#visibility:before
+                  content: url(../images/jobs/visibility.svg)
+
+                &#expert:before
+                  content: url(../images/jobs/expert.svg)
+
+                &#information:before
+                  content: url(../images/jobs/information.svg)
+
+                &#legislation:before
+                  content: url(../images/jobs/legislation.svg)
+
+                &#solutions:before
+                  content: url(../images/jobs/solutions.svg)
+
+                &#innovation:before
+                  content: url(../images/jobs/innovation.svg)
+
+                &#quality:before
+                  content: url(../images/jobs/quality.svg)
+
+                &#duplicable:before
+                  content: url(../images/jobs/duplicable.svg)
+
+                &#image:before
+                  content: url(../images/jobs/image.svg)
+
+                &#notoriety:before
+                  content: url(../images/jobs/notoriety.svg)
+
+                &#share:before
+                  content: url(../images/jobs/share.svg)
+
+                &#competition:before
+                  content: url(../images/jobs/competition.svg)
+
+                &#collect:before
+                  content: url(../images/jobs/collect.svg)
+
+                &#offers:before
+                  content: url(../images/jobs/offers.svg)
+
+                &#reference:before
+                  content: url(../images/jobs/reference.svg)
+                  
+                
 
         &:nth-child(2)
           background: green
-
-        &:last-child
 
     &#page-about main article:first-of-type, 
     &#page-services main article:last-of-type
@@ -141,7 +231,8 @@ html
     &#page-services article section, 
     &#page-group article:last-child,
     &#page-pharmacy article:last-child,
-    &#page-laboratory article:last-child
+    &#page-laboratory article:last-child,
+    &#page-about article:not(:first-child)
       max-width: 1024px
       margin: auto
     
@@ -242,6 +333,9 @@ html
             justify-content: flex-end
             position: relative
 
+            &:nth-child(2)
+              padding-right: 300px
+
             &:after
               background: rgba($primary,0.6)
               content: ''
@@ -323,6 +417,9 @@ html
 
     &#page-guarantees
       z-index: 0
+
+      h2
+        padding-bottom: 20px
 
       dl 
         counter-reset: guarantee 

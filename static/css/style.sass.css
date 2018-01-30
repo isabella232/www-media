@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:300,400,500,700");
+a.link {
+  color: #E73C4D; }
+
 address {
   font-style: normal; }
 
@@ -40,18 +43,17 @@ html body {
   display: flex;
   flex-direction: column; }
   html body h1 {
-    background: yellow;
-    font-size: 1em;
-    font-weight: 300; }
+    display: none; }
     html body h1:before {
       content: '[ '; }
     html body h1:after {
       content: '] '; }
   html body h2 {
     font-size: 2.4em;
-    margin-top: 0;
-    margin-bottom: 0; }
-    html body h2 + * {
+    margin: 0; }
+  html body article h2 {
+    padding-top: 50px; }
+    html body article h2 + * {
       margin-top: 0; }
   html body p {
     font-size: 1.3em; }
@@ -73,13 +75,89 @@ html body {
   html body#page-guarantees article h2,
   html body#page-guarantees article h2 + p,
   html body#page-services article:first-child h2,
-  html body#page-services article:first-child h2 + p {
+  html body#page-services article:first-child h2 + p,
+  html body#page-pharmacy article:not(:first-child) h2,
+  html body#page-pharmacy article:not(:first-child) h2 + p,
+  html body#page-laboratory article:not(:first-child) h2,
+  html body#page-laboratory article:not(:first-child) h2 + p,
+  html body#page-group article:not(:first-child) h2,
+  html body#page-group article:not(:first-child) h2 + p {
     text-align: center;
     width: 40%;
     margin: auto; }
+  html body#page-about article:nth-child(2) h2, html body#page-quotation h2,
+  html body#page-guarantees article h2,
+  html body#page-services article:first-child h2,
+  html body#page-pharmacy article:not(:first-child) h2,
+  html body#page-laboratory article:not(:first-child) h2,
+  html body#page-group article:not(:first-child) h2 {
+    padding-top: 50px;
+    line-height: 1.2em; }
+  html body#page-about article:nth-child(2) h2 + p, html body#page-quotation h2 + p,
+  html body#page-guarantees article h2 + p,
+  html body#page-services article:first-child h2 + p,
+  html body#page-pharmacy article:not(:first-child) h2 + p,
+  html body#page-laboratory article:not(:first-child) h2 + p,
+  html body#page-group article:not(:first-child) h2 + p {
+    padding-bottom: 20px; }
   html body#page-pharmacy main article:first-child, html body#page-laboratory main article:first-child, html body#page-group main article:first-child {
-    background: cadetblue;
-    width: 50%; }
+    background: cadetblue; }
+    html body#page-pharmacy main article:first-child ul:first-of-type, html body#page-laboratory main article:first-child ul:first-of-type, html body#page-group main article:first-child ul:first-of-type {
+      font-size: 1.3em; }
+    html body#page-pharmacy main article:first-child ul:last-of-type, html body#page-laboratory main article:first-child ul:last-of-type, html body#page-group main article:first-child ul:last-of-type {
+      align-items: center;
+      background: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      width: 50%; }
+      html body#page-pharmacy main article:first-child ul:last-of-type li, html body#page-laboratory main article:first-child ul:last-of-type li, html body#page-group main article:first-child ul:last-of-type li {
+        background: #fff;
+        box-shadow: 0 0 1px red;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        height: 250px;
+        padding: 7% 2%;
+        width: 50%; }
+        html body#page-pharmacy main article:first-child ul:last-of-type li:before, html body#page-laboratory main article:first-child ul:last-of-type li:before, html body#page-group main article:first-child ul:last-of-type li:before {
+          display: block;
+          margin: 0 auto 10px;
+          width: 22%; }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#revenue:before, html body#page-laboratory main article:first-child ul:last-of-type li#revenue:before, html body#page-group main article:first-child ul:last-of-type li#revenue:before {
+          content: url(../images/jobs/revenue.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#competition:before, html body#page-laboratory main article:first-child ul:last-of-type li#competition:before, html body#page-group main article:first-child ul:last-of-type li#competition:before {
+          content: url(../images/jobs/competition.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#visibility:before, html body#page-laboratory main article:first-child ul:last-of-type li#visibility:before, html body#page-group main article:first-child ul:last-of-type li#visibility:before {
+          content: url(../images/jobs/visibility.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#expert:before, html body#page-laboratory main article:first-child ul:last-of-type li#expert:before, html body#page-group main article:first-child ul:last-of-type li#expert:before {
+          content: url(../images/jobs/expert.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#information:before, html body#page-laboratory main article:first-child ul:last-of-type li#information:before, html body#page-group main article:first-child ul:last-of-type li#information:before {
+          content: url(../images/jobs/information.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#legislation:before, html body#page-laboratory main article:first-child ul:last-of-type li#legislation:before, html body#page-group main article:first-child ul:last-of-type li#legislation:before {
+          content: url(../images/jobs/legislation.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#solutions:before, html body#page-laboratory main article:first-child ul:last-of-type li#solutions:before, html body#page-group main article:first-child ul:last-of-type li#solutions:before {
+          content: url(../images/jobs/solutions.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#innovation:before, html body#page-laboratory main article:first-child ul:last-of-type li#innovation:before, html body#page-group main article:first-child ul:last-of-type li#innovation:before {
+          content: url(../images/jobs/innovation.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#quality:before, html body#page-laboratory main article:first-child ul:last-of-type li#quality:before, html body#page-group main article:first-child ul:last-of-type li#quality:before {
+          content: url(../images/jobs/quality.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#duplicable:before, html body#page-laboratory main article:first-child ul:last-of-type li#duplicable:before, html body#page-group main article:first-child ul:last-of-type li#duplicable:before {
+          content: url(../images/jobs/duplicable.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#image:before, html body#page-laboratory main article:first-child ul:last-of-type li#image:before, html body#page-group main article:first-child ul:last-of-type li#image:before {
+          content: url(../images/jobs/image.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#notoriety:before, html body#page-laboratory main article:first-child ul:last-of-type li#notoriety:before, html body#page-group main article:first-child ul:last-of-type li#notoriety:before {
+          content: url(../images/jobs/notoriety.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#share:before, html body#page-laboratory main article:first-child ul:last-of-type li#share:before, html body#page-group main article:first-child ul:last-of-type li#share:before {
+          content: url(../images/jobs/share.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#competition:before, html body#page-laboratory main article:first-child ul:last-of-type li#competition:before, html body#page-group main article:first-child ul:last-of-type li#competition:before {
+          content: url(../images/jobs/competition.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#collect:before, html body#page-laboratory main article:first-child ul:last-of-type li#collect:before, html body#page-group main article:first-child ul:last-of-type li#collect:before {
+          content: url(../images/jobs/collect.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#offers:before, html body#page-laboratory main article:first-child ul:last-of-type li#offers:before, html body#page-group main article:first-child ul:last-of-type li#offers:before {
+          content: url(../images/jobs/offers.svg); }
+        html body#page-pharmacy main article:first-child ul:last-of-type li#reference:before, html body#page-laboratory main article:first-child ul:last-of-type li#reference:before, html body#page-group main article:first-child ul:last-of-type li#reference:before {
+          content: url(../images/jobs/reference.svg); }
   html body#page-pharmacy main article:nth-child(2), html body#page-laboratory main article:nth-child(2), html body#page-group main article:nth-child(2) {
     background: green; }
   html body#page-about main article:first-of-type,
@@ -104,7 +182,8 @@ html body {
   html body#page-services article section,
   html body#page-group article:last-child,
   html body#page-pharmacy article:last-child,
-  html body#page-laboratory article:last-child {
+  html body#page-laboratory article:last-child,
+  html body#page-about article:not(:first-child) {
     max-width: 1024px;
     margin: auto; }
   html body#page-services article:first-child > section,
@@ -230,6 +309,8 @@ html body {
       flex-direction: column;
       justify-content: flex-end;
       position: relative; }
+      html body#page-about article #members section:nth-child(2) {
+        padding-right: 300px; }
       html body#page-about article #members section:after {
         background: rgba(231, 60, 77, 0.6);
         content: '';
@@ -297,6 +378,8 @@ html body {
         font-size: 2.4em; }
   html body#page-guarantees {
     z-index: 0; }
+    html body#page-guarantees h2 {
+      padding-bottom: 20px; }
     html body#page-guarantees dl {
       counter-reset: guarantee;
       display: flex;
