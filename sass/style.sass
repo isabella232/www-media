@@ -39,7 +39,7 @@ form
 
   input[type="submit"]
     align-self: flex-end
-    +button($text,25px,12px,none) 
+    +button($text,25px,15px,none) 
     color: #fff
     width: 40%
 
@@ -340,9 +340,9 @@ html
           flex-wrap: wrap
 
           > *
-            height: 300px
+            height: 250px
             margin: 0
-            width: 300px
+            width: 250px
 
           section
             display: flex
@@ -350,20 +350,20 @@ html
             justify-content: flex-end
             position: relative
 
-            &:nth-child(2)
-              padding-right: 300px
+            &:first-of-type
+              margin-left: 500px
 
             &:after
               background: rgba($primary,0.6)
               content: ''
-              height: 250px
+              height: 200px
               left: 25px
               opacity: 0
               position: absolute
               top: 25px
               transform: scale(0)
               transition: opacity 0.35s, transform 0.35s
-              width: 250px
+              width: 200px
               z-index: -1
 
             h4, p
@@ -396,7 +396,7 @@ html
               left: 0
               position: absolute
               top: 0
-              width: 300px
+              width: 250px
               z-index: -1
 
             &:hover, &:focus
@@ -406,9 +406,10 @@ html
 
         &:last-child
           display: table
+          margin: 50px auto 70px
 
           >*:not(:last-child)
-            padding: 4% 10%
+            padding: 0 10%
             text-align: end
 
           ul
@@ -418,7 +419,7 @@ html
             li
               display: inline-table
               background: #fff
-              height: 300px
+              height: 250px
               width: 50%
               display: inline-flex
               flex-direction: column

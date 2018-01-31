@@ -28,7 +28,7 @@ form {
     align-self: flex-end;
     background: #1C1C1C;
     border-radius: 25px;
-    padding: 12px;
+    padding: 15px;
     border: none;
     color: #fff;
     width: 40%; }
@@ -314,27 +314,27 @@ html body {
     display: flex;
     flex-wrap: wrap; }
     html body#page-about article #members > * {
-      height: 300px;
+      height: 250px;
       margin: 0;
-      width: 300px; }
+      width: 250px; }
     html body#page-about article #members section {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       position: relative; }
-      html body#page-about article #members section:nth-child(2) {
-        padding-right: 300px; }
+      html body#page-about article #members section:first-of-type {
+        margin-left: 500px; }
       html body#page-about article #members section:after {
         background: rgba(231, 60, 77, 0.6);
         content: '';
-        height: 250px;
+        height: 200px;
         left: 25px;
         opacity: 0;
         position: absolute;
         top: 25px;
         transform: scale(0);
         transition: opacity 0.35s, transform 0.35s;
-        width: 250px;
+        width: 200px;
         z-index: -1; }
       html body#page-about article #members section h4, html body#page-about article #members section p {
         opacity: 0;
@@ -362,15 +362,16 @@ html body {
         left: 0;
         position: absolute;
         top: 0;
-        width: 300px;
+        width: 250px;
         z-index: -1; }
       html body#page-about article #members section:hover:after, html body#page-about article #members section:hover h4, html body#page-about article #members section:hover p, html body#page-about article #members section:focus:after, html body#page-about article #members section:focus h4, html body#page-about article #members section:focus p {
         opacity: 1;
         transform: scale(1); }
   html body#page-about article:last-child {
-    display: table; }
+    display: table;
+    margin: 50px auto 70px; }
     html body#page-about article:last-child > *:not(:last-child) {
-      padding: 4% 10%;
+      padding: 0 10%;
       text-align: end; }
     html body#page-about article:last-child ul {
       width: 50%;
@@ -378,7 +379,7 @@ html body {
       html body#page-about article:last-child ul li {
         display: inline-table;
         background: #fff;
-        height: 300px;
+        height: 250px;
         width: 50%;
         display: inline-flex;
         flex-direction: column;
