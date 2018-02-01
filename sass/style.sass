@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,700')
 
 $text: #1C1C1C
 $primary: #E73C4D
@@ -6,33 +6,33 @@ $bkgd: #fcfcfc
 
 =button($bkgd,$radius,$padding,$border)
   background: $bkgd
+  border: $border
   border-radius: $radius
   padding: $padding
-  border: $border
 
-  a
-    color: $text
+a
+  color: $text
 
-a.link
-  color: $primary
+  &.link
+    color: $primary
 
 address
   font-style: normal
 
 form
+  box-sizing: border-box
   display: flex
   flex-direction: column
-  box-sizing: border-box;
 
   label
     font-size: 0
 
     input, textarea, select
-      box-sizing: border-box;
+      box-sizing: border-box
       +button(transparent,0,15px,2px solid $text)
       color: $text
       margin-bottom: 20px
-      width: 100%;
+      width: 100%
 
     textarea
       min-height: 150px
@@ -45,29 +45,23 @@ form
 
 html
   body
-    font-family: 'Hind', sans-serif
     background: $bkgd
     color: $text
-    margin: 0
     display: flex
     flex-direction: column
+    font-family: 'Hind', sans-serif
+    margin: 0
 
     h1
       display: none
-
-      &:before 
-        content: '[ '
-
-      &:after 
-        content: '] '
 
     h2
       font-size: 2.4em
       margin: 0
 
     article h2
-      padding-top: 50px
       line-height: 1.2em
+      padding-top: 50px
 
       & + *
         margin-top: 0
@@ -76,153 +70,89 @@ html
       font-size: 1.3em
 
     ul li a
-      text-decoration: none
       font-size: 1.1em
+      text-decoration: none
     
-    > nav
-      background: red
-      order: -1
-
-      & + nav 
-        background: grey
-
     ul
       padding-left: 0
 
       li
         list-style-type: none
 
-    nav:last-of-type
-      ul 
-        display: flex
+    nav:first-of-type
+      background: $text
+      order: -1
+      width: 30%
+      padding: 0 4%
+      height: 63px
+      box-sizing: border-box
+      position: absolute
+      overflow: hidden
+
+      ul
+        li
+          line-height: 3em
+          font-size: 1.2em
+          font-weight: 300
+
+          a
+            color: #fff
+            letter-spacing: .5px
+            
+        &:first-of-type
+          &:before
+            content: url(../images/logo.svg)
+            width: 25%
+            display: block
+
+          li a
+            display: block
+
+        &:last-child
+          li a
+            font-weight: 500
+            border-bottom: 2px solid #fff
+            padding: 0 5px
 
 
-    &#page-about article:nth-child(2), 
-    &#page-quotation, 
-    &#page-guarantees article, 
-    &#page-services article:first-child,
-    &#page-pharmacy article:not(:first-child),
-    &#page-laboratory article:not(:first-child),
-    &#page-group article:not(:first-child)
-      h2, h2 + p
-        text-align: center
-        width: 40%
-        margin: auto
 
-      h2 + p
-        padding-bottom: 20px
+      & + nav 
+        background: #fff
+        border-bottom: 1px solid darken($bkgd,5%)
+        width: 70%
+        margin-left: 30%
+
+        ul 
+          display: flex
+          margin: 0
+
+          li
+            flex: 1
+            padding: 20px
+            text-transform: uppercase
+            letter-spacing: 1px
+            font-size: .8em
+            text-align: center
+            box-shadow: 1px 0 0 darken($bkgd,5%)
+            display: inline-block
+            position: relative
+            transform: perspective(1px) translateZ(0)
+            transition-duration: 0.3s
+            transition-property: color, background-color
+
+            &.active
+              background: $primary
+
+              a
+                color: #fff
+
+            &:hover
+              background-color: $primary
 
 
-    &#page-pharmacy, 
-    &#page-laboratory, 
-    &#page-group
-      main article 
-        &:first-child
-          display: table
 
-          >*:not(:last-child)
-            padding: 0 15%
 
-          ul
-            &:first-of-type
-              font-size: 1.3em
-
-            &:last-of-type
-              align-items: center
-              background: #fff
-              display: table-cell
-              text-align: center
-              width: 50%
-
-              li
-                background: #fff
-                box-shadow: 0 0 1px darken($bkgd,8%)
-                box-sizing: border-box
-                display: inline-table
-                height: 250px
-                padding: 7% 2%
-                width: 50%
-                margin-left: -3px
-
-                &:before
-                  display: block
-                  margin: 0 auto 10px
-                  width: 22%
-
-                &#revenue:before
-                  content: url(../images/jobs/revenue.svg)
-
-                &#competition:before
-                  content: url(../images/jobs/competition.svg)
-
-                &#visibility:before
-                  content: url(../images/jobs/visibility.svg)
-
-                &#expert:before
-                  content: url(../images/jobs/expert.svg)
-
-                &#information:before
-                  content: url(../images/jobs/information.svg)
-
-                &#legislation:before
-                  content: url(../images/jobs/legislation.svg)
-
-                &#solutions:before
-                  content: url(../images/jobs/solutions.svg)
-
-                &#innovation:before
-                  content: url(../images/jobs/innovation.svg)
-
-                &#quality:before
-                  content: url(../images/jobs/quality.svg)
-
-                &#duplicable:before
-                  content: url(../images/jobs/duplicable.svg)
-
-                &#image:before
-                  content: url(../images/jobs/image.svg)
-
-                &#notoriety:before
-                  content: url(../images/jobs/notoriety.svg)
-
-                &#share:before
-                  content: url(../images/jobs/share.svg)
-
-                &#competition:before
-                  content: url(../images/jobs/competition.svg)
-
-                &#collect:before
-                  content: url(../images/jobs/collect.svg)
-
-                &#offers:before
-                  content: url(../images/jobs/offers.svg)
-
-                &#reference:before
-                  content: url(../images/jobs/reference.svg)
-                  
-                
-
-        &:nth-child(2)
-          background: green
-
-    &#page-about main article:first-of-type, 
-    &#page-services main article:last-of-type
-      background: #fff
-      padding: 4% 8%;
-      margin-left: 50%
-      position: relative
-
-      &:before
-        background-size: cover;
-        content: ''
-        height: 100%;
-        left: -100%
-        position: absolute
-        top: 0
-        width: 100%;
-        z-index: -1
-
-    &#page-index, &#page-quotation
+    &#page-index, &#page-quotation/*aside et footer cachés*/
       aside,footer
         display: none
 
@@ -232,13 +162,45 @@ html
     &#page-pharmacy article:last-child,
     &#page-laboratory article:last-child,
     &#page-about article:not(:first-child)
-      max-width: 1024px
       margin: auto
+      max-width: 1024px
+
+    &#page-about article:nth-child(2), 
+    &#page-quotation, 
+    &#page-guarantees article, 
+    &#page-services article:first-child,
+    &#page-pharmacy article:not(:first-child),
+    &#page-laboratory article:not(:first-child),
+    &#page-group article:not(:first-child)/*articles avec h2 centrés dans la page*/
+      h2, h2 + p
+        margin: auto
+        text-align: center
+        width: 40%
+
+      h2 + p
+        padding-bottom: 20px
+
+    &#page-about main article:first-of-type, 
+    &#page-services main article:last-of-type
+      background: #fff
+      margin-left: 50%
+      padding: 4% 8%
+      position: relative
+
+      &:before
+        background-size: cover
+        content: ''
+        height: 100%
+        left: -100%
+        position: absolute
+        top: 0
+        width: 100%
+        z-index: -1
     
     &#page-services article:first-child, 
     &#page-pharmacy article:last-child,
     &#page-laboratory article:last-child,
-    &#page-group article:last-child,
+    &#page-group article:last-child, /*Tableaux services*/
       > section
         display: flex
         flex-wrap: wrap
@@ -309,137 +271,229 @@ html
           &#offers h3:before
             content: url(../images/services/offer.svg)
 
-    &#page-index
+    &#page-pharmacy, 
+    &#page-laboratory, 
+    &#page-group /*pages métiers-secteurs d'activité*/
+      main article 
+        &:first-child
+          display: flex
+          flex-direction: column
+          height: calc(100vh - 63px)
+          flex-wrap: wrap
+          justify-content: center
+
+          >*:not(:last-child)
+            padding: 0 8%
+            box-sizing: border-box
+            width: 50%
+
+          ul
+            &:first-of-type
+              font-size: 1.3em
+
+            &:last-of-type
+              background: #fff
+              display: flex
+              text-align: center
+              width: 50%
+              height: calc(100vh - 63px)
+              flex-wrap: wrap
+              margin: 0
+
+              li
+                background: #fff
+                box-shadow: 0 0 1px darken($bkgd,8%)
+                box-sizing: border-box
+                height: calc((100vh - 63px) / 3)
+                padding: 7% 2%
+                width: 50%
+
+                &:before
+                  display: block
+                  margin: 0 auto 10px
+                  width: 22%
+
+                &#revenue:before/*pharmacy*/
+                  content: url(../images/jobs/revenue.svg)
+
+                &#competition:before
+                  content: url(../images/jobs/competition.svg)
+
+                &#visibility:before
+                  content: url(../images/jobs/visibility.svg)
+
+                &#expert:before
+                  content: url(../images/jobs/expert.svg)
+
+                &#information:before
+                  content: url(../images/jobs/information.svg)
+
+                &#legislation:before
+                  content: url(../images/jobs/legislation.svg)
+
+                &#solutions:before/*group*/
+                  content: url(../images/jobs/solutions.svg)
+
+                &#innovation:before
+                  content: url(../images/jobs/innovation.svg)
+
+                &#quality:before
+                  content: url(../images/jobs/quality.svg)
+
+                &#duplicable:before
+                  content: url(../images/jobs/duplicable.svg)
+
+                &#image:before
+                  content: url(../images/jobs/image.svg)
+
+                &#notoriety:before/*laboratory*/
+                  content: url(../images/jobs/notoriety.svg)
+
+                &#share:before
+                  content: url(../images/jobs/share.svg)
+
+                &#collect:before
+                  content: url(../images/jobs/collect.svg)
+
+                &#offers:before
+                  content: url(../images/jobs/offers.svg)
+
+                &#reference:before
+                  content: url(../images/jobs/reference.svg)
+               
+        &:nth-child(2)
+          background: green
+
+    &#page-index /*ACCUEIL*/
       main
         background: url(../images/bkgd-index.jpg)
-        height: calc(100vh - 70px)
         background-position: 100%
+        height: calc(100vh - 63px)
 
         article
+          align-items: center
           color: #fff
-          align-items: center;
-          display: flex;
-          flex-direction: column;
+          display: flex
+          flex-direction: column
 
           p
-            +button($primary,50px,15px,none)
+            +button($primary,50px,10px,none)
             text-align: center
-            width: 13%
+            width: 12%
 
             a
               color: #fff
               text-decoration: none
 
-    &#page-about
-      article 
-        &:first-child:before
-          background: url(../images/bkgd-agency.jpg)
+    &#page-about article/*A PROPOS*/
+      &:first-child:before
+        background: url(../images/bkgd-agency.jpg)
 
-        #members
+      #members
+        display: flex
+        flex-wrap: wrap
+
+        > *
+          height: 250px
+          margin: 0
+          width: 250px
+
+        section
           display: flex
-          flex-wrap: wrap
+          flex-direction: column
+          justify-content: flex-end
+          position: relative
 
-          > *
-            height: 250px
+          &:first-of-type
+            margin-left: 500px
+
+          &:after
+            background: rgba($primary,0.6)
+            content: ''
+            height: 200px
+            left: 25px
+            opacity: 0
+            position: absolute
+            top: 25px
+            transform: scale(0)
+            transition: opacity 0.35s, transform 0.35s
+            width: 200px
+            z-index: -1
+
+          h4, p
+            color: #fff
+            opacity: 0
+            padding: 0 12%
+            transform: scale(0)
+            transition: opacity 0.35s, transform 0.35s
+
+          h4
+            font-size: 1.2em
+            font-weight: 400
+            line-height: 2.2em
             margin: 0
-            width: 250px
-
-          section
-            display: flex
-            flex-direction: column
-            justify-content: flex-end
-            position: relative
-
-            &:first-of-type
-              margin-left: 500px
 
             &:after
-              background: rgba($primary,0.6)
-              content: ''
-              height: 200px
-              left: 25px
-              opacity: 0
-              position: absolute
-              top: 25px
-              transform: scale(0)
-              transition: opacity 0.35s, transform 0.35s
-              width: 200px
-              z-index: -1
-
-            h4, p
-              opacity: 0
-              padding: 0 12%
-              transform: scale(0)
-              transition: opacity 0.35s, transform 0.35s
-              color: #fff
-
-            h4
-              font-size: 1.2em
-              font-weight: 400
-              line-height: 2.2em
-              margin: 0
-
-              &:after
-                background: #fff
-                content: ''
-                display: block
-                height: 2px
-                width: 25px
-
-            p
-              font-size: 1em
-              font-style: italic
-              line-height: 1.2em
-              padding-bottom: 20px
-
-            img
-              left: 0
-              position: absolute
-              top: 0
-              width: 250px
-              z-index: -1
-
-            &:hover, &:focus
-              &:after,h4,p
-                opacity: 1
-                transform: scale(1)
-
-        &:last-child
-          display: table
-          margin: 50px auto 70px
-
-          >*:not(:last-child)
-            padding: 0 10%
-            text-align: end
-
-          ul
-            width: 50%
-            display: table-cell
-
-            li
-              display: inline-table
               background: #fff
-              height: 250px
-              width: 50%
-              display: inline-flex
-              flex-direction: column
-              align-items: center
-              justify-content: center
-              text-transform: uppercase
-              letter-spacing: 0.1em;
-              margin-left: -3px
+              content: ''
+              display: block
+              height: 2px
+              width: 25px
 
-              &:nth-child(odd)
-                border-right: 1px solid darken($bkgd,4%)
-                box-sizing: border-box
+          p
+            font-size: 1em
+            font-style: italic
+            line-height: 1.2em
+            padding-bottom: 20px
 
-              &:nth-child(n+3)
-                border-top: 1px solid darken($bkgd,4%)
+          img
+            left: 0
+            position: absolute
+            top: 0
+            width: 250px
+            z-index: -1
 
-              strong
-                font-size: 2.4em
+          &:hover, &:focus
+            &:after,h4,p
+              opacity: 1
+              transform: scale(1)
 
-    &#page-guarantees
+      &:last-child
+        display: table
+        margin: 50px auto 70px
+
+        >*:not(:last-child)
+          padding: 0 10%
+          text-align: end
+
+        ul
+          display: table-cell
+          width: 50%
+
+          li
+            align-items: center
+            background: #fff
+            display: inline-table
+            display: inline-flex
+            flex-direction: column
+            height: 250px
+            justify-content: center
+            letter-spacing: 0.1em
+            margin-left: -3px
+            text-transform: uppercase
+            width: 50%
+
+            &:nth-child(odd)
+              border-right: 1px solid darken($bkgd,4%)
+              box-sizing: border-box
+
+            &:nth-child(n+3)
+              border-top: 1px solid darken($bkgd,4%)
+
+            strong
+              font-size: 2.4em
+
+    &#page-guarantees /*GARANTIES*/
       z-index: 0
 
       article 
@@ -450,19 +504,18 @@ html
           counter-reset: guarantee 
           display: flex
           flex-wrap: wrap
-          margin-top: 30px
           margin-bottom: 70px
 
           dt, dd
             color: #fff
             display: flex
             flex-direction: column
-            height: 335px
+            height: 340px
             justify-content: center
             margin: 0
             position: relative
             text-align: center
-            width: 335px
+            width: 340px
 
           dd
             background: lighten($text,8%)
@@ -474,15 +527,15 @@ html
                 left: 0
    
               & + dt
-                margin-left: 335px
+                margin-left: 340px
 
           dd:hover, dt:hover + dd
             &:nth-of-type(2n+1):after
-              transform: translateX(335px)
+              transform: translateX(340px)
 
           dt:hover
             &:nth-of-type(2n):after
-              transform: translateX(-335px)
+              transform: translateX(-340px)
 
           dt:nth-of-type(2n), dd:nth-of-type(2n+1)
             &:after
@@ -534,8 +587,7 @@ html
               background: #fff url(../images/guarantees/accompaniment.svg)no-repeat 50%
               background-size: 40%
 
-
-    &#page-services
+    &#page-services/*SERVICES*/
       article
         &:last-child
           &:before
@@ -543,21 +595,23 @@ html
 
           ul li
             +button(transparent,50px,15px,2px solid $text)
-            display: flex;
-            justify-content: center;
+            display: flex
+            justify-content: center
             margin-bottom: 20px
 
           p
-            display: flex;
-            flex-direction: column;
+            display: flex
+            flex-direction: column
 
-    &#page-contact
+    &#page-references/*REFERENCES - TO DO*/
+
+    &#page-contact/*CONTACT*/
       background: url(../images/bkgd-contact.jpg) 0
 
       article
         background: #fff
         margin-left: 50%
-        padding: 4% 8%;
+        padding: 4% 8%
 
         dl
           display: flex
@@ -591,15 +645,15 @@ html
       aside
         display: none
     
-    &#page-quotation
+    &#page-quotation/*FORMULAIRE DEVIS*/
       form
-        width: 50%
-        margin: 0 auto 70px
-        background: #fff
-        padding: 8%
         border: 1px solid darken($bkgd,3%)
+        background: #fff
+        margin: 0 auto 70px
+        padding: 8%
+        width: 50%
 
-    > aside
+    > aside/*Alors pourquoi pas vous ?*/
       background: url(../images/pourquoi-pas-vous.jpg)100%
       padding: 4%
 
@@ -607,7 +661,6 @@ html
         color: #fff
         margin: auto
         text-align: center
-        width: 60%
 
       ul 
         display: flex
@@ -615,7 +668,7 @@ html
 
         li
           +button(white,25px,7px 20px,2px solid #fff)
-          margin: 15px 10px;
+          margin: 15px 10px
 
         li + li
           +button(transparent,25px,7px 20px,2px solid #fff)
@@ -623,7 +676,7 @@ html
           a 
             color: #fff
         
-    footer
+    footer/*FOOTER*/
       background: $text
       color: #fff
       display: flex
@@ -648,7 +701,7 @@ html
             position: absolute
             width: 22%
 
-        &:last-child
+        &#more
           display: flex
           font-size: 1.15em
           position: relative
@@ -659,13 +712,13 @@ html
             left: calc(50% - 76px)
             padding: 5px 10px
             position: absolute
-            top: -10px
+            top: -5px
             z-index: 1
 
           ul
             align-self: center
             border: 2px solid $primary
-            display: flex;
+            display: flex
             margin: 0 auto
             padding: 15px 20px
             
@@ -676,9 +729,6 @@ html
 
       h2, ul,address
         font-size: .8em
-
-      h2
-        margin-bottom: 0
 
       ul
         margin-top: 0
