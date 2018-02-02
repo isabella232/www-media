@@ -79,63 +79,83 @@ html
       li
         list-style-type: none
 
-    nav:first-of-type
+    nav:first-of-type/*MENU NOIR KOZEA*/
       background: $text
-      order: -1
-      width: 30%
-      padding: 0 4%
-      height: 63px
       box-sizing: border-box
-      position: absolute
+      order: -1
+      height: 63px
       overflow: hidden
+      position: absolute
+      transition-duration: 0.5s
+      width: calc(100% / 3)
+      z-index: 1
+
+      &:hover
+        height: 100vh
+        transition: 
 
       ul
+        padding: 0 12%
+
         li
-          line-height: 3em
           font-size: 1.2em
           font-weight: 300
+          line-height: 3em
+
+          &:first-of-type
+            margin-top: 40px
 
           a
             color: #fff
+            display: inline-block
             letter-spacing: .5px
+            transform: translateX(0px)
+            transition-duration: 0.3s
+            transition-property: transform
+
+            &:hover
+              transform: translateX(8px)
             
         &:first-of-type
           &:before
             content: url(../images/logo.svg)
-            width: 25%
             display: block
+            width: 22%
 
-          li a
-            display: block
+          &:after
+            color: #fff
+            content: 'menu'
+            position: absolute
+            right: 10%
+            top: 20px
+            text-transform: uppercase
 
         &:last-child
           li a
-            font-weight: 500
             border-bottom: 2px solid #fff
+            font-weight: 500
             padding: 0 5px
 
-
-
-      & + nav 
+      & + nav /*MENU METIERS - SECTEUR D'ACTIVITE*/
         background: #fff
         border-bottom: 1px solid darken($bkgd,5%)
-        width: 70%
-        margin-left: 30%
+        margin-left: calc(100% / 3)
+        width: calc((100% / 3) * 2)
 
         ul 
           display: flex
           margin: 0
 
           li
-            flex: 1
-            padding: 20px
-            text-transform: uppercase
-            letter-spacing: 1px
-            font-size: .8em
-            text-align: center
             box-shadow: 1px 0 0 darken($bkgd,5%)
             display: inline-block
+            flex: 1
+            font-size: .8em
+            letter-spacing: 1px
+            padding: 20px
             position: relative
+            text-align: center
+            text-transform: uppercase
             transform: perspective(1px) translateZ(0)
             transition-duration: 0.3s
             transition-property: color, background-color
@@ -147,10 +167,11 @@ html
                 color: #fff
 
             &:hover
-              background-color: $primary
+              a
+                color: $primary
 
-
-
+              &.active a
+                color: #fff
 
     &#page-index, &#page-quotation/*aside et footer cachés*/
       aside,footer
@@ -278,13 +299,13 @@ html
         &:first-child
           display: flex
           flex-direction: column
-          height: calc(100vh - 63px)
           flex-wrap: wrap
+          height: calc(100vh - 63px)
           justify-content: center
 
           >*:not(:last-child)
-            padding: 0 8%
             box-sizing: border-box
+            padding: 0 8%
             width: 50%
 
           ul
@@ -305,7 +326,7 @@ html
                 box-shadow: 0 0 1px darken($bkgd,8%)
                 box-sizing: border-box
                 height: calc((100vh - 63px) / 3)
-                padding: 7% 2%
+                padding: 10% 2%
                 width: 50%
 
                 &:before

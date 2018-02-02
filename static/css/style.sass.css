@@ -62,47 +62,65 @@ html body {
   html body nav:first-of-type {
     background: #1C1C1C;
     order: -1;
-    width: 30%;
-    padding: 0 4%;
+    width: calc(100% / 3);
     height: 63px;
     box-sizing: border-box;
     position: absolute;
-    overflow: hidden; }
-    html body nav:first-of-type ul li {
-      line-height: 3em;
-      font-size: 1.2em;
-      font-weight: 300; }
-      html body nav:first-of-type ul li a {
+    overflow: hidden;
+    z-index: 1;
+    transition-duration: 0.5s; }
+    html body nav:first-of-type:hover {
+      height: 100vh; }
+    html body nav:first-of-type ul {
+      padding: 0 12%; }
+      html body nav:first-of-type ul li {
+        line-height: 3em;
+        font-size: 1.2em;
+        font-weight: 300; }
+        html body nav:first-of-type ul li:first-of-type {
+          margin-top: 40px; }
+        html body nav:first-of-type ul li a {
+          color: #fff;
+          letter-spacing: .5px;
+          transition-property: transform;
+          transition-duration: 0.3s;
+          transform: translateX(0px);
+          display: inline-block; }
+          html body nav:first-of-type ul li a:hover {
+            transform: translateX(8px); }
+      html body nav:first-of-type ul:first-of-type:before {
+        content: url(../images/logo.svg);
+        width: 22%;
+        display: block; }
+      html body nav:first-of-type ul:first-of-type:after {
+        content: 'menu';
+        text-transform: uppercase;
         color: #fff;
-        letter-spacing: .5px; }
-    html body nav:first-of-type ul:first-of-type:before {
-      content: url(../images/logo.svg);
-      width: 25%;
-      display: block; }
-    html body nav:first-of-type ul:first-of-type li a {
-      display: block; }
-    html body nav:first-of-type ul:last-child li a {
-      font-weight: 500;
-      border-bottom: 2px solid #fff;
-      padding: 0 5px; }
+        position: absolute;
+        top: 20px;
+        right: 10%; }
+      html body nav:first-of-type ul:last-child li a {
+        font-weight: 500;
+        border-bottom: 2px solid #fff;
+        padding: 0 5px; }
     html body nav:first-of-type + nav {
       background: #fff;
       border-bottom: 1px solid #efefef;
-      width: 70%;
-      margin-left: 30%; }
+      margin-left: calc(100% / 3);
+      width: calc((100% / 3) * 2); }
       html body nav:first-of-type + nav ul {
         display: flex;
         margin: 0; }
         html body nav:first-of-type + nav ul li {
-          flex: 1;
-          padding: 20px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-size: .8em;
-          text-align: center;
           box-shadow: 1px 0 0 #efefef;
           display: inline-block;
+          flex: 1;
+          font-size: .8em;
+          letter-spacing: 1px;
+          padding: 20px;
           position: relative;
+          text-align: center;
+          text-transform: uppercase;
           transform: perspective(1px) translateZ(0);
           transition-duration: 0.3s;
           transition-property: color, background-color; }
@@ -110,8 +128,10 @@ html body {
             background: #E73C4D; }
             html body nav:first-of-type + nav ul li.active a {
               color: #fff; }
-          html body nav:first-of-type + nav ul li:hover {
-            background-color: #E73C4D; }
+          html body nav:first-of-type + nav ul li:hover a {
+            color: #E73C4D; }
+          html body nav:first-of-type + nav ul li:hover.active a {
+            color: #fff; }
   html body#page-index aside, html body#page-index footer, html body#page-quotation aside, html body#page-quotation footer {
     display: none; }
   html body#page-guarantees article dl,
@@ -269,12 +289,12 @@ html body {
   html body#page-pharmacy main article:first-child, html body#page-laboratory main article:first-child, html body#page-group main article:first-child {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 63px);
     flex-wrap: wrap;
+    height: calc(100vh - 63px);
     justify-content: center; }
     html body#page-pharmacy main article:first-child > *:not(:last-child), html body#page-laboratory main article:first-child > *:not(:last-child), html body#page-group main article:first-child > *:not(:last-child) {
-      padding: 0 8%;
       box-sizing: border-box;
+      padding: 0 8%;
       width: 50%; }
     html body#page-pharmacy main article:first-child ul:first-of-type, html body#page-laboratory main article:first-child ul:first-of-type, html body#page-group main article:first-child ul:first-of-type {
       font-size: 1.3em; }
@@ -291,7 +311,7 @@ html body {
         box-shadow: 0 0 1px #e8e8e8;
         box-sizing: border-box;
         height: calc((100vh - 63px) / 3);
-        padding: 7% 2%;
+        padding: 10% 2%;
         width: 50%; }
         html body#page-pharmacy main article:first-child ul:last-of-type li:before, html body#page-laboratory main article:first-child ul:last-of-type li:before, html body#page-group main article:first-child ul:last-of-type li:before {
           display: block;
