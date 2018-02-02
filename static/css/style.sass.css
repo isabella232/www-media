@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:300,400,500,700");
 a {
-  color: #1C1C1C; }
+  color: #1C1C1C;
+  display: inline-block;
+  text-decoration: none;
+  transform: translateX(0px);
+  transition-duration: 0.3s; }
   a.link {
     color: #E73C4D; }
+    a.link:hover {
+      transform: translateX(8px); }
 
 address {
   font-style: normal; }
@@ -19,6 +25,7 @@ form {
       border: 2px solid #1C1C1C;
       border-radius: 0;
       padding: 15px;
+      transition-duration: .4s;
       color: #1C1C1C;
       margin-bottom: 20px;
       width: 100%; }
@@ -30,8 +37,11 @@ form {
     border: none;
     border-radius: 25px;
     padding: 15px;
+    transition-duration: .4s;
     color: #fff;
     width: 40%; }
+    form input[type="submit"]:hover {
+      background-color: #E73C4D; }
 
 html body {
   background: #fcfcfc;
@@ -61,47 +71,44 @@ html body {
       list-style-type: none; }
   html body nav:first-of-type {
     background: #1C1C1C;
-    order: -1;
-    width: calc(100% / 3);
-    height: 63px;
     box-sizing: border-box;
-    position: absolute;
+    height: 63px;
+    order: -1;
     overflow: hidden;
-    z-index: 1;
-    transition-duration: 0.5s; }
+    position: absolute;
+    transition-duration: 0.5s;
+    width: calc(100% / 3);
+    z-index: 1; }
     html body nav:first-of-type:hover {
       height: 100vh; }
     html body nav:first-of-type ul {
       padding: 0 12%; }
       html body nav:first-of-type ul li {
-        line-height: 3em;
         font-size: 1.2em;
-        font-weight: 300; }
+        font-weight: 300;
+        line-height: 3em; }
         html body nav:first-of-type ul li:first-of-type {
           margin-top: 40px; }
         html body nav:first-of-type ul li a {
           color: #fff;
-          letter-spacing: .5px;
-          transition-property: transform;
-          transition-duration: 0.3s;
-          transform: translateX(0px);
-          display: inline-block; }
+          display: inline-block;
+          letter-spacing: .5px; }
           html body nav:first-of-type ul li a:hover {
             transform: translateX(8px); }
       html body nav:first-of-type ul:first-of-type:before {
         content: url(../images/logo.svg);
-        width: 22%;
-        display: block; }
+        display: block;
+        width: 22%; }
       html body nav:first-of-type ul:first-of-type:after {
-        content: 'menu';
-        text-transform: uppercase;
         color: #fff;
+        content: 'menu';
         position: absolute;
+        right: 10%;
         top: 20px;
-        right: 10%; }
+        text-transform: uppercase; }
       html body nav:first-of-type ul:last-child li a {
-        font-weight: 500;
         border-bottom: 2px solid #fff;
+        font-weight: 500;
         padding: 0 5px; }
     html body nav:first-of-type + nav {
       background: #fff;
@@ -365,8 +372,11 @@ html body {
         border: none;
         border-radius: 50px;
         padding: 10px;
+        transition-duration: .4s;
         text-align: center;
         width: 12%; }
+        html body#page-index main article p:hover {
+          background-color: #1C1C1C; }
         html body#page-index main article p a {
           color: #fff;
           text-decoration: none; }
@@ -534,9 +544,18 @@ html body {
     border: 2px solid #1C1C1C;
     border-radius: 50px;
     padding: 15px;
+    transition-duration: .4s;
     display: flex;
     justify-content: center;
     margin-bottom: 20px; }
+    html body#page-services article:last-child ul li:hover {
+      background: #1C1C1C;
+      border: 2px solid #1C1C1C;
+      border-radius: 50px;
+      padding: 15px;
+      transition-duration: .4s; }
+      html body#page-services article:last-child ul li:hover a {
+        color: #fff; }
   html body#page-services article:last-child p {
     display: flex;
     flex-direction: column; }
@@ -561,6 +580,8 @@ html body {
         margin: 0; }
         html body#page-contact article ul li a {
           color: #1C1C1C; }
+          html body#page-contact article ul li a:hover {
+            transform: translateX(8px); }
       html body#page-contact article dd {
         margin-left: 0; }
       html body#page-contact article dt {
@@ -586,16 +607,34 @@ html body {
       display: flex;
       justify-content: center; }
       html body > aside ul li {
-        background: white;
+        background: #fff;
         border: 2px solid #fff;
         border-radius: 25px;
         padding: 7px 20px;
+        transition-duration: .4s;
         margin: 15px 10px; }
+        html body > aside ul li:hover {
+          background: #1C1C1C;
+          border: 2px solid #1C1C1C;
+          border-radius: 25px;
+          padding: 7px 20px;
+          transition-duration: .4s; }
+          html body > aside ul li:hover a {
+            color: #fff; }
       html body > aside ul li + li {
         background: transparent;
         border: 2px solid #fff;
         border-radius: 25px;
-        padding: 7px 20px; }
+        padding: 7px 20px;
+        transition-duration: .4s; }
+        html body > aside ul li + li:hover {
+          background: transparent;
+          border: 2px solid #1C1C1C;
+          border-radius: 25px;
+          padding: 7px 20px;
+          transition-duration: .4s; }
+          html body > aside ul li + li:hover a {
+            color: #1C1C1C; }
         html body > aside ul li + li a {
           color: #fff; }
   html body footer {
@@ -606,6 +645,8 @@ html body {
     padding: 20px; }
     html body footer a {
       color: #fff; }
+      html body footer a:hover {
+        transform: translateX(8px); }
     html body footer section {
       flex: 1; }
       html body footer section:first-child {
@@ -636,6 +677,8 @@ html body {
           display: flex;
           margin: 0 auto;
           padding: 15px 20px; }
+          html body footer section#more ul li a:hover {
+            transform: translateY(-5px); }
           html body footer section#more ul li:first-of-type:after {
             content: '-';
             padding: 8px; }

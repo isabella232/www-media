@@ -9,12 +9,20 @@ $bkgd: #fcfcfc
   border: $border
   border-radius: $radius
   padding: $padding
+  transition-duration: .4s
 
 a
   color: $text
+  display: inline-block
+  text-decoration: none
+  transform: translateX(0px)
+  transition-duration: 0.3s
 
   &.link
     color: $primary
+
+    &:hover
+      transform: translateX(8px)
 
 address
   font-style: normal
@@ -42,6 +50,9 @@ form
     +button($text,25px,15px,none) 
     color: #fff
     width: 40%
+
+    &:hover
+      background-color: $primary
 
 html
   body
@@ -82,8 +93,8 @@ html
     nav:first-of-type/*MENU NOIR KOZEA*/
       background: $text
       box-sizing: border-box
-      order: -1
       height: 63px
+      order: -1
       overflow: hidden
       position: absolute
       transition-duration: 0.5s
@@ -92,7 +103,6 @@ html
 
       &:hover
         height: 100vh
-        transition: 
 
       ul
         padding: 0 12%
@@ -109,9 +119,6 @@ html
             color: #fff
             display: inline-block
             letter-spacing: .5px
-            transform: translateX(0px)
-            transition-duration: 0.3s
-            transition-property: transform
 
             &:hover
               transform: translateX(8px)
@@ -402,6 +409,9 @@ html
             text-align: center
             width: 12%
 
+            &:hover
+              background-color: $text
+
             a
               color: #fff
               text-decoration: none
@@ -620,6 +630,12 @@ html
             justify-content: center
             margin-bottom: 20px
 
+            &:hover
+              +button($text,50px,15px,2px solid $text)
+
+              a
+                color: #fff
+
           p
             display: flex
             flex-direction: column
@@ -653,7 +669,10 @@ html
           margin: 0
 
           li a
-            color: $text             
+            color: $text
+
+            &:hover
+              transform: translateX(8px)          
 
         dd
           margin-left: 0
@@ -688,11 +707,23 @@ html
         justify-content: center
 
         li
-          +button(white,25px,7px 20px,2px solid #fff)
+          +button(#fff,25px,7px 20px,2px solid #fff)
           margin: 15px 10px
+
+          &:hover
+            +button($text,25px,7px 20px,2px solid $text)
+            
+            a
+              color: #fff
 
         li + li
           +button(transparent,25px,7px 20px,2px solid #fff)
+
+          &:hover
+            +button(transparent,25px,7px 20px,2px solid $text)
+
+            a
+              color: $text
 
           a 
             color: #fff
@@ -706,6 +737,9 @@ html
         
       a
         color: #fff
+
+        &:hover
+          transform: translateX(8px)
 
       section
         flex: 1
@@ -742,6 +776,9 @@ html
             display: flex
             margin: 0 auto
             padding: 15px 20px
+
+            li a:hover
+              transform: translateY(-5px)
             
             li:first-of-type
               &:after
