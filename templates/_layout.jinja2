@@ -61,10 +61,13 @@
         Osez vous démarquer en allant chercher vos patients là où ils se
         trouvent.
       </p>
-      <ul>
-        <li><a href="{{ url_for('page', page='quotation') }}">Obtenir un devis personnalisé</a></li>
-        <li><a href="{{ url_for('page', page='services') }}">Voir notre expertise</a></li>
-      </ul>
+      {% if page in (MENU_PAGES | map(attribute=0) | list)[:-1] %}
+        <ul>
+          <li><a href="{{ url_for('page', page='quotation') }}">Obtenir un devis personnalisé</a></li>
+          {% set next_page = MENU_PAGES[(MENU_PAGES | map(attribute=0) | list).index(page) + 1][0] %}
+          <li><a href="{{ url_for('page', page=next_page) }}">Voir notre expertise {{next_page}}</a></li>
+        </ul>
+      {% endif %}
     </aside>
 
     <footer>
