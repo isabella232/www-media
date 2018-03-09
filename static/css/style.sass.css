@@ -76,7 +76,8 @@ html body {
     order: -1;
     overflow: hidden;
     position: absolute;
-    transition-duration: 0.5s;
+    transition: height .35s ease-out;
+    transition-delay: .15s;
     width: calc(100% / 3);
     z-index: 1; }
     html body nav:first-of-type:hover {
