@@ -361,25 +361,30 @@ html body {
   html body#page-index main {
     background: url(../images/bkgd-index.jpg);
     background-position: 100%;
-    height: calc(100vh - 63px); }
+    height: calc(100vh - 63px);
+    display: flex; }
     html body#page-index main article {
-      align-items: center;
       color: #fff;
-      display: flex;
-      flex-direction: column; }
-      html body#page-index main article p {
+      margin: auto;
+      text-align: center; }
+      html body#page-index main article::before {
+        content: url(../images/logo.svg);
+        display: block;
+        margin: 0 auto;
+        max-width: 15em; }
+      html body#page-index main article h2 {
+        font-size: 3.5em;
+        padding: 1em 0; }
+      html body#page-index main article a {
         background: #E73C4D;
         border: none;
         border-radius: 50px;
-        padding: 10px;
+        padding: 0.75em 2em;
         transition-duration: .4s;
-        text-align: center;
-        width: 12%; }
-        html body#page-index main article p:hover {
+        color: #fff;
+        text-decoration: none; }
+        html body#page-index main article a:hover {
           background-color: #1C1C1C; }
-        html body#page-index main article p a {
-          color: #fff;
-          text-decoration: none; }
   html body#page-about article:first-child:before {
     background: url(../images/bkgd-agency.jpg); }
   html body#page-about article #members {

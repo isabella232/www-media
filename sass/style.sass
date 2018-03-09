@@ -4,7 +4,7 @@ $text: #1C1C1C
 $primary: #E73C4D
 $bkgd: #fcfcfc
 
-=button($bkgd,$radius,$padding,$border)
+=button($bkgd, $radius, $padding, $border)
   background: $bkgd
   border: $border
   border-radius: $radius
@@ -47,7 +47,7 @@ form
 
   input[type="submit"]
     align-self: flex-end
-    +button($text,25px,15px,none) 
+    +button($text,25px,15px,none)
     color: #fff
     width: 40%
 
@@ -83,7 +83,7 @@ html
     ul li a
       font-size: 1.1em
       text-decoration: none
-    
+
     ul
       padding-left: 0
 
@@ -122,7 +122,7 @@ html
 
             &:hover
               transform: translateX(8px)
-            
+
         &:first-of-type
           &:before
             content: url(../images/logo.svg)
@@ -149,7 +149,7 @@ html
         margin-left: calc(100% / 3)
         width: calc((100% / 3) * 2)
 
-        ul 
+        ul
           display: flex
           margin: 0
 
@@ -184,8 +184,8 @@ html
       aside,footer
         display: none
 
-    &#page-guarantees article dl, 
-    &#page-services article section, 
+    &#page-guarantees article dl,
+    &#page-services article section,
     &#page-group article:last-child,
     &#page-pharmacy article:last-child,
     &#page-laboratory article:last-child,
@@ -193,9 +193,9 @@ html
       margin: auto
       max-width: 1024px
 
-    &#page-about article:nth-child(2), 
-    &#page-quotation, 
-    &#page-guarantees article, 
+    &#page-about article:nth-child(2),
+    &#page-quotation,
+    &#page-guarantees article,
     &#page-services article:first-child,
     &#page-pharmacy article:not(:first-child),
     &#page-laboratory article:not(:first-child),
@@ -208,7 +208,7 @@ html
       h2 + p
         padding-bottom: 20px
 
-    &#page-about main article:first-of-type, 
+    &#page-about main article:first-of-type,
     &#page-services main article:last-of-type
       background: #fff
       margin-left: 50%
@@ -224,8 +224,8 @@ html
         top: 0
         width: 100%
         z-index: -1
-    
-    &#page-services article:first-child, 
+
+    &#page-services article:first-child,
     &#page-pharmacy article:last-child,
     &#page-laboratory article:last-child,
     &#page-group article:last-child, /*Tableaux services*/
@@ -248,7 +248,7 @@ html
           padding: 7% 2%
           text-align: center
           width: 33.3%
-          
+
           h3, ul
             margin: 0
 
@@ -299,10 +299,10 @@ html
           &#offers h3:before
             content: url(../images/services/offer.svg)
 
-    &#page-pharmacy, 
-    &#page-laboratory, 
+    &#page-pharmacy,
+    &#page-laboratory,
     &#page-group /*pages métiers-secteurs d'activité*/
-      main article 
+      main article
         &:first-child
           display: flex
           flex-direction: column
@@ -388,7 +388,7 @@ html
 
                 &#reference:before
                   content: url(../images/jobs/reference.svg)
-               
+
         &:nth-child(2)
           background: green
 
@@ -397,24 +397,30 @@ html
         background: url(../images/bkgd-index.jpg)
         background-position: 100%
         height: calc(100vh - 63px)
+        display: flex
 
         article
-          align-items: center
           color: #fff
-          display: flex
-          flex-direction: column
+          margin: auto
+          text-align: center
 
-          p
-            +button($primary,50px,10px,none)
-            text-align: center
-            width: 12%
+          &::before
+            content: url(../images/logo.svg)
+            display: block
+            margin: 0 auto
+            max-width: 15em
+
+          h2
+            font-size: 3.5em
+            padding: 1em 0
+
+          a
+            +button($primary,50px,.75em 2em,none)
+            color: #fff
+            text-decoration: none
 
             &:hover
               background-color: $text
-
-            a
-              color: #fff
-              text-decoration: none
 
     &#page-about article/*A PROPOS*/
       &:first-child:before
@@ -527,12 +533,12 @@ html
     &#page-guarantees /*GARANTIES*/
       z-index: 0
 
-      article 
+      article
         h2
           padding-bottom: 20px
 
         dl
-          counter-reset: guarantee 
+          counter-reset: guarantee
           display: flex
           flex-wrap: wrap
           margin-bottom: 70px
@@ -556,7 +562,7 @@ html
             &:nth-of-type(2n+1)
               &:after
                 left: 0
-   
+
               & + dt
                 margin-left: 340px
 
@@ -672,7 +678,7 @@ html
             color: $text
 
             &:hover
-              transform: translateX(8px)          
+              transform: translateX(8px)
 
         dd
           margin-left: 0
@@ -684,7 +690,7 @@ html
 
       aside
         display: none
-    
+
     &#page-quotation/*FORMULAIRE DEVIS*/
       form
         border: 1px solid darken($bkgd,3%)
@@ -697,12 +703,12 @@ html
       background: url(../images/pourquoi-pas-vous.jpg)100%
       padding: 4%
 
-      h2,p,ul 
+      h2,p,ul
         color: #fff
         margin: auto
         text-align: center
 
-      ul 
+      ul
         display: flex
         justify-content: center
 
@@ -712,7 +718,7 @@ html
 
           &:hover
             +button($text,25px,7px 20px,2px solid $text)
-            
+
             a
               color: #fff
 
@@ -725,16 +731,16 @@ html
             a
               color: $text
 
-          a 
+          a
             color: #fff
-        
+
     footer/*FOOTER*/
       background: $text
       color: #fff
       display: flex
       font-weight: 300
       padding: 20px
-        
+
       a
         color: #fff
 
@@ -779,7 +785,7 @@ html
 
             li a:hover
               transform: translateY(-5px)
-            
+
             li:first-of-type
               &:after
                 content: '-'
@@ -790,6 +796,3 @@ html
 
       ul
         margin-top: 0
-
-
-
