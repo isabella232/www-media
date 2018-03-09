@@ -76,7 +76,7 @@ html body {
     order: -1;
     overflow: hidden;
     position: absolute;
-    transition: height .35s ease-out;
+    transition: height .35s ease-in-out;
     transition-delay: .15s;
     width: calc(100% / 3);
     z-index: 1; }
@@ -318,8 +318,11 @@ html body {
         background: #fff;
         box-shadow: 0 0 1px #e8e8e8;
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
         height: calc((100vh - 63px) / 3);
-        padding: 10% 2%;
+        justify-content: center;
+        padding: 2%;
         width: 50%; }
         html body#page-pharmacy main article:first-child ul:last-of-type li:before, html body#page-laboratory main article:first-child ul:last-of-type li:before, html body#page-group main article:first-child ul:last-of-type li:before {
           display: block;
