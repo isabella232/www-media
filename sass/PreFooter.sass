@@ -1,0 +1,28 @@
+// Alors pourquoi pas vous ?
+body > aside
+  background: url(../images/pourquoi-pas-vous.jpg)100%
+  color: #fff
+  padding: 3em 4%
+  text-align: center
+
+  h2
+    line-height: 1
+    margin: 0
+
+  ul
+    li
+      display: inline-block
+      margin: 0 1em 1em
+
+      a
+        +button(#fff, 2px solid #fff, $text, .75em 2em)
+
+        &:hover
+          +button($text, 2px solid $text, #fff, .75em 2em)
+
+    li + li
+      a
+        +button(transparent, 2px solid #fff, #fff, .75em 2em)
+
+        &:hover
+          +button(transparent, 2px solid $text, $text, .75em 2em)

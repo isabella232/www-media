@@ -2,11 +2,39 @@
 @import mixins
 @import variables
 
+@import 'PreFooter.sass'
 @import 'Menus.sass'
 
 
+
+h1
+  display: none
+
+h2
+  font-size: 2.8em
+
+article h2
+  line-height: 1.2em
+  padding-top: 50px
+
+  & + *
+    margin-top: 0
+
+p
+  font-size: 1.3em
+
+ul li a
+  font-size: 1.1em
+  text-decoration: none
+
+ul
+  padding-left: 0
+
+  li
+    list-style-type: none
+
 a
-  color: $text
+  color: inherit
   display: inline-block
   outline: none
   text-decoration: none
@@ -57,33 +85,6 @@ html
     flex-direction: column
     font-family: 'Hind', sans-serif
     margin: 0
-
-    h1
-      display: none
-
-    h2
-      font-size: 2.4em
-      margin: 0
-
-    article h2
-      line-height: 1.2em
-      padding-top: 50px
-
-      & + *
-        margin-top: 0
-
-    p
-      font-size: 1.3em
-
-    ul li a
-      font-size: 1.1em
-      text-decoration: none
-
-    ul
-      padding-left: 0
-
-      li
-        list-style-type: none
 
     &#page-index, &#page-quotation/*aside et footer cachés*/
       aside,footer
@@ -607,40 +608,6 @@ html
         padding: 8%
         width: 50%
 
-    > aside/*Alors pourquoi pas vous ?*/
-      background: url(../images/pourquoi-pas-vous.jpg)100%
-      padding: 4%
-
-      h2,p,ul
-        color: #fff
-        margin: auto
-        text-align: center
-
-      ul
-        display: flex
-        justify-content: center
-
-        li
-          +button(#fff,25px,7px 20px,2px solid #fff)
-          margin: 15px 10px
-
-          &:hover
-            +button($text,25px,7px 20px,2px solid $text)
-
-            a
-              color: #fff
-
-        li + li
-          +button(transparent,25px,7px 20px,2px solid #fff)
-
-          &:hover
-            +button(transparent,25px,7px 20px,2px solid $text)
-
-            a
-              color: $text
-
-          a
-            color: #fff
 
     footer/*FOOTER*/
       background: $text

@@ -1,4 +1,44 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:300,400,500,700");
+body > aside {
+  background: url(../images/pourquoi-pas-vous.jpg) 100%;
+  color: #fff;
+  padding: 3em 4%;
+  text-align: center; }
+  body > aside h2 {
+    line-height: 1;
+    margin: 0; }
+  body > aside ul li {
+    display: inline-block;
+    margin: 0 1em 1em; }
+    body > aside ul li a {
+      background: #fff;
+      border: 2px solid #fff;
+      border-radius: 2em;
+      color: #1C1C1C;
+      padding: 0.75em 2em;
+      transition-duration: .4s; }
+      body > aside ul li a:hover {
+        background: #1C1C1C;
+        border: 2px solid #1C1C1C;
+        border-radius: 2em;
+        color: #fff;
+        padding: 0.75em 2em;
+        transition-duration: .4s; }
+  body > aside ul li + li a {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 2em;
+    color: #fff;
+    padding: 0.75em 2em;
+    transition-duration: .4s; }
+    body > aside ul li + li a:hover {
+      background: transparent;
+      border: 2px solid #1C1C1C;
+      border-radius: 2em;
+      color: #1C1C1C;
+      padding: 0.75em 2em;
+      transition-duration: .4s; }
+
 nav:first-of-type, nav:first-of-type + nav {
   height: 63px; }
   nav:first-of-type a, nav:first-of-type + nav a {
@@ -73,8 +113,32 @@ nav:first-of-type + nav {
       nav:first-of-type + nav ul li:hover:not(.active) {
         color: #E73C4D; }
 
+h1 {
+  display: none; }
+
+h2 {
+  font-size: 2.8em; }
+
+article h2 {
+  line-height: 1.2em;
+  padding-top: 50px; }
+  article h2 + * {
+    margin-top: 0; }
+
+p {
+  font-size: 1.3em; }
+
+ul li a {
+  font-size: 1.1em;
+  text-decoration: none; }
+
+ul {
+  padding-left: 0; }
+  ul li {
+    list-style-type: none; }
+
 a {
-  color: #1C1C1C;
+  color: inherit;
   display: inline-block;
   outline: none;
   text-decoration: none;
@@ -97,9 +161,10 @@ form {
     form label input, form label textarea, form label select {
       box-sizing: border-box;
       background: transparent;
-      border: 2px solid #1C1C1C;
-      border-radius: 0;
-      padding: 15px;
+      border: 0;
+      border-radius: 2em;
+      color: 15px;
+      padding: 2px solid #1C1C1C;
       transition-duration: .4s;
       color: #1C1C1C;
       margin-bottom: 20px;
@@ -109,9 +174,10 @@ form {
   form input[type="submit"] {
     align-self: flex-end;
     background: #1C1C1C;
-    border: none;
-    border-radius: 25px;
-    padding: 15px;
+    border: 25px;
+    border-radius: 2em;
+    color: 15px;
+    padding: none;
     transition-duration: .4s;
     color: #fff;
     width: 40%; }
@@ -125,25 +191,6 @@ html body {
   flex-direction: column;
   font-family: 'Hind', sans-serif;
   margin: 0; }
-  html body h1 {
-    display: none; }
-  html body h2 {
-    font-size: 2.4em;
-    margin: 0; }
-  html body article h2 {
-    line-height: 1.2em;
-    padding-top: 50px; }
-    html body article h2 + * {
-      margin-top: 0; }
-  html body p {
-    font-size: 1.3em; }
-  html body ul li a {
-    font-size: 1.1em;
-    text-decoration: none; }
-  html body ul {
-    padding-left: 0; }
-    html body ul li {
-      list-style-type: none; }
   html body#page-index aside, html body#page-index footer, html body#page-quotation aside, html body#page-quotation footer {
     display: none; }
   html body#page-guarantees article dl,
@@ -385,9 +432,10 @@ html body {
         padding: 1em 0; }
       html body#page-index main article a {
         background: #E73C4D;
-        border: none;
-        border-radius: 50px;
-        padding: 0.75em 2em;
+        border: 50px;
+        border-radius: 2em;
+        color: 0.75em 2em;
+        padding: none;
         transition-duration: .4s;
         color: #fff;
         text-decoration: none; }
@@ -554,18 +602,20 @@ html body {
     background: url(../images/bkgd-targets.jpg); }
   html body#page-services article:last-child ul li {
     background: transparent;
-    border: 2px solid #1C1C1C;
-    border-radius: 50px;
-    padding: 15px;
+    border: 50px;
+    border-radius: 2em;
+    color: 15px;
+    padding: 2px solid #1C1C1C;
     transition-duration: .4s;
     display: flex;
     justify-content: center;
     margin-bottom: 20px; }
     html body#page-services article:last-child ul li:hover {
       background: #1C1C1C;
-      border: 2px solid #1C1C1C;
-      border-radius: 50px;
-      padding: 15px;
+      border: 50px;
+      border-radius: 2em;
+      color: 15px;
+      padding: 2px solid #1C1C1C;
       transition-duration: .4s; }
       html body#page-services article:last-child ul li:hover a {
         color: #fff; }
@@ -609,47 +659,6 @@ html body {
     margin: 0 auto 70px;
     padding: 8%;
     width: 50%; }
-  html body > aside {
-    background: url(../images/pourquoi-pas-vous.jpg) 100%;
-    padding: 4%; }
-    html body > aside h2, html body > aside p, html body > aside ul {
-      color: #fff;
-      margin: auto;
-      text-align: center; }
-    html body > aside ul {
-      display: flex;
-      justify-content: center; }
-      html body > aside ul li {
-        background: #fff;
-        border: 2px solid #fff;
-        border-radius: 25px;
-        padding: 7px 20px;
-        transition-duration: .4s;
-        margin: 15px 10px; }
-        html body > aside ul li:hover {
-          background: #1C1C1C;
-          border: 2px solid #1C1C1C;
-          border-radius: 25px;
-          padding: 7px 20px;
-          transition-duration: .4s; }
-          html body > aside ul li:hover a {
-            color: #fff; }
-      html body > aside ul li + li {
-        background: transparent;
-        border: 2px solid #fff;
-        border-radius: 25px;
-        padding: 7px 20px;
-        transition-duration: .4s; }
-        html body > aside ul li + li:hover {
-          background: transparent;
-          border: 2px solid #1C1C1C;
-          border-radius: 25px;
-          padding: 7px 20px;
-          transition-duration: .4s; }
-          html body > aside ul li + li:hover a {
-            color: #1C1C1C; }
-        html body > aside ul li + li a {
-          color: #fff; }
   html body footer {
     background: #1C1C1C;
     color: #fff;
