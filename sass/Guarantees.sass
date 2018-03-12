@@ -1,0 +1,98 @@
+// GARANTIES
+#page-guarantees
+  z-index: 0
+
+  article
+    h2
+      padding-bottom: 20px
+
+    dl
+      counter-reset: guarantee
+      display: flex
+      flex-wrap: wrap
+      margin-bottom: 70px
+
+      dt, dd
+        box-sizing: border-box
+        color: #fff
+        display: flex
+        flex-direction: column
+        height: 340px
+        justify-content: center
+        margin: 0
+        padding: 2%
+        position: relative
+        text-align: center
+        width: 340px
+
+      dd
+        background: lighten($text,8%)
+        font-size: 1.25em
+
+        &:nth-of-type(2n+1)
+          &:after
+            left: 0
+
+          & + dt
+            margin-left: 340px
+
+      dd:hover, dt:hover + dd
+        &:nth-of-type(2n+1):after
+          transform: translateX(340px)
+
+      dt:hover
+        &:nth-of-type(2n):after
+          transform: translateX(-340px)
+
+      dt:nth-of-type(2n), dd:nth-of-type(2n+1)
+        &:after
+          content: ''
+          height: 100%
+          position: absolute
+          top: 0
+          transition-duration: 1s
+          transition-property: transform
+          transition-timing-function: ease
+          width: 100%
+          z-index: -1
+
+      dt
+        background: lighten($text,3%)
+        font-size: 1.6em
+        font-weight: 700
+        letter-spacing: 0.1em
+        line-height: 1.5
+        text-transform: uppercase
+
+        &:before
+          content: "[0" counter(guarantee) "]"
+          counter-increment: guarantee
+          font-weight: 300
+          margin-bottom: .5em
+
+        &:nth-of-type(2n):after
+          left: 0
+
+        &#innovate + dd:after
+          background: #fff url(../images/guarantees/innovation.svg)no-repeat 50%
+          background-size: 40%
+
+        &#visibility:after
+          background: #fff url(../images/guarantees/visibility.svg)no-repeat 50%
+          background-size: 40%
+
+        &#expertise + dd:after
+          background: #fff url(../images/guarantees/expertise.svg)no-repeat 50%
+          background-size: 40%
+
+        &#guarantee:after
+          background: #fff url(../images/guarantees/guarantee.svg)no-repeat 50%
+          background-size: 40%
+
+        &#result + dd:after
+          background: #fff url(../images/guarantees/result.svg)no-repeat 50%
+          background-size: 40%
+
+        &#accompaniment:after
+          background: #fff url(../images/guarantees/accompaniment.svg)no-repeat 50%
+          background-size: 40%
