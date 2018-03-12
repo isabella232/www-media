@@ -1,43 +1,62 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:300,400,500,700");
-body > aside {
-  background: url(../images/pourquoi-pas-vous.jpg) 100%;
+footer {
+  align-items: flex-start;
+  background: #1C1C1C;
   color: #fff;
-  padding: 3em 4%;
-  text-align: center; }
-  body > aside h2 {
-    line-height: 1;
-    margin: 0; }
-  body > aside ul li {
-    display: inline-block;
-    margin: 0 1em 1em; }
-    body > aside ul li a {
-      background: #fff;
-      border: 2px solid #fff;
-      border-radius: 2em;
-      color: #1C1C1C;
-      padding: 0.75em 2em;
-      transition-duration: .4s; }
-      body > aside ul li a:hover {
+  display: flex;
+  font-weight: 300;
+  padding: 20px; }
+  footer:before {
+    content: url(../images/logo-footer.svg);
+    display: block;
+    width: 7em; }
+  footer a:hover {
+    transform: translateX(8px); }
+  footer section {
+    flex: 1;
+    margin: 0 4%; }
+    footer section#more {
+      border: 2px solid #E73C4D;
+      display: flex;
+      font-size: 1.15em;
+      position: relative; }
+      footer section#more h2 {
+        align-items: center;
         background: #1C1C1C;
-        border: 2px solid #1C1C1C;
-        border-radius: 2em;
-        color: #fff;
-        padding: 0.75em 2em;
-        transition-duration: .4s; }
-  body > aside ul li + li a {
-    background: transparent;
-    border: 2px solid #fff;
-    border-radius: 2em;
-    color: #fff;
-    padding: 0.75em 2em;
-    transition-duration: .4s; }
-    body > aside ul li + li a:hover {
-      background: transparent;
-      border: 2px solid #1C1C1C;
-      border-radius: 2em;
-      color: #1C1C1C;
-      padding: 0.75em 2em;
-      transition-duration: .4s; }
+        color: #E73C4D;
+        display: flex;
+        left: 50%;
+        margin: 0;
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        top: -1px;
+        z-index: 1;
+        width: 100%; }
+        footer section#more h2::before, footer section#more h2::after {
+          background-color: #E73C4D;
+          content: '';
+          flex: 1;
+          height: 2px; }
+        footer section#more h2::before {
+          margin-right: 1em; }
+        footer section#more h2::after {
+          margin-left: 1em; }
+      footer section#more ul {
+        align-self: center;
+        display: flex;
+        margin: 0 auto;
+        padding: 15px 20px; }
+        footer section#more ul:before {
+          content: '-';
+          margin: 0 1em; }
+        footer section#more ul li:first-child {
+          order: -1; }
+        footer section#more ul li a:hover {
+          transform: translateY(-5px); }
+  footer h2, footer ul, footer address {
+    font-size: .8em; }
+  footer ul {
+    margin-top: 0; }
 
 nav:first-of-type, nav:first-of-type + nav {
   height: 63px; }
@@ -112,6 +131,46 @@ nav:first-of-type + nav {
         color: #fff; }
       nav:first-of-type + nav ul li:hover:not(.active) {
         color: #E73C4D; }
+
+body > aside {
+  background: url(../images/pourquoi-pas-vous.jpg) 100%;
+  color: #fff;
+  padding: 3em 4%;
+  text-align: center; }
+  body > aside h2 {
+    line-height: 1;
+    margin: 0; }
+  body > aside ul li {
+    display: inline-block;
+    margin: 0 1em 1em; }
+    body > aside ul li a {
+      background: #fff;
+      border: 2px solid #fff;
+      border-radius: 2em;
+      color: #1C1C1C;
+      padding: 0.75em 2em;
+      transition-duration: .4s; }
+      body > aside ul li a:hover {
+        background: #1C1C1C;
+        border: 2px solid #1C1C1C;
+        border-radius: 2em;
+        color: #fff;
+        padding: 0.75em 2em;
+        transition-duration: .4s; }
+  body > aside ul li + li a {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 2em;
+    color: #fff;
+    padding: 0.75em 2em;
+    transition-duration: .4s; }
+    body > aside ul li + li a:hover {
+      background: transparent;
+      border: 2px solid #1C1C1C;
+      border-radius: 2em;
+      color: #1C1C1C;
+      padding: 0.75em 2em;
+      transition-duration: .4s; }
 
 h1 {
   display: none; }
@@ -659,54 +718,5 @@ html body {
     margin: 0 auto 70px;
     padding: 8%;
     width: 50%; }
-  html body footer {
-    background: #1C1C1C;
-    color: #fff;
-    display: flex;
-    font-weight: 300;
-    padding: 20px; }
-    html body footer a {
-      color: #fff; }
-      html body footer a:hover {
-        transform: translateX(8px); }
-    html body footer section {
-      flex: 1; }
-      html body footer section:first-child {
-        padding: 0 3% 0 10%;
-        position: relative; }
-        html body footer section:first-child:before {
-          background: url(../images/logo-footer.svg) no-repeat;
-          content: '';
-          height: 100%;
-          left: 0;
-          position: absolute;
-          width: 22%; }
-      html body footer section#more {
-        display: flex;
-        font-size: 1.15em;
-        position: relative; }
-        html body footer section#more h2 {
-          background: #1C1C1C;
-          color: #E73C4D;
-          left: calc(50% - 76px);
-          padding: 5px 10px;
-          position: absolute;
-          top: -5px;
-          z-index: 1; }
-        html body footer section#more ul {
-          align-self: center;
-          border: 2px solid #E73C4D;
-          display: flex;
-          margin: 0 auto;
-          padding: 15px 20px; }
-          html body footer section#more ul li a:hover {
-            transform: translateY(-5px); }
-          html body footer section#more ul li:first-of-type:after {
-            content: '-';
-            padding: 8px; }
-    html body footer h2, html body footer ul, html body footer address {
-      font-size: .8em; }
-    html body footer ul {
-      margin-top: 0; }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */

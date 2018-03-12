@@ -1,0 +1,75 @@
+footer
+  align-items: flex-start
+  background: $text
+  color: #fff
+  display: flex
+  font-weight: 300
+  padding: 20px
+
+  &:before
+    content: url(../images/logo-footer.svg)
+    display: block
+    width: 7em
+
+  a
+    &:hover
+      transform: translateX(8px)
+
+  section
+    flex: 1
+    margin: 0 4%
+
+    &#more
+      border: 2px solid $primary
+      display: flex
+      font-size: 1.15em
+      position: relative
+
+      h2
+        align-items: center
+        background: $text
+        color: $primary
+        display: flex
+        left: 50%
+        margin: 0
+        position: absolute
+        transform: translateX(-50%) translateY(-50%)
+        top: -1px
+        z-index: 1
+        width: 100%
+
+        &::before, &::after
+          background-color: $primary
+          content: ''
+          flex: 1
+          height: 2px
+
+        &::before
+          margin-right: 1em
+
+        &::after
+          margin-left: 1em
+
+      ul
+        align-self: center
+        display: flex
+        margin: 0 auto
+        padding: 15px 20px
+
+        &:before
+          content: '-'
+          margin: 0 1em
+
+        li
+          &:first-child
+            order: -1
+
+          a:hover
+            transform: translateY(-5px)
+
+
+  h2, ul,address
+    font-size: .8em
+
+  ul
+    margin-top: 0

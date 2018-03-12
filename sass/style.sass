@@ -2,8 +2,9 @@
 @import mixins
 @import variables
 
-@import 'PreFooter.sass'
+@import 'Footer.sass'
 @import 'Menus.sass'
+@import 'PreFooter.sass'
 
 
 
@@ -607,67 +608,3 @@ html
         margin: 0 auto 70px
         padding: 8%
         width: 50%
-
-
-    footer/*FOOTER*/
-      background: $text
-      color: #fff
-      display: flex
-      font-weight: 300
-      padding: 20px
-
-      a
-        color: #fff
-
-        &:hover
-          transform: translateX(8px)
-
-      section
-        flex: 1
-
-        &:first-child
-          padding: 0 3% 0 10%
-          position: relative
-
-          &:before
-            background: url(../images/logo-footer.svg)no-repeat
-            content: ''
-            height: 100%
-            left: 0
-            position: absolute
-            width: 22%
-
-        &#more
-          display: flex
-          font-size: 1.15em
-          position: relative
-
-          h2
-            background: $text
-            color: $primary
-            left: calc(50% - 76px)
-            padding: 5px 10px
-            position: absolute
-            top: -5px
-            z-index: 1
-
-          ul
-            align-self: center
-            border: 2px solid $primary
-            display: flex
-            margin: 0 auto
-            padding: 15px 20px
-
-            li a:hover
-              transform: translateY(-5px)
-
-            li:first-of-type
-              &:after
-                content: '-'
-                padding: 8px
-
-      h2, ul,address
-        font-size: .8em
-
-      ul
-        margin-top: 0
