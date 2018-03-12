@@ -1,19 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,700')
+@import mixins
+@import variables
 
-$text: #1C1C1C
-$primary: #E73C4D
-$bkgd: #fcfcfc
+@import 'Menus.sass'
 
-=button($bkgd, $radius, $padding, $border)
-  background: $bkgd
-  border: $border
-  border-radius: $radius
-  padding: $padding
-  transition-duration: .4s
 
 a
   color: $text
   display: inline-block
+  outline: none
   text-decoration: none
   transform: translateX(0px)
   transition-duration: 0.3s
@@ -89,97 +84,6 @@ html
 
       li
         list-style-type: none
-
-    nav:first-of-type/*MENU NOIR KOZEA*/
-      background: $text
-      box-sizing: border-box
-      height: 63px
-      order: -1
-      overflow: hidden
-      position: absolute
-      transition: height .35s ease-in-out
-      transition-delay: .15s
-      width: calc(100% / 3)
-      z-index: 1
-
-      &:hover
-        height: 100vh
-
-      ul
-        padding: 0 12%
-
-        li
-          font-size: 1.2em
-          font-weight: 300
-          line-height: 3em
-
-          &:first-of-type
-            margin-top: 40px
-
-          a
-            color: #fff
-            display: inline-block
-            letter-spacing: .5px
-
-            &:hover
-              transform: translateX(8px)
-
-        &:first-of-type
-          &:before
-            content: url(../images/logo.svg)
-            display: block
-            width: 22%
-
-          &:after
-            color: #fff
-            content: 'menu'
-            position: absolute
-            right: 10%
-            top: 20px
-            text-transform: uppercase
-
-        &:last-child
-          li a
-            border-bottom: 2px solid #fff
-            font-weight: 500
-            padding: 0 5px
-
-      & + nav /*MENU METIERS - SECTEUR D'ACTIVITE*/
-        background: #fff
-        border-bottom: 1px solid darken($bkgd,5%)
-        margin-left: calc(100% / 3)
-        width: calc((100% / 3) * 2)
-
-        ul
-          display: flex
-          margin: 0
-
-          li
-            box-shadow: 1px 0 0 darken($bkgd,5%)
-            display: inline-block
-            flex: 1
-            font-size: .8em
-            letter-spacing: 1px
-            padding: 20px
-            position: relative
-            text-align: center
-            text-transform: uppercase
-            transform: perspective(1px) translateZ(0)
-            transition-duration: 0.3s
-            transition-property: color, background-color
-
-            &.active
-              background: $primary
-
-              a
-                color: #fff
-
-            &:hover
-              a
-                color: $primary
-
-              &.active a
-                color: #fff
 
     &#page-index, &#page-quotation/*aside et footer cachés*/
       aside,footer
