@@ -10,6 +10,7 @@
 @import 'pages/About.sass'
 @import 'pages/Contact.sass'
 @import 'pages/Guarantees.sass'
+@import 'pages/Home.sass'
 @import 'pages/Services.sass'
 
 
@@ -292,37 +293,6 @@ html
 
         &:nth-of-type(2)
           background: green
-
-    &#page-index /*ACCUEIL*/
-      main
-        background: url(../images/bkgd-index.jpg)
-        background-position: 100%
-        height: calc(100vh - 63px)
-        display: flex
-
-        article
-          color: #fff
-          margin: auto
-          text-align: center
-
-          &::before
-            content: url(../images/logo.svg)
-            display: block
-            margin: 0 auto
-            max-width: 15em
-
-          h2
-            font-size: 3.5em
-            padding: 1em 0
-
-          a
-            +button($primary,50px,.75em 2em,none)
-            color: #fff
-            text-decoration: none
-
-            &:hover
-              background-color: $text
-
 
     &#page-references/*REFERENCES - TO DO*/
 

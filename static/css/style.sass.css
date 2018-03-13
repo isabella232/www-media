@@ -407,6 +407,34 @@ body > aside {
       #page-guarantees article dl dd:nth-of-type(2n):hover:after, #page-guarantees article dl dt:nth-of-type(2n):hover + dd:after {
         transform: translateX(-340px); }
 
+#page-index main {
+  background: url(../images/bkgd-index.jpg);
+  background-position: 100%;
+  height: calc(100vh - 63px);
+  display: flex; }
+  #page-index main article {
+    color: #fff;
+    margin: auto;
+    text-align: center; }
+    #page-index main article::before {
+      content: url(../images/logo.svg);
+      display: block;
+      margin: 0 auto;
+      max-width: 15em; }
+    #page-index main article h2 {
+      font-size: 3.5em;
+      padding: 1em 0; }
+    #page-index main article a {
+      background: #E73C4D;
+      border: 0;
+      border-radius: 2em;
+      color: #fff;
+      padding: 0.5em 2em;
+      transition-duration: .4s;
+      text-decoration: none; }
+      #page-index main article a:hover {
+        background-color: #1C1C1C; }
+
 #page-services article:first-of-type {
   margin-left: auto;
   margin-right: auto;
@@ -706,34 +734,6 @@ html body {
           content: url(../images/jobs/reference.svg); }
   html body#page-pharmacy main article:nth-of-type(2), html body#page-laboratory main article:nth-of-type(2), html body#page-group main article:nth-of-type(2) {
     background: green; }
-  html body#page-index main {
-    background: url(../images/bkgd-index.jpg);
-    background-position: 100%;
-    height: calc(100vh - 63px);
-    display: flex; }
-    html body#page-index main article {
-      color: #fff;
-      margin: auto;
-      text-align: center; }
-      html body#page-index main article::before {
-        content: url(../images/logo.svg);
-        display: block;
-        margin: 0 auto;
-        max-width: 15em; }
-      html body#page-index main article h2 {
-        font-size: 3.5em;
-        padding: 1em 0; }
-      html body#page-index main article a {
-        background: #E73C4D;
-        border: 50px;
-        border-radius: 2em;
-        color: 0.75em 2em;
-        padding: none;
-        transition-duration: .4s;
-        color: #fff;
-        text-decoration: none; }
-        html body#page-index main article a:hover {
-          background-color: #1C1C1C; }
   html body#page-quotation form {
     border: 1px solid #f4f4f4;
     background: #fff;

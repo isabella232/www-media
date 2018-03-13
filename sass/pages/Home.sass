@@ -1,0 +1,28 @@
+#page-index
+  main
+    background: url(../images/bkgd-index.jpg)
+    background-position: 100%
+    height: calc(100vh - 63px)
+    display: flex
+
+    article
+      color: #fff
+      margin: auto
+      text-align: center
+
+      &::before
+        content: url(../images/logo.svg)
+        display: block
+        margin: 0 auto
+        max-width: 15em
+
+      h2
+        font-size: 3.5em
+        padding: 1em 0
+
+      a
+        +button($primary, 0, #fff, .5em 2em)
+        text-decoration: none
+
+        &:hover
+          background-color: $text
