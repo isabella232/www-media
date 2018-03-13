@@ -7,6 +7,7 @@
 @import 'layout/Menus.sass'
 @import 'layout/PreFooter.sass'
 
+@import 'pages/Contact.sass'
 @import 'pages/Guarantees.sass'
 @import 'pages/Services.sass'
 
@@ -76,20 +77,22 @@ form
     font-size: 0
 
     input, textarea, select
+      border: solid 2px $text
       box-sizing: border-box
-      +button(transparent,0,15px,2px solid $text)
       color: $text
+      font-family: inherit
+      font-size: 1.1rem
       margin-bottom: 20px
+      padding: .75em 1em
       width: 100%
 
     textarea
       min-height: 150px
 
   input[type="submit"]
+    +button($text, none, #fff, .75em 2.5em)
     align-self: flex-end
-    +button($text,25px,15px,none)
-    color: #fff
-    width: 40%
+    cursor: pointer
 
     &:hover
       background-color: $primary
@@ -429,48 +432,6 @@ html
 
     &#page-references/*REFERENCES - TO DO*/
 
-    &#page-contact/*CONTACT*/
-      background: url(../images/bkgd-contact.jpg) 0
-
-      article
-        background: #fff
-        margin-left: 50%
-        padding: 4% 8%
-
-        dl
-          display: flex
-          flex-wrap: wrap
-          margin-bottom: 50px
-
-          dt,dl,address, ul li a
-            font-size: 1.3em
-
-        dt:first-child, dt:first-child + dd
-          padding-right: 4%
-          width: 50%
-
-        dt:nth-of-type(2),dt:nth-of-type(2) + dd
-          width: 23%
-
-        ul
-          margin: 0
-
-          li a
-            color: $text
-
-            &:hover
-              transform: translateX(8px)
-
-        dd
-          margin-left: 0
-
-        dt
-          font-weight: 700
-          order: -1
-          padding-top: 10px
-
-      aside
-        display: none
 
     &#page-quotation/*FORMULAIRE DEVIS*/
       form

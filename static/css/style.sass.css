@@ -172,6 +172,41 @@ body > aside {
       padding: 0.75em 2em;
       transition-duration: .4s; }
 
+#page-contact {
+  background: url(../images/bkgd-contact.jpg) 0; }
+  #page-contact main {
+    background: #fff;
+    margin-left: 50%;
+    padding: 7rem 8%; }
+  #page-contact h1 {
+    margin-top: 0;
+    text-align: left; }
+  #page-contact h2 {
+    margin: 0 auto .5em; }
+  #page-contact dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px; }
+    #page-contact dl dt, #page-contact dl dl, #page-contact dl address, #page-contact dl ul li a {
+      font-size: 1.3em; }
+  #page-contact dt:first-child, #page-contact dt:first-child + dd {
+    padding-right: 4%;
+    width: 50%; }
+  #page-contact dt:nth-of-type(2), #page-contact dt:nth-of-type(2) + dd {
+    width: 23%; }
+  #page-contact ul {
+    margin: 0; }
+    #page-contact ul li a:hover {
+      transform: translateX(8px); }
+  #page-contact dd {
+    margin-left: 0; }
+  #page-contact dt {
+    font-weight: 700;
+    order: -1;
+    padding-top: 10px; }
+  #page-contact aside {
+    display: none; }
+
 #page-guarantees {
   z-index: 0; }
   #page-guarantees article {
@@ -385,28 +420,25 @@ form {
   form label {
     font-size: 0; }
     form label input, form label textarea, form label select {
+      border: solid 2px #1C1C1C;
       box-sizing: border-box;
-      background: transparent;
-      border: 0;
-      border-radius: 2em;
-      color: 15px;
-      padding: 2px solid #1C1C1C;
-      transition-duration: .4s;
       color: #1C1C1C;
+      font-family: inherit;
+      font-size: 1.1rem;
       margin-bottom: 20px;
+      padding: .75em 1em;
       width: 100%; }
     form label textarea {
       min-height: 150px; }
   form input[type="submit"] {
-    align-self: flex-end;
     background: #1C1C1C;
-    border: 25px;
+    border: none;
     border-radius: 2em;
-    color: 15px;
-    padding: none;
-    transition-duration: .4s;
     color: #fff;
-    width: 40%; }
+    padding: 0.75em 2.5em;
+    transition-duration: .4s;
+    align-self: flex-end;
+    cursor: pointer; }
     form input[type="submit"]:hover {
       background-color: #E73C4D; }
 
@@ -682,37 +714,6 @@ html body {
           border-top: 1px solid #f2f2f2; }
         html body#page-about article:last-child ul li strong {
           font-size: 2.4em; }
-  html body#page-contact {
-    background: url(../images/bkgd-contact.jpg) 0; }
-    html body#page-contact article {
-      background: #fff;
-      margin-left: 50%;
-      padding: 4% 8%; }
-      html body#page-contact article dl {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 50px; }
-        html body#page-contact article dl dt, html body#page-contact article dl dl, html body#page-contact article dl address, html body#page-contact article dl ul li a {
-          font-size: 1.3em; }
-      html body#page-contact article dt:first-child, html body#page-contact article dt:first-child + dd {
-        padding-right: 4%;
-        width: 50%; }
-      html body#page-contact article dt:nth-of-type(2), html body#page-contact article dt:nth-of-type(2) + dd {
-        width: 23%; }
-      html body#page-contact article ul {
-        margin: 0; }
-        html body#page-contact article ul li a {
-          color: #1C1C1C; }
-          html body#page-contact article ul li a:hover {
-            transform: translateX(8px); }
-      html body#page-contact article dd {
-        margin-left: 0; }
-      html body#page-contact article dt {
-        font-weight: 700;
-        order: -1;
-        padding-top: 10px; }
-    html body#page-contact aside {
-      display: none; }
   html body#page-quotation form {
     border: 1px solid #f4f4f4;
     background: #fff;
