@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,700')
+
 @import mixins
 @import variables
 
 @import 'layout/Footer.sass'
 @import 'layout/Menus.sass'
 @import 'layout/PreFooter.sass'
+
 @import 'pages/Guarantees.sass'
+@import 'pages/Services.sass'
 
 
 
@@ -105,7 +108,7 @@ html
         display: none
 
     &#page-guarantees article dl,
-    &#page-services article section,
+    // &#page-services article section,
     &#page-group article:last-child,
     &#page-pharmacy article:last-child,
     &#page-laboratory article:last-child,
@@ -146,7 +149,7 @@ html
         width: 100%
         z-index: -1
 
-    &#page-services article:first-child,
+    // &#page-services article:first-child,
     &#page-pharmacy article:last-child,
     &#page-laboratory article:last-child,
     &#page-group article:last-child, /*Tableaux services*/
@@ -189,36 +192,6 @@ html
 
             li:not(:last-child):after
               content: ' / '
-
-          &#advice h3:before
-            content: url(../images/services/advice.svg)
-
-          &#website h3:before
-            content: url(../images/services/website.svg)
-
-          &#community h3:before
-            content: url(../images/services/community.svg)
-
-          &#graphics h3:before
-            content: url(../images/services/graphics.svg)
-
-          &#content h3:before
-            content: url(../images/services/content.svg)
-
-          &#media h3:before
-            content: url(../images/services/media.svg)
-
-          &#animation h3:before
-            content: url(../images/services/animation.svg)
-
-          &#integration h3:before
-            content: url(../images/services/integration.svg)
-
-          &#video h3:before
-            content: url(../images/services/video.svg)
-
-          &#offers h3:before
-            content: url(../images/services/offer.svg)
 
     &#page-pharmacy,
     &#page-laboratory,
@@ -453,29 +426,6 @@ html
 
             strong
               font-size: 2.4em
-
-
-    &#page-services/*SERVICES*/
-      article
-        &:last-child
-          &:before
-            background: url(../images/bkgd-targets.jpg)
-
-          ul li
-            +button(transparent,50px,15px,2px solid $text)
-            display: flex
-            justify-content: center
-            margin-bottom: 20px
-
-            &:hover
-              +button($text,50px,15px,2px solid $text)
-
-              a
-                color: #fff
-
-          p
-            display: flex
-            flex-direction: column
 
     &#page-references/*REFERENCES - TO DO*/
 

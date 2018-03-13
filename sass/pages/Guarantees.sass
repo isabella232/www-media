@@ -3,16 +3,13 @@
   z-index: 0
 
   article
-    h2
-      margin: .25em auto 6rem
-      text-align: center
-      max-width: 40%
+    +centered-article
 
     dl
       counter-reset: guarantee
       display: flex
       flex-wrap: wrap
-      margin-bottom: 70px
+      margin: 6rem auto
 
       dt, dd
         box-sizing: border-box

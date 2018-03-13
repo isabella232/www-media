@@ -1,0 +1,58 @@
+#page-services
+  article
+    &:first-of-type
+      +centered-article
+
+      > section
+        display: flex
+        flex-wrap: wrap
+        margin: 6rem auto
+
+        section
+          align-items: center
+          background: #fff
+          box-shadow: 0 0 1px darken($bkgd,7%)
+          box-sizing: border-box
+          display: flex
+          flex-direction: column
+          min-height: 300px
+          justify-content: center
+          padding: 2em
+          text-align: center
+          width: 33.3%
+
+          @each $section in advice website community graphics content media animation integration video offers
+            &##{$section} h3:before
+              content: url(../images/services/#{$section}.svg)
+
+          h3, ul
+            margin: 0
+
+          h3
+            letter-spacing: 0.1em
+            text-transform: uppercase
+
+            &:before
+              display: block
+              margin: 0 auto 10px
+              width: 60px
+
+          li
+            display: inline-block
+
+            &:not(:last-child):after
+              content: ' / '
+
+
+    &:last-of-type
+      &:before
+        background: url(../images/bkgd-targets.jpg)
+
+      ul li a
+        +button(transparent, 2px solid $text, $text, .75em 1em)
+        display: block
+        margin-bottom: 1.5em
+        text-align: center
+
+        &:hover
+          +button($text, 2px solid $text, #fff, .75em 1em)
