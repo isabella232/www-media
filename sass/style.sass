@@ -7,6 +7,7 @@
 @import 'layout/Menus.sass'
 @import 'layout/PreFooter.sass'
 
+@import 'pages/About.sass'
 @import 'pages/Contact.sass'
 @import 'pages/Guarantees.sass'
 @import 'pages/Services.sass'
@@ -112,10 +113,10 @@ html
 
     &#page-guarantees article dl,
     // &#page-services article section,
+    // &#page-about article:not(:first-child),
     &#page-group article:last-child,
     &#page-pharmacy article:last-child,
-    &#page-laboratory article:last-child,
-    &#page-about article:not(:first-child)
+    &#page-laboratory article:last-child
       margin-left: auto
       margin-right: auto
       max-width: 1024px
@@ -137,20 +138,20 @@ html
 
     &#page-about main article:first-of-type,
     &#page-services main article:last-of-type
-      background: #fff
-      margin-left: 50%
-      padding: 4% 8%
-      position: relative
-
-      &:before
-        background-size: cover
-        content: ''
-        height: 100%
-        left: -100%
-        position: absolute
-        top: 0
-        width: 100%
-        z-index: -1
+      // background: #fff
+      // margin-left: 50%
+      // padding: 4% 8%
+      // position: relative
+      //
+      // &:before
+      //   background-size: cover
+      //   content: ''
+      //   height: 100%
+      //   left: -100%
+      //   position: absolute
+      //   top: 0
+      //   width: 100%
+      //   z-index: -1
 
     // &#page-services article:first-child,
     &#page-pharmacy article:last-child,
@@ -322,113 +323,6 @@ html
             &:hover
               background-color: $text
 
-    &#page-about article/*A PROPOS*/
-      &:first-child:before
-        background: url(../images/bkgd-agency.jpg)
-
-      #members
-        display: flex
-        flex-wrap: wrap
-
-        > *
-          height: 250px
-          margin: 0
-          width: 250px
-
-        section
-          display: flex
-          flex-direction: column
-          justify-content: flex-end
-          position: relative
-
-          &:first-of-type
-            margin-left: 500px
-
-          &:after
-            background: rgba($primary,0.6)
-            content: ''
-            height: 200px
-            left: 25px
-            opacity: 0
-            position: absolute
-            top: 25px
-            transform: scale(0)
-            transition: opacity 0.35s, transform 0.35s
-            width: 200px
-            z-index: -1
-
-          h4, p
-            color: #fff
-            opacity: 0
-            padding: 0 12%
-            transform: scale(0)
-            transition: opacity 0.35s, transform 0.35s
-
-          h4
-            font-size: 1.2em
-            font-weight: 400
-            line-height: 2.2em
-            margin: 0
-
-            &:after
-              background: #fff
-              content: ''
-              display: block
-              height: 2px
-              width: 25px
-
-          p
-            font-size: 1em
-            font-style: italic
-            line-height: 1.2em
-            padding-bottom: 20px
-
-          img
-            left: 0
-            position: absolute
-            top: 0
-            width: 250px
-            z-index: -1
-
-          &:hover, &:focus
-            &:after,h4,p
-              opacity: 1
-              transform: scale(1)
-
-      &:last-child
-        display: table
-        margin: 50px auto 70px
-
-        >*:not(:last-child)
-          padding: 0 10%
-          text-align: end
-
-        ul
-          display: table-cell
-          width: 50%
-
-          li
-            align-items: center
-            background: #fff
-            display: inline-table
-            display: inline-flex
-            flex-direction: column
-            height: 250px
-            justify-content: center
-            letter-spacing: 0.1em
-            margin-left: -3px
-            text-transform: uppercase
-            width: 50%
-
-            &:nth-child(odd)
-              border-right: 1px solid darken($bkgd,4%)
-              box-sizing: border-box
-
-            &:nth-child(n+3)
-              border-top: 1px solid darken($bkgd,4%)
-
-            strong
-              font-size: 2.4em
 
     &#page-references/*REFERENCES - TO DO*/
 

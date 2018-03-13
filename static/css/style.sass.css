@@ -172,6 +172,128 @@ body > aside {
       padding: 0.75em 2em;
       transition-duration: .4s; }
 
+#page-about article:first-of-type {
+  box-sizing: border-box;
+  margin-left: 50%;
+  padding: 7rem 8%;
+  position: relative;
+  width: 50%; }
+  #page-about article:first-of-type:before {
+    content: '';
+    background: url(../images/bkgd-agency.jpg) right/cover no-repeat;
+    height: 100%;
+    left: -100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1; }
+
+#page-about h1 {
+  left: 58%;
+  position: absolute; }
+
+#page-about article:nth-of-type(n+2) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  margin: 7rem auto; }
+  #page-about article:nth-of-type(n+2) > h2, #page-about article:nth-of-type(n+2) > p {
+    text-align: center;
+    margin: .25em auto;
+    max-width: 25em;
+    padding: 0 10%; }
+  #page-about article:nth-of-type(n+2) > p {
+    font-size: 1.7em;
+    font-weight: 300; }
+
+#page-about #members {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2em; }
+  #page-about #members > * {
+    height: 250px;
+    margin: 0;
+    width: 250px; }
+  #page-about #members section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative; }
+    #page-about #members section:first-of-type {
+      margin-left: 500px; }
+    #page-about #members section:after {
+      background: rgba(231, 60, 77, 0.6);
+      content: '';
+      height: 200px;
+      left: 25px;
+      opacity: 0;
+      position: absolute;
+      top: 25px;
+      transform: scale(0);
+      transition: opacity 0.35s, transform 0.35s;
+      width: 200px;
+      z-index: -1; }
+    #page-about #members section h4, #page-about #members section p {
+      color: #fff;
+      opacity: 0;
+      padding: 0 12%;
+      transform: scale(0);
+      transition: opacity 0.35s, transform 0.35s; }
+    #page-about #members section h4 {
+      font-size: 1.2em;
+      font-weight: 400;
+      line-height: 2.2em;
+      margin: 0; }
+      #page-about #members section h4:after {
+        background: #fff;
+        content: '';
+        display: block;
+        height: 2px;
+        width: 25px; }
+    #page-about #members section p {
+      font-size: 1em;
+      font-style: italic;
+      line-height: 1.2em;
+      padding-bottom: 20px; }
+    #page-about #members section img {
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 250px;
+      z-index: -1; }
+    #page-about #members section:hover:after, #page-about #members section:hover h4, #page-about #members section:hover p, #page-about #members section:focus:after, #page-about #members section:focus h4, #page-about #members section:focus p {
+      opacity: 1;
+      transform: scale(1); }
+
+#page-about article:last-of-type {
+  display: table;
+  margin: 50px auto 70px; }
+  #page-about article:last-of-type > *:not(:last-child) {
+    padding: 0 10%;
+    text-align: end; }
+  #page-about article:last-of-type ul {
+    display: table-cell;
+    width: 50%; }
+    #page-about article:last-of-type ul li {
+      align-items: center;
+      background: #fff;
+      display: inline-table;
+      display: inline-flex;
+      flex-direction: column;
+      height: 250px;
+      justify-content: center;
+      letter-spacing: 0.1em;
+      margin-left: -3px;
+      text-transform: uppercase;
+      width: 50%; }
+      #page-about article:last-of-type ul li:nth-child(odd) {
+        border-right: 1px solid #f2f2f2;
+        box-sizing: border-box; }
+      #page-about article:last-of-type ul li:nth-child(n+3) {
+        border-top: 1px solid #f2f2f2; }
+      #page-about article:last-of-type ul li strong {
+        font-size: 2.4em; }
+
 #page-contact {
   background: url(../images/bkgd-contact.jpg) 0; }
   #page-contact main {
@@ -216,9 +338,10 @@ body > aside {
     #page-guarantees article > h2, #page-guarantees article > p {
       text-align: center;
       margin: .25em auto;
+      max-width: 25em;
       padding: 0 10%; }
     #page-guarantees article > p {
-      font-size: 1.8em;
+      font-size: 1.7em;
       font-weight: 300; }
     #page-guarantees article dl {
       counter-reset: guarantee;
@@ -291,9 +414,10 @@ body > aside {
   #page-services article:first-of-type > h2, #page-services article:first-of-type > p {
     text-align: center;
     margin: .25em auto;
+    max-width: 25em;
     padding: 0 10%; }
   #page-services article:first-of-type > p {
-    font-size: 1.8em;
+    font-size: 1.7em;
     font-weight: 300; }
   #page-services article:first-of-type > section {
     display: flex;
@@ -454,8 +578,7 @@ html body {
   html body#page-guarantees article dl,
   html body#page-group article:last-child,
   html body#page-pharmacy article:last-child,
-  html body#page-laboratory article:last-child,
-  html body#page-about article:not(:first-child) {
+  html body#page-laboratory article:last-child {
     margin-left: auto;
     margin-right: auto;
     max-width: 1024px; }
@@ -466,22 +589,6 @@ html body {
   html body#page-laboratory article:not(:first-child) h2 + p,
   html body#page-group article:not(:first-child) h2 + p {
     padding-bottom: 20px; }
-  html body#page-about main article:first-of-type,
-  html body#page-services main article:last-of-type {
-    background: #fff;
-    margin-left: 50%;
-    padding: 4% 8%;
-    position: relative; }
-    html body#page-about main article:first-of-type:before,
-    html body#page-services main article:last-of-type:before {
-      background-size: cover;
-      content: '';
-      height: 100%;
-      left: -100%;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: -1; }
   html body#page-pharmacy article:last-child > section,
   html body#page-laboratory article:last-child > section,
   html body#page-group article:last-child > section {
@@ -627,93 +734,6 @@ html body {
         text-decoration: none; }
         html body#page-index main article a:hover {
           background-color: #1C1C1C; }
-  html body#page-about article:first-child:before {
-    background: url(../images/bkgd-agency.jpg); }
-  html body#page-about article #members {
-    display: flex;
-    flex-wrap: wrap; }
-    html body#page-about article #members > * {
-      height: 250px;
-      margin: 0;
-      width: 250px; }
-    html body#page-about article #members section {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      position: relative; }
-      html body#page-about article #members section:first-of-type {
-        margin-left: 500px; }
-      html body#page-about article #members section:after {
-        background: rgba(231, 60, 77, 0.6);
-        content: '';
-        height: 200px;
-        left: 25px;
-        opacity: 0;
-        position: absolute;
-        top: 25px;
-        transform: scale(0);
-        transition: opacity 0.35s, transform 0.35s;
-        width: 200px;
-        z-index: -1; }
-      html body#page-about article #members section h4, html body#page-about article #members section p {
-        color: #fff;
-        opacity: 0;
-        padding: 0 12%;
-        transform: scale(0);
-        transition: opacity 0.35s, transform 0.35s; }
-      html body#page-about article #members section h4 {
-        font-size: 1.2em;
-        font-weight: 400;
-        line-height: 2.2em;
-        margin: 0; }
-        html body#page-about article #members section h4:after {
-          background: #fff;
-          content: '';
-          display: block;
-          height: 2px;
-          width: 25px; }
-      html body#page-about article #members section p {
-        font-size: 1em;
-        font-style: italic;
-        line-height: 1.2em;
-        padding-bottom: 20px; }
-      html body#page-about article #members section img {
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 250px;
-        z-index: -1; }
-      html body#page-about article #members section:hover:after, html body#page-about article #members section:hover h4, html body#page-about article #members section:hover p, html body#page-about article #members section:focus:after, html body#page-about article #members section:focus h4, html body#page-about article #members section:focus p {
-        opacity: 1;
-        transform: scale(1); }
-  html body#page-about article:last-child {
-    display: table;
-    margin: 50px auto 70px; }
-    html body#page-about article:last-child > *:not(:last-child) {
-      padding: 0 10%;
-      text-align: end; }
-    html body#page-about article:last-child ul {
-      display: table-cell;
-      width: 50%; }
-      html body#page-about article:last-child ul li {
-        align-items: center;
-        background: #fff;
-        display: inline-table;
-        display: inline-flex;
-        flex-direction: column;
-        height: 250px;
-        justify-content: center;
-        letter-spacing: 0.1em;
-        margin-left: -3px;
-        text-transform: uppercase;
-        width: 50%; }
-        html body#page-about article:last-child ul li:nth-child(odd) {
-          border-right: 1px solid #f2f2f2;
-          box-sizing: border-box; }
-        html body#page-about article:last-child ul li:nth-child(n+3) {
-          border-top: 1px solid #f2f2f2; }
-        html body#page-about article:last-child ul li strong {
-          font-size: 2.4em; }
   html body#page-quotation form {
     border: 1px solid #f4f4f4;
     background: #fff;
