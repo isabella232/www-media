@@ -58,81 +58,6 @@ footer {
   footer ul {
     margin-top: 0; }
 
-#page-guarantees {
-  z-index: 0; }
-  #page-guarantees article h2 {
-    padding-bottom: 20px; }
-  #page-guarantees article dl {
-    counter-reset: guarantee;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 70px; }
-    #page-guarantees article dl dt, #page-guarantees article dl dd {
-      box-sizing: border-box;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      height: 340px;
-      justify-content: center;
-      margin: 0;
-      padding: 2%;
-      position: relative;
-      text-align: center;
-      width: 340px; }
-    #page-guarantees article dl dd {
-      background: #303030;
-      font-size: 1.25em; }
-      #page-guarantees article dl dd:nth-of-type(2n+1):after {
-        left: 0; }
-      #page-guarantees article dl dd:nth-of-type(2n+1) + dt {
-        margin-left: 340px; }
-    #page-guarantees article dl dd:hover:nth-of-type(2n+1):after, #page-guarantees article dl dt:hover + dd:nth-of-type(2n+1):after {
-      transform: translateX(340px); }
-    #page-guarantees article dl dt:hover:nth-of-type(2n):after {
-      transform: translateX(-340px); }
-    #page-guarantees article dl dt:nth-of-type(2n):after, #page-guarantees article dl dd:nth-of-type(2n+1):after {
-      content: '';
-      height: 100%;
-      position: absolute;
-      top: 0;
-      transition-duration: 1s;
-      transition-property: transform;
-      transition-timing-function: ease;
-      width: 100%;
-      z-index: -1; }
-    #page-guarantees article dl dt {
-      background: #242424;
-      font-size: 1.6em;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      line-height: 1.5;
-      text-transform: uppercase; }
-      #page-guarantees article dl dt:before {
-        content: "[0" counter(guarantee) "]";
-        counter-increment: guarantee;
-        font-weight: 300;
-        margin-bottom: .5em; }
-      #page-guarantees article dl dt:nth-of-type(2n):after {
-        left: 0; }
-      #page-guarantees article dl dt#innovate + dd:after {
-        background: #fff url(../images/guarantees/innovation.svg) no-repeat 50%;
-        background-size: 40%; }
-      #page-guarantees article dl dt#visibility:after {
-        background: #fff url(../images/guarantees/visibility.svg) no-repeat 50%;
-        background-size: 40%; }
-      #page-guarantees article dl dt#expertise + dd:after {
-        background: #fff url(../images/guarantees/expertise.svg) no-repeat 50%;
-        background-size: 40%; }
-      #page-guarantees article dl dt#guarantee:after {
-        background: #fff url(../images/guarantees/guarantee.svg) no-repeat 50%;
-        background-size: 40%; }
-      #page-guarantees article dl dt#result + dd:after {
-        background: #fff url(../images/guarantees/result.svg) no-repeat 50%;
-        background-size: 40%; }
-      #page-guarantees article dl dt#accompaniment:after {
-        background: #fff url(../images/guarantees/accompaniment.svg) no-repeat 50%;
-        background-size: 40%; }
-
 nav:first-of-type, nav:first-of-type + nav {
   height: 63px; }
   nav:first-of-type a, nav:first-of-type + nav a {
@@ -246,6 +171,81 @@ body > aside {
       color: #1C1C1C;
       padding: 0.75em 2em;
       transition-duration: .4s; }
+
+#page-guarantees {
+  z-index: 0; }
+  #page-guarantees article h2 {
+    padding-bottom: 20px; }
+  #page-guarantees article dl {
+    counter-reset: guarantee;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 70px; }
+    #page-guarantees article dl dt, #page-guarantees article dl dd {
+      box-sizing: border-box;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      height: 340px;
+      justify-content: center;
+      margin: 0;
+      padding: 2%;
+      position: relative;
+      text-align: center;
+      width: 340px; }
+    #page-guarantees article dl dd {
+      background: #303030;
+      font-size: 1.25em; }
+      #page-guarantees article dl dd:nth-of-type(2n+1):after {
+        left: 0; }
+      #page-guarantees article dl dd:nth-of-type(2n+1) + dt {
+        margin-left: 340px; }
+    #page-guarantees article dl dd:hover:nth-of-type(2n+1):after, #page-guarantees article dl dt:hover + dd:nth-of-type(2n+1):after {
+      transform: translateX(340px); }
+    #page-guarantees article dl dt:hover:nth-of-type(2n):after {
+      transform: translateX(-340px); }
+    #page-guarantees article dl dt:nth-of-type(2n):after, #page-guarantees article dl dd:nth-of-type(2n+1):after {
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      transition-duration: 1s;
+      transition-property: transform;
+      transition-timing-function: ease;
+      width: 100%;
+      z-index: -1; }
+    #page-guarantees article dl dt {
+      background: #242424;
+      font-size: 1.6em;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      line-height: 1.5;
+      text-transform: uppercase; }
+      #page-guarantees article dl dt:before {
+        content: "[0" counter(guarantee) "]";
+        counter-increment: guarantee;
+        font-weight: 300;
+        margin-bottom: .5em; }
+      #page-guarantees article dl dt:nth-of-type(2n):after {
+        left: 0; }
+      #page-guarantees article dl dt#innovate + dd:after {
+        background: #fff url(../images/guarantees/innovation.svg) no-repeat 50%;
+        background-size: 40%; }
+      #page-guarantees article dl dt#visibility:after {
+        background: #fff url(../images/guarantees/visibility.svg) no-repeat 50%;
+        background-size: 40%; }
+      #page-guarantees article dl dt#expertise + dd:after {
+        background: #fff url(../images/guarantees/expertise.svg) no-repeat 50%;
+        background-size: 40%; }
+      #page-guarantees article dl dt#guarantee:after {
+        background: #fff url(../images/guarantees/guarantee.svg) no-repeat 50%;
+        background-size: 40%; }
+      #page-guarantees article dl dt#result + dd:after {
+        background: #fff url(../images/guarantees/result.svg) no-repeat 50%;
+        background-size: 40%; }
+      #page-guarantees article dl dt#accompaniment:after {
+        background: #fff url(../images/guarantees/accompaniment.svg) no-repeat 50%;
+        background-size: 40%; }
 
 h1 {
   display: none; }
