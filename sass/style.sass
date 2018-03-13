@@ -10,14 +10,26 @@
 
 
 h1
-  display: none
+  font-size: 1.15em
+  font-weight: 400
+  letter-spacing: 0.15em
+  margin: 7rem auto .5em
+  text-align: center
+  text-transform: uppercase
+
+  &:before
+    content: "[ "
+
+  &:after
+    content: " ]"
+
 
 h2
-  font-size: 2.8em
+  font-size: 3em
 
 article h2
   line-height: 1.2em
-  padding-top: 50px
+  // padding-top: 50px
 
   & + *
     margin-top: 0
@@ -98,10 +110,11 @@ html
     &#page-pharmacy article:last-child,
     &#page-laboratory article:last-child,
     &#page-about article:not(:first-child)
-      margin: auto
+      margin-left: auto
+      margin-right: auto
       max-width: 1024px
 
-    &#page-about article:nth-child(2),
+    &#page-about article:nth-of-type(2),
     &#page-quotation,
     &#page-guarantees article,
     &#page-services article:first-child,
@@ -109,9 +122,9 @@ html
     &#page-laboratory article:not(:first-child),
     &#page-group article:not(:first-child)/*articles avec h2 centrés dans la page*/
       h2, h2 + p
-        margin: auto
-        text-align: center
-        width: 40%
+        // margin: .25em auto 1.5em
+        // text-align: center
+        // width: 40%
 
       h2 + p
         padding-bottom: 20px
@@ -211,7 +224,7 @@ html
     &#page-laboratory,
     &#page-group /*pages métiers-secteurs d'activité*/
       main article
-        &:first-child
+        &:first-of-type
           display: flex
           flex-direction: column
           flex-wrap: wrap
@@ -300,7 +313,7 @@ html
                 &#reference:before
                   content: url(../images/jobs/reference.svg)
 
-        &:nth-child(2)
+        &:nth-of-type(2)
           background: green
 
     &#page-index /*ACCUEIL*/

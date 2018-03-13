@@ -29,7 +29,6 @@
   </head>
 
   <body id="page-{{ page }}">
-    <h1>{{ PAGES[page] }}</h1>
 
     <nav>
       <ul>
@@ -52,6 +51,7 @@
     </nav>
 
     <main>
+      <h1>{{ PAGES[page] }}</h1>
       {% block content %}{% endblock content %}
     </main>
 
