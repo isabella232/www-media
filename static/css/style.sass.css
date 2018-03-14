@@ -546,9 +546,11 @@ body > aside {
       #page-guarantees article dl dd:nth-of-type(2n):hover:after, #page-guarantees article dl dt:nth-of-type(2n):hover + dd:after {
         transform: translateX(-340px); }
 
+#page-index h1, #page-index aside, #page-index footer {
+  display: none; }
+
 #page-index main {
-  background: url(../images/bkgd-index.jpg);
-  background-position: 100%;
+  background: url(../images/bkgd-index.jpg) center/cover no-repeat;
   height: calc(100vh - 63px);
   display: flex; }
   #page-index main article {
@@ -573,6 +575,9 @@ body > aside {
       text-decoration: none; }
       #page-index main article a:hover {
         background-color: #1C1C1C; }
+
+#page-quotation aside, #page-quotation footer {
+  display: none; }
 
 #page-quotation article {
   margin-left: auto;
@@ -665,6 +670,14 @@ body > aside {
         padding: 0.75em 1em;
         transition-duration: .4s; }
 
+body {
+  background: #fcfcfc;
+  color: #1C1C1C;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Hind', sans-serif;
+  margin: 0; }
+
 h1 {
   font-size: 1.15em;
   font-weight: 400;
@@ -686,14 +699,12 @@ article h2 {
 p {
   font-size: 1.3em; }
 
-ul li a {
-  font-size: 1.1em;
-  text-decoration: none; }
-
 ul {
   padding-left: 0; }
   ul li {
     list-style-type: none; }
+    ul li a {
+      font-size: 1.1em; }
 
 a {
   color: inherit;
@@ -738,16 +749,6 @@ form {
     cursor: pointer; }
     form input[type="submit"]:hover {
       background-color: #E73C4D; }
-
-html body {
-  background: #fcfcfc;
-  color: #1C1C1C;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Hind', sans-serif;
-  margin: 0; }
-  html body#page-index aside, html body#page-index footer, html body#page-quotation aside, html body#page-quotation footer {
-    display: none; }
 
 section#advice h3 {
   letter-spacing: 0.1em;

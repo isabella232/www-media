@@ -16,6 +16,14 @@
 @import 'pages/Services.sass'
 
 
+body
+  background: $bkgd
+  color: $text
+  display: flex
+  flex-direction: column
+  font-family: 'Hind', sans-serif
+  margin: 0
+
 
 h1
   font-size: 1.15em
@@ -35,25 +43,24 @@ h1
 h2
   font-size: 3em
 
+
 article h2
   line-height: 1.2em
-  // padding-top: 50px
-  //
-  // & + *
-  //   margin-top: 0
+
 
 p
   font-size: 1.3em
 
-ul li a
-  font-size: 1.1em
-  text-decoration: none
 
 ul
   padding-left: 0
 
   li
     list-style-type: none
+
+    a
+      font-size: 1.1em
+
 
 a
   color: inherit
@@ -69,8 +76,10 @@ a
     &:hover
       transform: translateX(8px)
 
+
 address
   font-style: normal
+
 
 form
   box-sizing: border-box
@@ -100,19 +109,6 @@ form
 
     &:hover
       background-color: $primary
-
-html
-  body
-    background: $bkgd
-    color: $text
-    display: flex
-    flex-direction: column
-    font-family: 'Hind', sans-serif
-    margin: 0
-
-    &#page-index, &#page-quotation/*aside et footer cachés*/
-      aside,footer
-        display: none
 
 
 // Objectifs - Pages Nos servies & Pharmaciens / Labos / Groupement
