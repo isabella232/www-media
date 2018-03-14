@@ -1,5 +1,9 @@
 {% extends "_layout.jinja2" %}
 
+{% set type = request.form.get('type') %}
+{% set need = request.form.get('need') %}
+{% set target = request.form.get('target') %}
+
 {% block content %}
   <article>
     <h2>Obtenir un devis</h2>
@@ -7,31 +11,54 @@
       Si vous remplissez ce questionnaire rapide, nous pourrons vous
       recontacter pour votre devis personnalisé.
     </p>
-    <form action="{{ url_for('contact') }}" method="post">
+    <form action="{{ url_for('quotation') }}" method="post">
       <label>Qui êtes-vous ?
         <select name="type">
-          {# TODO #}
+          {% for value in (
+            'Pharmacien',
+            'Responsable de groupement',
+            'Membre d\'un laboratoire',
+            'Autre',
+            ) %}
+            <option value="{{ value }}" {{ 'selected' if type == value }}>{{ value }}</option>
+          {% endfor %}
         </select>
       </label>
       <label>Quel est votre besoin ?
         <select name="need">
-          {# TODO #}
+          {% for value in (
+            'Digitaliser votre activité',
+            'Gagner en visibilité',
+            'Augmenter votre CA',
+            'Diffuser de l\'information',
+            'Autre'
+            ) %}
+            <option value="{{ value }}" {{ 'selected' if need == value }}>{{ value }}</option>
+          {% endfor %}
         </select>
       </label>
       <label>Quelle est votre cible ?
         <select name="target">
-          {# TODO #}
+          {% for value in (
+            'Pharmaciens',
+            'Patients',
+            'Autre'
+            ) %}
+            <option value="{{ value }}" {{ 'selected' if target == value }}>{{ value }}</option>
+          {% endfor %}
         </select>
       </label>
-      <label>Nom / Société
-        <input placeholder="Firstname" type="text" name="name" />
-      </label>
-      <label>Email
-        <input placeholder="Email" type="email" name="email" />
-      </label>
-      <label>Téléphone
-        <input placeholder="Téléphone" type="telephone" name="phone" />
-      </label>
+      {% if type and need and target %}
+        <label>Nom / Société
+          <input placeholder="Nom / Société" type="text" name="name" />
+        </label>
+        <label>Email
+          <input placeholder="Email" type="email" name="email" />
+        </label>
+        <label>Téléphone
+          <input placeholder="Téléphone" type="telephone" name="phone" />
+        </label>
+      {% endif %}
       <input type="submit" value="Envoyer" />
     </form>
   </article>

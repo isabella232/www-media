@@ -31,6 +31,17 @@
   <body id="page-{{ page }}">
     <h1>{{ PAGES[page] }}</h1>
 
+    {% set grouped_messages = get_flashed_messages(with_categories=True)|sort(0)|groupby(0) %}
+    <aside id="flash">
+      {% for category, messages in grouped_messages %}
+        <ul class="{{ category }}">
+          {% for _, message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </aside>
+
     <nav>
       <ul>
         {% for id, name in MENU_PAGES %}
