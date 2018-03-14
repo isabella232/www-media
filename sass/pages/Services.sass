@@ -5,12 +5,17 @@
   article:last-of-type
     +big-left-img(bkgd-targets, 50%)
     background-origin: border-box
+    margin-top: 6rem
 
-    ul li a
-      +button(transparent, 2px solid $text, $text, .75em 1em)
-      display: block
-      margin-bottom: 1.5em
-      text-align: center
+    ul
+      margin: 0 0 3em
 
-      &:hover
-        +button($text, 2px solid $text, #fff, .75em 1em)
+      li a
+        +button(transparent, 2px solid $text, $text, .75em 1em)
+        display: block
+        margin: 1em auto
+        max-width: 25em
+        text-align: center
+
+        &:hover
+          +button($text, 2px solid $text, #fff, .75em 1em)
