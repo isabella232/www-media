@@ -37,3 +37,45 @@
     position: absolute
     top: 0
     width: 50%
+
+
+=before-icon($margin: 0 auto 1em, $width: 4em)
+  &:before
+    display: block
+    margin: $margin
+    width: $width
+
+
+=mozaic($height, $width)
+  display: flex
+  flex-wrap: wrap
+
+  > *
+    align-items: center
+    background: #fff
+    box-shadow: 0 0 1px darken($bkgd, 7%)
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    height: $height
+    justify-content: center
+    padding: 2em
+    text-align: center
+    width: $width
+
+
+=target-section
+  +centered-article
+
+  > section
+    +mozaic(300px, 33.3%)
+    margin-top: 3rem
+
+    h3, ul
+      margin: 0
+
+    li
+      display: inline-block
+
+      &:not(:last-child):after
+        content: ' / '

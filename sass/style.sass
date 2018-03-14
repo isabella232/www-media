@@ -8,6 +8,7 @@
 @import 'layout/PreFooter.sass'
 
 @import 'pages/About.sass'
+@import 'pages/Clients.sass'
 @import 'pages/Contact.sass'
 @import 'pages/Guarantees.sass'
 @import 'pages/Home.sass'
@@ -36,9 +37,9 @@ h2
 article h2
   line-height: 1.2em
   // padding-top: 50px
-
-  & + *
-    margin-top: 0
+  //
+  // & + *
+  //   margin-top: 0
 
 p
   font-size: 1.3em
@@ -112,175 +113,6 @@ html
       aside,footer
         display: none
 
-    &#page-guarantees article dl,
-    // &#page-services article section,
-    // &#page-about article:not(:first-child),
-    &#page-group article:last-child,
-    &#page-pharmacy article:last-child,
-    &#page-laboratory article:last-child
-      margin-left: auto
-      margin-right: auto
-      max-width: 1024px
-
-    &#page-about article:nth-of-type(2),
-    &#page-quotation,
-    &#page-guarantees article,
-    &#page-services article:first-child,
-    &#page-pharmacy article:not(:first-child),
-    &#page-laboratory article:not(:first-child),
-    &#page-group article:not(:first-child)/*articles avec h2 centrés dans la page*/
-      h2, h2 + p
-        // margin: .25em auto 1.5em
-        // text-align: center
-        // width: 40%
-
-      h2 + p
-        padding-bottom: 20px
-
-
-    // &#page-services article:first-child,
-    &#page-pharmacy article:last-child,
-    &#page-laboratory article:last-child,
-    &#page-group article:last-child, /*Tableaux services*/
-      > section
-        display: flex
-        flex-wrap: wrap
-        margin-bottom: 70px
-        margin-top: 30px
-
-        section
-          align-items: center
-          background: #fff
-          box-shadow: 0 0 1px darken($bkgd,7%)
-          box-sizing: border-box
-          display: flex
-          flex-direction: column
-          height: 300px
-          line-height: 1.4em
-          justify-content: end
-          padding: 7% 2%
-          text-align: center
-          width: 33.3%
-
-          h3, ul
-            margin: 0
-
-          h3
-            letter-spacing: 0.1em
-            text-transform: uppercase
-
-            &:before
-              display: block
-              margin: 0 auto 10px
-              width: 60px
-
-          ul
-            display: flex
-            flex-wrap: wrap
-            justify-content: center
-
-            li:not(:last-child):after
-              content: ' / '
-
-    &#page-pharmacy,
-    &#page-laboratory,
-    &#page-group /*pages métiers-secteurs d'activité*/
-      main article
-        &:first-of-type
-          display: flex
-          flex-direction: column
-          flex-wrap: wrap
-          height: calc(100vh - 63px)
-          justify-content: center
-
-          >*:not(:last-child)
-            box-sizing: border-box
-            padding: 0 8%
-            width: 50%
-
-          ul
-            &:first-of-type
-              font-size: 1.3em
-
-            &:last-of-type
-              background: #fff
-              display: flex
-              text-align: center
-              width: 50%
-              height: calc(100vh - 63px)
-              flex-wrap: wrap
-              margin: 0
-
-              li
-                background: #fff
-                box-shadow: 0 0 1px darken($bkgd,8%)
-                box-sizing: border-box
-                display: flex
-                flex-direction: column
-                height: calc((100vh - 63px) / 3)
-                justify-content: center
-                padding: 2%
-                width: 50%
-
-                &:before
-                  display: block
-                  margin: 0 auto 10px
-                  width: 22%
-
-                &#revenue:before/*pharmacy*/
-                  content: url(../images/jobs/revenue.svg)
-
-                &#competition:before
-                  content: url(../images/jobs/competition.svg)
-
-                &#visibility:before
-                  content: url(../images/jobs/visibility.svg)
-
-                &#expert:before
-                  content: url(../images/jobs/expert.svg)
-
-                &#information:before
-                  content: url(../images/jobs/information.svg)
-
-                &#legislation:before
-                  content: url(../images/jobs/legislation.svg)
-
-                &#solutions:before/*group*/
-                  content: url(../images/jobs/solutions.svg)
-
-                &#innovation:before
-                  content: url(../images/jobs/innovation.svg)
-
-                &#quality:before
-                  content: url(../images/jobs/quality.svg)
-
-                &#duplicable:before
-                  content: url(../images/jobs/duplicable.svg)
-
-                &#image:before
-                  content: url(../images/jobs/image.svg)
-
-                &#notoriety:before/*laboratory*/
-                  content: url(../images/jobs/notoriety.svg)
-
-                &#share:before
-                  content: url(../images/jobs/share.svg)
-
-                &#collect:before
-                  content: url(../images/jobs/collect.svg)
-
-                &#offers:before
-                  content: url(../images/jobs/offers.svg)
-
-                &#reference:before
-                  content: url(../images/jobs/reference.svg)
-
-        &:nth-of-type(2)
-          background: green
-
-    &#page-references/*REFERENCES - TO DO*/
-
-
     &#page-quotation/*FORMULAIRE DEVIS*/
       form
         border: 1px solid darken($bkgd,3%)
@@ -288,3 +120,15 @@ html
         margin: 0 auto 70px
         padding: 8%
         width: 50%
+
+
+// Objectifs - Pages Nos servies & Pharmaciens / Labos / Groupement
+section
+  @each $section in advice website community graphics content media animation integration video offers
+    &##{$section} h3
+      +before-icon
+      letter-spacing: 0.1em
+      text-transform: uppercase
+
+      &:before
+        content: url(../images/services/#{$section}.svg)
