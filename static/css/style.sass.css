@@ -574,6 +574,26 @@ body > aside {
       #page-index main article a:hover {
         background-color: #1C1C1C; }
 
+#page-quotation article {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px; }
+  #page-quotation article > h2, #page-quotation article > p {
+    text-align: center;
+    margin: .25em auto;
+    max-width: 25em;
+    padding: 0 10%; }
+  #page-quotation article > p {
+    font-size: 1.7em;
+    font-weight: 300; }
+
+#page-quotation form {
+  border: 1px solid #f4f4f4;
+  background: #fff;
+  margin: 3em auto;
+  max-width: 50em;
+  padding: 4em; }
+
 #page-services article:first-of-type {
   margin-left: auto;
   margin-right: auto;
@@ -728,12 +748,6 @@ html body {
   margin: 0; }
   html body#page-index aside, html body#page-index footer, html body#page-quotation aside, html body#page-quotation footer {
     display: none; }
-  html body#page-quotation form {
-    border: 1px solid #f4f4f4;
-    background: #fff;
-    margin: 0 auto 70px;
-    padding: 8%;
-    width: 50%; }
 
 section#advice h3 {
   letter-spacing: 0.1em;
