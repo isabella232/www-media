@@ -29,7 +29,6 @@
   </head>
 
   <body id="page-{{ page }}">
-    <h1>{{ PAGES[page] }}</h1>
 
     {% set grouped_messages = get_flashed_messages(with_categories=True)|sort(0)|groupby(0) %}
     <aside id="flash">
@@ -63,6 +62,7 @@
     </nav>
 
     <main>
+      <h1>{{ PAGES[page] }}</h1>
       {% block content %}{% endblock content %}
     </main>
 

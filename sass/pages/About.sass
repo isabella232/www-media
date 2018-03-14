@@ -1,0 +1,118 @@
+#page-about
+  article:first-of-type
+    +big-left-img(bkgd-agency, right)
+
+  h1
+    left: calc(50% + 8%)
+    position: absolute
+    z-index: 1
+
+
+  article:nth-of-type(n+2)
+    +centered-article
+    margin: 7rem auto
+
+  #members
+    display: flex
+    flex-wrap: wrap
+    margin-top: 2em
+
+    > *
+      height: 250px
+      margin: 0
+      width: 250px
+
+    section
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      position: relative
+
+      &:first-of-type
+        margin-left: 500px
+
+      &:after
+        background: rgba($primary,0.6)
+        content: ''
+        height: 200px
+        left: 25px
+        opacity: 0
+        position: absolute
+        top: 25px
+        transform: scale(0)
+        transition: opacity 0.35s, transform 0.35s
+        width: 200px
+        z-index: -1
+
+      h4, p
+        color: #fff
+        opacity: 0
+        padding: 0 12%
+        transform: scale(0)
+        transition: opacity 0.35s, transform 0.35s
+
+      h4
+        font-size: 1.2em
+        font-weight: 400
+        line-height: 2.2em
+        margin: 0
+
+        &:after
+          background: #fff
+          content: ''
+          display: block
+          height: 2px
+          width: 25px
+
+      p
+        font-size: 1em
+        font-style: italic
+        line-height: 1.2em
+        padding-bottom: 20px
+
+      img
+        left: 0
+        position: absolute
+        top: 0
+        width: 250px
+        z-index: -1
+
+      &:hover, &:focus
+        &:after,h4,p
+          opacity: 1
+          transform: scale(1)
+
+  article:last-of-type
+    display: table
+    margin: 50px auto 70px
+
+    >*:not(:last-child)
+      padding: 0 10%
+      text-align: end
+
+    ul
+      display: table-cell
+      width: 50%
+
+      li
+        align-items: center
+        background: #fff
+        display: inline-table
+        display: inline-flex
+        flex-direction: column
+        height: 250px
+        justify-content: center
+        letter-spacing: 0.1em
+        margin-left: -3px
+        text-transform: uppercase
+        width: 50%
+
+        &:nth-child(odd)
+          border-right: 1px solid darken($bkgd,4%)
+          box-sizing: border-box
+
+        &:nth-child(n+3)
+          border-top: 1px solid darken($bkgd,4%)
+
+        strong
+          font-size: 2.4em

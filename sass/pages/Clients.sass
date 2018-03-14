@@ -1,0 +1,73 @@
+// Pages métiers-secteurs d'activité
+#page-pharmacy, #page-laboratory, #page-group
+  h1
+    display: none
+
+  article:first-of-type
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    height: calc(100vh - 63px)
+    justify-content: center
+
+    > *:not(:last-child)
+      box-sizing: border-box
+      padding: 0 8%
+      width: 50%
+
+    h2
+      &:before
+        display: block
+        content: '[ Nos services ]'
+        font-size: 1.15rem
+        font-weight: 400
+        letter-spacing: 0.15em
+        text-transform: uppercase
+
+    ul:first-of-type
+      font-size: 1.3em
+      margin: 0
+
+      li
+        margin: 1em 0
+
+    p
+      margin-top: 0
+
+    aside
+      font-weight: 300
+      margin-top: 1em
+
+      &:before
+        content: '* '
+
+    ul:last-of-type
+      +mozaic(calc(100% / 3), 50%)
+      background: #fff
+      text-align: center
+      width: 50%
+      height: 100%
+      margin: 0
+
+      li
+        +before-icon
+
+        @each $list-item in revenue competition visibility expert information legislation solutions innovation quality duplicable image notoriety share collect offers reference
+          &##{$list-item}:before
+            content: url(../images/jobs/#{$list-item}.svg)
+
+
+  article + article
+    margin: 7rem auto
+
+
+  article:nth-of-type(2)
+    background: green
+    padding: 1em
+
+    h2
+      margin: 0
+
+
+  article:last-of-type
+    +target-section

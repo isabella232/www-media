@@ -1,4 +1,63 @@
 @import url("https://fonts.googleapis.com/css?family=Hind:300,400,500,700");
+footer {
+  align-items: flex-start;
+  background: #1C1C1C;
+  color: #fff;
+  display: flex;
+  font-weight: 300;
+  padding: 20px; }
+  footer:before {
+    content: url(../images/logo-footer.svg);
+    display: block;
+    width: 7em; }
+  footer a:hover {
+    transform: translateX(8px); }
+  footer section {
+    flex: 1;
+    margin: 0 4%; }
+    footer section#more {
+      border: 2px solid #E73C4D;
+      display: flex;
+      font-size: 1.15em;
+      position: relative; }
+      footer section#more h2 {
+        align-items: center;
+        background: #1C1C1C;
+        color: #E73C4D;
+        display: flex;
+        left: 50%;
+        margin: 0;
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        top: -1px;
+        z-index: 1;
+        width: 100%; }
+        footer section#more h2::before, footer section#more h2::after {
+          background-color: #E73C4D;
+          content: '';
+          flex: 1;
+          height: 2px; }
+        footer section#more h2::before {
+          margin-right: 1em; }
+        footer section#more h2::after {
+          margin-left: 1em; }
+      footer section#more ul {
+        align-self: center;
+        display: flex;
+        margin: 0 auto;
+        padding: 15px 20px; }
+        footer section#more ul:before {
+          content: '-';
+          margin: 0 1em; }
+        footer section#more ul li:first-child {
+          order: -1; }
+        footer section#more ul li a:hover {
+          transform: translateY(-5px); }
+  footer h2, footer ul, footer address {
+    font-size: .8em; }
+  footer ul {
+    margin-top: 0; }
+
 nav:first-of-type, nav:first-of-type + nav {
   height: 63px; }
   nav:first-of-type a, nav:first-of-type + nav a {
@@ -73,8 +132,614 @@ nav:first-of-type + nav {
       nav:first-of-type + nav ul li:hover:not(.active) {
         color: #E73C4D; }
 
-a {
+body > aside {
+  background: url(../images/pourquoi-pas-vous.jpg) 100%;
+  color: #fff;
+  padding: 3em 4%;
+  text-align: center; }
+  body > aside h2 {
+    line-height: 1;
+    margin: 0; }
+  body > aside ul li {
+    display: inline-block;
+    margin: 0 1em 1em; }
+    body > aside ul li a {
+      background: #fff;
+      border: 2px solid #fff;
+      border-radius: 2em;
+      color: #1C1C1C;
+      padding: 0.75em 2em;
+      transition-duration: .4s; }
+      body > aside ul li a:hover {
+        background: #1C1C1C;
+        border: 2px solid #1C1C1C;
+        border-radius: 2em;
+        color: #fff;
+        padding: 0.75em 2em;
+        transition-duration: .4s; }
+  body > aside ul li + li a {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 2em;
+    color: #fff;
+    padding: 0.75em 2em;
+    transition-duration: .4s; }
+    body > aside ul li + li a:hover {
+      background: transparent;
+      border: 2px solid #1C1C1C;
+      border-radius: 2em;
+      color: #1C1C1C;
+      padding: 0.75em 2em;
+      transition-duration: .4s; }
+
+#page-about article:first-of-type {
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 7rem 8% 7rem calc(50% + 8%);
+  position: relative; }
+  #page-about article:first-of-type:before {
+    background: url(../images/bkgd-agency.jpg) right/cover no-repeat;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%; }
+
+#page-about h1 {
+  left: calc(50% + 8%);
+  position: absolute;
+  z-index: 1; }
+
+#page-about article:nth-of-type(n+2) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  margin: 7rem auto; }
+  #page-about article:nth-of-type(n+2) > h2, #page-about article:nth-of-type(n+2) > p {
+    text-align: center;
+    margin: .25em auto;
+    max-width: 25em;
+    padding: 0 10%; }
+  #page-about article:nth-of-type(n+2) > p {
+    font-size: 1.7em;
+    font-weight: 300; }
+
+#page-about #members {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2em; }
+  #page-about #members > * {
+    height: 250px;
+    margin: 0;
+    width: 250px; }
+  #page-about #members section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative; }
+    #page-about #members section:first-of-type {
+      margin-left: 500px; }
+    #page-about #members section:after {
+      background: rgba(231, 60, 77, 0.6);
+      content: '';
+      height: 200px;
+      left: 25px;
+      opacity: 0;
+      position: absolute;
+      top: 25px;
+      transform: scale(0);
+      transition: opacity 0.35s, transform 0.35s;
+      width: 200px;
+      z-index: -1; }
+    #page-about #members section h4, #page-about #members section p {
+      color: #fff;
+      opacity: 0;
+      padding: 0 12%;
+      transform: scale(0);
+      transition: opacity 0.35s, transform 0.35s; }
+    #page-about #members section h4 {
+      font-size: 1.2em;
+      font-weight: 400;
+      line-height: 2.2em;
+      margin: 0; }
+      #page-about #members section h4:after {
+        background: #fff;
+        content: '';
+        display: block;
+        height: 2px;
+        width: 25px; }
+    #page-about #members section p {
+      font-size: 1em;
+      font-style: italic;
+      line-height: 1.2em;
+      padding-bottom: 20px; }
+    #page-about #members section img {
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 250px;
+      z-index: -1; }
+    #page-about #members section:hover:after, #page-about #members section:hover h4, #page-about #members section:hover p, #page-about #members section:focus:after, #page-about #members section:focus h4, #page-about #members section:focus p {
+      opacity: 1;
+      transform: scale(1); }
+
+#page-about article:last-of-type {
+  display: table;
+  margin: 50px auto 70px; }
+  #page-about article:last-of-type > *:not(:last-child) {
+    padding: 0 10%;
+    text-align: end; }
+  #page-about article:last-of-type ul {
+    display: table-cell;
+    width: 50%; }
+    #page-about article:last-of-type ul li {
+      align-items: center;
+      background: #fff;
+      display: inline-table;
+      display: inline-flex;
+      flex-direction: column;
+      height: 250px;
+      justify-content: center;
+      letter-spacing: 0.1em;
+      margin-left: -3px;
+      text-transform: uppercase;
+      width: 50%; }
+      #page-about article:last-of-type ul li:nth-child(odd) {
+        border-right: 1px solid #f2f2f2;
+        box-sizing: border-box; }
+      #page-about article:last-of-type ul li:nth-child(n+3) {
+        border-top: 1px solid #f2f2f2; }
+      #page-about article:last-of-type ul li strong {
+        font-size: 2.4em; }
+
+#page-pharmacy h1, #page-laboratory h1, #page-group h1 {
+  display: none; }
+
+#page-pharmacy article:first-of-type, #page-laboratory article:first-of-type, #page-group article:first-of-type {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: calc(100vh - 63px);
+  justify-content: center; }
+  #page-pharmacy article:first-of-type > *:not(:last-child), #page-laboratory article:first-of-type > *:not(:last-child), #page-group article:first-of-type > *:not(:last-child) {
+    box-sizing: border-box;
+    padding: 0 8%;
+    width: 50%; }
+  #page-pharmacy article:first-of-type h2:before, #page-laboratory article:first-of-type h2:before, #page-group article:first-of-type h2:before {
+    display: block;
+    content: '[ Nos services ]';
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase; }
+  #page-pharmacy article:first-of-type ul:first-of-type, #page-laboratory article:first-of-type ul:first-of-type, #page-group article:first-of-type ul:first-of-type {
+    font-size: 1.3em;
+    margin: 0; }
+    #page-pharmacy article:first-of-type ul:first-of-type li, #page-laboratory article:first-of-type ul:first-of-type li, #page-group article:first-of-type ul:first-of-type li {
+      margin: 1em 0; }
+  #page-pharmacy article:first-of-type p, #page-laboratory article:first-of-type p, #page-group article:first-of-type p {
+    margin-top: 0; }
+  #page-pharmacy article:first-of-type aside, #page-laboratory article:first-of-type aside, #page-group article:first-of-type aside {
+    font-weight: 300;
+    margin-top: 1em; }
+    #page-pharmacy article:first-of-type aside:before, #page-laboratory article:first-of-type aside:before, #page-group article:first-of-type aside:before {
+      content: '* '; }
+  #page-pharmacy article:first-of-type ul:last-of-type, #page-laboratory article:first-of-type ul:last-of-type, #page-group article:first-of-type ul:last-of-type {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    margin: 0; }
+    #page-pharmacy article:first-of-type ul:last-of-type > *, #page-laboratory article:first-of-type ul:last-of-type > *, #page-group article:first-of-type ul:last-of-type > * {
+      align-items: center;
+      background: #fff;
+      box-shadow: 0 0 1px #eaeaea;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      height: calc(100% / 3);
+      justify-content: center;
+      padding: 2em;
+      text-align: center;
+      width: 50%; }
+    #page-pharmacy article:first-of-type ul:last-of-type li:before, #page-laboratory article:first-of-type ul:last-of-type li:before, #page-group article:first-of-type ul:last-of-type li:before {
+      display: block;
+      margin: 0 auto 1em;
+      width: 4em; }
+    #page-pharmacy article:first-of-type ul:last-of-type li#revenue:before, #page-laboratory article:first-of-type ul:last-of-type li#revenue:before, #page-group article:first-of-type ul:last-of-type li#revenue:before {
+      content: url(../images/jobs/revenue.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#competition:before, #page-laboratory article:first-of-type ul:last-of-type li#competition:before, #page-group article:first-of-type ul:last-of-type li#competition:before {
+      content: url(../images/jobs/competition.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#visibility:before, #page-laboratory article:first-of-type ul:last-of-type li#visibility:before, #page-group article:first-of-type ul:last-of-type li#visibility:before {
+      content: url(../images/jobs/visibility.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#expert:before, #page-laboratory article:first-of-type ul:last-of-type li#expert:before, #page-group article:first-of-type ul:last-of-type li#expert:before {
+      content: url(../images/jobs/expert.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#information:before, #page-laboratory article:first-of-type ul:last-of-type li#information:before, #page-group article:first-of-type ul:last-of-type li#information:before {
+      content: url(../images/jobs/information.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#legislation:before, #page-laboratory article:first-of-type ul:last-of-type li#legislation:before, #page-group article:first-of-type ul:last-of-type li#legislation:before {
+      content: url(../images/jobs/legislation.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#solutions:before, #page-laboratory article:first-of-type ul:last-of-type li#solutions:before, #page-group article:first-of-type ul:last-of-type li#solutions:before {
+      content: url(../images/jobs/solutions.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#innovation:before, #page-laboratory article:first-of-type ul:last-of-type li#innovation:before, #page-group article:first-of-type ul:last-of-type li#innovation:before {
+      content: url(../images/jobs/innovation.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#quality:before, #page-laboratory article:first-of-type ul:last-of-type li#quality:before, #page-group article:first-of-type ul:last-of-type li#quality:before {
+      content: url(../images/jobs/quality.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#duplicable:before, #page-laboratory article:first-of-type ul:last-of-type li#duplicable:before, #page-group article:first-of-type ul:last-of-type li#duplicable:before {
+      content: url(../images/jobs/duplicable.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#image:before, #page-laboratory article:first-of-type ul:last-of-type li#image:before, #page-group article:first-of-type ul:last-of-type li#image:before {
+      content: url(../images/jobs/image.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#notoriety:before, #page-laboratory article:first-of-type ul:last-of-type li#notoriety:before, #page-group article:first-of-type ul:last-of-type li#notoriety:before {
+      content: url(../images/jobs/notoriety.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#share:before, #page-laboratory article:first-of-type ul:last-of-type li#share:before, #page-group article:first-of-type ul:last-of-type li#share:before {
+      content: url(../images/jobs/share.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#collect:before, #page-laboratory article:first-of-type ul:last-of-type li#collect:before, #page-group article:first-of-type ul:last-of-type li#collect:before {
+      content: url(../images/jobs/collect.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#offers:before, #page-laboratory article:first-of-type ul:last-of-type li#offers:before, #page-group article:first-of-type ul:last-of-type li#offers:before {
+      content: url(../images/jobs/offers.svg); }
+    #page-pharmacy article:first-of-type ul:last-of-type li#reference:before, #page-laboratory article:first-of-type ul:last-of-type li#reference:before, #page-group article:first-of-type ul:last-of-type li#reference:before {
+      content: url(../images/jobs/reference.svg); }
+
+#page-pharmacy article + article, #page-laboratory article + article, #page-group article + article {
+  margin: 7rem auto; }
+
+#page-pharmacy article:nth-of-type(2), #page-laboratory article:nth-of-type(2), #page-group article:nth-of-type(2) {
+  background: green;
+  padding: 1em; }
+  #page-pharmacy article:nth-of-type(2) h2, #page-laboratory article:nth-of-type(2) h2, #page-group article:nth-of-type(2) h2 {
+    margin: 0; }
+
+#page-pharmacy article:last-of-type, #page-laboratory article:last-of-type, #page-group article:last-of-type {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px; }
+  #page-pharmacy article:last-of-type > h2, #page-pharmacy article:last-of-type > p, #page-laboratory article:last-of-type > h2, #page-laboratory article:last-of-type > p, #page-group article:last-of-type > h2, #page-group article:last-of-type > p {
+    text-align: center;
+    margin: .25em auto;
+    max-width: 25em;
+    padding: 0 10%; }
+  #page-pharmacy article:last-of-type > p, #page-laboratory article:last-of-type > p, #page-group article:last-of-type > p {
+    font-size: 1.7em;
+    font-weight: 300; }
+  #page-pharmacy article:last-of-type > section, #page-laboratory article:last-of-type > section, #page-group article:last-of-type > section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem; }
+    #page-pharmacy article:last-of-type > section > *, #page-laboratory article:last-of-type > section > *, #page-group article:last-of-type > section > * {
+      align-items: center;
+      background: #fff;
+      box-shadow: 0 0 1px #eaeaea;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      justify-content: center;
+      padding: 2em;
+      text-align: center;
+      width: 33.3%; }
+    #page-pharmacy article:last-of-type > section h3, #page-pharmacy article:last-of-type > section ul, #page-laboratory article:last-of-type > section h3, #page-laboratory article:last-of-type > section ul, #page-group article:last-of-type > section h3, #page-group article:last-of-type > section ul {
+      margin: 0; }
+    #page-pharmacy article:last-of-type > section li, #page-laboratory article:last-of-type > section li, #page-group article:last-of-type > section li {
+      display: inline-block; }
+      #page-pharmacy article:last-of-type > section li:not(:last-child):after, #page-laboratory article:last-of-type > section li:not(:last-child):after, #page-group article:last-of-type > section li:not(:last-child):after {
+        content: ' / '; }
+
+#page-contact main {
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 7rem 8% 7rem calc(50% + 8%);
+  position: relative; }
+  #page-contact main:before {
+    background: url(../images/bkgd-targets.jpg) center/cover no-repeat;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%; }
+  #page-contact main h1 {
+    margin-top: 0;
+    text-align: left; }
+  #page-contact main h2 {
+    margin: 0 auto .5em; }
+  #page-contact main dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px; }
+    #page-contact main dl dt, #page-contact main dl dl, #page-contact main dl address, #page-contact main dl ul li a {
+      font-size: 1.3em; }
+  #page-contact main dt:first-child, #page-contact main dt:first-child + dd {
+    padding-right: 4%;
+    width: 50%; }
+  #page-contact main dt:nth-of-type(2), #page-contact main dt:nth-of-type(2) + dd {
+    width: 23%; }
+    #page-contact main dt:nth-of-type(2) ul, #page-contact main dt:nth-of-type(2) + dd ul {
+      margin: 0; }
+      #page-contact main dt:nth-of-type(2) ul li a:hover, #page-contact main dt:nth-of-type(2) + dd ul li a:hover {
+        transform: translateX(8px); }
+  #page-contact main dd {
+    margin-left: 0; }
+  #page-contact main dt {
+    font-weight: 700;
+    order: -1;
+    padding-top: 10px; }
+  #page-contact main aside {
+    display: none; }
+
+#page-guarantees {
+  z-index: 0; }
+  #page-guarantees article {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px; }
+    #page-guarantees article > h2, #page-guarantees article > p {
+      text-align: center;
+      margin: .25em auto;
+      max-width: 25em;
+      padding: 0 10%; }
+    #page-guarantees article > p {
+      font-size: 1.7em;
+      font-weight: 300; }
+    #page-guarantees article dl {
+      counter-reset: guarantee;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 6rem auto; }
+      #page-guarantees article dl dt, #page-guarantees article dl dd {
+        box-sizing: border-box;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        height: 340px;
+        justify-content: center;
+        margin: 0;
+        padding: 2%;
+        position: relative;
+        text-align: center;
+        width: 340px; }
+      #page-guarantees article dl dt {
+        background: #242424;
+        font-size: 1.6em;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        line-height: 1.5;
+        text-transform: uppercase; }
+        #page-guarantees article dl dt:before {
+          content: "[0" counter(guarantee) "]";
+          counter-increment: guarantee;
+          font-weight: 300;
+          margin-bottom: .5em; }
+        #page-guarantees article dl dt:nth-of-type(2n) {
+          margin-left: 340px; }
+          #page-guarantees article dl dt:nth-of-type(2n) + dd:after {
+            left: -100%; }
+        #page-guarantees article dl dt#innovate + dd:after {
+          background: #fff url(../images/guarantees/innovate.svg) no-repeat center/40%; }
+        #page-guarantees article dl dt#visibility + dd:after {
+          background: #fff url(../images/guarantees/visibility.svg) no-repeat center/40%; }
+        #page-guarantees article dl dt#expertise + dd:after {
+          background: #fff url(../images/guarantees/expertise.svg) no-repeat center/40%; }
+        #page-guarantees article dl dt#guarantee + dd:after {
+          background: #fff url(../images/guarantees/guarantee.svg) no-repeat center/40%; }
+        #page-guarantees article dl dt#result + dd:after {
+          background: #fff url(../images/guarantees/result.svg) no-repeat center/40%; }
+        #page-guarantees article dl dt#accompaniment + dd:after {
+          background: #fff url(../images/guarantees/accompaniment.svg) no-repeat center/40%; }
+      #page-guarantees article dl dd {
+        background: #303030;
+        font-size: 1.25em; }
+        #page-guarantees article dl dd:after {
+          content: '';
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          transition-duration: 1s;
+          transition-property: transform;
+          transition-timing-function: ease;
+          width: 100%;
+          z-index: -1; }
+      #page-guarantees article dl dd:hover:after, #page-guarantees article dl dt:hover + dd:after {
+        transform: translateX(340px); }
+      #page-guarantees article dl dd:nth-of-type(2n):hover:after, #page-guarantees article dl dt:nth-of-type(2n):hover + dd:after {
+        transform: translateX(-340px); }
+
+#page-index h1, #page-index aside, #page-index footer {
+  display: none; }
+
+#page-index main {
+  background: url(../images/bkgd-index.jpg) center/cover no-repeat;
+  height: calc(100vh - 63px);
+  display: flex; }
+  #page-index main article {
+    color: #fff;
+    margin: auto;
+    text-align: center; }
+    #page-index main article::before {
+      content: url(../images/logo.svg);
+      display: block;
+      margin: 0 auto;
+      max-width: 15em; }
+    #page-index main article h2 {
+      font-size: 3.5em;
+      padding: 1em 0; }
+    #page-index main article a {
+      background: #E73C4D;
+      border: 0;
+      border-radius: 2em;
+      color: #fff;
+      padding: 0.5em 2em;
+      transition-duration: .4s;
+      text-decoration: none; }
+      #page-index main article a:hover {
+        background-color: #1C1C1C; }
+
+#page-legal aside {
+  display: none; }
+
+#page-legal article {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  text-align: center;
+  margin-bottom: 6em; }
+  #page-legal article > h2, #page-legal article > p {
+    text-align: center;
+    margin: .25em auto;
+    max-width: 25em;
+    padding: 0 10%; }
+  #page-legal article > p {
+    font-size: 1.7em;
+    font-weight: 300; }
+
+#page-legal h3 {
+  font-size: 1.7em;
+  font-weight: 400;
+  margin: 3em 0 0; }
+
+#page-legal dt {
+  font-size: 1.3em;
+  font-weight: 700;
+  padding-top: 10px; }
+
+#page-legal dd {
+  font-size: 1.1em;
+  margin-left: 0; }
+
+#page-quotation aside, #page-quotation footer {
+  display: none; }
+
+#page-quotation article {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px; }
+  #page-quotation article > h2, #page-quotation article > p {
+    text-align: center;
+    margin: .25em auto;
+    max-width: 25em;
+    padding: 0 10%; }
+  #page-quotation article > p {
+    font-size: 1.7em;
+    font-weight: 300; }
+
+#page-quotation form {
+  border: 1px solid #f4f4f4;
+  background: #fff;
+  margin: 3em auto;
+  max-width: 50em;
+  padding: 4em; }
+
+#page-services article:first-of-type {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px; }
+  #page-services article:first-of-type > h2, #page-services article:first-of-type > p {
+    text-align: center;
+    margin: .25em auto;
+    max-width: 25em;
+    padding: 0 10%; }
+  #page-services article:first-of-type > p {
+    font-size: 1.7em;
+    font-weight: 300; }
+  #page-services article:first-of-type > section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem; }
+    #page-services article:first-of-type > section > * {
+      align-items: center;
+      background: #fff;
+      box-shadow: 0 0 1px #eaeaea;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      justify-content: center;
+      padding: 2em;
+      text-align: center;
+      width: 33.3%; }
+    #page-services article:first-of-type > section h3, #page-services article:first-of-type > section ul {
+      margin: 0; }
+    #page-services article:first-of-type > section li {
+      display: inline-block; }
+      #page-services article:first-of-type > section li:not(:last-child):after {
+        content: ' / '; }
+
+#page-services article:last-of-type {
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 7rem 8% 7rem calc(50% + 8%);
+  position: relative;
+  background-origin: border-box;
+  margin-top: 6rem; }
+  #page-services article:last-of-type:before {
+    background: url(../images/bkgd-targets.jpg) 50%/cover no-repeat;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%; }
+  #page-services article:last-of-type ul {
+    margin: 0 0 3em; }
+    #page-services article:last-of-type ul li a {
+      background: transparent;
+      border: 2px solid #1C1C1C;
+      border-radius: 2em;
+      color: #1C1C1C;
+      padding: 0.75em 1em;
+      transition-duration: .4s;
+      display: block;
+      margin: 1em auto;
+      max-width: 25em;
+      text-align: center; }
+      #page-services article:last-of-type ul li a:hover {
+        background: #1C1C1C;
+        border: 2px solid #1C1C1C;
+        border-radius: 2em;
+        color: #fff;
+        padding: 0.75em 1em;
+        transition-duration: .4s; }
+
+body {
+  background: #fcfcfc;
   color: #1C1C1C;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Hind', sans-serif;
+  margin: 0; }
+
+h1 {
+  font-size: 1.15em;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  margin: 7rem auto .5em;
+  text-align: center;
+  text-transform: uppercase; }
+  h1:before {
+    content: "[ "; }
+  h1:after {
+    content: " ]"; }
+
+h2 {
+  font-size: 3em; }
+
+article h2 {
+  line-height: 1.2em; }
+
+p {
+  font-size: 1.3em; }
+
+ul {
+  padding-left: 0; }
+  ul li {
+    list-style-type: none; }
+    ul li a {
+      font-size: 1.1em; }
+
+a {
+  color: inherit;
   display: inline-block;
   outline: none;
   text-decoration: none;
@@ -95,609 +760,126 @@ form {
   form label {
     font-size: 0; }
     form label input, form label textarea, form label select {
+      border: solid 2px #1C1C1C;
       box-sizing: border-box;
-      background: transparent;
-      border: 2px solid #1C1C1C;
-      border-radius: 0;
-      padding: 15px;
-      transition-duration: .4s;
       color: #1C1C1C;
+      font-family: inherit;
+      font-size: 1.1rem;
       margin-bottom: 20px;
+      padding: .75em 1em;
       width: 100%; }
     form label textarea {
       min-height: 150px; }
   form input[type="submit"] {
-    align-self: flex-end;
     background: #1C1C1C;
     border: none;
-    border-radius: 25px;
-    padding: 15px;
-    transition-duration: .4s;
+    border-radius: 2em;
     color: #fff;
-    width: 40%; }
+    padding: 0.75em 2.5em;
+    transition-duration: .4s;
+    align-self: flex-end;
+    cursor: pointer; }
     form input[type="submit"]:hover {
       background-color: #E73C4D; }
 
-html body {
-  background: #fcfcfc;
-  color: #1C1C1C;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Hind', sans-serif;
-  margin: 0; }
-  html body h1 {
-    display: none; }
-  html body h2 {
-    font-size: 2.4em;
-    margin: 0; }
-  html body article h2 {
-    line-height: 1.2em;
-    padding-top: 50px; }
-    html body article h2 + * {
-      margin-top: 0; }
-  html body p {
-    font-size: 1.3em; }
-  html body ul li a {
-    font-size: 1.1em;
-    text-decoration: none; }
-  html body ul {
-    padding-left: 0; }
-    html body ul li {
-      list-style-type: none; }
-  html body#page-index aside, html body#page-index footer, html body#page-quotation aside, html body#page-quotation footer {
-    display: none; }
-  html body#page-guarantees article dl,
-  html body#page-services article section,
-  html body#page-group article:last-child,
-  html body#page-pharmacy article:last-child,
-  html body#page-laboratory article:last-child,
-  html body#page-about article:not(:first-child) {
-    margin: auto;
-    max-width: 1024px; }
-  html body#page-about article:nth-child(2) h2, html body#page-about article:nth-child(2) h2 + p, html body#page-quotation h2, html body#page-quotation h2 + p,
-  html body#page-guarantees article h2,
-  html body#page-guarantees article h2 + p,
-  html body#page-services article:first-child h2,
-  html body#page-services article:first-child h2 + p,
-  html body#page-pharmacy article:not(:first-child) h2,
-  html body#page-pharmacy article:not(:first-child) h2 + p,
-  html body#page-laboratory article:not(:first-child) h2,
-  html body#page-laboratory article:not(:first-child) h2 + p,
-  html body#page-group article:not(:first-child) h2,
-  html body#page-group article:not(:first-child) h2 + p {
-    margin: auto;
-    text-align: center;
-    width: 40%; }
-  html body#page-about article:nth-child(2) h2 + p, html body#page-quotation h2 + p,
-  html body#page-guarantees article h2 + p,
-  html body#page-services article:first-child h2 + p,
-  html body#page-pharmacy article:not(:first-child) h2 + p,
-  html body#page-laboratory article:not(:first-child) h2 + p,
-  html body#page-group article:not(:first-child) h2 + p {
-    padding-bottom: 20px; }
-  html body#page-about main article:first-of-type,
-  html body#page-services main article:last-of-type {
-    background: #fff;
-    margin-left: 50%;
-    padding: 4% 8%;
-    position: relative; }
-    html body#page-about main article:first-of-type:before,
-    html body#page-services main article:last-of-type:before {
-      background-size: cover;
-      content: '';
-      height: 100%;
-      left: -100%;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: -1; }
-  html body#page-services article:first-child > section,
-  html body#page-pharmacy article:last-child > section,
-  html body#page-laboratory article:last-child > section,
-  html body#page-group article:last-child > section {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 70px;
-    margin-top: 30px; }
-    html body#page-services article:first-child > section section,
-    html body#page-pharmacy article:last-child > section section,
-    html body#page-laboratory article:last-child > section section,
-    html body#page-group article:last-child > section section {
-      align-items: center;
-      background: #fff;
-      box-shadow: 0 0 1px #eaeaea;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      height: 300px;
-      line-height: 1.4em;
-      justify-content: end;
-      padding: 7% 2%;
-      text-align: center;
-      width: 33.3%; }
-      html body#page-services article:first-child > section section h3, html body#page-services article:first-child > section section ul,
-      html body#page-pharmacy article:last-child > section section h3,
-      html body#page-pharmacy article:last-child > section section ul,
-      html body#page-laboratory article:last-child > section section h3,
-      html body#page-laboratory article:last-child > section section ul,
-      html body#page-group article:last-child > section section h3,
-      html body#page-group article:last-child > section section ul {
-        margin: 0; }
-      html body#page-services article:first-child > section section h3,
-      html body#page-pharmacy article:last-child > section section h3,
-      html body#page-laboratory article:last-child > section section h3,
-      html body#page-group article:last-child > section section h3 {
-        letter-spacing: 0.1em;
-        text-transform: uppercase; }
-        html body#page-services article:first-child > section section h3:before,
-        html body#page-pharmacy article:last-child > section section h3:before,
-        html body#page-laboratory article:last-child > section section h3:before,
-        html body#page-group article:last-child > section section h3:before {
-          display: block;
-          margin: 0 auto 10px;
-          width: 60px; }
-      html body#page-services article:first-child > section section ul,
-      html body#page-pharmacy article:last-child > section section ul,
-      html body#page-laboratory article:last-child > section section ul,
-      html body#page-group article:last-child > section section ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; }
-        html body#page-services article:first-child > section section ul li:not(:last-child):after,
-        html body#page-pharmacy article:last-child > section section ul li:not(:last-child):after,
-        html body#page-laboratory article:last-child > section section ul li:not(:last-child):after,
-        html body#page-group article:last-child > section section ul li:not(:last-child):after {
-          content: ' / '; }
-      html body#page-services article:first-child > section section#advice h3:before,
-      html body#page-pharmacy article:last-child > section section#advice h3:before,
-      html body#page-laboratory article:last-child > section section#advice h3:before,
-      html body#page-group article:last-child > section section#advice h3:before {
-        content: url(../images/services/advice.svg); }
-      html body#page-services article:first-child > section section#website h3:before,
-      html body#page-pharmacy article:last-child > section section#website h3:before,
-      html body#page-laboratory article:last-child > section section#website h3:before,
-      html body#page-group article:last-child > section section#website h3:before {
-        content: url(../images/services/website.svg); }
-      html body#page-services article:first-child > section section#community h3:before,
-      html body#page-pharmacy article:last-child > section section#community h3:before,
-      html body#page-laboratory article:last-child > section section#community h3:before,
-      html body#page-group article:last-child > section section#community h3:before {
-        content: url(../images/services/community.svg); }
-      html body#page-services article:first-child > section section#graphics h3:before,
-      html body#page-pharmacy article:last-child > section section#graphics h3:before,
-      html body#page-laboratory article:last-child > section section#graphics h3:before,
-      html body#page-group article:last-child > section section#graphics h3:before {
-        content: url(../images/services/graphics.svg); }
-      html body#page-services article:first-child > section section#content h3:before,
-      html body#page-pharmacy article:last-child > section section#content h3:before,
-      html body#page-laboratory article:last-child > section section#content h3:before,
-      html body#page-group article:last-child > section section#content h3:before {
-        content: url(../images/services/content.svg); }
-      html body#page-services article:first-child > section section#media h3:before,
-      html body#page-pharmacy article:last-child > section section#media h3:before,
-      html body#page-laboratory article:last-child > section section#media h3:before,
-      html body#page-group article:last-child > section section#media h3:before {
-        content: url(../images/services/media.svg); }
-      html body#page-services article:first-child > section section#animation h3:before,
-      html body#page-pharmacy article:last-child > section section#animation h3:before,
-      html body#page-laboratory article:last-child > section section#animation h3:before,
-      html body#page-group article:last-child > section section#animation h3:before {
-        content: url(../images/services/animation.svg); }
-      html body#page-services article:first-child > section section#integration h3:before,
-      html body#page-pharmacy article:last-child > section section#integration h3:before,
-      html body#page-laboratory article:last-child > section section#integration h3:before,
-      html body#page-group article:last-child > section section#integration h3:before {
-        content: url(../images/services/integration.svg); }
-      html body#page-services article:first-child > section section#video h3:before,
-      html body#page-pharmacy article:last-child > section section#video h3:before,
-      html body#page-laboratory article:last-child > section section#video h3:before,
-      html body#page-group article:last-child > section section#video h3:before {
-        content: url(../images/services/video.svg); }
-      html body#page-services article:first-child > section section#offers h3:before,
-      html body#page-pharmacy article:last-child > section section#offers h3:before,
-      html body#page-laboratory article:last-child > section section#offers h3:before,
-      html body#page-group article:last-child > section section#offers h3:before {
-        content: url(../images/services/offer.svg); }
-  html body#page-pharmacy main article:first-child, html body#page-laboratory main article:first-child, html body#page-group main article:first-child {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: calc(100vh - 63px);
-    justify-content: center; }
-    html body#page-pharmacy main article:first-child > *:not(:last-child), html body#page-laboratory main article:first-child > *:not(:last-child), html body#page-group main article:first-child > *:not(:last-child) {
-      box-sizing: border-box;
-      padding: 0 8%;
-      width: 50%; }
-    html body#page-pharmacy main article:first-child ul:first-of-type, html body#page-laboratory main article:first-child ul:first-of-type, html body#page-group main article:first-child ul:first-of-type {
-      font-size: 1.3em; }
-    html body#page-pharmacy main article:first-child ul:last-of-type, html body#page-laboratory main article:first-child ul:last-of-type, html body#page-group main article:first-child ul:last-of-type {
-      background: #fff;
-      display: flex;
-      text-align: center;
-      width: 50%;
-      height: calc(100vh - 63px);
-      flex-wrap: wrap;
-      margin: 0; }
-      html body#page-pharmacy main article:first-child ul:last-of-type li, html body#page-laboratory main article:first-child ul:last-of-type li, html body#page-group main article:first-child ul:last-of-type li {
-        background: #fff;
-        box-shadow: 0 0 1px #e8e8e8;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        height: calc((100vh - 63px) / 3);
-        justify-content: center;
-        padding: 2%;
-        width: 50%; }
-        html body#page-pharmacy main article:first-child ul:last-of-type li:before, html body#page-laboratory main article:first-child ul:last-of-type li:before, html body#page-group main article:first-child ul:last-of-type li:before {
-          display: block;
-          margin: 0 auto 10px;
-          width: 22%; }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#revenue:before, html body#page-laboratory main article:first-child ul:last-of-type li#revenue:before, html body#page-group main article:first-child ul:last-of-type li#revenue:before {
-          content: url(../images/jobs/revenue.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#competition:before, html body#page-laboratory main article:first-child ul:last-of-type li#competition:before, html body#page-group main article:first-child ul:last-of-type li#competition:before {
-          content: url(../images/jobs/competition.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#visibility:before, html body#page-laboratory main article:first-child ul:last-of-type li#visibility:before, html body#page-group main article:first-child ul:last-of-type li#visibility:before {
-          content: url(../images/jobs/visibility.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#expert:before, html body#page-laboratory main article:first-child ul:last-of-type li#expert:before, html body#page-group main article:first-child ul:last-of-type li#expert:before {
-          content: url(../images/jobs/expert.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#information:before, html body#page-laboratory main article:first-child ul:last-of-type li#information:before, html body#page-group main article:first-child ul:last-of-type li#information:before {
-          content: url(../images/jobs/information.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#legislation:before, html body#page-laboratory main article:first-child ul:last-of-type li#legislation:before, html body#page-group main article:first-child ul:last-of-type li#legislation:before {
-          content: url(../images/jobs/legislation.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#solutions:before, html body#page-laboratory main article:first-child ul:last-of-type li#solutions:before, html body#page-group main article:first-child ul:last-of-type li#solutions:before {
-          content: url(../images/jobs/solutions.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#innovation:before, html body#page-laboratory main article:first-child ul:last-of-type li#innovation:before, html body#page-group main article:first-child ul:last-of-type li#innovation:before {
-          content: url(../images/jobs/innovation.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#quality:before, html body#page-laboratory main article:first-child ul:last-of-type li#quality:before, html body#page-group main article:first-child ul:last-of-type li#quality:before {
-          content: url(../images/jobs/quality.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#duplicable:before, html body#page-laboratory main article:first-child ul:last-of-type li#duplicable:before, html body#page-group main article:first-child ul:last-of-type li#duplicable:before {
-          content: url(../images/jobs/duplicable.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#image:before, html body#page-laboratory main article:first-child ul:last-of-type li#image:before, html body#page-group main article:first-child ul:last-of-type li#image:before {
-          content: url(../images/jobs/image.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#notoriety:before, html body#page-laboratory main article:first-child ul:last-of-type li#notoriety:before, html body#page-group main article:first-child ul:last-of-type li#notoriety:before {
-          content: url(../images/jobs/notoriety.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#share:before, html body#page-laboratory main article:first-child ul:last-of-type li#share:before, html body#page-group main article:first-child ul:last-of-type li#share:before {
-          content: url(../images/jobs/share.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#collect:before, html body#page-laboratory main article:first-child ul:last-of-type li#collect:before, html body#page-group main article:first-child ul:last-of-type li#collect:before {
-          content: url(../images/jobs/collect.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#offers:before, html body#page-laboratory main article:first-child ul:last-of-type li#offers:before, html body#page-group main article:first-child ul:last-of-type li#offers:before {
-          content: url(../images/jobs/offers.svg); }
-        html body#page-pharmacy main article:first-child ul:last-of-type li#reference:before, html body#page-laboratory main article:first-child ul:last-of-type li#reference:before, html body#page-group main article:first-child ul:last-of-type li#reference:before {
-          content: url(../images/jobs/reference.svg); }
-  html body#page-pharmacy main article:nth-child(2), html body#page-laboratory main article:nth-child(2), html body#page-group main article:nth-child(2) {
-    background: green; }
-  html body#page-index main {
-    background: url(../images/bkgd-index.jpg);
-    background-position: 100%;
-    height: calc(100vh - 63px);
-    display: flex; }
-    html body#page-index main article {
-      color: #fff;
-      margin: auto;
-      text-align: center; }
-      html body#page-index main article::before {
-        content: url(../images/logo.svg);
-        display: block;
-        margin: 0 auto;
-        max-width: 15em; }
-      html body#page-index main article h2 {
-        font-size: 3.5em;
-        padding: 1em 0; }
-      html body#page-index main article a {
-        background: #E73C4D;
-        border: none;
-        border-radius: 50px;
-        padding: 0.75em 2em;
-        transition-duration: .4s;
-        color: #fff;
-        text-decoration: none; }
-        html body#page-index main article a:hover {
-          background-color: #1C1C1C; }
-  html body#page-about article:first-child:before {
-    background: url(../images/bkgd-agency.jpg); }
-  html body#page-about article #members {
-    display: flex;
-    flex-wrap: wrap; }
-    html body#page-about article #members > * {
-      height: 250px;
-      margin: 0;
-      width: 250px; }
-    html body#page-about article #members section {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      position: relative; }
-      html body#page-about article #members section:first-of-type {
-        margin-left: 500px; }
-      html body#page-about article #members section:after {
-        background: rgba(231, 60, 77, 0.6);
-        content: '';
-        height: 200px;
-        left: 25px;
-        opacity: 0;
-        position: absolute;
-        top: 25px;
-        transform: scale(0);
-        transition: opacity 0.35s, transform 0.35s;
-        width: 200px;
-        z-index: -1; }
-      html body#page-about article #members section h4, html body#page-about article #members section p {
-        color: #fff;
-        opacity: 0;
-        padding: 0 12%;
-        transform: scale(0);
-        transition: opacity 0.35s, transform 0.35s; }
-      html body#page-about article #members section h4 {
-        font-size: 1.2em;
-        font-weight: 400;
-        line-height: 2.2em;
-        margin: 0; }
-        html body#page-about article #members section h4:after {
-          background: #fff;
-          content: '';
-          display: block;
-          height: 2px;
-          width: 25px; }
-      html body#page-about article #members section p {
-        font-size: 1em;
-        font-style: italic;
-        line-height: 1.2em;
-        padding-bottom: 20px; }
-      html body#page-about article #members section img {
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 250px;
-        z-index: -1; }
-      html body#page-about article #members section:hover:after, html body#page-about article #members section:hover h4, html body#page-about article #members section:hover p, html body#page-about article #members section:focus:after, html body#page-about article #members section:focus h4, html body#page-about article #members section:focus p {
-        opacity: 1;
-        transform: scale(1); }
-  html body#page-about article:last-child {
-    display: table;
-    margin: 50px auto 70px; }
-    html body#page-about article:last-child > *:not(:last-child) {
-      padding: 0 10%;
-      text-align: end; }
-    html body#page-about article:last-child ul {
-      display: table-cell;
-      width: 50%; }
-      html body#page-about article:last-child ul li {
-        align-items: center;
-        background: #fff;
-        display: inline-table;
-        display: inline-flex;
-        flex-direction: column;
-        height: 250px;
-        justify-content: center;
-        letter-spacing: 0.1em;
-        margin-left: -3px;
-        text-transform: uppercase;
-        width: 50%; }
-        html body#page-about article:last-child ul li:nth-child(odd) {
-          border-right: 1px solid #f2f2f2;
-          box-sizing: border-box; }
-        html body#page-about article:last-child ul li:nth-child(n+3) {
-          border-top: 1px solid #f2f2f2; }
-        html body#page-about article:last-child ul li strong {
-          font-size: 2.4em; }
-  html body#page-guarantees {
-    z-index: 0; }
-    html body#page-guarantees article h2 {
-      padding-bottom: 20px; }
-    html body#page-guarantees article dl {
-      counter-reset: guarantee;
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 70px; }
-      html body#page-guarantees article dl dt, html body#page-guarantees article dl dd {
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        height: 340px;
-        justify-content: center;
-        margin: 0;
-        position: relative;
-        text-align: center;
-        width: 340px; }
-      html body#page-guarantees article dl dd {
-        background: #303030;
-        box-sizing: border-box;
-        padding: 2%; }
-        html body#page-guarantees article dl dd:nth-of-type(2n+1):after {
-          left: 0; }
-        html body#page-guarantees article dl dd:nth-of-type(2n+1) + dt {
-          margin-left: 340px; }
-      html body#page-guarantees article dl dd:hover:nth-of-type(2n+1):after, html body#page-guarantees article dl dt:hover + dd:nth-of-type(2n+1):after {
-        transform: translateX(340px); }
-      html body#page-guarantees article dl dt:hover:nth-of-type(2n):after {
-        transform: translateX(-340px); }
-      html body#page-guarantees article dl dt:nth-of-type(2n):after, html body#page-guarantees article dl dd:nth-of-type(2n+1):after {
-        content: '';
-        height: 100%;
-        position: absolute;
-        top: 0;
-        transition-duration: 1s;
-        transition-property: transform;
-        transition-timing-function: ease;
-        width: 100%;
-        z-index: -1; }
-      html body#page-guarantees article dl dt {
-        background: #242424;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase; }
-        html body#page-guarantees article dl dt:before {
-          content: "[0" counter(guarantee) "]";
-          counter-increment: guarantee;
-          font-weight: 300; }
-        html body#page-guarantees article dl dt:nth-of-type(2n):after {
-          left: 0; }
-        html body#page-guarantees article dl dt#innovate + dd:after {
-          background: #fff url(../images/guarantees/innovation.svg) no-repeat 50%;
-          background-size: 40%; }
-        html body#page-guarantees article dl dt#visibility:after {
-          background: #fff url(../images/guarantees/visibility.svg) no-repeat 50%;
-          background-size: 40%; }
-        html body#page-guarantees article dl dt#expertise + dd:after {
-          background: #fff url(../images/guarantees/expertise.svg) no-repeat 50%;
-          background-size: 40%; }
-        html body#page-guarantees article dl dt#guarantee:after {
-          background: #fff url(../images/guarantees/guarantee.svg) no-repeat 50%;
-          background-size: 40%; }
-        html body#page-guarantees article dl dt#result + dd:after {
-          background: #fff url(../images/guarantees/result.svg) no-repeat 50%;
-          background-size: 40%; }
-        html body#page-guarantees article dl dt#accompaniment:after {
-          background: #fff url(../images/guarantees/accompaniment.svg) no-repeat 50%;
-          background-size: 40%; }
-  html body#page-services article:last-child:before {
-    background: url(../images/bkgd-targets.jpg); }
-  html body#page-services article:last-child ul li {
-    background: transparent;
-    border: 2px solid #1C1C1C;
-    border-radius: 50px;
-    padding: 15px;
-    transition-duration: .4s;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px; }
-    html body#page-services article:last-child ul li:hover {
-      background: #1C1C1C;
-      border: 2px solid #1C1C1C;
-      border-radius: 50px;
-      padding: 15px;
-      transition-duration: .4s; }
-      html body#page-services article:last-child ul li:hover a {
-        color: #fff; }
-  html body#page-services article:last-child p {
-    display: flex;
-    flex-direction: column; }
-  html body#page-contact {
-    background: url(../images/bkgd-contact.jpg) 0; }
-    html body#page-contact article {
-      background: #fff;
-      margin-left: 50%;
-      padding: 4% 8%; }
-      html body#page-contact article dl {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 50px; }
-        html body#page-contact article dl dt, html body#page-contact article dl dl, html body#page-contact article dl address, html body#page-contact article dl ul li a {
-          font-size: 1.3em; }
-      html body#page-contact article dt:first-child, html body#page-contact article dt:first-child + dd {
-        padding-right: 4%;
-        width: 50%; }
-      html body#page-contact article dt:nth-of-type(2), html body#page-contact article dt:nth-of-type(2) + dd {
-        width: 23%; }
-      html body#page-contact article ul {
-        margin: 0; }
-        html body#page-contact article ul li a {
-          color: #1C1C1C; }
-          html body#page-contact article ul li a:hover {
-            transform: translateX(8px); }
-      html body#page-contact article dd {
-        margin-left: 0; }
-      html body#page-contact article dt {
-        font-weight: 700;
-        order: -1;
-        padding-top: 10px; }
-    html body#page-contact aside {
-      display: none; }
-  html body#page-quotation form {
-    border: 1px solid #f4f4f4;
-    background: #fff;
-    margin: 0 auto 70px;
-    padding: 8%;
-    width: 50%; }
-  html body > aside {
-    background: url(../images/pourquoi-pas-vous.jpg) 100%;
-    padding: 4%; }
-    html body > aside h2, html body > aside p, html body > aside ul {
-      color: #fff;
-      margin: auto;
-      text-align: center; }
-    html body > aside ul {
-      display: flex;
-      justify-content: center; }
-      html body > aside ul li {
-        background: #fff;
-        border: 2px solid #fff;
-        border-radius: 25px;
-        padding: 7px 20px;
-        transition-duration: .4s;
-        margin: 15px 10px; }
-        html body > aside ul li:hover {
-          background: #1C1C1C;
-          border: 2px solid #1C1C1C;
-          border-radius: 25px;
-          padding: 7px 20px;
-          transition-duration: .4s; }
-          html body > aside ul li:hover a {
-            color: #fff; }
-      html body > aside ul li + li {
-        background: transparent;
-        border: 2px solid #fff;
-        border-radius: 25px;
-        padding: 7px 20px;
-        transition-duration: .4s; }
-        html body > aside ul li + li:hover {
-          background: transparent;
-          border: 2px solid #1C1C1C;
-          border-radius: 25px;
-          padding: 7px 20px;
-          transition-duration: .4s; }
-          html body > aside ul li + li:hover a {
-            color: #1C1C1C; }
-        html body > aside ul li + li a {
-          color: #fff; }
-  html body footer {
-    background: #1C1C1C;
-    color: #fff;
-    display: flex;
-    font-weight: 300;
-    padding: 20px; }
-    html body footer a {
-      color: #fff; }
-      html body footer a:hover {
-        transform: translateX(8px); }
-    html body footer section {
-      flex: 1; }
-      html body footer section:first-child {
-        padding: 0 3% 0 10%;
-        position: relative; }
-        html body footer section:first-child:before {
-          background: url(../images/logo-footer.svg) no-repeat;
-          content: '';
-          height: 100%;
-          left: 0;
-          position: absolute;
-          width: 22%; }
-      html body footer section#more {
-        display: flex;
-        font-size: 1.15em;
-        position: relative; }
-        html body footer section#more h2 {
-          background: #1C1C1C;
-          color: #E73C4D;
-          left: calc(50% - 76px);
-          padding: 5px 10px;
-          position: absolute;
-          top: -5px;
-          z-index: 1; }
-        html body footer section#more ul {
-          align-self: center;
-          border: 2px solid #E73C4D;
-          display: flex;
-          margin: 0 auto;
-          padding: 15px 20px; }
-          html body footer section#more ul li a:hover {
-            transform: translateY(-5px); }
-          html body footer section#more ul li:first-of-type:after {
-            content: '-';
-            padding: 8px; }
-    html body footer h2, html body footer ul, html body footer address {
-      font-size: .8em; }
-    html body footer ul {
-      margin-top: 0; }
+section#advice h3 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
+  section#advice h3:before {
+    display: block;
+    margin: 0 auto 1em;
+    width: 4em; }
+  section#advice h3:before {
+    content: url(../images/services/advice.svg); }
+
+section#website h3 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
+  section#website h3:before {
+    display: block;
+    margin: 0 auto 1em;
+    width: 4em; }
+  section#website h3:before {
+    content: url(../images/services/website.svg); }
+
+section#community h3 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
+  section#community h3:before {
+    display: block;
+    margin: 0 auto 1em;
+    width: 4em; }
+  section#community h3:before {
+    content: url(../images/services/community.svg); }
+
+section#graphics h3 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
+  section#graphics h3:before {
+    display: block;
+    margin: 0 auto 1em;
+    width: 4em; }
+  section#graphics h3:before {
+    content: url(../images/services/graphics.svg); }
+
+section#content h3 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
+  section#content h3:before {
+    display: block;
+    margin: 0 auto 1em;
+    width: 4em; }
+  section#content h3:before {
+    content: url(../images/services/content.svg); }
+
+section#media h3 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
+  section#media h3:before {
+    display: block;
+    margin: 0 auto 1em;
+    width: 4em; }
+  section#media h3:before {
+    content: url(../images/services/media.svg); }
+
+section#animation h3 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
+  section#animation h3:before {
+    display: block;
+    margin: 0 auto 1em;
+    width: 4em; }
+  section#animation h3:before {
+    content: url(../images/services/animation.svg); }
+
+section#integration h3 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
+  section#integration h3:before {
+    display: block;
+    margin: 0 auto 1em;
+    width: 4em; }
+  section#integration h3:before {
+    content: url(../images/services/integration.svg); }
+
+section#video h3 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
+  section#video h3:before {
+    display: block;
+    margin: 0 auto 1em;
+    width: 4em; }
+  section#video h3:before {
+    content: url(../images/services/video.svg); }
+
+section#offers h3 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
+  section#offers h3:before {
+    display: block;
+    margin: 0 auto 1em;
+    width: 4em; }
+  section#offers h3:before {
+    content: url(../images/services/offers.svg); }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */

@@ -1,0 +1,81 @@
+=button($bkgd, $border, $color, $padding)
+  background: $bkgd
+  border: $border
+  border-radius: 2em
+  color: $color
+  padding: $padding
+  transition-duration: .4s
+
+
+=centered-article
+  margin-left: auto
+  margin-right: auto
+  max-width: 1024px
+
+  & > h2, & > p
+    text-align: center
+    margin: .25em auto
+    max-width: 25em
+    padding: 0 10%
+
+  & > p
+    font-size: 1.7em
+    font-weight: 300
+
+
+=big-left-img($img-url, $bg-position)
+  background-color: #fff
+  box-sizing: border-box
+  padding: 7rem 8% 7rem calc(50% + 8%)
+  position: relative
+
+  &:before
+    background: url(../images/#{$img-url}.jpg) $bg-position / cover no-repeat
+    content: ''
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 50%
+
+
+=before-icon($margin: 0 auto 1em, $width: 4em)
+  &:before
+    display: block
+    margin: $margin
+    width: $width
+
+
+=mozaic($height, $width)
+  display: flex
+  flex-wrap: wrap
+
+  > *
+    align-items: center
+    background: #fff
+    box-shadow: 0 0 1px darken($bkgd, 7%)
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    height: $height
+    justify-content: center
+    padding: 2em
+    text-align: center
+    width: $width
+
+
+=target-section
+  +centered-article
+
+  > section
+    +mozaic(300px, 33.3%)
+    margin-top: 3rem
+
+    h3, ul
+      margin: 0
+
+    li
+      display: inline-block
+
+      &:not(:last-child):after
+        content: ' / '
