@@ -21,3 +21,19 @@
   & > p
     font-size: 1.7em
     font-weight: 300
+
+
+=big-left-img($img-url, $bg-position)
+  background-color: #fff
+  box-sizing: border-box
+  padding: 7rem 8% 7rem calc(50% + 8%)
+  position: relative
+
+  &:before
+    background: url(../images/#{$img-url}.jpg) $bg-position / cover no-repeat
+    content: ''
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 50%

@@ -173,20 +173,18 @@ body > aside {
       transition-duration: .4s; }
 
 #page-about article:first-of-type {
+  background-color: #fff;
   box-sizing: border-box;
-  margin-left: 50%;
-  padding: 7rem 8%;
-  position: relative;
-  width: 50%; }
+  padding: 7rem 8% 7rem calc(50% + 8%);
+  position: relative; }
   #page-about article:first-of-type:before {
-    content: '';
     background: url(../images/bkgd-agency.jpg) right/cover no-repeat;
+    content: '';
     height: 100%;
-    left: -100%;
+    left: 0;
     position: absolute;
     top: 0;
-    width: 100%;
-    z-index: -1; }
+    width: 50%; }
 
 #page-about h1 {
   left: 58%;
@@ -294,40 +292,56 @@ body > aside {
       #page-about article:last-of-type ul li strong {
         font-size: 2.4em; }
 
-#page-contact {
-  background: url(../images/bkgd-contact.jpg) 0; }
-  #page-contact main {
-    background: #fff;
-    margin-left: 50%;
-    padding: 7rem 8%; }
-  #page-contact h1 {
-    margin-top: 0;
-    text-align: left; }
-  #page-contact h2 {
-    margin: 0 auto .5em; }
-  #page-contact dl {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 50px; }
-    #page-contact dl dt, #page-contact dl dl, #page-contact dl address, #page-contact dl ul li a {
-      font-size: 1.3em; }
-  #page-contact dt:first-child, #page-contact dt:first-child + dd {
-    padding-right: 4%;
+#page-contact main {
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 7rem 8% 7rem calc(50% + 8%);
+  position: relative; }
+  #page-contact main:before {
+    background: url(../images/bkgd-targets.jpg) center/cover no-repeat;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
     width: 50%; }
-  #page-contact dt:nth-of-type(2), #page-contact dt:nth-of-type(2) + dd {
-    width: 23%; }
-  #page-contact ul {
-    margin: 0; }
-    #page-contact ul li a:hover {
-      transform: translateX(8px); }
-  #page-contact dd {
-    margin-left: 0; }
-  #page-contact dt {
-    font-weight: 700;
-    order: -1;
-    padding-top: 10px; }
-  #page-contact aside {
-    display: none; }
+
+#page-contact h1 {
+  margin-top: 0;
+  text-align: left; }
+
+#page-contact h2 {
+  margin: 0 auto .5em; }
+
+#page-contact dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px; }
+  #page-contact dl dt, #page-contact dl dl, #page-contact dl address, #page-contact dl ul li a {
+    font-size: 1.3em; }
+
+#page-contact dt:first-child, #page-contact dt:first-child + dd {
+  padding-right: 4%;
+  width: 50%; }
+
+#page-contact dt:nth-of-type(2), #page-contact dt:nth-of-type(2) + dd {
+  width: 23%; }
+
+#page-contact ul {
+  margin: 0; }
+  #page-contact ul li a:hover {
+    transform: translateX(8px); }
+
+#page-contact dd {
+  margin-left: 0; }
+
+#page-contact dt {
+  font-weight: 700;
+  order: -1;
+  padding-top: 10px; }
+
+#page-contact aside {
+  display: none; }
 
 #page-guarantees {
   z-index: 0; }
@@ -497,26 +511,37 @@ body > aside {
         #page-services article:first-of-type > section section li:not(:last-child):after {
           content: ' / '; }
 
-#page-services article:last-of-type:before {
-  background: url(../images/bkgd-targets.jpg); }
-
-#page-services article:last-of-type ul li a {
-  background: transparent;
-  border: 2px solid #1C1C1C;
-  border-radius: 2em;
-  color: #1C1C1C;
-  padding: 0.75em 1em;
-  transition-duration: .4s;
-  display: block;
-  margin-bottom: 1.5em;
-  text-align: center; }
-  #page-services article:last-of-type ul li a:hover {
-    background: #1C1C1C;
+#page-services article:last-of-type {
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 7rem 8% 7rem calc(50% + 8%);
+  position: relative;
+  background-origin: border-box; }
+  #page-services article:last-of-type:before {
+    background: url(../images/bkgd-targets.jpg) 50%/cover no-repeat;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%; }
+  #page-services article:last-of-type ul li a {
+    background: transparent;
     border: 2px solid #1C1C1C;
     border-radius: 2em;
-    color: #fff;
+    color: #1C1C1C;
     padding: 0.75em 1em;
-    transition-duration: .4s; }
+    transition-duration: .4s;
+    display: block;
+    margin-bottom: 1.5em;
+    text-align: center; }
+    #page-services article:last-of-type ul li a:hover {
+      background: #1C1C1C;
+      border: 2px solid #1C1C1C;
+      border-radius: 2em;
+      color: #fff;
+      padding: 0.75em 1em;
+      transition-duration: .4s; }
 
 h1 {
   font-size: 1.15em;

@@ -1,20 +1,6 @@
 #page-about
   article:first-of-type
-    box-sizing: border-box
-    margin-left: 50%
-    padding: 7rem 8%
-    position: relative
-    width: 50%
-
-    &:before
-      content: ''
-      background: url(../images/bkgd-agency.jpg) right / cover no-repeat
-      height: 100%
-      left: -100%
-      position: absolute
-      top: 0
-      width: 100%
-      z-index: -1
+    +big-left-img(bkgd-agency, right)
 
   h1
     left: 58%
