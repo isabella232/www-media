@@ -3,8 +3,9 @@
 @import mixins
 @import variables
 
+@import 'layout/ClientMenu.sass'
 @import 'layout/Footer.sass'
-@import 'layout/Menus.sass'
+@import 'layout/MainMenu.sass'
 @import 'layout/PreFooter.sass'
 
 @import 'pages/About.sass'
@@ -24,6 +25,27 @@ body
   flex-direction: column
   font-family: 'Hind', sans-serif
   margin: 0
+
+  &:before
+    background: url(../images/logo.svg) center / contain no-repeat, $text
+    background-origin: content-box
+    box-sizing: border-box
+    content: ''
+    display: block
+    padding: 1em 0
+
+    @media screen and (min-width: $menu-mobile + 1px)
+      background-position: 1em
+      height: 63px
+      position: fixed
+      top: 0
+      width: calc(100% / 3)
+      z-index: 2
+
+    @media screen and (max-width: $menu-mobile)
+      height: 5rem
+      width: 100%
+
 
 
 h1

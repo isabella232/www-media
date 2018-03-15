@@ -1,0 +1,91 @@
+#burger-menu
+  align-items: center
+  box-sizing: border-box
+  content: ''
+  color: #fff
+  display: flex
+  font-size: .85em
+  justify-content: flex-end
+  text-transform: uppercase
+  position: fixed
+  z-index: 2
+
+
+// MENU NOIR KOZEA
+nav:first-of-type
+  background: $text
+  box-sizing: border-box
+  color: #fff
+  display: flex
+  flex-direction: column
+  height: 0
+  justify-content: center
+  overflow: hidden
+  position: fixed
+  top: 0
+  transition: height .35s ease-in-out, width .35s ease-in-out
+  transition-delay: .15s, .15s
+  width: calc(100% / 3)
+  z-index: 1
+
+  ul
+    padding: 0 12%
+
+    li
+      font-size: 1.2em
+      font-weight: 300
+      line-height: 3em
+
+      a
+        display: inline-block
+        letter-spacing: .5px
+
+        &:hover
+          transform: translateX(8px)
+
+    &:last-child
+      margin: 2em 0
+
+      li a
+        border-bottom: 2px solid #fff
+        font-weight: 500
+        padding: 0 5px
+
+
+@media screen and (min-width: $menu-mobile + 1px)
+  #burger-menu
+    height: 63px
+    padding: 2em
+    top: 0
+    width: calc(100% / 3)
+
+  // Desktop - Open state
+  #burger-menu:hover + nav:first-of-type, nav:first-of-type:hover
+    height: 100vh
+
+
+@media screen and (max-width: $menu-mobile)
+  #burger-menu
+    background-color: $text
+    bottom: 0
+    justify-content: center
+    padding: 1em
+    transition: bottom .25s
+    transition-delay: .25s
+
+    // Mobile - Open state
+    &:hover
+      bottom: -5em
+
+      + nav:first-of-type
+        height: 100vh
+        overflow: auto
+        width: 100vw
+
+        &::before
+          content: '×'
+          font-size: 2em
+          line-height: 1
+          position: absolute
+          right: 1rem
+          top: 1rem
