@@ -32,6 +32,14 @@ def robots():
     return Response('User-agent: *\nDisallow: \n', mimetype='text/plain')
 
 
+@app.route('/quotation', methods=['POST'])
+def quotation():
+    if all(request.form.get(key) for key in (
+           'type', 'need', 'target', 'name', 'email', 'phone')):
+        return contact()
+    return page('quotation')
+
+
 @app.route('/contact', methods=['POST'])
 def contact():
     message = {
