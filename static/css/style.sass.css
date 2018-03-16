@@ -592,7 +592,8 @@ body > aside:last-of-type {
   display: none; }
 
 #page-index main {
-  display: flex; }
+  display: flex;
+  padding: 2em 5vw; }
   #page-index main article {
     margin: auto;
     text-align: center; }
@@ -781,8 +782,7 @@ body {
         width: 100%; } }
   body > main {
     box-sizing: border-box;
-    flex: 1;
-    padding: 2em 5vw; }
+    flex: 1; }
 
 h1 {
   font-size: 1.15em;
