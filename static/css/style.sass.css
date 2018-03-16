@@ -605,10 +605,9 @@ body > aside:last-of-type {
         color: #fff;
         display: flex;
         flex-direction: column;
-        height: 340px;
         justify-content: center;
         margin: 0;
-        padding: 2%;
+        padding: 1.5em;
         position: relative;
         text-align: center;
         width: 340px; }
@@ -624,10 +623,6 @@ body > aside:last-of-type {
           counter-increment: guarantee;
           font-weight: 300;
           margin-bottom: .5em; }
-        #page-guarantees article dl dt:nth-of-type(2n) {
-          margin-left: 340px; }
-          #page-guarantees article dl dt:nth-of-type(2n) + dd:after {
-            left: -100%; }
         #page-guarantees article dl dt#innovate + dd:after {
           background: #fff url(../images/guarantees/innovate.svg) no-repeat center/40%; }
         #page-guarantees article dl dt#visibility + dd:after {
@@ -658,6 +653,18 @@ body > aside:last-of-type {
         transform: translateX(340px); }
       #page-guarantees article dl dd:nth-of-type(2n):hover:after, #page-guarantees article dl dt:nth-of-type(2n):hover + dd:after {
         transform: translateX(-340px); }
+  @media screen and (min-width: 601px) {
+    #page-guarantees article dl dt, #page-guarantees article dl dd {
+      height: 340px; }
+    #page-guarantees article dl dt:nth-of-type(2n) {
+      margin-left: 340px; }
+      #page-guarantees article dl dt:nth-of-type(2n) + dd:after {
+        left: -100%; } }
+  @media screen and (max-width: 600px) {
+    #page-guarantees article dl {
+      margin: 3rem auto; }
+      #page-guarantees article dl dd {
+        margin-bottom: 1em; } }
 
 #page-index h1, #page-index aside, #page-index footer {
   display: none; }
@@ -1046,6 +1053,8 @@ section#offers h3 {
     content: url(../images/services/offers.svg); }
 
 @media screen and (max-width: 600px) {
+  h1 {
+    margin: 3rem auto .5em; }
   h2 {
     font-size: 2.2em; } }
 

@@ -16,10 +16,9 @@
         color: #fff
         display: flex
         flex-direction: column
-        height: $guarantee-square-size
         justify-content: center
         margin: 0
-        padding: 2%
+        padding: 1.5em
         position: relative
         text-align: center
         width: $guarantee-square-size
@@ -37,12 +36,6 @@
           counter-increment: guarantee
           font-weight: 300
           margin-bottom: .5em
-
-        &:nth-of-type(2n)
-          margin-left: $guarantee-square-size
-
-          & + dd:after
-            left: -100%
 
         @each $dt-type in innovate visibility expertise guarantee result accompaniment
           &##{$dt-type} + dd:after
@@ -71,3 +64,26 @@
       dd:nth-of-type(2n):hover, dt:nth-of-type(2n):hover + dd
         &:after
           transform: translateX(-$guarantee-square-size)
+
+
+  @media screen and (min-width: $menu-mobile + 1px)
+    article
+      dl
+        dt, dd
+          height: $guarantee-square-size
+
+        dt
+          &:nth-of-type(2n)
+            margin-left: $guarantee-square-size
+
+            & + dd:after
+              left: -100%
+
+
+  @media screen and (max-width: $menu-mobile)
+    article
+      dl
+        margin: 3rem auto
+
+        dd
+          margin-bottom: 1em
