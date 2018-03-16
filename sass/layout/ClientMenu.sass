@@ -18,6 +18,14 @@ nav:first-of-type + nav
       transform: perspective(1px) translateZ(0)
       transition: color .3s, background-color .3s
 
+      &.active
+        background: $primary
+        box-shadow: 1px -1px 0 0 $primary inset
+        color: #fff
+
+      &:hover:not(.active)
+        color: $primary
+
       a
         align-items: center
         display: flex
@@ -25,12 +33,6 @@ nav:first-of-type + nav
         justify-content: center
         text-align: center
 
-      &.active
-        background: $primary
-        color: #fff
-
-      &:hover:not(.active)
-        color: $primary
 
 
   @media screen and (min-width: $menu-mobile + 1px)
