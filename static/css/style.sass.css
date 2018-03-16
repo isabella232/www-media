@@ -250,9 +250,9 @@ body > aside:last-of-type {
         width: 50%; } }
   @media screen and (max-width: 600px) {
     #page-about article:first-of-type {
-      padding: 0 8vw; }
+      padding: 0 8vw 3rem; }
       #page-about article:first-of-type:before {
-        height: 10em;
+        height: 10rem;
         margin-left: -8vw;
         width: 100vw; } }
 
@@ -260,7 +260,7 @@ body > aside:last-of-type {
   margin-left: auto;
   margin-right: auto;
   max-width: 1024px;
-  margin: 7rem auto; }
+  margin: 7vw auto; }
   #page-about article:nth-of-type(n+2) > h2, #page-about article:nth-of-type(n+2) > p {
     text-align: center;
     margin: .25em auto;
@@ -376,7 +376,7 @@ body > aside:last-of-type {
 @media screen and (max-width: 600px) {
   #page-about h1 {
     left: 8vw;
-    top: 12em; }
+    top: 17.5rem; }
   #page-about article:first-of-type h2 {
     margin-top: 3.75rem; }
   #page-about #members section {
@@ -436,15 +436,20 @@ body > aside:last-of-type {
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      height: calc(100% / 3);
       justify-content: center;
       padding: 2em;
-      text-align: center;
-      width: 50%; }
+      text-align: center; }
+    @media screen and (min-width: 601px) {
+      #page-pharmacy article:first-of-type ul:last-of-type > *, #page-laboratory article:first-of-type ul:last-of-type > *, #page-group article:first-of-type ul:last-of-type > * {
+        height: calc(100% / 3);
+        width: 50%; } }
     #page-pharmacy article:first-of-type ul:last-of-type li:before, #page-laboratory article:first-of-type ul:last-of-type li:before, #page-group article:first-of-type ul:last-of-type li:before {
       display: block;
       margin: 0 auto 1em;
       width: 4em; }
+    @media screen and (max-width: 600px) {
+      #page-pharmacy article:first-of-type ul:last-of-type li:before, #page-laboratory article:first-of-type ul:last-of-type li:before, #page-group article:first-of-type ul:last-of-type li:before {
+        width: 2.5em; } }
     #page-pharmacy article:first-of-type ul:last-of-type li#revenue:before, #page-laboratory article:first-of-type ul:last-of-type li#revenue:before, #page-group article:first-of-type ul:last-of-type li#revenue:before {
       content: url(../images/jobs/revenue.svg); }
     #page-pharmacy article:first-of-type ul:last-of-type li#competition:before, #page-laboratory article:first-of-type ul:last-of-type li#competition:before, #page-group article:first-of-type ul:last-of-type li#competition:before {
@@ -479,7 +484,7 @@ body > aside:last-of-type {
       content: url(../images/jobs/reference.svg); }
 
 #page-pharmacy article + article, #page-laboratory article + article, #page-group article + article {
-  margin: 7rem auto; }
+  margin: 7vw auto; }
 
 #page-pharmacy article:nth-of-type(2), #page-laboratory article:nth-of-type(2), #page-group article:nth-of-type(2) {
   background: green;
@@ -513,11 +518,13 @@ body > aside:last-of-type {
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      height: 300px;
       justify-content: center;
       padding: 2em;
-      text-align: center;
-      width: 33.3%; }
+      text-align: center; }
+    @media screen and (min-width: 601px) {
+      #page-pharmacy article:last-of-type > section > *, #page-laboratory article:last-of-type > section > *, #page-group article:last-of-type > section > * {
+        height: 300px;
+        width: 33.3%; } }
     #page-pharmacy article:last-of-type > section h3, #page-pharmacy article:last-of-type > section ul, #page-laboratory article:last-of-type > section h3, #page-laboratory article:last-of-type > section ul, #page-group article:last-of-type > section h3, #page-group article:last-of-type > section ul {
       margin: 0; }
     #page-pharmacy article:last-of-type > section li, #page-laboratory article:last-of-type > section li, #page-group article:last-of-type > section li {
@@ -544,9 +551,9 @@ body > aside:last-of-type {
         width: 50%; } }
   @media screen and (max-width: 600px) {
     #page-contact main {
-      padding: 0 8vw; }
+      padding: 0 8vw 3rem; }
       #page-contact main:before {
-        height: 10em;
+        height: 10rem;
         margin-left: -8vw;
         width: 100vw; } }
   #page-contact main h1 {
@@ -792,11 +799,13 @@ body > aside:last-of-type {
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      height: 300px;
       justify-content: center;
       padding: 2em;
-      text-align: center;
-      width: 33.3%; }
+      text-align: center; }
+    @media screen and (min-width: 601px) {
+      #page-services article:first-of-type > section > * {
+        height: 300px;
+        width: 33.3%; } }
     #page-services article:first-of-type > section h3, #page-services article:first-of-type > section ul {
       margin: 0; }
     #page-services article:first-of-type > section li {
@@ -825,9 +834,9 @@ body > aside:last-of-type {
         width: 50%; } }
   @media screen and (max-width: 600px) {
     #page-services article:last-of-type {
-      padding: 0 8vw; }
+      padding: 0 8vw 3rem; }
       #page-services article:last-of-type:before {
-        height: 10em;
+        height: 10rem;
         margin-left: -8vw;
         width: 100vw; } }
   #page-services article:last-of-type ul {
@@ -886,7 +895,7 @@ h1 {
   font-size: 1.15em;
   font-weight: 400;
   letter-spacing: 0.15em;
-  margin: 7rem auto .5em;
+  margin: 7vw auto .5em;
   text-align: center;
   text-transform: uppercase; }
   h1:before {
@@ -959,6 +968,9 @@ section#advice h3 {
     display: block;
     margin: 0 auto 1em;
     width: 4em; }
+  @media screen and (max-width: 600px) {
+    section#advice h3:before {
+      width: 2.5em; } }
   section#advice h3:before {
     content: url(../images/services/advice.svg); }
 
@@ -969,6 +981,9 @@ section#website h3 {
     display: block;
     margin: 0 auto 1em;
     width: 4em; }
+  @media screen and (max-width: 600px) {
+    section#website h3:before {
+      width: 2.5em; } }
   section#website h3:before {
     content: url(../images/services/website.svg); }
 
@@ -979,6 +994,9 @@ section#community h3 {
     display: block;
     margin: 0 auto 1em;
     width: 4em; }
+  @media screen and (max-width: 600px) {
+    section#community h3:before {
+      width: 2.5em; } }
   section#community h3:before {
     content: url(../images/services/community.svg); }
 
@@ -989,6 +1007,9 @@ section#graphics h3 {
     display: block;
     margin: 0 auto 1em;
     width: 4em; }
+  @media screen and (max-width: 600px) {
+    section#graphics h3:before {
+      width: 2.5em; } }
   section#graphics h3:before {
     content: url(../images/services/graphics.svg); }
 
@@ -999,6 +1020,9 @@ section#content h3 {
     display: block;
     margin: 0 auto 1em;
     width: 4em; }
+  @media screen and (max-width: 600px) {
+    section#content h3:before {
+      width: 2.5em; } }
   section#content h3:before {
     content: url(../images/services/content.svg); }
 
@@ -1009,6 +1033,9 @@ section#media h3 {
     display: block;
     margin: 0 auto 1em;
     width: 4em; }
+  @media screen and (max-width: 600px) {
+    section#media h3:before {
+      width: 2.5em; } }
   section#media h3:before {
     content: url(../images/services/media.svg); }
 
@@ -1019,6 +1046,9 @@ section#animation h3 {
     display: block;
     margin: 0 auto 1em;
     width: 4em; }
+  @media screen and (max-width: 600px) {
+    section#animation h3:before {
+      width: 2.5em; } }
   section#animation h3:before {
     content: url(../images/services/animation.svg); }
 
@@ -1029,6 +1059,9 @@ section#integration h3 {
     display: block;
     margin: 0 auto 1em;
     width: 4em; }
+  @media screen and (max-width: 600px) {
+    section#integration h3:before {
+      width: 2.5em; } }
   section#integration h3:before {
     content: url(../images/services/integration.svg); }
 
@@ -1039,6 +1072,9 @@ section#video h3 {
     display: block;
     margin: 0 auto 1em;
     width: 4em; }
+  @media screen and (max-width: 600px) {
+    section#video h3:before {
+      width: 2.5em; } }
   section#video h3:before {
     content: url(../images/services/video.svg); }
 
@@ -1049,6 +1085,9 @@ section#offers h3 {
     display: block;
     margin: 0 auto 1em;
     width: 4em; }
+  @media screen and (max-width: 600px) {
+    section#offers h3:before {
+      width: 2.5em; } }
   section#offers h3:before {
     content: url(../images/services/offers.svg); }
 

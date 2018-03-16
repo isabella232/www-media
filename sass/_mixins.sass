@@ -48,19 +48,23 @@
       width: 50%
 
   @media screen and (max-width: $menu-mobile)
-    padding: 0 8vw
+    padding: 0 8vw 3rem
 
     &:before
-      height: 10em
+      height: 10rem
       margin-left: -8vw
       width: 100vw
 
 
-=before-icon($margin: 0 auto 1em, $width: 4em)
+=before-icon($margin: 0 auto 1em, $width: 4em, $width-mobile: 2.5em)
   &:before
     display: block
     margin: $margin
     width: $width
+
+  @media screen and (max-width: $menu-mobile)
+    &:before
+      width: $width-mobile
 
 
 =mozaic($height, $width)
@@ -74,11 +78,14 @@
     box-sizing: border-box
     display: flex
     flex-direction: column
-    height: $height
     justify-content: center
     padding: 2em
     text-align: center
-    width: $width
+
+  @media screen and (min-width: $menu-mobile + 1)
+    > *
+      height: $height
+      width: $width
 
 
 =target-section
