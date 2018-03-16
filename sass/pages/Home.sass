@@ -3,24 +3,21 @@
     display: none
 
   main
-    background: url(../images/bkgd-index.jpg) center / cover no-repeat
-    height: calc(100vh - 63px)
     display: flex
 
     article
-      color: #fff
       margin: auto
       text-align: center
 
       &::before
-        content: url(../images/logo.svg)
         display: block
         margin: 0 auto
-        max-width: 15em
+        max-width: 60vw
+        width: 15em
+
 
       h2
         font-size: 3.5em
-        padding: 1em 0
 
       a
         +button($primary, 0, #fff, .5em 2em)
@@ -30,6 +27,19 @@
           background-color: $text
 
 
+  @media screen and (min-width: $menu-mobile + 1px)
+    main
+      background: url(../images/bkgd-index.jpg) center / cover no-repeat
+
+      article
+        color: #fff
+
+        &::before
+          content: url(../images/logo.svg)
+
+
   @media screen and (max-width: $menu-mobile)
-    main article h2
-      font-size: 2em
+    main
+      article
+        h2
+          font-size: 2em

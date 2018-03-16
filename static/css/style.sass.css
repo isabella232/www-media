@@ -7,9 +7,10 @@ nav:first-of-type + nav {
     margin: 0; }
     nav:first-of-type + nav ul li {
       box-sizing: border-box;
-      box-shadow: 1px -1px 0 0 #d6d6d6;
+      box-shadow: 1px -1px 0 0 #d6d6d6 inset;
       flex: 1;
       font-size: .8em;
+      letter-spacing: 1px;
       line-height: 1.1;
       padding: 1.5em .5em;
       text-transform: uppercase;
@@ -32,12 +33,10 @@ nav:first-of-type + nav {
       margin-left: calc(100% / 3);
       width: calc(100% / 3 * 2); }
       nav:first-of-type + nav ul {
-        height: 100%; }
-        nav:first-of-type + nav ul li {
-          letter-spacing: 1px; } }
+        height: 100%; } }
   @media screen and (max-width: 600px) {
     nav:first-of-type + nav ul li {
-      font-size: .8em; } }
+      font-size: .75em; } }
 
 footer {
   align-items: flex-start;
@@ -108,7 +107,7 @@ footer {
   justify-content: flex-end;
   text-transform: uppercase;
   position: fixed;
-  z-index: 2; }
+  z-index: 3; }
 
 nav:first-of-type {
   background: #1C1C1C;
@@ -149,7 +148,7 @@ nav:first-of-type {
     padding: 2em;
     top: 0;
     width: calc(100% / 3); }
-  #burger-menu:hover + nav:first-of-type, nav:first-of-type:hover {
+  #burger-menu:hover ~ nav:first-of-type, nav:first-of-type:hover {
     height: 100vh; } }
 
 @media screen and (max-width: 600px) {
@@ -162,11 +161,11 @@ nav:first-of-type {
     transition-delay: .25s; }
     #burger-menu:hover {
       bottom: -5em; }
-      #burger-menu:hover + nav:first-of-type {
+      #burger-menu:hover ~ nav:first-of-type {
         height: 100vh;
         overflow: auto;
         width: 100vw; }
-        #burger-menu:hover + nav:first-of-type::before {
+        #burger-menu:hover ~ nav:first-of-type::before {
           content: '×';
           font-size: 2em;
           line-height: 1;
@@ -592,21 +591,17 @@ body > aside:last-of-type {
   display: none; }
 
 #page-index main {
-  background: url(../images/bkgd-index.jpg) center/cover no-repeat;
-  height: calc(100vh - 63px);
   display: flex; }
   #page-index main article {
-    color: #fff;
     margin: auto;
     text-align: center; }
     #page-index main article::before {
-      content: url(../images/logo.svg);
       display: block;
       margin: 0 auto;
-      max-width: 15em; }
+      max-width: 60vw;
+      width: 15em; }
     #page-index main article h2 {
-      font-size: 3.5em;
-      padding: 1em 0; }
+      font-size: 3.5em; }
     #page-index main article a {
       background: #E73C4D;
       border: 0;
@@ -617,6 +612,14 @@ body > aside:last-of-type {
       text-decoration: none; }
       #page-index main article a:hover {
         background-color: #1C1C1C; }
+
+@media screen and (min-width: 601px) {
+  #page-index main {
+    background: url(../images/bkgd-index.jpg) center/cover no-repeat; }
+    #page-index main article {
+      color: #fff; }
+      #page-index main article::before {
+        content: url(../images/logo.svg); } }
 
 @media screen and (max-width: 600px) {
   #page-index main article h2 {
@@ -754,7 +757,8 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Hind', sans-serif;
-  margin: 0; }
+  margin: 0;
+  min-height: 100vh; }
   body:before {
     background: url(../images/logo.svg) center/contain no-repeat, #1C1C1C;
     background-origin: content-box;
@@ -774,6 +778,10 @@ body {
       body:before {
         height: 5rem;
         width: 100%; } }
+  body > main {
+    box-sizing: border-box;
+    flex: 1;
+    padding: 2em 5vw; }
 
 h1 {
   font-size: 1.15em;
