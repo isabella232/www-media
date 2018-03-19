@@ -3,19 +3,36 @@
     +big-left-img(bkgd-targets, center)
 
     h1
-      margin-top: 0
       text-align: left
 
     h2
       margin: 0 auto .5em
 
     dl
-      display: flex
-      flex-wrap: wrap
       margin-bottom: 50px
 
       dt,dl,address, ul li a
         font-size: 1.3em
+
+    dd
+      margin-left: 0
+
+    dt
+      font-weight: 700
+      order: -1
+      padding-top: 10px
+
+    aside
+      display: none
+
+
+  @media screen and (min-width: $menu-mobile + 1)
+    h1
+      margin-top: 0
+
+    dl
+      display: flex
+      flex-wrap: wrap
 
     dt:first-child, dt:first-child + dd
       padding-right: 4%
@@ -30,14 +47,3 @@
         li a
           &:hover
             transform: translateX(8px)
-
-    dd
-      margin-left: 0
-
-    dt
-      font-weight: 700
-      order: -1
-      padding-top: 10px
-
-    aside
-      display: none

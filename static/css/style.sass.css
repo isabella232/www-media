@@ -137,7 +137,7 @@ nav:first-of-type {
   transition: height .35s ease-in-out, width .35s ease-in-out;
   transition-delay: .15s, .15s;
   width: calc(100% / 3);
-  z-index: 1; }
+  z-index: 2; }
   nav:first-of-type ul {
     padding: 0 12%; }
     nav:first-of-type ul li {
@@ -557,25 +557,13 @@ body > aside:last-of-type {
         margin-left: -8vw;
         width: 100vw; } }
   #page-contact main h1 {
-    margin-top: 0;
     text-align: left; }
   #page-contact main h2 {
     margin: 0 auto .5em; }
   #page-contact main dl {
-    display: flex;
-    flex-wrap: wrap;
     margin-bottom: 50px; }
     #page-contact main dl dt, #page-contact main dl dl, #page-contact main dl address, #page-contact main dl ul li a {
       font-size: 1.3em; }
-  #page-contact main dt:first-child, #page-contact main dt:first-child + dd {
-    padding-right: 4%;
-    width: 50%; }
-  #page-contact main dt:nth-of-type(2), #page-contact main dt:nth-of-type(2) + dd {
-    width: 23%; }
-    #page-contact main dt:nth-of-type(2) ul, #page-contact main dt:nth-of-type(2) + dd ul {
-      margin: 0; }
-      #page-contact main dt:nth-of-type(2) ul li a:hover, #page-contact main dt:nth-of-type(2) + dd ul li a:hover {
-        transform: translateX(8px); }
   #page-contact main dd {
     margin-left: 0; }
   #page-contact main dt {
@@ -584,6 +572,22 @@ body > aside:last-of-type {
     padding-top: 10px; }
   #page-contact main aside {
     display: none; }
+
+@media screen and (min-width: 601px) {
+  #page-contact h1 {
+    margin-top: 0; }
+  #page-contact dl {
+    display: flex;
+    flex-wrap: wrap; }
+  #page-contact dt:first-child, #page-contact dt:first-child + dd {
+    padding-right: 4%;
+    width: 50%; }
+  #page-contact dt:nth-of-type(2), #page-contact dt:nth-of-type(2) + dd {
+    width: 23%; }
+    #page-contact dt:nth-of-type(2) ul, #page-contact dt:nth-of-type(2) + dd ul {
+      margin: 0; }
+      #page-contact dt:nth-of-type(2) ul li a:hover, #page-contact dt:nth-of-type(2) + dd ul li a:hover {
+        transform: translateX(8px); } }
 
 #page-guarantees {
   z-index: 0; }
