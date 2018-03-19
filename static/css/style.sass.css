@@ -580,7 +580,7 @@ body > aside:last-of-type {
   background-color: #fff;
   box-sizing: border-box; }
   #page-contact main:before {
-    background: url(../images/bkgd-targets.jpg) center/cover no-repeat;
+    background: url(../images/bkgd-contact.jpg) left/cover no-repeat;
     content: '';
     display: block; }
   @media screen and (min-width: 601px) {
