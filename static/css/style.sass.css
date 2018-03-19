@@ -663,8 +663,7 @@ body > aside:last-of-type {
         margin: 0;
         padding: 1.5em;
         position: relative;
-        text-align: center;
-        width: 340px; }
+        text-align: center; }
       #page-guarantees article dl dt {
         background: #242424;
         font-size: 1.6em;
@@ -709,13 +708,16 @@ body > aside:last-of-type {
         transform: translateX(-340px); }
   @media screen and (min-width: 601px) {
     #page-guarantees article dl dt, #page-guarantees article dl dd {
-      height: 340px; }
+      height: 340px;
+      width: 340px; }
     #page-guarantees article dl dt:nth-of-type(2n) {
       margin-left: 340px; }
       #page-guarantees article dl dt:nth-of-type(2n) + dd:after {
         left: -100%; } }
   @media screen and (max-width: 600px) {
     #page-guarantees article dl {
+      align-items: stretch;
+      flex-direction: column;
       margin: 3rem auto; }
       #page-guarantees article dl dd {
         margin-bottom: 1em; } }
