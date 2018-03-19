@@ -16,6 +16,8 @@ nav:first-of-type + nav {
       text-transform: uppercase;
       transform: perspective(1px) translateZ(0);
       transition: color .3s, background-color .3s; }
+      nav:first-of-type + nav ul li:nth-of-type(2) {
+        order: 2; }
       nav:first-of-type + nav ul li.active {
         background: #E73C4D;
         box-shadow: 1px -1px 0 0 #E73C4D inset;
