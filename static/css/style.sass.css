@@ -39,6 +39,29 @@ nav:first-of-type + nav {
     nav:first-of-type + nav ul li {
       font-size: .75em; } }
 
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0); }
+  to {
+    opacity: 0;
+    transform: translateY(50%); } }
+
+#flash ul {
+  animation: fade-out .35s ease-in-out both;
+  animation-delay: 4s;
+  background-color: #1C1C1C;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: .9em;
+  font-weight: 700;
+  max-width: 19em;
+  padding: 1.5em;
+  position: absolute;
+  right: 1em;
+  top: 80px;
+  z-index: 1; }
+
 footer {
   align-items: flex-start;
   background: #1C1C1C;
@@ -680,7 +703,7 @@ body > aside:last-of-type {
       #page-guarantees article dl dd {
         margin-bottom: 1em; } }
 
-#page-index h1, #page-index aside, #page-index footer {
+#page-index h1, #page-index aside:not(#flash), #page-index footer {
   display: none; }
 
 #page-index main {

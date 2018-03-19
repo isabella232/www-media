@@ -1,0 +1,25 @@
+@keyframes fade-out
+  from
+    opacity: 1
+    transform: translateY(0)
+
+  to
+    opacity: 0
+    transform: translateY(50%)
+
+
+#flash
+  ul
+    animation: fade-out .35s ease-in-out both
+    animation-delay: 4s
+    background-color: $text
+    box-sizing: border-box
+    color: #fff
+    font-size: .9em
+    font-weight: 700
+    max-width: 19em
+    padding: 1.5em
+    position: absolute
+    right: 1em
+    top: 80px
+    z-index: 1
