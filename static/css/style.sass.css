@@ -135,6 +135,7 @@ footer {
 
 #burger-menu {
   align-items: center;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
   box-sizing: border-box;
   content: '';
   color: #fff;
@@ -729,12 +730,14 @@ body > aside:last-of-type {
   display: flex;
   padding: 2em 5vw; }
   #page-index main article {
+    color: #fff;
     margin: auto;
     text-align: center; }
     #page-index main article::before {
+      content: url(../images/logo.svg);
       display: block;
       margin: 0 auto;
-      max-width: 60vw;
+      max-width: 50vw;
       width: 15em; }
     #page-index main article h2 {
       font-size: 3.5em; }
@@ -751,15 +754,16 @@ body > aside:last-of-type {
 
 @media screen and (min-width: 601px) {
   #page-index main {
-    background: url(../images/bkgd-index.jpg) center/cover no-repeat; }
-    #page-index main article {
-      color: #fff; }
-      #page-index main article::before {
-        content: url(../images/logo.svg); } }
+    background: url(../images/bkgd-index.jpg) center/cover no-repeat; } }
 
 @media screen and (max-width: 600px) {
-  #page-index main article h2 {
-    font-size: 2em; } }
+  #page-index::before {
+    display: none; }
+  #page-index main {
+    background-color: #1C1C1C;
+    color: #fff; }
+    #page-index main article h2 {
+      font-size: 2em; } }
 
 #page-legal aside {
   display: none; }
