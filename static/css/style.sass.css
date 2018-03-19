@@ -353,10 +353,11 @@ body > aside:last-of-type {
   #page-about article:last-of-type ul li {
     align-items: center;
     background: #fff;
+    box-sizing: border-box;
     flex-direction: column;
-    height: 250px;
     justify-content: center;
     letter-spacing: 0.1em;
+    padding: 2em 1em;
     text-transform: uppercase; }
     #page-about article:last-of-type ul li:nth-child(odd) {
       border-right: 1px solid #f2f2f2;
@@ -398,6 +399,7 @@ body > aside:last-of-type {
       width: 50%; }
       #page-about article:last-of-type ul li {
         display: inline-flex;
+        height: 250px;
         width: 49%; } }
 
 @media screen and (max-width: 600px) {
