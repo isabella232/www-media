@@ -29,6 +29,7 @@
   </head>
 
   <body id="page-{{ page }}">
+    <span id="burger-menu">☰ Menu</span>
 
     {% set grouped_messages = get_flashed_messages(with_categories=True)|sort(0)|groupby(0) %}
     <aside id="flash">

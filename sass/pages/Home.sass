@@ -1,11 +1,10 @@
 #page-index
-  h1, aside,footer
+  h1, aside:not(#flash), footer
     display: none
 
   main
-    background: url(../images/bkgd-index.jpg) center / cover no-repeat
-    height: calc(100vh - 63px)
     display: flex
+    padding: 2em 5vw
 
     article
       color: #fff
@@ -16,11 +15,12 @@
         content: url(../images/logo.svg)
         display: block
         margin: 0 auto
-        max-width: 15em
+        max-width: 50vw
+        width: 15em
+
 
       h2
         font-size: 3.5em
-        padding: 1em 0
 
       a
         +button($primary, 0, #fff, .5em 2em)
@@ -28,3 +28,21 @@
 
         &:hover
           background-color: $text
+
+
+  @media screen and (min-width: $menu-mobile + 1px)
+    main
+      background: url(../images/bkgd-index.jpg) center / cover no-repeat
+
+
+  @media screen and (max-width: $menu-mobile)
+    &::before
+      display: none
+
+    main
+      background-color: $text
+      color: #fff
+
+      article
+        h2
+          font-size: 2em

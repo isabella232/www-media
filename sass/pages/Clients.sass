@@ -4,17 +4,6 @@
     display: none
 
   article:first-of-type
-    display: flex
-    flex-direction: column
-    flex-wrap: wrap
-    height: calc(100vh - 63px)
-    justify-content: center
-
-    > *:not(:last-child)
-      box-sizing: border-box
-      padding: 0 8%
-      width: 50%
-
     h2
       &:before
         display: block
@@ -45,9 +34,6 @@
       +mozaic(calc(100% / 3), 50%)
       background: #fff
       text-align: center
-      width: 50%
-      height: 100%
-      margin: 0
 
       li
         +before-icon
@@ -58,7 +44,7 @@
 
 
   article + article
-    margin: 7rem auto
+    margin: 7vw auto
 
 
   article:nth-of-type(2)
@@ -71,3 +57,26 @@
 
   article:last-of-type
     +target-section
+
+
+  @media screen and (min-width: $menu-mobile + 1px)
+    article:first-of-type
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      height: calc(100vh - 63px)
+      justify-content: center
+
+      > *:not(:last-child)
+        box-sizing: border-box
+        padding: 0 8%
+        width: 50%
+
+      ul:last-of-type
+        height: 100%
+        margin: 0
+        width: 50%
+
+  @media screen and (max-width: $menu-mobile)
+    article:first-of-type
+      padding: 0 10%
