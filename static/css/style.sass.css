@@ -213,42 +213,42 @@ nav:first-of-type {
           right: 1rem;
           top: 1rem; } }
 
-body > aside:last-of-type {
+#why-not-you {
   background: url(../images/pourquoi-pas-vous.jpg) center/cover no-repeat;
   color: #fff;
   padding: 3em 4%;
   text-align: center; }
-  body > aside:last-of-type h2 {
+  #why-not-you h2 {
     line-height: 1;
     margin: 0; }
-  body > aside:last-of-type ul {
+  #why-not-you ul {
     margin: 0; }
-    body > aside:last-of-type ul li {
+    #why-not-you ul li {
       display: inline-block; }
-      body > aside:last-of-type ul li a {
+      #why-not-you ul li a {
         background: #fff;
         border: 2px solid #fff;
         border-radius: 2em;
         color: #1C1C1C;
         padding: 0.75em 1.5em;
         transition-duration: .4s; }
-        body > aside:last-of-type ul li a:hover {
+        #why-not-you ul li a:hover {
           background: #1C1C1C;
           border: 2px solid #1C1C1C;
           border-radius: 2em;
           color: #fff;
           padding: 0.75em 1.5em;
           transition-duration: .4s; }
-    body > aside:last-of-type ul li + li {
+    #why-not-you ul li + li {
       margin: 1em 1em 0; }
-      body > aside:last-of-type ul li + li a {
+      #why-not-you ul li + li a {
         background: transparent;
         border: 2px solid #fff;
         border-radius: 2em;
         color: #fff;
         padding: 0.75em 1.5em;
         transition-duration: .4s; }
-        body > aside:last-of-type ul li + li a:hover {
+        #why-not-you ul li + li a:hover {
           background: transparent;
           border: 2px solid #1C1C1C;
           border-radius: 2em;
