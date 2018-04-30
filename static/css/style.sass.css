@@ -213,14 +213,16 @@ nav:first-of-type {
           right: 1rem;
           top: 1rem; } }
 
-#why-not-you {
-  background: url(../images/pourquoi-pas-vous.jpg) center/cover no-repeat;
-  color: #fff;
+body > aside {
   padding: 3em 4%;
   text-align: center; }
-  #why-not-you h2 {
+  body > aside h2 {
     line-height: 1;
-    margin: 0; }
+    margin: .5em 0; }
+
+#why-not-you {
+  background: url(../images/pourquoi-pas-vous.jpg) center/cover no-repeat;
+  color: #fff; }
   #why-not-you ul {
     margin: 0; }
     #why-not-you ul li {
@@ -255,6 +257,24 @@ nav:first-of-type {
           color: #1C1C1C;
           padding: 0.75em 1.5em;
           transition-duration: .4s; }
+
+#newsletter form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1em 0;
+  text-align: left; }
+  #newsletter form label {
+    margin: .5em 1em;
+    max-width: 17.5em; }
+  #newsletter form > div {
+    height: 1px;
+    position: static !important;
+    width: 100%; }
+    #newsletter form > div input {
+      left: inherit;
+      position: absolute; }
 
 #page-about h1 {
   position: absolute;
@@ -994,19 +1014,17 @@ form {
   box-sizing: border-box;
   display: flex;
   flex-direction: column; }
-  form label {
-    font-size: 0; }
-    form label input, form label textarea, form label select {
-      border: solid 2px #1C1C1C;
-      box-sizing: border-box;
-      color: #1C1C1C;
-      font-family: inherit;
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      padding: .75em 1em;
-      width: 100%; }
-    form label textarea {
-      min-height: 150px; }
+  form label input, form label textarea, form label select {
+    border: solid 2px #1C1C1C;
+    box-sizing: border-box;
+    color: #1C1C1C;
+    font-family: inherit;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding: .75em 1em;
+    width: 100%; }
+  form label textarea {
+    min-height: 150px; }
   form input[type="submit"] {
     background: #1C1C1C;
     border: none;

@@ -1,13 +1,16 @@
-// Alors pourquoi pas vous ?
-#why-not-you
-  background: url(../images/pourquoi-pas-vous.jpg) center / cover no-repeat
-  color: #fff
+body > aside
   padding: 3em 4%
   text-align: center
 
   h2
     line-height: 1
-    margin: 0
+    margin: .5em 0
+
+
+// Alors pourquoi pas vous ?
+#why-not-you
+  background: url(../images/pourquoi-pas-vous.jpg) center / cover no-repeat
+  color: #fff
 
   ul
     margin: 0
@@ -29,3 +32,27 @@
 
         &:hover
           +button(transparent, 2px solid $text, $text, .75em 1.5em)
+
+
+// Newsletter
+#newsletter
+  form
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    margin: 1em 0
+    text-align: left
+
+    label
+      margin: .5em 1em
+      max-width: 17.5em
+
+    > div
+      height: 1px
+      position: static !important
+      width: 100%
+
+      input
+        left: inherit
+        position: absolute
