@@ -10,7 +10,7 @@
   justify-content: flex-end
   text-transform: uppercase
   position: fixed
-  z-index: 3
+  z-index: 5
 
 
 // MENU NOIR KOZEA
@@ -28,9 +28,10 @@ nav:first-of-type
   transition: height .35s ease-in-out, width .35s ease-in-out
   transition-delay: .15s, .15s
   width: calc(100% / 3)
-  z-index: 2
+  z-index: 4
 
   ul
+    margin: 1.5em 0
     padding: 0 12%
 
     li
@@ -43,10 +44,24 @@ nav:first-of-type
         letter-spacing: .5px
 
         &:hover
-          transform: translateX(8px)
+          color: $primary
+
+
+    &:first-child
+      li:first-child
+        a
+          &:before
+            background: url(../images/logo.svg) left / contain no-repeat
+            content: ''
+            display: block
+            height: 3em
+            margin-bottom: .5em
+            width: 7em
+
+            &:hover
+              transform: translateX(8px)
 
     &:last-child
-      margin: 2em 0
 
       li a
         border-bottom: 2px solid #fff
@@ -91,3 +106,6 @@ nav:first-of-type
           position: absolute
           right: 1rem
           top: 1rem
+
+        ul:last-child
+          font-size: .85em

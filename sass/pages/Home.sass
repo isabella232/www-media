@@ -1,48 +1,202 @@
 #page-index
-  h1, aside:not(#flash), footer
+  h1
     display: none
 
-  main
+  article:first-of-type
+    box-sizing: border-box
+    color: #fff
     display: flex
+    flex-direction: column
+    justify-content: center
+    margin: auto
     padding: 2em 5vw
+    text-align: center
 
-    article
-      color: #fff
-      margin: auto
-      text-align: center
+    &::before
+      content: url(../images/logo.svg)
+      display: block
+      margin: 0 auto
+      max-width: 50vw
+      width: 15em
 
-      &::before
-        content: url(../images/logo.svg)
-        display: block
-        margin: 0 auto
-        max-width: 50vw
-        width: 15em
+    h2
+      font-size: 3.5em
+
+    a
+      +button($primary, 0, #fff, .5em 2em)
+      text-decoration: none
+
+      &:hover
+        background-color: $text
 
 
-      h2
-        font-size: 3.5em
+  #about
+    +big-left-img(bkgd-agency, right)
 
-      a
-        +button($primary, 0, #fff, .5em 2em)
-        text-decoration: none
 
-        &:hover
-          background-color: $text
+  article:nth-of-type(n+3)
+    +centered-article
+    margin: 7vw auto
+
+
+  #members
+    display: flex
+    flex-wrap: wrap
+    margin-top: 2em
+
+    section
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      margin: 0
+      position: relative
+      width: 250px
+
+      &:after
+        background: rgba($primary,0.6)
+        content: ''
+        height: 200px
+        left: 25px
+        opacity: 0
+        position: absolute
+        right: 25px
+        top: 25px
+        transform: scale(0)
+        transition: opacity 0.35s, transform 0.35s
+        z-index: -1
+
+      h4, p
+        color: #fff
+        margin: 0
+        padding: .5em 12%
+
+      h4
+        font-size: 1.2em
+        font-weight: 400
+        line-height: 2.2em
+        margin: 0
+
+        &:after
+          background: #fff
+          content: ''
+          display: block
+          height: 2px
+          width: 25px
+
+      p
+        font-size: 1em
+        font-style: italic
+        line-height: 1.2em
+        padding-bottom: 20px
+
+      img
+        max-width: 100%
+
+
+  article:last-of-type
+    margin: 50px auto 70px
+
+    >*:not(:last-child)
+      padding: 0 10%
+
+    ul
+      li
+        align-items: center
+        background: #fff
+        box-sizing: border-box
+        flex-direction: column
+        justify-content: center
+        letter-spacing: 0.1em
+        padding: 2em 1em
+        text-transform: uppercase
+
+        &:nth-child(odd)
+          border-right: 1px solid darken($bkgd,4%)
+          box-sizing: border-box
+
+        &:nth-child(n+3)
+          border-top: 1px solid darken($bkgd,4%)
+
+        strong
+          font-size: 2.4em
 
 
   @media screen and (min-width: $menu-mobile + 1px)
     main
-      background: url(../images/bkgd-index.jpg) center / cover no-repeat
+      article:first-of-type
+        background: url(../images/bkgd-index.jpg) center / cover no-repeat
+        min-height: 80vh
+
+      #members section
+        height: 250px
+
+        &:first-of-type
+          margin-left: 500px
+
+        &:after, h4, p
+          opacity: 0
+          padding: 0 12%
+          transform: scale(0)
+          transition: opacity 0.35s, transform 0.35s
+
+        p
+          margin: 1em 0 35px
+
+        img
+          left: 0
+          position: absolute
+          top: 0
+          width: 250px
+          z-index: -1
+
+        &:hover, &:focus
+          &:after, h4, p
+            opacity: 1
+            transform: scale(1)
+
+
+      article:last-of-type
+        display: table
+
+        >*:not(:last-child)
+          text-align: end
+
+        ul
+          display: table-cell
+          width: 50%
+
+          li
+            display: inline-flex
+            height: 250px
+            width: 49%
 
 
   @media screen and (max-width: $menu-mobile)
-    &::before
-      display: none
+    h1
+      left: 8vw
+      top: 17.5rem
 
     main
-      background-color: $text
-      color: #fff
+      article:first-of-type
+        background-color: $text
+        color: #fff
 
-      article
+        &::before
+          display: none
+
         h2
           font-size: 2em
+
+    #members section
+      margin: 1em auto
+
+      h4, p
+        background-color: $primary
+
+      img
+        order: -1
+
+    article:last-of-type
+      li
+        display: flex
+        margin: 2em
