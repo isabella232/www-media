@@ -9,7 +9,6 @@
     flex-direction: column
     justify-content: center
     margin: auto
-    min-height: 80vh
     padding: 2em 5vw
     text-align: center
 
@@ -126,6 +125,7 @@
     main
       article:first-of-type
         background: url(../images/bkgd-index.jpg) center / cover no-repeat
+        min-height: 80vh
 
       #members section
         height: 250px
@@ -175,6 +175,17 @@
     h1
       left: 8vw
       top: 17.5rem
+
+    main
+      article:first-of-type
+        background-color: $text
+        color: #fff
+
+        &::before
+          display: none
+
+        h2
+          font-size: 2em
 
     #members section
       margin: 1em auto

@@ -1,6 +1,9 @@
 //MENU METIERS - SECTEUR D'ACTIVITE
 nav:first-of-type + nav
   background: #fff
+  position: sticky
+  top: 0
+  z-index: 3
 
   ul
     display: flex
@@ -10,7 +13,6 @@ nav:first-of-type + nav
       box-sizing: border-box
       box-shadow: 1px -1px 0 0 darken($bkgd, 15%) inset
       flex: 1
-      font-size: .8em
       letter-spacing: 1px
       line-height: 1.1
       padding: 1.5em .5em
@@ -47,8 +49,12 @@ nav:first-of-type + nav
       height: 100%
 
       li
+        font-size: .9em
+
 
   @media screen and (max-width: $menu-mobile)
+    width: 100%
+
     ul
       li
         font-size: .75em
