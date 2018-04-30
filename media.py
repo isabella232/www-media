@@ -35,7 +35,7 @@ def robots():
 @app.route('/quotation', methods=['POST'])
 def quotation():
     if all(request.form.get(key) for key in (
-           'type', 'need', 'target', 'name', 'email', 'phone')):
+           'type', 'need', 'email', 'phone')):
         return contact()
     return page('quotation')
 
@@ -52,8 +52,7 @@ def contact():
             'Téléphone : %s' % request.form.get('phone', ''),
             'Message : %s' % request.form.get('message', ''),
             'Type de contact : %s' % request.form.get('type', ''),
-            'Besoin : %s' % request.form.get('need', ''),
-            'Cible : %s' % request.form.get('target', '')])}
+            'Besoin : %s' % request.form.get('need', '')])}
 
     if app.debug:
         print(message)

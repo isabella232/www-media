@@ -12,7 +12,7 @@
       recontacter pour votre devis personnalisé.
     </p>
     <form action="{{ url_for('quotation') }}" method="post">
-      <label>Qui êtes-vous ?
+      <label>Vous êtes
         <select name="type">
           {% for value in (
             'Pharmacien',
@@ -24,7 +24,7 @@
           {% endfor %}
         </select>
       </label>
-      <label>Quel est votre besoin ?
+      <label>Vous souhaitez
         <select name="need">
           {% for value in (
             'Digitaliser votre activité',
@@ -37,28 +37,12 @@
           {% endfor %}
         </select>
       </label>
-      <label>Quelle est votre cible ?
-        <select name="target">
-          {% for value in (
-            'Pharmaciens',
-            'Patients',
-            'Autre'
-            ) %}
-            <option value="{{ value }}" {{ 'selected' if target == value }}>{{ value }}</option>
-          {% endfor %}
-        </select>
+      <label>Email
+        <input placeholder="Email" type="email" name="email" />
       </label>
-      {% if type and need and target %}
-        <label>Nom / Société
-          <input placeholder="Nom / Société" type="text" name="name" />
-        </label>
-        <label>Email
-          <input placeholder="Email" type="email" name="email" />
-        </label>
-        <label>Téléphone
-          <input placeholder="Téléphone" type="telephone" name="phone" />
-        </label>
-      {% endif %}
+      <label>Téléphone
+        <input placeholder="Téléphone" type="telephone" name="phone" />
+      </label>
       <input type="submit" value="Envoyer" />
     </form>
   </article>
