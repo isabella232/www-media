@@ -702,9 +702,7 @@ nav:first-of-type {
           left: 0;
           position: absolute;
           top: 0;
-          transition-duration: 1s;
-          transition-property: transform;
-          transition-timing-function: ease;
+          transition: transform .5s ease-in-out;
           width: 100%;
           z-index: -1; }
       #page-guarantees article dl dd:hover:after, #page-guarantees article dl dt:hover + dd:after {
