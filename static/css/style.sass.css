@@ -444,8 +444,9 @@ body > aside:not(#flash) {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: calc(100vh - 63px);
-    justify-content: center; }
+    min-height: calc(100vh - 63px);
+    justify-content: center;
+    position: relative; }
     #page-pharmacy article:first-of-type > *:not(:last-child), #page-laboratory article:first-of-type > *:not(:last-child), #page-group article:first-of-type > *:not(:last-child) {
       box-sizing: border-box;
       padding: 0 8%;
@@ -453,6 +454,9 @@ body > aside:not(#flash) {
     #page-pharmacy article:first-of-type ul:last-of-type, #page-laboratory article:first-of-type ul:last-of-type, #page-group article:first-of-type ul:last-of-type {
       height: 100%;
       margin: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
       width: 50%; } }
 
 @media screen and (max-width: 600px) {

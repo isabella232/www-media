@@ -64,8 +64,9 @@
       display: flex
       flex-direction: column
       flex-wrap: wrap
-      height: calc(100vh - 63px)
+      min-height: calc(100vh - 63px)
       justify-content: center
+      position: relative
 
       > *:not(:last-child)
         box-sizing: border-box
@@ -75,6 +76,9 @@
       ul:last-of-type
         height: 100%
         margin: 0
+        position: absolute
+        right: 0
+        top: 0
         width: 50%
 
   @media screen and (max-width: $menu-mobile)
