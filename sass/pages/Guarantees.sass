@@ -36,10 +36,6 @@
           font-weight: 300
           margin-bottom: .5em
 
-        @each $dt-type in innovate visibility expertise guarantee result accompaniment
-          &##{$dt-type} + dd:after
-            background: #fff url(../images/guarantees/#{$dt-type}.svg) no-repeat center / 40%
-
       dd
         background: lighten($text,8%)
         font-size: 1.25em
@@ -77,6 +73,10 @@
             & + dd:after
               left: -100%
 
+          @each $dt-type in innovate visibility expertise guarantee result accompaniment
+            &##{$dt-type} + dd:after
+              background: #fff url(../images/guarantees/#{$dt-type}.svg) no-repeat center / 40%
+
 
   @media screen and (max-width: $menu-mobile)
     article
@@ -85,5 +85,10 @@
         flex-direction: column
         margin: 3rem auto
 
+        dt
+          background-color: transparent
+          color: $text
+          padding: 1em
+
         dd
-          margin-bottom: 1em
+          margin: 0 1em 1em

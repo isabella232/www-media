@@ -560,18 +560,6 @@ body > aside:not(#flash) {
           counter-increment: guarantee;
           font-weight: 300;
           margin-bottom: .5em; }
-        #page-guarantees article dl dt#innovate + dd:after {
-          background: #fff url(../images/guarantees/innovate.svg) no-repeat center/40%; }
-        #page-guarantees article dl dt#visibility + dd:after {
-          background: #fff url(../images/guarantees/visibility.svg) no-repeat center/40%; }
-        #page-guarantees article dl dt#expertise + dd:after {
-          background: #fff url(../images/guarantees/expertise.svg) no-repeat center/40%; }
-        #page-guarantees article dl dt#guarantee + dd:after {
-          background: #fff url(../images/guarantees/guarantee.svg) no-repeat center/40%; }
-        #page-guarantees article dl dt#result + dd:after {
-          background: #fff url(../images/guarantees/result.svg) no-repeat center/40%; }
-        #page-guarantees article dl dt#accompaniment + dd:after {
-          background: #fff url(../images/guarantees/accompaniment.svg) no-repeat center/40%; }
       #page-guarantees article dl dd {
         background: #303030;
         font-size: 1.25em; }
@@ -595,14 +583,30 @@ body > aside:not(#flash) {
     #page-guarantees article dl dt:nth-of-type(2n) {
       margin-left: 340px; }
       #page-guarantees article dl dt:nth-of-type(2n) + dd:after {
-        left: -100%; } }
+        left: -100%; }
+    #page-guarantees article dl dt#innovate + dd:after {
+      background: #fff url(../images/guarantees/innovate.svg) no-repeat center/40%; }
+    #page-guarantees article dl dt#visibility + dd:after {
+      background: #fff url(../images/guarantees/visibility.svg) no-repeat center/40%; }
+    #page-guarantees article dl dt#expertise + dd:after {
+      background: #fff url(../images/guarantees/expertise.svg) no-repeat center/40%; }
+    #page-guarantees article dl dt#guarantee + dd:after {
+      background: #fff url(../images/guarantees/guarantee.svg) no-repeat center/40%; }
+    #page-guarantees article dl dt#result + dd:after {
+      background: #fff url(../images/guarantees/result.svg) no-repeat center/40%; }
+    #page-guarantees article dl dt#accompaniment + dd:after {
+      background: #fff url(../images/guarantees/accompaniment.svg) no-repeat center/40%; } }
   @media screen and (max-width: 600px) {
     #page-guarantees article dl {
       align-items: stretch;
       flex-direction: column;
       margin: 3rem auto; }
+      #page-guarantees article dl dt {
+        background-color: transparent;
+        color: #1C1C1C;
+        padding: 1em; }
       #page-guarantees article dl dd {
-        margin-bottom: 1em; } }
+        margin: 0 1em 1em; } }
 
 #page-index h1 {
   display: none; }
