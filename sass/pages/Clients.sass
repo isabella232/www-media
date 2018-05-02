@@ -38,6 +38,14 @@
       li
         +before-icon
 
+        &::before
+          transition: margin 250ms, transform 250ms
+
+        &:hover
+          &::before
+            margin-bottom: 1.75em
+            transform: scale(1.35)
+
         @each $list-item in revenue competition visibility expert information legislation solutions innovation quality duplicable image notoriety share collect offers reference
           &##{$list-item}:before
             content: url(../images/jobs/#{$list-item}.svg)

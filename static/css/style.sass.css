@@ -354,6 +354,11 @@ body > aside:not(#flash) {
   @media screen and (max-width: 600px) {
     #page-pharmacy article:first-of-type ul:last-of-type li:before, #page-laboratory article:first-of-type ul:last-of-type li:before, #page-group article:first-of-type ul:last-of-type li:before {
       width: 2.5em; } }
+  #page-pharmacy article:first-of-type ul:last-of-type li::before, #page-laboratory article:first-of-type ul:last-of-type li::before, #page-group article:first-of-type ul:last-of-type li::before {
+    transition: margin 250ms, transform 250ms; }
+  #page-pharmacy article:first-of-type ul:last-of-type li:hover::before, #page-laboratory article:first-of-type ul:last-of-type li:hover::before, #page-group article:first-of-type ul:last-of-type li:hover::before {
+    margin-bottom: 1.75em;
+    transform: scale(1.35); }
   #page-pharmacy article:first-of-type ul:last-of-type li#revenue:before, #page-laboratory article:first-of-type ul:last-of-type li#revenue:before, #page-group article:first-of-type ul:last-of-type li#revenue:before {
     content: url(../images/jobs/revenue.svg); }
   #page-pharmacy article:first-of-type ul:last-of-type li#competition:before, #page-laboratory article:first-of-type ul:last-of-type li#competition:before, #page-group article:first-of-type ul:last-of-type li#competition:before {
@@ -434,6 +439,16 @@ body > aside:not(#flash) {
         width: 100%; } }
     #page-pharmacy article:last-of-type > section h3, #page-pharmacy article:last-of-type > section ul, #page-laboratory article:last-of-type > section h3, #page-laboratory article:last-of-type > section ul, #page-group article:last-of-type > section h3, #page-group article:last-of-type > section ul {
       margin: 0; }
+    #page-pharmacy article:last-of-type > section h3, #page-laboratory article:last-of-type > section h3, #page-group article:last-of-type > section h3 {
+      filter: grayscale(100%);
+      transition: color 250ms, filter 250ms; }
+      #page-pharmacy article:last-of-type > section h3::before, #page-laboratory article:last-of-type > section h3::before, #page-group article:last-of-type > section h3::before {
+        transition: transform 250ms; }
+    #page-pharmacy article:last-of-type > section section:hover h3, #page-laboratory article:last-of-type > section section:hover h3, #page-group article:last-of-type > section section:hover h3 {
+      color: #E73C4D;
+      filter: grayscale(0%); }
+      #page-pharmacy article:last-of-type > section section:hover h3::before, #page-laboratory article:last-of-type > section section:hover h3::before, #page-group article:last-of-type > section section:hover h3::before {
+        transform: translateY(-0.5em); }
     #page-pharmacy article:last-of-type > section li, #page-laboratory article:last-of-type > section li, #page-group article:last-of-type > section li {
       display: inline-block; }
       #page-pharmacy article:last-of-type > section li:not(:last-child):after, #page-laboratory article:last-of-type > section li:not(:last-child):after, #page-group article:last-of-type > section li:not(:last-child):after {
@@ -786,7 +801,11 @@ body > aside:not(#flash) {
       #page-index main article:last-of-type ul li {
         display: inline-flex;
         height: 250px;
-        width: 49%; } }
+        width: 49%; }
+        #page-index main article:last-of-type ul li strong {
+          transition: letter-spacing 350ms; }
+        #page-index main article:last-of-type ul li:hover strong {
+          letter-spacing: .1em; } }
 
 @media screen and (max-width: 600px) {
   #page-index h1 {
@@ -908,6 +927,16 @@ body > aside:not(#flash) {
         width: 100%; } }
     #page-services article:first-of-type > section h3, #page-services article:first-of-type > section ul {
       margin: 0; }
+    #page-services article:first-of-type > section h3 {
+      filter: grayscale(100%);
+      transition: color 250ms, filter 250ms; }
+      #page-services article:first-of-type > section h3::before {
+        transition: transform 250ms; }
+    #page-services article:first-of-type > section section:hover h3 {
+      color: #E73C4D;
+      filter: grayscale(0%); }
+      #page-services article:first-of-type > section section:hover h3::before {
+        transform: translateY(-0.5em); }
     #page-services article:first-of-type > section li {
       display: inline-block; }
       #page-services article:first-of-type > section li:not(:last-child):after {

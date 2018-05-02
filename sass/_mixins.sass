@@ -103,6 +103,21 @@
     h3, ul
       margin: 0
 
+    h3
+      filter: grayscale(100%)
+      transition: color 250ms, filter 250ms
+
+      &::before
+        transition: transform 250ms
+
+    section:hover
+      h3
+        color: $primary
+        filter: grayscale(0%)
+
+        &::before
+          transform: translateY(-.5em)
+
     li
       display: inline-block
 
