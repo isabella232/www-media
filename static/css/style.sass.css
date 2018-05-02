@@ -226,6 +226,8 @@ nav:first-of-type {
           position: absolute;
           right: 1rem;
           top: 1rem; }
+        #burger-menu:hover ~ nav:first-of-type ul li {
+          line-height: 2; }
         #burger-menu:hover ~ nav:first-of-type ul:last-child {
           font-size: .85em; } }
 
