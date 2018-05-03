@@ -171,12 +171,12 @@ nav:first-of-type {
   width: calc(100% / 3);
   z-index: 4; }
   nav:first-of-type ul {
-    margin: 1.5em 0;
+    margin: 1em 0;
     padding: 0 12%; }
     nav:first-of-type ul li {
       font-size: 1.2em;
       font-weight: 300;
-      line-height: 3em; }
+      line-height: 2.5em; }
       nav:first-of-type ul li a {
         display: inline-block;
         letter-spacing: .5px; }
