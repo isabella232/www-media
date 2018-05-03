@@ -634,7 +634,7 @@ body > aside:not(#flash) {
 #page-index h1 {
   display: none; }
 
-#page-index article:first-of-type {
+#page-index #intro {
   box-sizing: border-box;
   color: #fff;
   display: flex;
@@ -643,15 +643,15 @@ body > aside:not(#flash) {
   margin: auto;
   padding: 2em 5vw;
   text-align: center; }
-  #page-index article:first-of-type::before {
+  #page-index #intro::before {
     content: url(../images/logo.svg);
     display: block;
     margin: 0 auto;
     max-width: 50vw;
     width: 15em; }
-  #page-index article:first-of-type h2 {
+  #page-index #intro h2 {
     font-size: 3.5em; }
-  #page-index article:first-of-type a {
+  #page-index #intro a {
     background: #E73C4D;
     border: 0;
     border-radius: 2em;
@@ -659,7 +659,7 @@ body > aside:not(#flash) {
     padding: 0.5em 2em;
     transition-duration: .4s;
     text-decoration: none; }
-    #page-index article:first-of-type a:hover {
+    #page-index #intro a:hover {
       background-color: #1C1C1C; }
 
 #page-index #about {
@@ -687,21 +687,21 @@ body > aside:not(#flash) {
         margin-left: -8vw;
         width: 100vw; } }
 
-#page-index article:nth-of-type(n+3) {
+#page-index #team {
   margin-left: auto;
   margin-right: auto;
   max-width: 1024px;
   margin: 7vw auto; }
-  #page-index article:nth-of-type(n+3) > h2, #page-index article:nth-of-type(n+3) > p {
+  #page-index #team > h2, #page-index #team > p {
     text-align: center;
     margin: .25em auto;
     max-width: 25em;
     padding: 0 10%; }
-  #page-index article:nth-of-type(n+3) > p {
+  #page-index #team > p {
     font-size: 1.7em;
     font-weight: 300; }
   @media screen and (max-width: 600px) {
-    #page-index article:nth-of-type(n+3) > p {
+    #page-index #team > p {
       font-size: 1.25em; } }
 
 #page-index #members {
@@ -750,11 +750,11 @@ body > aside:not(#flash) {
     #page-index #members section img {
       max-width: 100%; }
 
-#page-index article:last-of-type {
+#page-index #datas {
   margin: 50px auto 70px; }
-  #page-index article:last-of-type > *:not(:last-child) {
+  #page-index #datas > *:not(:last-child) {
     padding: 0 10%; }
-  #page-index article:last-of-type ul li {
+  #page-index #datas ul li {
     align-items: center;
     background: #fff;
     box-sizing: border-box;
@@ -763,16 +763,38 @@ body > aside:not(#flash) {
     letter-spacing: 0.1em;
     padding: 2em 1em;
     text-transform: uppercase; }
-    #page-index article:last-of-type ul li:nth-child(odd) {
+    #page-index #datas ul li:nth-child(odd) {
       border-right: 1px solid #f2f2f2;
       box-sizing: border-box; }
-    #page-index article:last-of-type ul li:nth-child(n+3) {
+    #page-index #datas ul li:nth-child(n+3) {
       border-top: 1px solid #f2f2f2; }
-    #page-index article:last-of-type ul li strong {
+    #page-index #datas ul li strong {
       font-size: 2.4em; }
 
+#page-index #news h2 {
+  display: none; }
+
+#page-index #news ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  min-height: 150px;
+  position: relative; }
+  #page-index #news ul li a {
+    font-size: 2.75em;
+    font-weight: bold;
+    line-height: 1.25;
+    margin: 1em; }
+    #page-index #news ul li a::after {
+      content: '➜';
+      display: block;
+      transition: margin-left 200ms; }
+    #page-index #news ul li a:hover::after {
+      margin-left: .5em; }
+
 @media screen and (min-width: 601px) {
-  #page-index main article:first-of-type {
+  #page-index main #intro {
     background: url(../images/bkgd-index.jpg) center/cover no-repeat;
     min-height: 80vh; }
   #page-index main #members section {
@@ -795,32 +817,32 @@ body > aside:not(#flash) {
     #page-index main #members section:hover:after, #page-index main #members section:hover h4, #page-index main #members section:hover p, #page-index main #members section:focus:after, #page-index main #members section:focus h4, #page-index main #members section:focus p {
       opacity: 1;
       transform: scale(1); }
-  #page-index main article:last-of-type {
+  #page-index main #datas {
     display: table; }
-    #page-index main article:last-of-type > *:not(:last-child) {
+    #page-index main #datas > *:not(:last-child) {
       text-align: end; }
-    #page-index main article:last-of-type ul {
+    #page-index main #datas ul {
       display: table-cell;
       width: 50%; }
-      #page-index main article:last-of-type ul li {
+      #page-index main #datas ul li {
         display: inline-flex;
         height: 250px;
         width: 49%; }
-        #page-index main article:last-of-type ul li strong {
+        #page-index main #datas ul li strong {
           transition: letter-spacing 350ms; }
-        #page-index main article:last-of-type ul li:hover strong {
+        #page-index main #datas ul li:hover strong {
           letter-spacing: .1em; } }
 
 @media screen and (max-width: 600px) {
   #page-index h1 {
     left: 8vw;
     top: 17.5rem; }
-  #page-index main article:first-of-type {
+  #page-index main #intro {
     background-color: #1C1C1C;
     color: #fff; }
-    #page-index main article:first-of-type::before {
+    #page-index main #intro::before {
       display: none; }
-    #page-index main article:first-of-type h2 {
+    #page-index main #intro h2 {
       font-size: 2em; }
   #page-index #members section {
     margin: 1em auto; }
@@ -828,7 +850,7 @@ body > aside:not(#flash) {
       background-color: #E73C4D; }
     #page-index #members section img {
       order: -1; }
-  #page-index article:last-of-type li {
+  #page-index #datas li {
     display: flex;
     margin: 2em; } }
 
@@ -1223,10 +1245,63 @@ section#offers h3 {
   section#offers h3:before {
     content: url(../images/services/offers.svg); }
 
+#news-content {
+  flex-wrap: wrap; }
+  #news-content h2 {
+    margin-top: 0;
+    text-align: center;
+    width: 100%; }
+
+#news, #news-content {
+  display: flex; }
+  #news article, #news-content article {
+    box-sizing: border-box;
+    display: inline-flex;
+    filter: grayscale(100%);
+    flex-direction: column;
+    position: relative;
+    padding: 1em;
+    transition: filter 200ms; }
+    #news article:hover, #news-content article:hover {
+      filter: grayscale(0%); }
+    #news article h3, #news article time, #news-content article h3, #news-content article time {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative; }
+    #news article h3, #news-content article h3 {
+      order: 2;
+      margin: 0;
+      padding: .5em 1rem; }
+    #news article time, #news-content article time {
+      border-top: solid 2px #E73C4D;
+      order: 1;
+      padding: .5em  1rem 0;
+      text-transform: uppercase; }
+    #news article img, #news-content article img {
+      max-width: 100%; }
+    #news article a, #news-content article a {
+      bottom: 0;
+      font-size: 0;
+      left: 0;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 20; }
+    #news article p, #news-content article p {
+      margin: 0; }
+  @media screen and (min-width: 601px) {
+    #news article, #news > ul, #news-content article, #news-content > ul {
+      flex: auto;
+      width: 25%; } }
+
 @media screen and (max-width: 600px) {
   h1 {
     margin: 3rem auto .5em; }
   h2 {
-    font-size: 2.2em; } }
+    font-size: 2.2em; }
+  #news, #news-content {
+    flex-wrap: wrap; } }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */

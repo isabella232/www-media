@@ -2,7 +2,7 @@
   h1
     display: none
 
-  article:first-of-type
+  #intro
     box-sizing: border-box
     color: #fff
     display: flex
@@ -34,7 +34,7 @@
     +big-left-img(bkgd-agency, right)
 
 
-  article:nth-of-type(n+3)
+  #team
     +centered-article
     margin: 7vw auto
 
@@ -93,7 +93,7 @@
         max-width: 100%
 
 
-  article:last-of-type
+  #datas
     margin: 50px auto 70px
 
     >*:not(:last-child)
@@ -121,9 +121,38 @@
           font-size: 2.4em
 
 
+  #news
+    h2
+      display: none
+
+    ul
+      display: flex
+      flex-direction: column
+      justify-content: center
+      margin: 0
+      min-height: 150px
+      position: relative
+
+      li
+        a
+          font-size: 2.75em
+          font-weight: bold
+          line-height: 1.25
+          margin: 1em
+
+          &::after
+            content: '➜'
+            display: block
+            transition: margin-left 200ms
+
+          &:hover::after
+            margin-left: .5em
+
+
+
   @media screen and (min-width: $menu-mobile + 1px)
     main
-      article:first-of-type
+      #intro
         background: url(../images/bkgd-index.jpg) center / cover no-repeat
         min-height: 80vh
 
@@ -155,7 +184,7 @@
             transform: scale(1)
 
 
-      article:last-of-type
+      #datas
         display: table
 
         >*:not(:last-child)
@@ -184,7 +213,7 @@
       top: 17.5rem
 
     main
-      article:first-of-type
+      #intro
         background-color: $text
         color: #fff
 
@@ -203,7 +232,7 @@
       img
         order: -1
 
-    article:last-of-type
+    #datas
       li
         display: flex
         margin: 2em
