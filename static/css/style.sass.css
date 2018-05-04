@@ -276,30 +276,33 @@ body > aside:not(#flash) {
           padding: 0.75em 1.5em;
           transition-duration: .4s; }
 
-#newsletter h2 {
-  font-size: 2em; }
+#newsletter {
+  display: none; }
+  #newsletter h2 {
+    font-size: 2em; }
+  #newsletter p {
+    font-size: 1em;
+    margin: 0; }
+  #newsletter form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em 0;
+    text-align: left; }
+    #newsletter form label {
+      margin: .25em 1em;
+      max-width: 17.5em; }
+    #newsletter form > div {
+      height: 1px;
+      position: static !important;
+      width: 100%; }
+      #newsletter form > div input {
+        left: inherit;
+        position: absolute; }
 
-#newsletter p {
-  font-size: 1em;
-  margin: 0; }
-
-#newsletter form {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 1em 0;
-  text-align: left; }
-  #newsletter form label {
-    margin: .25em 1em;
-    max-width: 17.5em; }
-  #newsletter form > div {
-    height: 1px;
-    position: static !important;
-    width: 100%; }
-    #newsletter form > div input {
-      left: inherit;
-      position: absolute; }
+#page-contact #newsletter {
+  display: block; }
 
 #page-pharmacy h1, #page-laboratory h1, #page-group h1 {
   display: none; }
