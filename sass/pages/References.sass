@@ -1,0 +1,93 @@
+#page-references
+  main
+    margin-bottom: 4em
+
+    > article
+      +mozaic(300px, 33.3%)
+
+      h2
+        background-color: transparent
+        box-shadow: none
+        height: auto
+        margin: 0 0 1.5em
+        padding: 0
+        width: 100%
+
+      article
+        background-color: #fff
+        position: relative
+        transition: background-color 350ms
+        transition-delay: 100ms
+
+        img
+          max-height: 75%
+          max-width: 75%
+          transition: opacity 100ms
+          transition-delay: 350ms
+
+        h3
+          font-size: 1.75em
+          margin-bottom: 0
+
+        p
+          line-height: 1
+          margin: .5em
+
+        .subtitle
+          margin-top: 0
+          text-transform: uppercase
+
+        @media screen and (min-width: $menu-mobile + 1px)
+          color: #fff
+
+          img
+            height: auto
+            left: 50%
+            opacity: 1
+            position: absolute
+            top: 50%
+            transform: translate(-50%, -50%)
+
+          &:hover
+            background-color: $primary
+
+            img
+              opacity: 0
+              transition-delay: 0ms
+
+          &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(5)
+            &::after
+              display: flex
+              flex-direction: column
+              font-size: 2em
+              font-weight: bold
+              height: 100%
+              justify-content: center
+              position: absolute
+              width: 100%
+
+          &:nth-of-type(2), &:nth-of-type(5)
+            margin-right: 33.3%
+
+            &::after
+              background-color: $text
+              color: #fff
+              content: 'Innovation'
+              left: 100%
+
+
+          &:nth-of-type(3)
+            margin-left: 33.3%
+
+            &::after
+              color: $text
+              content: 'E-santé'
+              left: -100%
+
+          &:nth-of-type(5)
+            &::after
+              content: 'Accompagnement'
+
+        @media screen and (max-width: $menu-mobile)
+          img
+            order: -1

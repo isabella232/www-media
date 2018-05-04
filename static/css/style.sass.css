@@ -915,6 +915,97 @@ body > aside:not(#flash) {
   max-width: 50em;
   padding: 4em; }
 
+#page-references main {
+  margin-bottom: 4em; }
+  #page-references main > article {
+    display: flex;
+    flex-wrap: wrap; }
+    #page-references main > article > * {
+      align-items: center;
+      background: #fff;
+      box-shadow: 0 0 1px #eaeaea;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2em;
+      text-align: center; }
+    @media screen and (min-width: 601px) {
+      #page-references main > article > * {
+        height: 300px;
+        width: 33.3%; } }
+    @media screen and (max-width: 600px) {
+      #page-references main > article > * {
+        width: 100%; } }
+    #page-references main > article h2 {
+      background-color: transparent;
+      box-shadow: none;
+      height: auto;
+      margin: 0 0 1.5em;
+      padding: 0;
+      width: 100%; }
+    #page-references main > article article {
+      background-color: #fff;
+      position: relative;
+      transition: background-color 350ms;
+      transition-delay: 100ms; }
+      #page-references main > article article img {
+        max-height: 75%;
+        max-width: 75%;
+        transition: opacity 100ms;
+        transition-delay: 350ms; }
+      #page-references main > article article h3 {
+        font-size: 1.75em;
+        margin-bottom: 0; }
+      #page-references main > article article p {
+        line-height: 1;
+        margin: .5em; }
+      #page-references main > article article .subtitle {
+        margin-top: 0;
+        text-transform: uppercase; }
+      @media screen and (min-width: 601px) {
+        #page-references main > article article {
+          color: #fff; }
+          #page-references main > article article img {
+            height: auto;
+            left: 50%;
+            opacity: 1;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%); }
+          #page-references main > article article:hover {
+            background-color: #E73C4D; }
+            #page-references main > article article:hover img {
+              opacity: 0;
+              transition-delay: 0ms; }
+          #page-references main > article article:nth-of-type(2)::after, #page-references main > article article:nth-of-type(3)::after, #page-references main > article article:nth-of-type(5)::after {
+            display: flex;
+            flex-direction: column;
+            font-size: 2em;
+            font-weight: bold;
+            height: 100%;
+            justify-content: center;
+            position: absolute;
+            width: 100%; }
+          #page-references main > article article:nth-of-type(2), #page-references main > article article:nth-of-type(5) {
+            margin-right: 33.3%; }
+            #page-references main > article article:nth-of-type(2)::after, #page-references main > article article:nth-of-type(5)::after {
+              background-color: #1C1C1C;
+              color: #fff;
+              content: 'Innovation';
+              left: 100%; }
+          #page-references main > article article:nth-of-type(3) {
+            margin-left: 33.3%; }
+            #page-references main > article article:nth-of-type(3)::after {
+              color: #1C1C1C;
+              content: 'E-santé';
+              left: -100%; }
+          #page-references main > article article:nth-of-type(5)::after {
+            content: 'Accompagnement'; } }
+      @media screen and (max-width: 600px) {
+        #page-references main > article article img {
+          order: -1; } }
+
 #page-services article:first-of-type {
   margin-left: auto;
   margin-right: auto;
