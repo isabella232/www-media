@@ -76,7 +76,7 @@ def quotation():
 def contact():
     message = {
         'to': [{'email': 'media@kozea.fr'}],
-        'subject': 'Prise de contact sur le site de Kozea Media',
+        'subject': 'Prise de contact sur le site de Kozea media',
         'from_email': 'media@kozea.fr',
         'html': '<br>'.join([
             'Nom : %s' % request.form.get('name', ''),

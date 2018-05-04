@@ -10,7 +10,7 @@ tests_requirements = [
 setup(
     name="www-media",
     version="0.1.dev0",
-    description="Website for Kozea Media",
+    description="Website for Kozea media",
     url="https://media.kozea.fr",
     author="Kozea",
     packages=find_packages(),
