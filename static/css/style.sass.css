@@ -934,6 +934,9 @@ body > aside:not(#flash) {
   @media screen and (max-width: 600px) {
     #page-quotation article > p {
       font-size: 1.25em; } }
+  #page-quotation article p a {
+    color: #E73C4D;
+    font-size: .8em; }
 
 #page-quotation form {
   border: 1px solid #f4f4f4;
@@ -941,6 +944,12 @@ body > aside:not(#flash) {
   margin: 3em auto;
   max-width: 50em;
   padding: 4em; }
+  #page-quotation form label[for="data"] {
+    font-size: .8em; }
+    #page-quotation form label[for="data"] input {
+      margin: 0;
+      vertical-align: middle;
+      width: auto; }
 
 #page-references main {
   margin-bottom: 4em; }
