@@ -302,8 +302,20 @@ body > aside:not(#flash) {
         position: absolute; }
 
 #page-contact #newsletter {
-  display: block;
-  background: red; }
+  display: block; }
+  #page-contact #newsletter label[for="data"] {
+    font-size: .8em;
+    max-width: none; }
+    #page-contact #newsletter label[for="data"] input {
+      margin: 0;
+      width: auto; }
+  #page-contact #newsletter p {
+    font-size: .85em;
+    margin-bottom: 1em;
+    text-align: center;
+    width: 100%; }
+    #page-contact #newsletter p a {
+      color: #E73C4D; }
 
 #page-pharmacy h1, #page-laboratory h1, #page-group h1 {
   display: none; }
