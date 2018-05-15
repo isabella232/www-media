@@ -302,7 +302,8 @@ body > aside:not(#flash) {
         position: absolute; }
 
 #page-contact #newsletter {
-  display: block; }
+  display: block;
+  background: red; }
 
 #page-pharmacy h1, #page-laboratory h1, #page-group h1 {
   display: none; }
@@ -541,6 +542,17 @@ body > aside:not(#flash) {
       margin: 0; }
       #page-contact dt:nth-of-type(2) ul li a:hover, #page-contact dt:nth-of-type(2) + dd ul li a:hover {
         transform: translateX(8px); } }
+
+#page-contact article form label[for="data"] {
+  font-size: .8em; }
+  #page-contact article form label[for="data"] input {
+    margin: 0;
+    vertical-align: middle;
+    width: auto; }
+
+#page-contact article form p a {
+  color: #E73C4D;
+  font-size: .75em; }
 
 #page-guarantees {
   z-index: 0; }
