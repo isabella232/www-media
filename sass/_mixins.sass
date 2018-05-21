@@ -92,7 +92,6 @@
       width: 100%
 
 
-
 =target-section
   +centered-article
 
@@ -100,14 +99,17 @@
     +mozaic(300px, 33.3%)
     margin-top: 3rem
 
-    h3, ul
+    h3
+      margin: 0 0 .5em
+      line-height: 1.2
+
+    ul
       margin: 0
 
     li
       display: inline-block
+      margin: 0 .5em
 
-      &:not(:last-child):after
-        content: ' / '
 
     @media screen and (min-width: $menu-mobile + 1)
       h3

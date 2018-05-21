@@ -401,12 +401,6 @@ body > aside:not(#flash) {
 #page-pharmacy article + article, #page-laboratory article + article, #page-group article + article {
   margin: 7vw auto; }
 
-#page-pharmacy article:nth-of-type(2), #page-laboratory article:nth-of-type(2), #page-group article:nth-of-type(2) {
-  background: green;
-  padding: 1em; }
-  #page-pharmacy article:nth-of-type(2) h2, #page-laboratory article:nth-of-type(2) h2, #page-group article:nth-of-type(2) h2 {
-    margin: 0; }
-
 #page-pharmacy article:last-of-type, #page-laboratory article:last-of-type, #page-group article:last-of-type {
   margin-left: auto;
   margin-right: auto;
@@ -443,12 +437,14 @@ body > aside:not(#flash) {
     @media screen and (max-width: 600px) {
       #page-pharmacy article:last-of-type > section > *, #page-laboratory article:last-of-type > section > *, #page-group article:last-of-type > section > * {
         width: 100%; } }
-    #page-pharmacy article:last-of-type > section h3, #page-pharmacy article:last-of-type > section ul, #page-laboratory article:last-of-type > section h3, #page-laboratory article:last-of-type > section ul, #page-group article:last-of-type > section h3, #page-group article:last-of-type > section ul {
+    #page-pharmacy article:last-of-type > section h3, #page-laboratory article:last-of-type > section h3, #page-group article:last-of-type > section h3 {
+      margin: 0 0 .5em;
+      line-height: 1.2; }
+    #page-pharmacy article:last-of-type > section ul, #page-laboratory article:last-of-type > section ul, #page-group article:last-of-type > section ul {
       margin: 0; }
     #page-pharmacy article:last-of-type > section li, #page-laboratory article:last-of-type > section li, #page-group article:last-of-type > section li {
-      display: inline-block; }
-      #page-pharmacy article:last-of-type > section li:not(:last-child):after, #page-laboratory article:last-of-type > section li:not(:last-child):after, #page-group article:last-of-type > section li:not(:last-child):after {
-        content: ' / '; }
+      display: inline-block;
+      margin: 0 .5em; }
     @media screen and (min-width: 601px) {
       #page-pharmacy article:last-of-type > section h3, #page-laboratory article:last-of-type > section h3, #page-group article:last-of-type > section h3 {
         filter: grayscale(100%);
@@ -1045,12 +1041,14 @@ body > aside:not(#flash) {
     @media screen and (max-width: 600px) {
       #page-services article:first-of-type > section > * {
         width: 100%; } }
-    #page-services article:first-of-type > section h3, #page-services article:first-of-type > section ul {
+    #page-services article:first-of-type > section h3 {
+      margin: 0 0 .5em;
+      line-height: 1.2; }
+    #page-services article:first-of-type > section ul {
       margin: 0; }
     #page-services article:first-of-type > section li {
-      display: inline-block; }
-      #page-services article:first-of-type > section li:not(:last-child):after {
-        content: ' / '; }
+      display: inline-block;
+      margin: 0 .5em; }
     @media screen and (min-width: 601px) {
       #page-services article:first-of-type > section h3 {
         filter: grayscale(100%);
