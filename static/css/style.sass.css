@@ -456,7 +456,8 @@ body > aside:not(#flash) {
       margin: 0; }
     #page-pharmacy article:last-of-type > section li, #page-laboratory article:last-of-type > section li, #page-group article:last-of-type > section li {
       display: inline-block;
-      margin: 0 .5em; }
+      margin: 0 1em;
+      line-height: 1.1; }
     @media screen and (min-width: 601px) {
       #page-pharmacy article:last-of-type > section section h3, #page-laboratory article:last-of-type > section section h3, #page-group article:last-of-type > section section h3 {
         filter: grayscale(100%);
@@ -1076,7 +1077,8 @@ body > aside:not(#flash) {
       margin: 0; }
     #page-services article:first-of-type > section li {
       display: inline-block;
-      margin: 0 .5em; }
+      margin: 0 1em;
+      line-height: 1.1; }
     @media screen and (min-width: 601px) {
       #page-services article:first-of-type > section section h3 {
         filter: grayscale(100%);
@@ -1373,6 +1375,9 @@ section#offers h3 {
       width: 2.5em; } }
   section#offers h3:before {
     content: url(../images/services/offers.svg); }
+
+#page-news h1 {
+  margin-bottom: 2em; }
 
 #news-content {
   flex-wrap: wrap; }
