@@ -5,8 +5,8 @@ variables:
 stages:
   - install
   - test
-  - deploy_test
-  - deploy_prod
+#  - deploy_test
+#  - deploy_prod
 
 .artifacts: &artifacts
   artifacts:
@@ -43,22 +43,22 @@ test:
 .image: &image_deploy_jobs
   image: debian:latest
 
-deploy_test:
-  <<: *image_deploy_jobs
-  stage: deploy_test
-  before_script:
-    - apt-get update && apt-get install -y wget make
-  script:
-    - make deploy-test
-  dependencies: []
+#deploy_test:
+#  <<: *image_deploy_jobs
+#  stage: deploy_test
+#  before_script:
+#    - apt-get update && apt-get install -y wget make
+#  script:
+#    - make deploy-test
+#  dependencies: []
 
-deploy_prod:
-  <<: *image_deploy_jobs
-  stage: deploy_prod
-  before_script:
-    - apt-get update && apt-get install -y wget make
-  script:
-    - make deploy-prod
-  dependencies: []
-  only:
-    - master
+#deploy_prod:
+#  <<: *image_deploy_jobs
+#  stage: deploy_prod
+#  before_script:
+#    - apt-get update && apt-get install -y wget make
+#  script:
+#    - make deploy-prod
+#  dependencies: []
+#  only:
+#    - master
