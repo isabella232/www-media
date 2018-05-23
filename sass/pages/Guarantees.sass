@@ -1,0 +1,94 @@
+// GARANTIES
+#page-guarantees
+  z-index: 0
+
+  article
+    +centered-article
+
+    dl
+      counter-reset: guarantee
+      display: flex
+      flex-wrap: wrap
+      margin: 6rem auto
+
+      dt, dd
+        box-sizing: border-box
+        color: #fff
+        display: flex
+        flex-direction: column
+        justify-content: center
+        margin: 0
+        padding: 1.5em
+        position: relative
+        text-align: center
+
+      dt
+        background: lighten($text,3%)
+        font-size: 1.6em
+        font-weight: 700
+        letter-spacing: 0.1em
+        line-height: 1.5
+        text-transform: uppercase
+
+        &:before
+          content: "[0" counter(guarantee) "]"
+          counter-increment: guarantee
+          font-weight: 300
+          margin-bottom: .5em
+
+      dd
+        background: lighten($text,8%)
+        font-size: 1.25em
+
+        &:after
+          content: ''
+          height: 100%
+          left: 0
+          position: absolute
+          top: 0
+          transition: transform .5s ease-in-out
+          width: 100%
+          z-index: -1
+
+      dd:hover, dt:hover + dd
+        &:after
+          transform: translateX($guarantee-square-size)
+
+      dd:nth-of-type(2n):hover, dt:nth-of-type(2n):hover + dd
+        &:after
+          transform: translateX(-$guarantee-square-size)
+
+
+  @media screen and (min-width: $menu-mobile + 1px)
+    article
+      dl
+        dt, dd
+          height: $guarantee-square-size
+          width: $guarantee-square-size
+
+        dt
+          &:nth-of-type(2n)
+            margin-left: $guarantee-square-size
+
+            & + dd:after
+              left: -100%
+
+          @each $dt-type in innovate visibility expertise guarantee result accompaniment
+            &##{$dt-type} + dd:after
+              background: #fff url(../images/guarantees/#{$dt-type}.svg) no-repeat center / 40%
+
+
+  @media screen and (max-width: $menu-mobile)
+    article
+      dl
+        align-items: stretch
+        flex-direction: column
+        margin: 3rem auto
+
+        dt
+          background-color: transparent
+          color: $text
+          padding: 1em
+
+        dd
+          margin: 0 1em 1em

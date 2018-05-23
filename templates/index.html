@@ -1,0 +1,98 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+  <article id="intro">
+    <h2>L'agence digitale des professionnels de santé</h2>
+    <p><a href="#about">En savoir plus</a></p>
+  </article>
+  <article id="about">
+    <h2>L'agence</h2>
+    <p>
+      Kozea media est une agence e-marketing qui conseille depuis 10 ans les
+      différents acteurs de santé dans leur transformation digitale.
+    </p>
+    <p>
+      Elle a été créée par un pharmacien et est animée par des experts en
+      marketing digital.
+    </p>
+    <p>
+      Du social media (community management) à la publicité
+      on line, Kozea media vous propose des services adaptés pour réussir
+      une campagne de communication avec succès.
+    </p>
+    <p>
+      Kozea media accompagne les professionnels de santé pour développer une
+      stratégie digitale performante tout en respectant les contraintes définies par
+      ce secteur. Spécialiste reconnu sur le secteur de la E-santé, nous mettons tous
+      les moyens en oeuvre pour assurer le retour sur investissement de vos actions
+      de communication.
+    </p>
+    <p>
+      Kozea media est un service de <a class="link" href="https://www.kozea.fr/">Kozea
+      group</a>.
+    </p>
+  </article>
+  <article id="team">
+    <h2>L'équipe</h2>
+    <p>
+      Kozea media s'appuie sur les équipes du groupe Kozea pour réaliser tous
+      vos projets.
+    </p>
+    <section id ="members">
+      <section>
+        <h4>Guillaume Ayoub</h4>
+        <p>Responsable Technique</p>
+        <img src="/static/images/team/guillaume.jpg" alt="Guillaume, Responsable technique">
+      </section>
+      <section>
+        <h4>Philippe Donadieu</h4>
+        <p>Directeur associé, Docteur en pharmacie</p>
+        <img src="/static/images/team/philippe.jpg" alt="Philippe, Directeur associé">
+      </section>
+      <section>
+        <h4>Hugo</h4>
+        <p>Web designer</p>
+        <img src="/static/images/team/hugo.jpg" alt="Hugo, Web designer">
+      </section>
+      <section>
+        <h4>Laurène</h4>
+        <p>Community manager</p>
+        <img src="/static/images/team/laurène.jpg" alt="Laurène, Chargée de projet">
+      </section>
+      <section>
+        <h4>Olivia</h4>
+        <p>Responsable Commercial</p>
+        <img src="/static/images/team/olivia.jpg" alt="Olivia, Digital account manager">
+      </section>
+    </section>
+  </article>
+  <article id="datas">
+    <h2>Aujourd'hui ?</h2>
+    <p>
+      Kozea media s'appuie sur des données fortes pour réaliser tous vos
+      projets
+    </p>
+    <ul>
+      <li id="clients"><strong>2500</strong> pharmacies clientes</li>
+      <li id="users"><strong>68 000</strong> utilisateurs par mois</li>
+      <li id="pages"><strong>200 000</strong> pages vues par mois</li>
+      <li id="revenue"><strong>4 500 000 €</strong> de chiffre d'affaires</li>
+    </ul>
+  </article>
+  <article id="news">
+    <h2>Actualités</h2>
+    {% for entry in news %}
+      <article>
+        <h3>{{ entry.title }}</h3>
+        <time pubdate datetime="{{ entry.iso_date }}">{{ entry.date }}</time>
+        <img src="{{ entry.image or url_for('static', filename='news.svg') }}" alt="{{ entry.title }}" />
+        <p><a href="{{ entry.link }}">Lire la suite…</a></p>
+      </article>
+    {% endfor %}
+    <ul class="links">
+      <li>
+        <a href="{{ url_for('page', page='news') }}">Voir toutes les actualités</a>
+      </li>
+    </ul>
+  </article>
+{% endblock content %}

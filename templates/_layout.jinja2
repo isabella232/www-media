@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+{% set MENU_PAGES = (
+  ('index', 'À propos'),
+  ('guarantees', 'Nos garanties'),
+  ('services', 'Nos services'),
+  ('references', 'Nos références'),
+  ('news', 'Nos actualités'),
+  ('contact', 'Contact'),
+) %}
+{% set NAV_PAGES = (
+  ('pharmacy', 'Je suis un pharmacien'),
+  ('laboratory', 'Je suis un laboratoire'),
+  ('group', 'Je suis un groupement'),
+) %}
+{% set HIDDEN_PAGES = (
+  ('quotation', 'Devis'),
+  ('legal', 'Mentions légales'),
+) %}
+{% set PAGES = dict(MENU_PAGES + NAV_PAGES + HIDDEN_PAGES) %}
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Kozea media - Agence e-marketing dédiée exclusivement aux professionnels de santé" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>{{ PAGES[page] }} - Kozea media</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.sass.css') }}" />
+  </head>
+
+  <body id="page-{{ page }}">
+    <span id="burger-menu">☰ Menu</span>
+
+    {% set grouped_messages = get_flashed_messages(with_categories=True)|sort(0)|groupby(0) %}
+    <aside id="flash">
+      {% for category, messages in grouped_messages %}
+        <ul class="{{ category }}">
+          {% for _, message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </aside>
+
+    <nav>
+      <ul>
+        {% for id, name in MENU_PAGES %}
+          <li><a href="{{ url_for('page', page=id) }}">{{ name }}</a></li>
+        {% endfor %}
+      </ul>
+      <ul>
+        <li><a href="tel:+33427118397">+33 4 27 11 83 97</a></li>
+        <li><a href="mailto:media@kozea.fr">media@kozea.fr</a></li>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul>
+        {% for id, name in NAV_PAGES %}
+          <li {{ 'class="active"' if page == id }}><a href="{{ url_for('page', page=id) }}">{{ name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <main>
+      <h1>{{ PAGES[page] }}</h1>
+      {% block content %}{% endblock content %}
+    </main>
+
+    <aside id="why-not-you">
+      <h2>Alors pourquoi pas vous ?</h2>
+      <p>
+        Osez vous démarquer en allant chercher vos patients là où ils se
+        trouvent.
+      </p>
+      {% if page in ((MENU_PAGES + NAV_PAGES) | map(attribute=0) | list) %}
+        <ul>
+          <li><a href="{{ url_for('page', page='quotation') }}">Obtenez un devis personnalisé</a></li>
+          <li><a href="{{ url_for('page', page='services') }}">Découvrez nos solutions</a></li>
+        </ul>
+      {% endif %}
+    </aside>
+
+    <aside id="newsletter">
+      <h2>Inscription à la newsletter</h2>
+      <p>
+        Inscrivez-vous à notre newsletter pour être informé en avant-première
+        de notre actualité.
+      </p>
+      <p>
+        Une fois le formulaire complété, suivez bien les étapes de confirmation
+        d'inscription pour être sûr de bien recevoir nos newsletters.
+      </p>
+
+      <form action="https://pharminfo.us8.list-manage.com/subscribe/post?u=dde3a36d2f82cc3f75534f533&amp;id=05f381d616" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	    <label for="mce-EMAIL">Email  <span class="asterisk">*</span>
+	      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+        </label>
+	    <label for="mce-FNAME">Nom de famille
+	      <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+        </label>
+	    <label for="mce-LNAME">Prénom
+	      <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+        </label>
+	    <label for="mce-MMERGE4">Société
+	      <input type="text" value="" name="MMERGE4" class="" id="mce-MMERGE4">
+        </label>
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_dde3a36d2f82cc3f75534f533_05f381d616" tabindex="-1" value=""></div>
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+      </form>
+    </aside>
+
+    <footer>
+      <section id="address">
+        <h2>Adresse</h2>
+        <address>107 boulevard de Stalingrad
+69100
+Villeurbanne</address>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="tel:+33427118397">+33 4 27 11 83 97</a></li>
+          <li><a href="mailto:media@kozea.fr">media@kozea.fr</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://www.facebook.com/kozeagroup/">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/company/kozeagroup">Linkedin</a></li>
+          <li><a href="https://twitter.com/Kozeagroup">Twitter</a></li>
+          <li><a href="https://www.instagram.com/kozea/">Instagram</a></li>
+          <li><a href="https://www.youtube.com/channel/UCx5VGRSsjpRWhc55EpI_gEw">YouTube</a></li>
+        </ul>
+      </section>
+
+      <section id="credits">
+        <h2>Crédits</h2>
+        <ul>
+          <li><a href="{{ url_for('page', page='legal') }}">Mentions légales</a></li>
+          <li>Made by <a href="https://www.kozea.fr/">Kozea group</a></li>
+        </ul>
+      </section>
+
+      <section id="more">
+        <h2>Plus d'informations ?</h2>
+        <ul>
+          <li><a href="tel:+33427118397">+33 4 27 11 83 97</a></li>
+          <li><a href="mailto:media@kozea.fr">media@kozea.fr</a></li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>

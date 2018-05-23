@@ -1,0 +1,90 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+  <article>
+    <h2>Nos prestations à la carte</h2>
+    <p>
+      Du social media (community management) à la publicité
+      en ligne, Kozea media vous propose des services adaptés pour réussir
+      une campagne de communication avec succès.
+    </p>
+    <section>
+      <section id="advice">
+        <h3>Conseil stratégie digitale</h3>
+        <ul>
+          <li>Accompagnement</li>
+          <li>Conseil développement web</li>
+          <li>Projet optimisé</li>
+        </ul>
+      </section>
+      <section id="community">
+        <h3>Community management</h3>
+        <ul>
+          <li>Gestion complète de page</li>
+        </ul>
+      </section>
+      <section id="media">
+        <h3>Régie média</h3>
+        <ul>
+          <li>Gestion d'espaces publicitaires</li>
+          <li>Monétisation d'espaces</li>
+          <li>Plan média</li>
+        </ul>
+      </section>
+      <section id="content">
+        <h3>Création de contenu</h3>
+        <ul>
+          <li>Article de santé</li>
+          <li>Fiche conseil</li>
+          <li>Newsletter</li>
+        </ul>
+      </section>
+      <section id="graphics">
+        <h3>Studio graphique</h3>
+        <ul>
+          <li>Logo</li>
+          <li>Infographie</li>
+          <li>Thème personnalisé</li>
+          <li>Affiche</li>
+          <li>Flyer</li>
+        </ul>
+      </section>
+      <section id="integration">
+        <h3>Service d'intégration</h3>
+        <ul>
+          <li>Intégration de produits</li>
+          <li>Promotions</li>
+          <li>Base de données de +9000 produits</li>
+        </ul>
+      </section>
+      <section id="offers">
+        <h3>Nos offres sont personnalisables</h3>
+        <ul>
+          <li><a href="{{ url_for('page', page='contact') }}">Parlons-en !</a></li>
+        </ul>
+      </section>
+    </section>
+  </article>
+  <article>
+    <h2>Vous êtes ?</h2>
+    <ul>
+      <li>
+        <a href="{{ url_for('page', page='pharmacy') }}">Pharmacien</a>
+      </li>
+      <li>
+        <a href="{{ url_for('page', page='group') }}">Groupement</a>
+      </li>
+      <li>
+        <a href="{{ url_for('page', page='laboratory') }}">Laboratoire</a>
+      </li>
+    </ul>
+    <p>
+      <strong>Manque de temps, manque de ressources ?</strong> Confiez-nous
+      votre projet, on s'occupe de tout !
+    </p>
+    <p>
+      Nous nous adaptons à votre projet pour établir une prestation unique
+      répondant à vos besoins.
+    </p>
+  </article>
+{% endblock content %}

@@ -1,0 +1,86 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+  <article>
+    <h2>Connectons l'officine et la patientèle</h2>
+    <ul>
+      <li>
+        <strong>70 %</strong> des patients se disent favorables à la
+        digitalisation de leur officine.
+      </li>
+      <li>
+        <strong>2 patients sur 3</strong> pensent que la santé a sa place sur
+        les réseaux sociaux.
+      </li>
+      <li>
+        <strong>85 %</strong> des pharmaciens ne communiquent pas avec leur
+        patientèle en ligne alors que 80 % des patients souhaitent communiquer
+        davantage en ligne avec leur pharmacien.
+      </li>
+    </ul>
+    <p><strong>Pharmaciens, où en êtes-vous ?</strong></p>
+    <aside>
+      Enquêtes Pharminfo.fr « La digitalisation de l'officine » auprès de 250
+      patients, août 2017.
+    </aside>
+    <ul>
+      <li id="revenue">Augmentez votre chiffre d'affaires</li>
+      <li id="competition">Différenciez-vous de la concurrence</li>
+      <li id="visibility">Maximisez votre visibilité sur le web</li>
+      <li id="expert">Renforcez votre positionnement d'expert santé</li>
+      <li id="information">Diffusez de l'information de la pharmacie à votre patientèle</li>
+      <li id="legislation">Respectez la législation en vigueur</li>
+    </ul>
+  </article>
+  <article>
+    <h2>Vos besoins sont nos objectifs</h2>
+    <p>En réponse à vos besoins, Kozea media vous propose les services suivants :</p>
+    <section>
+      <section id="advice">
+        <h3>Conseil stratégie digitale</h3>
+        <ul>
+          <li>Accompagnement</li>
+          <li>Conseil</li>
+        </ul>
+      </section>
+      <section id="community">
+        <h3>Community management</h3>
+        <ul>
+          <li>Gestion complète de page Facebook</li>
+        </ul>
+      </section>
+      <section id="content">
+        <h3>Création de contenu</h3>
+        <ul>
+          <li>Article de santé</li>
+          <li>Fiche conseil</li>
+          <li>Newsletter BtoC</li>
+        </ul>
+      </section>
+      <section id="graphics">
+        <h3>Studio graphique</h3>
+        <ul>
+          <li>Logo</li>
+          <li>Infographie</li>
+          <li>Thème personnalisé</li>
+          <li>Affiche</li>
+          <li>Flyer</li>
+        </ul>
+      </section>
+      <section id="integration">
+        <h3>Service d'intégration</h3>
+        <ul>
+          <li>Intégration de produits</li>
+          <li>Promotions</li>
+          <li>Base de données +9000 produits</li>
+        </ul>
+      </section>
+      <section id="offers">
+        <h3>Nos offres sont personnalisables</h3>
+        <ul>
+          <li><a href="{{ url_for('page', page='contact') }}">Parlons-en !</a></li>
+        </ul>
+      </section>
+    </section>
+  </article>
+{% endblock content %}

@@ -1,0 +1,153 @@
+=button($bkgd, $border, $color, $padding)
+  background: $bkgd
+  border: $border
+  border-radius: 2em
+  color: $color
+  padding: $padding
+  transition-duration: .4s
+
+
+=centered-article
+  margin-left: auto
+  margin-right: auto
+  max-width: 1024px
+
+  & > h2, & > p
+    text-align: center
+    margin: .25em auto
+    max-width: 25em
+    padding: 0 10%
+
+  & > p
+    font-size: 1.7em
+    font-weight: 300
+
+  @media screen and (max-width: $menu-mobile)
+    & > p
+      font-size: 1.25em
+
+
+=big-left-img($img-url, $bg-position)
+  background-color: #fff
+  box-sizing: border-box
+
+  &:before
+    background: url(../images/#{$img-url}.jpg) $bg-position / cover no-repeat
+    content: ''
+    display: block
+
+  @media screen and (min-width: $menu-mobile + 1px)
+    padding: 7rem 8% 7rem calc(50% + 8%)
+    position: relative
+
+    &:before
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: 50%
+
+  @media screen and (max-width: $menu-mobile)
+    padding: 0 8vw 3rem
+
+    &:before
+      height: 10rem
+      margin-left: -8vw
+      width: 100vw
+
+
+=before-icon($margin: 0 auto 1em, $width: 4em, $width-mobile: 2.5em)
+  &:before
+    display: block
+    margin: $margin
+    width: $width
+
+  @media screen and (max-width: $menu-mobile)
+    &:before
+      width: $width-mobile
+
+
+=mozaic($height, $width)
+  display: flex
+  flex-wrap: wrap
+
+  > *
+    align-items: center
+    background: #fff
+    box-shadow: 0 0 1px darken($bkgd, 7%)
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 2em
+    text-align: center
+
+  @media screen and (min-width: $menu-mobile + 1)
+    > *
+      height: $height
+      width: $width
+
+  @media screen and (max-width: $menu-mobile)
+    > *
+      width: 100%
+
+
+=target-section
+  +centered-article
+
+  > section
+    +mozaic(300px, 33.3%)
+    margin-top: 3rem
+
+    #offers
+      background-color: $primary
+      color: #fff
+      position: relative
+
+      a::before
+        content: ''
+        font-size: 0
+        height: 100%
+        left: 0
+        position: absolute
+        top: 0
+        width: 100%
+
+    h3
+      margin: 0 0 .5em
+      line-height: 1.2
+
+    ul
+      margin: 0
+
+    li
+      display: inline-block
+      margin: 0 1em
+      line-height: 1.1
+
+
+    @media screen and (min-width: $menu-mobile + 1)
+      section
+        h3
+          filter: grayscale(100%)
+          transition: color 250ms, filter 250ms
+
+          &::before
+            transition: transform 250ms
+
+        &#offers
+          &:hover
+            h3
+              color: #fff
+
+          h3
+            filter: grayscale(0%)
+
+
+      section:hover
+        h3
+          color: $primary
+          filter: grayscale(0%)
+
+          &::before
+            transform: translateY(-.5em)

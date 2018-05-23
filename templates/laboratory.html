@@ -1,0 +1,73 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+  <article>
+    <h2>Tous connectés !</h2>
+    <ul>
+      <li>
+        <strong>90 %</strong> des patients ont déjà reçu un ou plusieurs emails
+        d'actualité produit d'un laboratoire du secteur de la santé.
+      </li>
+      <li>
+        <strong>65 %</strong> des Français ont effectué au moins un achat en
+        ligne en 2017.
+      </li>
+      <li>
+        <strong>60 %</strong> des Français sont inscrits au moins sur un réseau
+        social.
+      </li>
+    </ul>
+    <p><strong>Et vous, où en êtes-vous ?</strong></p>
+    <aside>
+      Enquête « Web to Store » réalisée par Mappy auprès de 4666 personnes,
+      juillet 2017. Enquête « 2017, les chiffres-clés et usages d'internet et
+      des réseaux sociaux, Perspectives communication.
+    </aside>
+    <ul>
+      <li id="notoriety">Renforcez votre notoriété auprès des pharmaciens</li>
+      <li id="share">Communiquez sur un lancement de produit</li>
+      <li id="legislation">Respectez la législation en vigueur</li>
+      <li id="collect">Collectez des prospects pharmaciens de qualité</li>
+      <li id="offers">Mettez en avant des offres spéciales</li>
+      <li id="reference">Soyez la référence produit auprès des pharmaciens</li>
+    </ul>
+  </article>
+  <article>
+    <h2>Vos besoins sont nos objectifs</h2>
+    <p>En réponse à vos besoins, Kozea media vous propose les services suivants :</p>
+    <section>
+      <section id="advice">
+        <h3>Conseil stratégie digitale</h3>
+        <ul>
+          <li>Accompagnement</li>
+          <li>Conseil développement web</li>
+          <li>Projet optimisé</li>
+        </ul>
+      </section>
+      <section id="graphics">
+        <h3>Studio graphique</h3>
+        <ul>
+          <li>Logo</li>
+          <li>Infographie</li>
+          <li>Thème personnalisé</li>
+          <li>Affiche</li>
+          <li>Flyer</li>
+        </ul>
+      </section>
+      <section id="media">
+        <h3>Régie média</h3>
+        <ul>
+          <li>Gestion d'espaces publicitaires</li>
+          <li>Monétisation d'espaces</li>
+          <li>Plan média</li>
+        </ul>
+      </section>
+      <section id="offers">
+        <h3>Nos offres sont personnalisables</h3>
+        <ul>
+          <li><a href="{{ url_for('page', page='contact') }}">Parlons-en !</a></li>
+        </ul>
+      </section>
+    </section>
+  </article>
+{% endblock content %}

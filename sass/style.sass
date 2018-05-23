@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,700')
+
+@import mixins
+@import variables
+
+@import 'layout/ClientMenu.sass'
+@import 'layout/Flash.sass'
+@import 'layout/Footer.sass'
+@import 'layout/MainMenu.sass'
+@import 'layout/PreFooter.sass'
+
+@import 'pages/Clients.sass'
+@import 'pages/Contact.sass'
+@import 'pages/Guarantees.sass'
+@import 'pages/Home.sass'
+@import 'pages/Legal.sass'
+@import 'pages/Quotation.sass'
+@import 'pages/References.sass'
+@import 'pages/Services.sass'
+
+
+body
+  background: $bkgd
+  color: $text
+  display: flex
+  flex-direction: column
+  font-family: 'Hind', sans-serif
+  margin: 0
+  min-height: 100vh
+
+  &:before
+    background: url(../images/logo.svg) center / contain no-repeat, $text
+    background-origin: content-box
+    box-sizing: border-box
+    content: ''
+    display: block
+    padding: 1em 0
+
+    @media screen and (min-width: $menu-mobile + 1px)
+      background-position: 1em
+      height: 63px
+      position: fixed
+      top: 0
+      width: calc(100% / 3)
+      z-index: 2
+
+    @media screen and (max-width: $menu-mobile)
+      height: 5rem
+      width: 100%
+
+  > main
+    box-sizing: border-box
+    flex: 1
+
+
+h1
+  font-size: 1.15em
+  font-weight: 400
+  letter-spacing: 0.15em
+  margin: 7vw auto .5em
+  text-align: center
+  text-transform: uppercase
+
+  &:before
+    content: "[ "
+
+  &:after
+    content: " ]"
+
+
+h2
+  font-size: 3em
+
+
+article h2
+  line-height: 1.2em
+
+
+p
+  font-size: 1.3em
+
+
+ul
+  padding-left: 0
+
+  li
+    list-style-type: none
+
+
+a
+  color: inherit
+  display: inline-block
+  font: inherit
+  outline: none
+  text-decoration: none
+  transition-duration: 0.3s
+
+  &.link
+    color: $primary
+
+    &:hover
+      transform: translateX(8px)
+
+
+address
+  font-style: normal
+
+
+form
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+
+  label
+    input, textarea, select
+      border: solid 2px $text
+      box-sizing: border-box
+      color: $text
+      font-family: inherit
+      font-size: 1.1rem
+      margin-bottom: 20px
+      padding: .75em 1em
+      width: 100%
+
+    textarea
+      min-height: 150px
+
+  input[type="submit"]
+    +button($text, none, #fff, .75em 2.5em)
+    align-self: flex-end
+    cursor: pointer
+
+    &:hover
+      background-color: $primary
+
+
+// Objectifs - Pages Nos servies & Pharmaciens / Labos / Groupement
+section
+  @each $section in advice website community graphics content media animation integration video offers
+    &##{$section} h3
+      +before-icon
+      letter-spacing: 0.1em
+      text-transform: uppercase
+
+      &:before
+        content: url(../images/services/#{$section}.svg)
+
+
+// Blog articles
+#page-news
+  h1
+    margin-bottom: 2em
+
+#news-content
+  flex-wrap: wrap
+
+  h2
+    margin-top: 0
+    text-align: center
+    width: 100%
+
+#news, #news-content
+  display: flex
+
+  article
+    box-sizing: border-box
+    display: inline-flex
+    filter: grayscale(100%)
+    flex-direction: column
+    position: relative
+    padding: 1em
+    transition: filter 200ms
+
+    &:hover
+      filter: grayscale(0%)
+
+    h3, time
+      background-color: rgba(255, 255, 255, 0.9)
+      padding-left: 15px
+      padding-right: 15px
+      position: relative
+
+    h3
+      order: 2
+      margin: 0
+      padding: .5em 1rem
+
+    time
+      border-top: solid 2px $primary
+      order: 1
+      padding: .5em  1rem 0
+      text-transform: uppercase
+
+    img
+      max-width: 100%
+
+    a
+      bottom: 0
+      font-size: 0
+      left: 0
+      margin: 0
+      position: absolute
+      right: 0
+      top: 0
+      z-index: 20
+
+    p
+      margin: 0
+
+  @media screen and (min-width: $menu-mobile + 1px)
+    article, > ul
+      flex: auto
+      width: 25%
+
+
+@media screen and (max-width: $menu-mobile)
+  h1
+    margin: 3rem auto .5em
+
+  h2
+    font-size: 2.2em
+
+  #news, #news-content
+    flex-wrap: wrap

@@ -1,0 +1,83 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+  <article>
+    <h2>Tous connectés !</h2>
+    <ul>
+      <li>
+        <strong>75 %</strong> des consommateurs sont incités à se rendre en
+        point de vente après avoir vu une offre promotionnelle sur Facebook.
+      </li>
+      <li>
+        <strong>93 %</strong> des consommateurs souhaitent obtenir sur internet
+        les prix ou les promotions des produits de parapharmacie de leur
+        pharmacien.
+      </li>
+    </ul>
+    <p><strong>Et vous, où en êtes-vous ?</strong></p>
+    <aside>
+      Enquête « Web to Store » réalisée par Mappy auprès de 4666 personnes,
+      juillet 2017.
+    </aside>
+    <ul>
+      <li id="solutions">Bénéficiez de solutions sur-mesure</li>
+      <li id="innovation">Soyez reconnu comme un expert digital avec des services innovants</li>
+      <li id="legislation">Respectez la législation en vigueur</li>
+      <li id="quality">Accédez à des services au meilleur rapport qualité / prix</li>
+      <li id="duplicable">Bénéficiez de solutions duplicables à l'ensemble des pharmacies partenaires</li>
+      <li id="image">Véhiculez l'image de votre groupement</li>
+    </ul>
+  </article>
+  <article>
+    <h2>Vos besoins sont nos objectifs</h2>
+    <p>En réponse à vos besoins, Kozea media vous propose les services suivants :</p>
+    <section>
+      <section id="advice">
+        <h3>Conseil stratégie digitale</h3>
+        <ul>
+          <li>Accompagnement</li>
+          <li>Conseil développement web</li>
+          <li>Projet optimisé</li>
+        </ul>
+      </section>
+      <section id="community">
+        <h3>Community management</h3>
+        <ul>
+          <li>Gestion complète de page</li>
+        </ul>
+      </section>
+      <section id="media">
+        <h3>Régie média</h3>
+        <ul>
+          <li>Gestion d'espaces publicitaires</li>
+          <li>Monétisation d'espaces</li>
+          <li>Plan média</li>
+        </ul>
+      </section>
+      <section id="graphics">
+        <h3>Studio graphique</h3>
+        <ul>
+          <li>Logo</li>
+          <li>Infographie</li>
+          <li>Thème personnalisé</li>
+          <li>Affiche</li>
+          <li>Flyer</li>
+        </ul>
+      </section>
+      <section id="content">
+        <h3>Création de contenu</h3>
+        <ul>
+          <li>Article de santé</li>
+          <li>Fiche conseil</li>
+          <li>Newsletter</li>
+        </ul>
+      </section>
+      <section id="offers">
+        <h3>Nos offres sont personnalisables</h3>
+        <ul>
+          <li><a href="{{ url_for('page', page='contact') }}">Parlons-en !</a></li>
+        </ul>
+      </section>
+    </section>
+  </article>
+{% endblock content %}

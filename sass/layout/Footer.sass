@@ -1,0 +1,92 @@
+footer
+  align-items: flex-start
+  background: $text
+  color: #fff
+  display: flex
+  font-weight: 300
+  padding: 2.5em 1.5em
+
+  &:before
+    content: url(../images/logo-footer.svg)
+    display: block
+    width: 7em
+
+  a
+    &:hover
+      transform: translateX(8px)
+
+  section
+    flex: 1
+    margin: 0 4%
+
+    &#more
+      border: 2px solid $primary
+      display: flex
+      font-size: 1.15em
+      position: relative
+
+      h2
+        align-items: center
+        background: $text
+        color: $primary
+        display: flex
+        left: 50%
+        margin: 0
+        position: absolute
+        transform: translateX(-50%) translateY(-50%)
+        top: -1px
+        z-index: 1
+        width: 100%
+
+        &::before, &::after
+          background-color: $primary
+          content: ''
+          flex: 1
+          height: 2px
+
+        &::before
+          margin-right: 1em
+
+        &::after
+          margin-left: 1em
+
+      ul
+        align-self: center
+        display: flex
+        margin: 0 auto
+        padding: 15px 20px
+
+        li
+          &:first-child
+            order: -1
+
+          a:hover
+            transform: translateY(-5px)
+
+
+  h2, ul,address
+    font-size: .8em
+
+  ul
+    margin-top: 0
+
+
+  @media screen and (min-width: $menu-mobile + 1)
+    #more ul
+      &:before
+        content: '-'
+        margin: 0 1em
+
+  @media screen and (max-width: $menu-mobile)
+    flex-wrap: wrap
+
+    &::before
+      padding: 0 20%
+      width: 100%
+
+    section
+      margin: 1em 4%
+      min-width: 42%
+
+      &#more ul
+        flex-direction: column

@@ -1,0 +1,49 @@
+{% extends "_layout.jinja2" %}
+
+{% set type = request.form.get('type') %}
+{% set need = request.form.get('need') %}
+{% set target = request.form.get('target') %}
+
+{% block content %}
+  <article>
+    <h2>Obtenir un devis</h2>
+    <p>
+      Si vous remplissez ce questionnaire rapide, nous pourrons vous
+      recontacter pour votre devis personnalisé.
+    </p>
+    <form action="{{ url_for('quotation') }}" method="post">
+      <label>Vous êtes
+        <select name="type">
+          {% for value in (
+            'Pharmacien',
+            'Responsable de groupement',
+            'Membre d\'un laboratoire',
+            'Autre',
+            ) %}
+            <option value="{{ value }}" {{ 'selected' if type == value }}>{{ value }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>Vous souhaitez
+        <select name="need">
+          {% for value in (
+            'Digitaliser votre activité',
+            'Gagner en visibilité',
+            'Augmenter votre CA',
+            'Diffuser de l\'information',
+            'Autre'
+            ) %}
+            <option value="{{ value }}" {{ 'selected' if need == value }}>{{ value }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>Email
+        <input type="email" name="email" />
+      </label>
+      <label>Téléphone
+        <input type="telephone" name="phone" />
+      </label>
+      <input type="submit" value="Envoyer" />
+    </form>
+  </article>
+{% endblock content %}

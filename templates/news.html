@@ -1,0 +1,16 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+  <article id="news-content">
+    {% for entry in news %}
+      <article>
+        <h3>{{ entry.title }}</h3>
+        <time pubdate datetime="{{ entry.isodate }}">{{ entry.date }}</time>
+        <img src="{{ entry.image or url_for('static', filename='news.svg') }}" alt="{{ entry.title }}" />
+        <p>
+          <a href="{{ entry.link }}">Lire la suite…</a>
+        </p>
+      </article>
+    {% endfor %}
+  </article>
+{% endblock content %}

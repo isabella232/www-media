@@ -1,0 +1,42 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+  <article>
+    <h2>Ils nous font confiance</h2>
+    <article>
+      <h3>Be Pharma</h3>
+      <img src="{{ url_for('static', filename='images/references/bepharma.png') }}" alt="Be Pharma" />
+      <p class="subtitle">Groupement</p>
+      <p>Community management</p>
+    </article>
+    <article>
+      <h3>Mutualpharmacies</h3>
+      <img src="{{ url_for('static', filename='images/references/mutualpharmacies.png') }}" alt="Mutualpharmacie" />
+      <p class="subtitle">Groupement</p>
+      <p>Studio graphique</p>
+    </article>
+    <article>
+      <h3>Mutualpharm</h3>
+      <img src="{{ url_for('static', filename='images/references/mutualpharm.png') }}" alt="Mutualpharm" />
+      <p class="subtitle">Groupement</p>
+      <p>Community management</p>
+    </article>
+    <article>
+      <h3>UPIE</h3>
+      <img src="{{ url_for('static', filename='images/references/upie.png') }}" alt="UPIE" />
+      <p class="subtitle">Groupement</p>
+      <p>Community management</p>
+    </article>
+    <article>
+      <h3>Pharminfo.fr</h3>
+      <img src="{{ url_for('static', filename='images/references/pharminfo.svg') }}" alt="Pharminfo.fr" />
+      <p>Conseil et suivi du projet de la refonte des 2500 sites clients</p>
+    </article>
+    <article>
+      <h3>Evolupharm</h3>
+      <img src="{{ url_for('static', filename='images/references/evolupharm.png') }}" alt="Evolupharm" />
+      <p class="subtitle">Laboratoire</p>
+      <p>Conseil et suivi de la création du site <a href="https://www.evolupharm-boutique.fr/">www.evolupharm-boutique.fr</a></p>
+    </article>
+  </article>
+{% endblock content %}

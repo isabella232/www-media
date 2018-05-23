@@ -1,0 +1,7 @@
+__pycache__
+*.map
+.cache
+.env
+*.egg-info
+*.map
+base.Makefile
