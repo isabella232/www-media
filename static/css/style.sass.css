@@ -303,6 +303,19 @@ body > aside:not(#flash) {
 
 #page-contact #newsletter {
   display: block; }
+  #page-contact #newsletter label[for="data"] {
+    font-size: .8em;
+    max-width: none; }
+    #page-contact #newsletter label[for="data"] input {
+      margin: 0;
+      width: auto; }
+  #page-contact #newsletter p {
+    font-size: .85em;
+    margin-bottom: 1em;
+    text-align: center;
+    width: 100%; }
+    #page-contact #newsletter p a {
+      color: #E73C4D; }
 
 #page-pharmacy h1, #page-laboratory h1, #page-group h1 {
   display: none; }
@@ -541,6 +554,17 @@ body > aside:not(#flash) {
       margin: 0; }
       #page-contact dt:nth-of-type(2) ul li a:hover, #page-contact dt:nth-of-type(2) + dd ul li a:hover {
         transform: translateX(8px); } }
+
+#page-contact article form label[for="data"] {
+  font-size: .8em; }
+  #page-contact article form label[for="data"] input {
+    margin: 0;
+    vertical-align: middle;
+    width: auto; }
+
+#page-contact article form p a {
+  color: #E73C4D;
+  font-size: .75em; }
 
 #page-guarantees {
   z-index: 0; }
@@ -910,6 +934,9 @@ body > aside:not(#flash) {
   @media screen and (max-width: 600px) {
     #page-quotation article > p {
       font-size: 1.25em; } }
+  #page-quotation article p a {
+    color: #E73C4D;
+    font-size: .8em; }
 
 #page-quotation form {
   border: 1px solid #f4f4f4;
@@ -917,6 +944,12 @@ body > aside:not(#flash) {
   margin: 3em auto;
   max-width: 50em;
   padding: 4em; }
+  #page-quotation form label[for="data"] {
+    font-size: .8em; }
+    #page-quotation form label[for="data"] input {
+      margin: 0;
+      vertical-align: middle;
+      width: auto; }
 
 #page-references main {
   margin-bottom: 4em; }
