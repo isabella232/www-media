@@ -914,11 +914,15 @@ body > aside:not(#flash) {
   @media screen and (max-width: 600px) {
     #page-legal article > p {
       font-size: 1.25em; } }
+  #page-legal article > p {
+    font-size: 1.2em;
+    max-width: none; }
+  #page-legal article h2 {
+    margin: 1em 0; }
 
 #page-legal h3 {
   font-size: 1.7em;
-  font-weight: 400;
-  margin: 3em 0 0; }
+  font-weight: 500; }
 
 #page-legal dt {
   font-size: 1.3em;
