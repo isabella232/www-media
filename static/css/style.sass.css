@@ -414,12 +414,6 @@ body > aside:not(#flash) {
 #page-pharmacy article + article, #page-laboratory article + article, #page-group article + article {
   margin: 7vw auto; }
 
-#page-pharmacy article:nth-of-type(2), #page-laboratory article:nth-of-type(2), #page-group article:nth-of-type(2) {
-  background: green;
-  padding: 1em; }
-  #page-pharmacy article:nth-of-type(2) h2, #page-laboratory article:nth-of-type(2) h2, #page-group article:nth-of-type(2) h2 {
-    margin: 0; }
-
 #page-pharmacy article:last-of-type, #page-laboratory article:last-of-type, #page-group article:last-of-type {
   margin-left: auto;
   margin-right: auto;
@@ -456,18 +450,37 @@ body > aside:not(#flash) {
     @media screen and (max-width: 600px) {
       #page-pharmacy article:last-of-type > section > *, #page-laboratory article:last-of-type > section > *, #page-group article:last-of-type > section > * {
         width: 100%; } }
-    #page-pharmacy article:last-of-type > section h3, #page-pharmacy article:last-of-type > section ul, #page-laboratory article:last-of-type > section h3, #page-laboratory article:last-of-type > section ul, #page-group article:last-of-type > section h3, #page-group article:last-of-type > section ul {
+    #page-pharmacy article:last-of-type > section #offers, #page-laboratory article:last-of-type > section #offers, #page-group article:last-of-type > section #offers {
+      background-color: #E73C4D;
+      color: #fff;
+      position: relative; }
+      #page-pharmacy article:last-of-type > section #offers a::before, #page-laboratory article:last-of-type > section #offers a::before, #page-group article:last-of-type > section #offers a::before {
+        content: '';
+        font-size: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%; }
+    #page-pharmacy article:last-of-type > section h3, #page-laboratory article:last-of-type > section h3, #page-group article:last-of-type > section h3 {
+      margin: 0 0 .5em;
+      line-height: 1.2; }
+    #page-pharmacy article:last-of-type > section ul, #page-laboratory article:last-of-type > section ul, #page-group article:last-of-type > section ul {
       margin: 0; }
     #page-pharmacy article:last-of-type > section li, #page-laboratory article:last-of-type > section li, #page-group article:last-of-type > section li {
-      display: inline-block; }
-      #page-pharmacy article:last-of-type > section li:not(:last-child):after, #page-laboratory article:last-of-type > section li:not(:last-child):after, #page-group article:last-of-type > section li:not(:last-child):after {
-        content: ' / '; }
+      display: inline-block;
+      margin: 0 1em;
+      line-height: 1.1; }
     @media screen and (min-width: 601px) {
-      #page-pharmacy article:last-of-type > section h3, #page-laboratory article:last-of-type > section h3, #page-group article:last-of-type > section h3 {
+      #page-pharmacy article:last-of-type > section section h3, #page-laboratory article:last-of-type > section section h3, #page-group article:last-of-type > section section h3 {
         filter: grayscale(100%);
         transition: color 250ms, filter 250ms; }
-        #page-pharmacy article:last-of-type > section h3::before, #page-laboratory article:last-of-type > section h3::before, #page-group article:last-of-type > section h3::before {
+        #page-pharmacy article:last-of-type > section section h3::before, #page-laboratory article:last-of-type > section section h3::before, #page-group article:last-of-type > section section h3::before {
           transition: transform 250ms; }
+      #page-pharmacy article:last-of-type > section section#offers:hover h3, #page-laboratory article:last-of-type > section section#offers:hover h3, #page-group article:last-of-type > section section#offers:hover h3 {
+        color: #fff; }
+      #page-pharmacy article:last-of-type > section section#offers h3, #page-laboratory article:last-of-type > section section#offers h3, #page-group article:last-of-type > section section#offers h3 {
+        filter: grayscale(0%); }
       #page-pharmacy article:last-of-type > section section:hover h3, #page-laboratory article:last-of-type > section section:hover h3, #page-group article:last-of-type > section section:hover h3 {
         color: #E73C4D;
         filter: grayscale(0%); }
@@ -1078,18 +1091,37 @@ body > aside:not(#flash) {
     @media screen and (max-width: 600px) {
       #page-services article:first-of-type > section > * {
         width: 100%; } }
-    #page-services article:first-of-type > section h3, #page-services article:first-of-type > section ul {
+    #page-services article:first-of-type > section #offers {
+      background-color: #E73C4D;
+      color: #fff;
+      position: relative; }
+      #page-services article:first-of-type > section #offers a::before {
+        content: '';
+        font-size: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%; }
+    #page-services article:first-of-type > section h3 {
+      margin: 0 0 .5em;
+      line-height: 1.2; }
+    #page-services article:first-of-type > section ul {
       margin: 0; }
     #page-services article:first-of-type > section li {
-      display: inline-block; }
-      #page-services article:first-of-type > section li:not(:last-child):after {
-        content: ' / '; }
+      display: inline-block;
+      margin: 0 1em;
+      line-height: 1.1; }
     @media screen and (min-width: 601px) {
-      #page-services article:first-of-type > section h3 {
+      #page-services article:first-of-type > section section h3 {
         filter: grayscale(100%);
         transition: color 250ms, filter 250ms; }
-        #page-services article:first-of-type > section h3::before {
+        #page-services article:first-of-type > section section h3::before {
           transition: transform 250ms; }
+      #page-services article:first-of-type > section section#offers:hover h3 {
+        color: #fff; }
+      #page-services article:first-of-type > section section#offers h3 {
+        filter: grayscale(0%); }
       #page-services article:first-of-type > section section:hover h3 {
         color: #E73C4D;
         filter: grayscale(0%); }
@@ -1099,8 +1131,7 @@ body > aside:not(#flash) {
 #page-services article:last-of-type {
   background-color: #fff;
   box-sizing: border-box;
-  background-origin: border-box;
-  margin-top: 6rem; }
+  background-origin: border-box; }
   #page-services article:last-of-type:before {
     background: url(../images/bkgd-targets.jpg) 50%/cover no-repeat;
     content: '';
@@ -1123,7 +1154,7 @@ body > aside:not(#flash) {
         margin-left: -8vw;
         width: 100vw; } }
   #page-services article:last-of-type ul {
-    margin: 0 0 3em; }
+    margin: 3em 0; }
     #page-services article:last-of-type ul li a {
       background: transparent;
       border: 2px solid #1C1C1C;
@@ -1142,6 +1173,12 @@ body > aside:not(#flash) {
         color: #fff;
         padding: 0.75em 1em;
         transition-duration: .4s; }
+
+@media screen and (min-width: 601px) {
+  #page-services article:last-of-type {
+    margin-top: 4rem; }
+    #page-services article:last-of-type h2 {
+      margin: 0; } }
 
 body {
   background: #fcfcfc;
@@ -1371,6 +1408,9 @@ section#offers h3 {
       width: 2.5em; } }
   section#offers h3:before {
     content: url(../images/services/offers.svg); }
+
+#page-news h1 {
+  margin-bottom: 2em; }
 
 #news-content {
   flex-wrap: wrap; }

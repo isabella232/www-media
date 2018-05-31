@@ -92,7 +92,6 @@
       width: 100%
 
 
-
 =target-section
   +centered-article
 
@@ -100,22 +99,50 @@
     +mozaic(300px, 33.3%)
     margin-top: 3rem
 
-    h3, ul
+    #offers
+      background-color: $primary
+      color: #fff
+      position: relative
+
+      a::before
+        content: ''
+        font-size: 0
+        height: 100%
+        left: 0
+        position: absolute
+        top: 0
+        width: 100%
+
+    h3
+      margin: 0 0 .5em
+      line-height: 1.2
+
+    ul
       margin: 0
 
     li
       display: inline-block
+      margin: 0 1em
+      line-height: 1.1
 
-      &:not(:last-child):after
-        content: ' / '
 
     @media screen and (min-width: $menu-mobile + 1)
-      h3
-        filter: grayscale(100%)
-        transition: color 250ms, filter 250ms
+      section
+        h3
+          filter: grayscale(100%)
+          transition: color 250ms, filter 250ms
 
-        &::before
-          transition: transform 250ms
+          &::before
+            transition: transform 250ms
+
+        &#offers
+          &:hover
+            h3
+              color: #fff
+
+          h3
+            filter: grayscale(0%)
+
 
       section:hover
         h3
