@@ -1,5 +1,6 @@
 #burger-menu
   align-items: center
+  background-color: $text
   box-shadow: 0 0 0 1px rgba(#fff, .35)
   box-sizing: border-box
   content: ''
@@ -9,33 +10,39 @@
   font-size: .85em
   justify-content: flex-end
   text-transform: uppercase
+  transition: height .35s ease-in-out
+  transition-delay: .75s
   position: fixed
   z-index: 5
 
 
 // MENU NOIR KOZEA
 nav:first-of-type
-  background: $text
+  background-color: $text
   box-sizing: border-box
   color: #fff
   display: flex
   flex-direction: column
-  height: 0
+  height: 63px
   justify-content: center
+  left: 0
   overflow: hidden
   position: fixed
   top: 0
   transition: height .35s ease-in-out, width .35s ease-in-out
-  transition-delay: .15s, .15s
-  width: calc(100% / 3)
-  z-index: 4
+  transition-delay: .75s, .75s
+  width: 9rem
+  z-index: 6
 
   ul
+    color: $text
+    font-size: 0
     margin: 1em 0
     padding: 0 12%
+    transition: color .25s, font-size .35s ease-in-out, margin .35s ease-in-out
+    transition-delay: 0s, 0s
 
     li
-      font-size: 1.2em
       font-weight: 300
       line-height: 2.5em
 
@@ -46,7 +53,6 @@ nav:first-of-type
         &:hover
           color: $primary
 
-
     &:first-child
       li:first-child
         a
@@ -54,17 +60,16 @@ nav:first-of-type
             background: url(../images/logo.svg) left / contain no-repeat
             content: ''
             display: block
-            height: 3em
-            margin-bottom: .5em
-            width: 7em
+            height: 2.25rem
+            margin-bottom: 1em
+            width: 7rem
 
             &:hover
               transform: translateX(8px)
 
     &:last-child
-
       li a
-        border-bottom: 2px solid #fff
+        border-bottom: .13em solid #fff
         font-weight: 500
         padding: 0 5px
 
@@ -79,9 +84,21 @@ nav:first-of-type
   // Desktop - Open state
   #burger-menu:hover ~ nav:first-of-type, nav:first-of-type:hover
     height: 100vh
+    width: calc(100% / 3)
+
+    ul
+      color: #fff
+      font-size: 1.2em
+      transition-delay: calc(.75s + .25s), calc(.75s + .25s), calc(.75s + .25s)
 
 
 @media screen and (max-width: $menu-mobile)
+
+  nav:first-of-type
+    text-align: center
+    width: 100vw
+
+
   #burger-menu
     background-color: $text
     bottom: 0
@@ -108,8 +125,12 @@ nav:first-of-type
           top: 1rem
 
         ul
+          color: #fff
+          font-size: 1.2em
+          transition-delay: calc(.75s + .25s), calc(.75s + .25s), calc(.75s + .25s)
+
+          &:last-child
+            font-size: .85em
+
           li
             line-height: 2
-
-        ul:last-child
-          font-size: .85em
