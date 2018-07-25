@@ -17,7 +17,7 @@ Villeurbanne</address>
       <dt>Contact</dt>
       <dd>
         <ul>
-          <li><a href="tel:+33427118397">+33 4 27 11 83 97</a></li>
+          <li><a href="tel:+33427118396">+33 4 27 11 83 96</a></li>
           <li><a href="mailto:media@kozea.fr">media@kozea.fr</a></li>
         </ul>
       </dd>
@@ -32,6 +32,19 @@ Villeurbanne</address>
       <label>Message
         <textarea placeholder="Message"></textarea>
       </label>
+      <label for="data">
+        <input name="data" type="checkbox" required />
+        J'accepte que les informations saisies soient exploitées par Kozea
+        group dans le cadre de demande d'informations ou de devis et de la
+        relation commerciale qui peut en découler. Je suis informé(e) que je
+        peux facilement et à tout moment, modifier mes préférences
+        d'abonnement.
+      </label>
+      <p>
+        <a href="{{ url_for('page', page='legal') }}">
+          Voir notre politique de confidentialité dans les mentions légales.
+        </a>
+      </p>
       <input type="submit" value="Envoyer" />
     </form>
   </article>
