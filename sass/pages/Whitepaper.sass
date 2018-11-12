@@ -1,0 +1,43 @@
+#page-whitepaper
+  main
+    h1
+      text-align: left
+
+    article
+      h2
+        margin-top: 0
+
+      ul
+        font-size: 1.3em
+
+        li
+          display: flex
+
+          &::before
+            content: '→'
+            margin-right: .5em
+
+      form
+        margin-top: 3em
+
+      p a
+        color: $primary
+        font-size: .75em
+
+  #why-not-you
+    display: none
+
+
+@media screen and (min-width: 901px)
+  #page-whitepaper
+    main
+      +big-left-img(bkgd-whitepaper, right)
+
+      h1
+        margin-top: 0
+
+
+@media screen and (max-width: 900px)
+  #page-whitepaper
+    main
+      padding: 0 2em 2em
