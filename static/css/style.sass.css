@@ -587,13 +587,6 @@ body > aside:not(#flash) {
       #page-contact dt:nth-of-type(2) ul li a:hover, #page-contact dt:nth-of-type(2) + dd ul li a:hover {
         transform: translateX(8px); } }
 
-#page-contact article form label[for="data"] {
-  font-size: .8em; }
-  #page-contact article form label[for="data"] input {
-    margin: 0;
-    vertical-align: middle;
-    width: auto; }
-
 #page-contact article form p a {
   color: #E73C4D;
   font-size: .75em; }
@@ -1203,6 +1196,64 @@ body > aside:not(#flash) {
     #page-services article:last-of-type h2 {
       margin: 0; } }
 
+#page-whitepaper main h1 {
+  text-align: left; }
+
+#page-whitepaper main article h2 {
+  margin-top: 0; }
+
+#page-whitepaper main article ul {
+  font-size: 1.3em; }
+  #page-whitepaper main article ul li {
+    display: flex; }
+    #page-whitepaper main article ul li::before {
+      content: '→';
+      margin-right: .5em; }
+
+#page-whitepaper main article form {
+  margin-top: 3em; }
+
+#page-whitepaper main article p a {
+  color: #E73C4D;
+  font-size: .75em; }
+
+#page-whitepaper #why-not-you {
+  display: none; }
+
+@media screen and (min-width: 901px) {
+  #page-whitepaper main {
+    background-color: #fff;
+    box-sizing: border-box; }
+    #page-whitepaper main:before {
+      background: url(../images/bkgd-whitepaper.jpg) right/cover no-repeat;
+      content: '';
+      display: block; } }
+  @media screen and (min-width: 901px) and (min-width: 601px) {
+    #page-whitepaper main {
+      padding: 7rem 8% 7rem calc(50% + 8%);
+      position: relative; }
+      #page-whitepaper main:before {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 50%; } }
+  @media screen and (min-width: 901px) and (max-width: 600px) {
+    #page-whitepaper main {
+      padding: 0 8vw 3rem; }
+      #page-whitepaper main:before {
+        height: 10rem;
+        margin-left: -8vw;
+        width: 100vw; } }
+
+@media screen and (min-width: 901px) {
+    #page-whitepaper main h1 {
+      margin-top: 0; } }
+
+@media screen and (max-width: 900px) {
+  #page-whitepaper main {
+    padding: 0 2em 2em; } }
+
 body {
   background: #fcfcfc;
   color: #1C1C1C;
@@ -1288,6 +1339,12 @@ form {
     cursor: pointer; }
     form input[type="submit"]:hover {
       background-color: #E73C4D; }
+  form label[for="data"] {
+    font-size: .8em; }
+    form label[for="data"] input {
+      margin: 0;
+      vertical-align: middle;
+      width: auto; }
 
 section#advice h3 {
   letter-spacing: 0.1em;

@@ -72,25 +72,40 @@ def quotation():
     return page('quotation')
 
 
-@app.route('/contact', methods=['POST'])
-def contact():
+def send_mail(subject, html):
     message = {
         'to': [{'email': 'media@kozea.fr'}],
-        'subject': 'Prise de contact sur le site de Kozea media',
+        'subject': subject,
         'from_email': 'media@kozea.fr',
-        'html': '<br>'.join([
-            'Nom : %s' % request.form.get('name', ''),
-            'Email : %s' % request.form.get('email', ''),
-            'Téléphone : %s' % request.form.get('phone', ''),
-            'Message : %s' % request.form.get('message', ''),
-            'Type de contact : %s' % request.form.get('type', ''),
-            'Besoin : %s' % request.form.get('need', '')])}
-
+        'html': html,
+    }
     if app.debug:
-        print(message)
+        print(subject, message)
     else:
         mandrill.Mandrill(MANDRILL_KEY).messages.send(message=message)
 
+
+@app.route('/download_whitepaper', methods=['POST'])
+def download_whitepaper():
+    html = '<br>'.join([
+        'Nom : %s' % request.form.get('name', ''),
+        'Email : %s' % request.form.get('email', ''),
+        'Téléphone : %s' % request.form.get('phone', '')])
+    send_mail('Téléchargement du livre blanc', html)
+    flash('Nous vous remercions pour votre téléchargement.')
+    return redirect(url_for('static', filename='documents/livre-blanc.pdf'))
+
+
+@app.route('/contact', methods=['POST'])
+def contact():
+    html = '<br>'.join([
+        'Nom : %s' % request.form.get('name', ''),
+        'Email : %s' % request.form.get('email', ''),
+        'Téléphone : %s' % request.form.get('phone', ''),
+        'Message : %s' % request.form.get('message', ''),
+        'Type de contact : %s' % request.form.get('type', ''),
+        'Besoin : %s' % request.form.get('need', '')])
+    send_mail('Contact', html)
     flash(
         'Nous vous remercions pour votre demande. '
         'Notre équipe va revenir vers vous dans les plus brefs délais.')

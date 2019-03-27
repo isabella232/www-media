@@ -1,0 +1,55 @@
+{% extends '_layout.jinja2' %}
+
+{% block content %}
+  <article id="social">
+    <h2>Téléchargez le livre blanc Kozea media !</h2>
+
+    <h3>Réseaux sociaux et pharmacie</h3>
+    <p>
+      Ce livre blanc informe les pharmaciens sur l’enjeux des réseaux sociaux
+      au sein d’une pharmacie d’officine. Il donne des solutions pratiques
+      pour bien gérer les réseaux sociaux à l’officine.
+    </p>
+    <p>
+      Vous découvrirez :
+    </p>
+    <ul>
+      <li>
+        L’essentiel sur les réseaux sociaux (Facebook, Twitter, Linkedin,
+        Instagram…)
+      </li>
+      <li>
+        Des solutions pratiques pour mettre en place les réseaux sociaux pour
+        votre pharmacie
+      </li>
+    </ul>
+    <p>
+      Avec ce livre blanc, les réseaux sociaux n’auront plus de secrets pour
+      vous !
+    </p>
+
+    <section id="form">
+    <form class="whitepaper-form" action="/download_whitepaper" method="POST">
+      <label>Email
+        <input id="email" type="email" placeholder="Email" name="email" required/>
+      </label>
+      <label>Nom / Société
+        <input id="name" placeholder="Nom / Société" name="name" required/>
+      </label>
+      <label>Numéro de téléphone
+        <input id="name" type="tel" placeholder="Numéro de téléphone" name="phone" required/>
+      </label>
+      <label for="data">
+        <input id="data" name="data" type="checkbox" required />
+        J'accepte que les informations saisies soient exploitées par Kozea
+        group en échange du téléchargement du livre blanc.
+      </label>
+      <p>
+        <a href="{{ url_for('page', page='legal') }}">
+          Voir notre politique de confidentialité dans les mentions légales.
+        </a>
+      </p>
+      <input type="submit" value="Télécharger le livre blanc"/>
+    </form>
+  </section>
+{% endblock content %}
