@@ -24,7 +24,7 @@ MANDRILL_KEY = app.config.get('MANDRILL_KEY')
 def get_news():
     tree = ElementTree.parse(
         urlopen(
-            'https://kozeagroup.wordpress.com/category/pharminfo-fr/feed/'))
+            'https://kozeagroup.wordpress.com/category/kozea-media/feed/'))
     news = []
     for item in tree.find('channel').findall('item'):
         date = parsedate_to_datetime(item.find('pubDate').text)
