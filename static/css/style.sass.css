@@ -1346,6 +1346,9 @@ form {
       vertical-align: middle;
       width: auto; }
 
+section section a {
+  color: #E73C4D; }
+
 section#advice h3 {
   letter-spacing: 0.1em;
   text-transform: uppercase; }
