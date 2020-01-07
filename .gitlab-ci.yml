@@ -1,60 +1,20 @@
-variables:
-  PYTHON_VERSION: python
-  STAGING: y
-
+include:
+  - remote: 'https://gitlab.com/Kozea/ci-master/raw/master/.variables-images.yml'
+  - remote: 'https://gitlab.com/Kozea/ci-master/raw/master/.ci-install.yml'
+  - remote: 'https://gitlab.com/Kozea/ci-master/raw/master/.ci-test.yml'
+  - remote: 'https://gitlab.com/Kozea/ci-master/raw/master/.ci-deploy-test.yml'
+  - remote: 'https://gitlab.com/Kozea/ci-master/raw/master/.ci-deploy-prod.yml'
+  
 stages:
   - install
   - test
   - deploy_test
   - deploy_prod
 
-.artifacts: &artifacts
+install:
+  script:
+    - sed -i '/git+/d' Makefile
+    - make install
   artifacts:
     paths:
       - .env/
-
-.image_test: &image_test
-  image: kozea/python-node-yarn-postgresql:latest
-
-install:
-  stage: install
-  <<: *image_test
-  script:
-    - make install
-  <<: *artifacts
-
-lint:
-  stage: test
-  <<: *image_test
-  script:
-    - make lint
-  dependencies:
-    - install
-
-test:
-  stage: test
-  <<: *image_test
-  script:
-    - make check
-  dependencies:
-    - install
-
-
-.image: &image_deploy_jobs
-  image: kozea/deploy-tools:latest
-
-deploy_test:
-  <<: *image_deploy_jobs
-  stage: deploy_test
-  script:
-    - make deploy-test
-  dependencies: []
-
-deploy_prod:
-  <<: *image_deploy_jobs
-  stage: deploy_prod
-  script:
-    - make deploy-prod
-  dependencies: []
-  only:
-    - master
