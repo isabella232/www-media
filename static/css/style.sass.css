@@ -46,7 +46,6 @@ nav:first-of-type + nav {
       width: 100%; }
       nav:first-of-type + nav ul li {
         font-size: .75em; } }
-
 @keyframes fade-out {
   from {
     opacity: 1;
@@ -140,7 +139,6 @@ footer {
         min-width: 42%; }
         footer section#more ul {
           flex-direction: column; } }
-
 #burger-menu {
   align-items: center;
   background-color: #1C1C1C;
@@ -505,7 +503,6 @@ body > aside:not(#flash) {
         filter: grayscale(0%); }
         #page-pharmacy article:last-of-type > section section:hover h3::before, #page-laboratory article:last-of-type > section section:hover h3::before, #page-group article:last-of-type > section section:hover h3::before {
           transform: translateY(-0.5em); } }
-
 @media screen and (min-width: 601px) {
   #page-pharmacy article:first-of-type, #page-laboratory article:first-of-type, #page-group article:first-of-type {
     display: flex;
@@ -682,7 +679,6 @@ body > aside:not(#flash) {
         padding: 1em; }
       #page-guarantees article dl dd {
         margin: 0 1em 1em; } }
-
 #page-index h1 {
   display: none; }
 
@@ -738,7 +734,6 @@ body > aside:not(#flash) {
         height: 10rem;
         margin-left: -8vw;
         width: 100vw; } }
-
 #page-index #team {
   margin-left: auto;
   margin-right: auto;
@@ -755,7 +750,6 @@ body > aside:not(#flash) {
   @media screen and (max-width: 600px) {
     #page-index #team > p {
       font-size: 1.25em; } }
-
 #page-index #members {
   display: flex;
   flex-wrap: wrap;
@@ -1070,7 +1064,6 @@ body > aside:not(#flash) {
       @media screen and (max-width: 600px) {
         #page-references main > article article img {
           order: -1; } }
-
 #page-services article:first-of-type {
   margin-left: auto;
   margin-right: auto;
@@ -1143,7 +1136,6 @@ body > aside:not(#flash) {
         filter: grayscale(0%); }
         #page-services article:first-of-type > section section:hover h3::before {
           transform: translateY(-0.5em); } }
-
 #page-services article:last-of-type {
   background-color: #fff;
   box-sizing: border-box;
@@ -1245,7 +1237,6 @@ body > aside:not(#flash) {
         height: 10rem;
         margin-left: -8vw;
         width: 100vw; } }
-
 @media screen and (min-width: 901px) {
     #page-whitepaper main h1 {
       margin-top: 0; } }
@@ -1532,7 +1523,6 @@ section#offers h3 {
     #news article, #news > ul, #news-content article, #news-content > ul {
       flex: auto;
       width: 25%; } }
-
 @media screen and (max-width: 600px) {
   h1 {
     margin: 3rem auto .5em; }
@@ -1541,4 +1531,4 @@ section#offers h3 {
   #news, #news-content {
     flex-wrap: wrap; } }
 
-/*# sourceMappingURL=../static/css/style.sass.css.map */
+/*# sourceMappingURL=style.sass.css.map */
