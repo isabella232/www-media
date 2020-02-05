@@ -122,4 +122,3 @@ if __name__ == '__main__':
     app.wsgi_app = SassMiddleware(app.wsgi_app, {
         'media': ('sass', 'static/css', '/static/css')})
     app.run(debug=True)
-    app.run(debug=True)
