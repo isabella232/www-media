@@ -1470,6 +1470,30 @@ section#offers h3 {
   section#offers h3:before {
     content: url(../images/services/offers.svg); }
 
+#announce {
+  background-color: #E73C4D; }
+  #announce a {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 2em;
+    color: #fff;
+    padding: 0.5em 1em;
+    transition-duration: .4s;
+    font-weight: bolder; }
+    #announce a:hover {
+      background: #fff;
+      border: 2px solid #1C1C1C;
+      border-radius: 2em;
+      color: #000;
+      padding: 0.5em 1em;
+      transition-duration: .4s; }
+  #announce p {
+    color: #fff;
+    font-size: 1.1em;
+    text-align: center; }
+  #announce p strong {
+    text-decoration-line: underline; }
+
 #page-news h1 {
   margin-bottom: 2em; }
 

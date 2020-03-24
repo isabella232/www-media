@@ -144,6 +144,23 @@ section
       &:before
         content: url(../images/services/#{$section}.svg)
 
+#announce
+  background-color: $primary
+
+  a
+    +button(transparent, 2px solid #fff, #fff, .5em 1em)
+    font-weight: bolder
+
+    &:hover
+      +button(#fff, 2px solid $text, #000, .5em 1em)
+
+  p
+    color: #fff
+    font-size: 1.1em
+    text-align: center
+
+  p strong
+    text-decoration-line: underline
 
 // Blog articles
 #page-news
