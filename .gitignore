@@ -5,3 +5,4 @@ __pycache__
 *.egg-info
 *.map
 base.Makefile
+.python-version
