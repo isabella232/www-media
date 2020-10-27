@@ -9,6 +9,5 @@ PYTHON_ONLY = 1
 VENV = $(PWD)/.env
 PYTHON = python3.8
 PYTHON_SRCDIR = $(PWD)
-VENV = $(PWD)/.env
 
 URL_PROD = https://media.kozea.fr
