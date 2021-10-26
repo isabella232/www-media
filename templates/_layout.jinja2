@@ -43,6 +43,34 @@
       g.type='text/javascript'; g.async=true; g.defer=true; g.src='//cdn.matomo.cloud/pharminfo.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
       })();
     </script>
+    <script src="{{ url_for('static', filename='tarteaucitron/tarteaucitron.js') }}"></script>
+    <script type="text/javascript">
+      tarteaucitron.init({
+        "privacyUrl": "{{ url_for('page', page='legal') }}",
+        "hashtag": "#tarteaucitron",
+        "cookieName": "tarteaucitron",
+        "orientation": "middle",
+        "groupServices": false,
+        "showAlertSmall": false,
+        "cookieslist": false,
+        "closePopup": false,
+        "showIcon": false,
+        //"iconSrc": "",
+        "iconPosition": "BottomRight",
+        "adblocker": false,
+        "DenyAllCta" : true,
+        "AcceptAllCta" : true,
+        "highPrivacy": true,
+        "handleBrowserDNTRequest": false,
+        "removeCredit": false,
+        "moreInfoLink": true,
+        "useExternalCss": false,
+        "useExternalJs": false,
+        //"cookieDomain": "",
+        "readmoreLink": "",
+        "mandatory": true,
+      });
+    </script>
   </head>
 
   <body id="page-{{ page }}">
@@ -171,6 +199,7 @@ Villeurbanne</address>
         <h2>Crédits</h2>
         <ul>
           <li><a href="{{ url_for('page', page='legal') }}">Mentions légales</a></li>
+          <li><a href="#tarteaucitron">Cookies</a></li>
           <li>Made by <a href="https://www.kozea.fr/">Kozea group</a></li>
         </ul>
       </section>
@@ -183,5 +212,9 @@ Villeurbanne</address>
         </ul>
       </section>
     </footer>
+    <script type="text/javascript">
+      tarteaucitron.user.getguanty = '101338043';
+      (tarteaucitron.job = tarteaucitron.job || []).push('getquanty');
+    </script>
   </body>
 </html>
