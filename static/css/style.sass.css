@@ -77,7 +77,7 @@ footer {
   footer:before {
     content: url(../images/logo-footer.svg);
     display: block;
-    width: 7em; }
+    width: 10em; }
   footer a:hover {
     transform: translateX(8px); }
   footer section {
