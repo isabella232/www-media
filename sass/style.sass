@@ -153,72 +153,6 @@ section
   p strong
     text-decoration-line: underline
 
-// Blog articles
-#page-news
-  h1
-    margin-bottom: 2em
-
-#news-content
-  flex-wrap: wrap
-
-  h2
-    margin-top: 0
-    text-align: center
-    width: 100%
-
-#news, #news-content
-  display: flex
-
-  article
-    box-sizing: border-box
-    display: inline-flex
-    filter: grayscale(100%)
-    flex-direction: column
-    position: relative
-    padding: 1em
-    transition: filter 200ms
-
-    &:hover
-      filter: grayscale(0%)
-
-    h3, time
-      background-color: rgba(255, 255, 255, 0.9)
-      padding-left: 15px
-      padding-right: 15px
-      position: relative
-
-    h3
-      order: 2
-      margin: 0
-      padding: .5em 1rem
-
-    time
-      border-top: solid 2px $primary
-      order: 1
-      padding: .5em  1rem 0
-      text-transform: uppercase
-
-    img
-      max-width: 100%
-
-    a
-      bottom: 0
-      font-size: 0
-      left: 0
-      margin: 0
-      position: absolute
-      right: 0
-      top: 0
-      z-index: 20
-
-    p
-      margin: 0
-
-  @media screen and (min-width: $menu-mobile + 1px)
-    article, > ul
-      flex: auto
-      width: 25%
-
 
 @media screen and (max-width: $menu-mobile)
   h1
@@ -226,6 +160,3 @@ section
 
   h2
     font-size: 2.2em
-
-  #news, #news-content
-    flex-wrap: wrap

@@ -80,20 +80,4 @@
       <li id="revenue"><strong>4 500 000 €</strong> de chiffre d'affaires</li>
     </ul>
   </article>
-  <article id="news">
-    <h2>Actualités</h2>
-    {% for entry in news %}
-      <article>
-        <h3>{{ entry.title }}</h3>
-        <time pubdate datetime="{{ entry.iso_date }}">{{ entry.date }}</time>
-        <img src="{{ entry.image or url_for('static', filename='news.svg') }}" alt="{{ entry.title }}" />
-        <p><a href="{{ entry.link }}">Lire la suite…</a></p>
-      </article>
-    {% endfor %}
-    <ul class="links">
-      <li>
-        <a href="{{ url_for('page', page='news') }}">Voir toutes les actualités</a>
-      </li>
-    </ul>
-  </article>
 {% endblock content %}
