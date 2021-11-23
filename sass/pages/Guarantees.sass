@@ -26,12 +26,10 @@
         background: lighten($text,3%)
         font-size: 1.6em
         font-weight: 700
-        letter-spacing: 0.1em
         line-height: 1.5
-        text-transform: uppercase
 
         &:before
-          content: "[0" counter(guarantee) "]"
+          content: "0" counter(guarantee)
           counter-increment: guarantee
           font-weight: 300
           margin-bottom: .5em

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,700')
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap')
 
 @import mixins
 @import variables
@@ -25,7 +25,7 @@ body
   color: $text
   display: flex
   flex-direction: column
-  font-family: 'Hind', sans-serif
+  font-family: 'Inter', sans-serif
   margin: 0
   min-height: 100vh
 
@@ -44,17 +44,8 @@ body
 h1
   font-size: 1.15em
   font-weight: 400
-  letter-spacing: 0.15em
   margin: 7vw auto .5em
   text-align: center
-  text-transform: uppercase
-
-  &:before
-    content: "[ "
-
-  &:after
-    content: " ]"
-
 
 h2
   font-size: 3em
@@ -66,6 +57,7 @@ article h2
 
 p
   font-size: 1.3em
+  line-height: 1.5em
 
 
 ul
@@ -138,8 +130,7 @@ section
   @each $section in advice website community graphics content media animation integration video offers
     &##{$section} h3
       +before-icon
-      letter-spacing: 0.1em
-      text-transform: uppercase
+      font-size: 1.3em
 
       &:before
         content: url(../images/services/#{$section}.svg)
@@ -162,72 +153,6 @@ section
   p strong
     text-decoration-line: underline
 
-// Blog articles
-#page-news
-  h1
-    margin-bottom: 2em
-
-#news-content
-  flex-wrap: wrap
-
-  h2
-    margin-top: 0
-    text-align: center
-    width: 100%
-
-#news, #news-content
-  display: flex
-
-  article
-    box-sizing: border-box
-    display: inline-flex
-    filter: grayscale(100%)
-    flex-direction: column
-    position: relative
-    padding: 1em
-    transition: filter 200ms
-
-    &:hover
-      filter: grayscale(0%)
-
-    h3, time
-      background-color: rgba(255, 255, 255, 0.9)
-      padding-left: 15px
-      padding-right: 15px
-      position: relative
-
-    h3
-      order: 2
-      margin: 0
-      padding: .5em 1rem
-
-    time
-      border-top: solid 2px $primary
-      order: 1
-      padding: .5em  1rem 0
-      text-transform: uppercase
-
-    img
-      max-width: 100%
-
-    a
-      bottom: 0
-      font-size: 0
-      left: 0
-      margin: 0
-      position: absolute
-      right: 0
-      top: 0
-      z-index: 20
-
-    p
-      margin: 0
-
-  @media screen and (min-width: $menu-mobile + 1px)
-    article, > ul
-      flex: auto
-      width: 25%
-
 
 @media screen and (max-width: $menu-mobile)
   h1
@@ -235,6 +160,3 @@ section
 
   h2
     font-size: 2.2em
-
-  #news, #news-content
-    flex-wrap: wrap
